@@ -1,0 +1,106 @@
+{
+  "revision": "dolphin_full_weld_velocity_optimized_20261022",
+  "record_end_s": 5e-05,
+  "analysis_step_s": 1e-08,
+  "default_threads": 4,
+  "sources": [
+    {
+      "id": "bead_centre",
+      "surface": "weld",
+      "x_mm": 0.0,
+      "xy_m": [
+        0.0,
+        0.0254
+      ],
+      "surface_interval_m": [
+        -0.0035533975315786143,
+        0.0035533975315786143
+      ],
+      "footprint_half_width_m": 0.001425,
+      "footprint_corner_clearance_m": 0.002128397531578614,
+      "nearest_corner_distance_m": 0.0035533975315786143,
+      "edge_traction_relative_to_peak": 3.1654189527932302e-43,
+      "source_trigger_s": 3e-08
+    },
+    {
+      "id": "bead_left",
+      "surface": "weld",
+      "x_mm": -1.5,
+      "xy_m": [
+        -0.0015,
+        0.0254
+      ],
+      "surface_interval_m": [
+        -0.0035533975315786143,
+        0.0035533975315786143
+      ],
+      "footprint_half_width_m": 0.001425,
+      "footprint_corner_clearance_m": 0.0006283975315786142,
+      "nearest_corner_distance_m": 0.0020533975315786142,
+      "edge_traction_relative_to_peak": 3.0357242700250066e-14,
+      "source_trigger_s": 3e-08
+    },
+    {
+      "id": "bead_right",
+      "surface": "weld",
+      "x_mm": 1.5,
+      "xy_m": [
+        0.0015,
+        0.0254
+      ],
+      "surface_interval_m": [
+        -0.0035533975315786143,
+        0.0035533975315786143
+      ],
+      "footprint_half_width_m": 0.001425,
+      "footprint_corner_clearance_m": 0.0006283975315786142,
+      "nearest_corner_distance_m": 0.0020533975315786142,
+      "edge_traction_relative_to_peak": 3.0357242700250066e-14,
+      "source_trigger_s": 3e-08
+    },
+    {
+      "id": "shoulder_left",
+      "surface": "left",
+      "x_mm": -12.0,
+      "xy_m": [
+        -0.012,
+        0.0254
+      ],
+      "surface_interval_m": [
+        -0.075,
+        -0.0035533975315786143
+      ],
+      "footprint_half_width_m": 0.001425,
+      "footprint_corner_clearance_m": 0.007021602468421386,
+      "nearest_corner_distance_m": 0.008446602468421386,
+      "edge_traction_relative_to_peak": 7.373043213840576e-247,
+      "source_trigger_s": 3e-08
+    },
+    {
+      "id": "shoulder_right",
+      "surface": "right",
+      "x_mm": 12.0,
+      "xy_m": [
+        0.012,
+        0.0254
+      ],
+      "surface_interval_m": [
+        0.0035533975315786143,
+        0.075
+      ],
+      "footprint_half_width_m": 0.001425,
+      "footprint_corner_clearance_m": 0.007021602468421386,
+      "nearest_corner_distance_m": 0.008446602468421386,
+      "edge_traction_relative_to_peak": 7.373043213840576e-247,
+      "source_trigger_s": 3e-08
+    }
+  ],
+  "selection_basis": "Retained five partial-weld x positions, all moved to flush OD at 25.4 mm. Geometry-based pilot.",
+  "acquisition": "Independent zero-state shots, one source per solve; paired reference/LOF on the identical inherited mesh. Constant absorbed fluence and pulse width. Physical US/DS remains unmapped.",
+  "solver_backend": "CPU velocity-only RK4 in both cases; cuDSS double direct subproblems",
+  "footprint_half_widths": 2.85,
+  "edge_traction_limit_relative_to_peak": 1e-06,
+  "reference_mirroring": false,
+  "compute_displacement": false,
+  "live_probe_plots": false
+}

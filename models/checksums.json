@@ -1,0 +1,53 @@
+{
+  "algorithm": "sha256",
+  "models": [
+    {
+      "path": "full_weld/shoulder_left/reference.mph",
+      "sha256": "12184bc03be770f6cf4803e24bcf30543dcd880192003351b76b5ff1f02bc180"
+    },
+    {
+      "path": "full_weld/shoulder_left/lof.mph",
+      "sha256": "a0c90c527a749857d12338809849b8088c75c26053adc3abe7ecab09e0ff212d"
+    },
+    {
+      "path": "full_weld/bead_left/reference.mph",
+      "sha256": "595b11b8006541df9f209e4f160a01b933ae1519be2a7f7215021c09244457d3"
+    },
+    {
+      "path": "full_weld/bead_left/lof.mph",
+      "sha256": "4d7c8ef1e7803de6f8955f699cfd9b0e3f8a224ba74adf5cbe42b3b0bc559ba5"
+    },
+    {
+      "path": "full_weld/bead_centre/reference.mph",
+      "sha256": "1b630a7fc0007bf28bab05692881f73162188342d6879d29da3bfccca0a26236"
+    },
+    {
+      "path": "full_weld/bead_centre/lof.mph",
+      "sha256": "f71209d47ec518df3b4574a564e9434f5ef97f9fe79de5ef8b1d6c9ce7344fe3"
+    },
+    {
+      "path": "full_weld/bead_right/reference.mph",
+      "sha256": "c10bd2f9c338b9a2d9c5d838e5e197c5406abb115d62adc12a7865cc6fcb9fba"
+    },
+    {
+      "path": "full_weld/bead_right/lof.mph",
+      "sha256": "adaca4a567375297a27dbfdb0fb5087522f8fc061a86ed75769584a31dcfd54c"
+    },
+    {
+      "path": "full_weld/shoulder_right/reference.mph",
+      "sha256": "4d01a98100bf9dd7a51cf2d674a4aff484829371d70b55fd09d41a395e4cf50d"
+    },
+    {
+      "path": "full_weld/shoulder_right/lof.mph",
+      "sha256": "7d591bfe93a09bb0adec642f9597377bc547f261b70ffb184addf80f4367f603"
+    },
+    {
+      "path": "partial_weld/reference.mph",
+      "sha256": "a540e3cbe529c4f4e1dba371cea4c8e19717cc3f783a0fc6c01b1e7019111931"
+    },
+    {
+      "path": "partial_weld/lof.mph",
+      "sha256": "5f2fbc116b0372b4a9eddff6f5e65dbcba258f1720300299cc996537048a8e91"
+    }
+  ]
+}

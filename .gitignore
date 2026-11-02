@@ -1,0 +1,33 @@
+# Local builds, acquisition datasets, and reconstruction outputs
+/build/
+/data/
+/output/
+CMakeUserPresets.json
+
+# COMSOL working files
+*.mphbin
+*.mph.lock
+*.mph.recovery/
+*.class
+
+# LaTeX build products (the supplied appendix PDF is retained)
+*.aux
+*.log
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.out
+*.toc
+*.lof
+*.lot
+*.synctex.gz
+
+# Local editor and Python files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+.venv/

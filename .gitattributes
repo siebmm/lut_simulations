@@ -1,0 +1,2 @@
+# Preserve exact bytes, including source hashes, across operating systems.
+* -text
