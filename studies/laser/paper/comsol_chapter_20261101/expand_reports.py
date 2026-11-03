@@ -1,8 +1,4 @@
-"""Assemble expanded manuscripts and generate additional figures/tables from evidence.
-
---assemble is retired: the revised manuscripts are edited directly.
-Default only regenerates added numerical artwork/tables from portable data.
-"""
+"""Regenerate the paper comparison tables and supporting artwork."""
 from pathlib import Path
 import argparse, json
 import numpy as np
@@ -19,8 +15,6 @@ def write(name,value):
     path=HERE/name;path.parent.mkdir(parents=True,exist_ok=True)
     path.write_text(value,encoding='utf-8')
 
-def assemble():
-    raise RuntimeError('The historical first-draft assembler is retired. Edit the manuscript .tex files directly; default regeneration updates only figures and tables.')
 
 
 def calibration():
@@ -139,8 +133,6 @@ def tables():
     write('verification/expanded_tables.json',json.dumps({'status':'passed','configurations':counts,'partial_primary_rows':54,'full_control_rows':12,'confirmation_rows':{'full':48,'partial':28}},indent=2)+'\n')
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--assemble',action='store_true');args=parser.parse_args()
-    if args.assemble:assemble()
     f.INDEX=json.loads((DATA/'images.json').read_text());f.DATASETS={k:json.loads((DATA/f'{k}_dataset.json').read_text()) for k in ['full','partial']}
     tables();calibration();atlases()
     print('Expanded figures and tables generated from existing verified evidence.')

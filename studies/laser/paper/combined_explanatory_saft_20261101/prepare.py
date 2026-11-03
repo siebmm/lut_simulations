@@ -1,4 +1,4 @@
-"""Prepare figures and a local driver; preserve the two source papers and datasets."""
+"""Draw the paper's path illustration and collect its explanatory figure panels."""
 from pathlib import Path
 import hashlib, json, re, shutil, sys
 import numpy as np

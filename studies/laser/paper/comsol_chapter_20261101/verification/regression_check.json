@@ -1,6 +1,0 @@
-{
-  "status": "passed",
-  "tests": 242,
-  "command": "PYTHONPATH=studies/laser/src python -m unittest discover -s studies/laser/tests",
-  "log_sha256": "efeba88d76b2378afe7e086c1f7ddf2a426e1100d28f58177d59ed25dcffac32"
-}

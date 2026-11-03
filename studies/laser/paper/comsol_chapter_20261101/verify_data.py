@@ -1,6 +1,6 @@
 """Independent array-to-score and coordinate checks for every archived image."""
 from pathlib import Path
-import hashlib,json
+import json
 import numpy as np
 HERE=Path(__file__).resolve().parent;DATA=HERE/'data'
 
@@ -40,10 +40,9 @@ def main():
                     j=np.nanargmax(values);np.testing.assert_allclose([*p[j],distance[j]],
                         [expected['peak']['x_mm'],expected['peak']['depth_mm'],expected['peak']['distance_mm']],rtol=0,atol=1e-9)
                 checked+=1
-    hashes={p.relative_to(DATA).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(DATA.rglob('*')) if p.is_file() and p.name!='sha256.json'}
-    (DATA/'sha256.json').write_text(json.dumps(hashes,indent=2)+'\n',encoding='utf-8')
     result=dict(status='passed',configurations=len(index),signal_cases_checked=checked,max_contrast_difference_db=worst,
                 coordinate_units='mm; bounds and native point correspondence verified',support='all finite image pixels have at least two qualified sources')
+    (HERE/'verification').mkdir(parents=True, exist_ok=True)
     (HERE/'verification/data_check.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     print(result)
 

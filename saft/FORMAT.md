@@ -201,7 +201,7 @@ editing the analysis code. All four native exporters accept the same schema-2
 dataset; `SAFTFilterStudy` also accepts external complex signal banks with the
 dataset's sample and receiver dimensions.
 
-The original schema-1 weld datasets and frozen chapter studies remain regression
+The original schema-1 weld datasets and frozen paper studies remain regression
 fixtures. `reproduce_main.py`, `reproduce_figures.py` and the historical surveys
 replay their original scientific questions and expected values. Use the generic
 analysis workflow for a new specimen; its results are not compared to unrelated

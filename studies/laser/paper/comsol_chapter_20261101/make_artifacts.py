@@ -1,7 +1,4 @@
-"""Collect numerical evidence (--collect), then regenerate the chapter artwork.
-
-Default plotting uses only the portable data/ folder. No simulations or fitting.
-"""
+"""Regenerate paper artwork from the retained baseline reference arrays."""
 
 # Locate portable scientific inputs without depending on the source checkout.
 import sys as _sys
@@ -34,55 +31,6 @@ plt.rcParams.update({'font.family':'DejaVu Sans','font.size':8,'axes.labelsize':
 def write(p,v):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(v,indent=2)+'\n',encoding='utf-8')
 def label(p):n=int(p.split('-')[0]);m=p.split('_')[1];return m[:n]+' | '+m[n:]
 
-def collect():
-    DATA.mkdir(exist_ok=True);FIG.mkdir(parents=True,exist_ok=True)
-    index=[]
-    for stage in ['numerical','confirmation','selected_checks']:
-        for kind in ['full','partial']:
-            source=PARTIAL_RESULTS if kind=='partial' else RESULTS
-            for p in sorted((source/stage/kind).rglob('arrays.npz')):
-                job=json.loads((p.parent/'request.json').read_text());config=job['selection']
-                spec=job.get('signal_processing',{});uid=f'{stage}_{kind}_'+p.parent.relative_to(source/stage/kind).as_posix().replace('/','__')
-                assert config['processing']=='raw', 'Publication images must use equal receiver averaging'
-                with np.load(p) as a:
-                    shape=(len(a['z']),len(a['x']));fields={'x_mm':a['x'],'depth_mm':a['z']}
-                    xx,zz=np.meshgrid(a['x'],a['z'])
-                    np.testing.assert_allclose(np.column_stack([xx.ravel(),zz.ravel()])/1000,a['points'].reshape(-1,2),rtol=0,atol=1e-14)
-                    for case in ['lof','reference','difference']:
-                        for attr in ['amplitude','count','cf','retained','screened']:
-                            fields[case+'_'+attr]=a[case+'_2_'+attr].reshape(shape)
-                    np.savez_compressed(DATA/(uid+'.npz'),**fields)
-                index.append(dict(uid=uid,stage=stage,kind=kind,id=job['id'],path=config['path'],
-                                  processing=config['processing'],variant=spec.get('name'),selection=config,signal_processing={k:v for k,v in spec.items() if k!='bank'}))
-    write(DATA/'images.json',index)
-    for kind in ['full','partial']:shutil.copy2(_data_root()/f'{kind}_weld/dataset.json',DATA/f'{kind}_dataset.json')
-    assert len(index)==384 and sum(r['kind']=='partial' for r in index)==280
-    for relative,name in [('verification/filter_audit.json','filter_audit.json'),
-         ('confirmation/full/metrics.json','full_confirmation_metrics.json'),
-         ('selected_checks/full/metrics.json','full_selected_metrics.json')]:
-        shutil.copy2(RESULTS/relative,DATA/name)
-    survey=json.loads((RESULTS/'metrics.json').read_text())['rows']
-    survey=[r for r in survey if r['kind']=='full']+json.loads((PARTIAL_RESULTS/'metrics.json').read_text())['rows']
-    write(DATA/'survey_metrics.json',dict(rows=survey))
-    shutil.copy2(PARTIAL_RESULTS/'confirmation/partial/metrics.json',DATA/'partial_confirmation_metrics.json')
-    shutil.copy2(PARTIAL_RESULTS/'verification/check.json',DATA/'native_parity.json')
-    shutil.copy2(PARTIAL_RESULTS/'verification/reproduction.json',HERE/'verification/equal_receiver_reproduction.json')
-    for name,p in [('survey_protocol',HERE.parent/'equal_receiver_study_20261101/protocol.json'),
-         ('full_confirmation_protocol',RESULTS/'confirmation/full/protocol.json'),('partial_confirmation_protocol',PARTIAL_RESULTS/'confirmation/partial/protocol.json'),
-         ('selected_protocol',RESULTS/'selected_checks/full/protocol.json'),('mesh_audit',STUDY/'results/saft_workflow/step_03_bandwidth_audit.json')]:
-        shutil.copy2(p,DATA/(name+'.json'))
-    shutil.copytree(RESULTS/'filter_evidence',DATA/'filter_evidence',dirs_exist_ok=True)
-    shutil.copytree(PARTIAL_RESULTS/'filter_evidence',DATA/'filter_evidence',dirs_exist_ok=True)
-    old=HERE.parent/'laser_weld_feasibility_20261030'
-    shutil.copy2(old/'data/directivity.npz',DATA/'directivity.npz')
-    shutil.copytree(old/'data/source_calibration',DATA/'source_calibration',dirs_exist_ok=True)
-    # Existing publication artwork has its own audited generators and layout.
-    # Collecting numerical evidence must not restore historical figure versions.
-    # Preserve original generation source separately; figures are based on the
-    # exact model vertices, never hand-redrawn approximations of the bevel.
-    prov={str(p.relative_to(DATA)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(DATA.rglob('*')) if p.is_file() and p.name!='sha256.json'}
-    write(DATA/'sha256.json',prov)
-    print('Collected',len(index),'image configurations',flush=True)
 
 def row(kind,id,stage='confirmation'):
     return next(r for r in INDEX if r['kind']==kind and r['stage']==stage and r['id']==id)
@@ -245,8 +193,6 @@ def marker_comparison():
     save(fig,'marker_comparison')
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--collect',action='store_true');args=parser.parse_args()
-    if args.collect:collect()
     global INDEX,DATASETS
     INDEX=json.loads((DATA/'images.json').read_text());DATASETS={k:json.loads((DATA/f'{k}_dataset.json').read_text()) for k in ['full','partial']}
     for function in [primary,core_full,partial_atlas,matrices,wide,filter_response,marker_comparison]:function();print(function.__name__,flush=True)

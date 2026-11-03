@@ -34,17 +34,17 @@ the source and receiver definitions needed for this are retained locally.
 ## Metadata
 
 Each weld's `metadata/` directory retains the model setup, source definitions,
-receiver coordinates, and defect geometry. Coordinates use the original model's
+and receiver coordinates. The shared flaw definition is stored once in
+`defect_geometry.json`. Coordinates use the original model's
 x/y convention; the paper and SAFT use depth = plate thickness - y. Historical
 paths inside the original setup metadata describe the source study and are not
 dependencies of this repository.
 
 The canonical receiver histories and repair information are included in
-`../data/`. `solver/` retains original Java calibration and receiver-export
-templates plus the native-step postprocessor. These templates describe the
-original simulation setup; configure paths and solver/runtime settings for
-your COMSOL installation before using them. The saved `.mph` inputs remain
-the authoritative models, and no new COMSOL solve was performed during packaging.
+`../data/`. The saved `.mph` inputs are the authoritative models. Legacy solver
+automation and export templates are outside this replay-focused repository.
+Export histories for other models using the contract in `../saft/FORMAT.md`.
+No new COMSOL solve was performed during packaging.
 
 Solved field snapshots, original native-time probe tables and machine-specific
 batch-control infrastructure are omitted. They are not required to reconstruct

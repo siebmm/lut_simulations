@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import re
 import zipfile
+from replay_workspace import contained
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT/'verification/standalone_manifest.json'
@@ -57,6 +58,34 @@ def main():
             if entry['sha256'] not in model_hashes: failures.append('Missing model evidence: '+entry['path'])
     for p in list((ROOT/'studies').rglob('*.py'))+list((ROOT/'tools').glob('*.py'))+list((ROOT/'tests').glob('*.py')):
         ast.parse(p.read_text(encoding='utf-8-sig'), filename=str(p))
+    study = ROOT/'studies/laser'
+    replay = json.loads((study/'replay_inputs.json').read_text())
+    assert replay['schema'] == 1
+    modules = {contained(study, name) for name in replay['modules']}
+    if modules != set(study.rglob('*.py')):
+        failures.append('Replay helper modules must match replay_inputs.json exactly')
+    canonical = set()
+    with zipfile.ZipFile(ROOT/'paper/evidence.zip') as evidence:
+        for name, origin in replay['inputs'].items():
+            contained(study, name)
+            if 'file' in origin:
+                source = contained(ROOT, origin['file'])
+                canonical.add(source)
+                actual = sha(source)
+            else:
+                actual = hashlib.sha256(evidence.read(origin['member'])).hexdigest()
+            if actual != origin['sha256']:
+                failures.append('Replay input checksum: '+name)
+    allowed_study = modules | canonical | {study/'README.md', study/'replay_inputs.json'}
+    retained_study = {p for p in files() if p.is_relative_to(study)}
+    if retained_study != {p for p in allowed_study if p.is_relative_to(study)}:
+        failures.append('Study tree contains missing or unused replay files')
+    content = {}
+    for p in files():
+        digest = sha(p)
+        if digest in content:
+            failures.append(f'Duplicate file content: {p.relative_to(ROOT)} and {content[digest]}')
+        content[digest] = p.relative_to(ROOT).as_posix()
     graphics = set()
     cites = set()
     for name in ['paper.tex']:
@@ -96,6 +125,9 @@ def main():
         entries = [{'path':p.relative_to(ROOT).as_posix(),'bytes':p.stat().st_size,'sha256':sha(p)} for p in sorted(files())]
         MANIFEST.write_text(json.dumps({'schema':1,'files':entries},indent=2)+'\n')
     manifest = json.loads(MANIFEST.read_text())
+    actual_names = {p.relative_to(ROOT).as_posix() for p in files()}
+    if actual_names != {e['path'] for e in manifest['files']}:
+        failures.append('Snapshot file list differs from the repository; review additions/removals before updating it')
     for entry in manifest['files']:
         p = ROOT/entry['path']
         if not p.is_file() or p.stat().st_size!=entry['bytes'] or sha(p)!=entry['sha256']:

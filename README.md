@@ -35,10 +35,10 @@ The frozen weld studies below retain their original protocols and metric checks.
 | [data/](data/README.md) | Both acquisition manifests and all 120 velocity-history CSVs |
 | [saft/](saft/README.md) | C++17 reconstruction engine and four headless scientific exporters |
 | [paper/](paper/README.md) | One complete standalone paper, its rendered PDF, source, cited figures, bibliography and electronic supplement |
-| [studies/laser/](studies/laser/README.md) | Analysis/figure scripts, frozen protocols, comparison records and compact figure arrays |
-| [tools/](tools/README.md) | Integrity checks, main-result replay and isolated study/figure runners |
+| [studies/laser/](studies/laser/README.md) | Required replay helpers, canonical reference arrays and an explicit input index |
+| [tools/](tools/README.md) | General analysis, integrity checks, main-result and figure replay, and paper build |
 | [tests/](tests/test_general_datasets.py) | General-dataset contract and independent numerical regressions |
-| `verification/` | Import provenance, snapshot hashes and validation receipts |
+| `verification/` | Snapshot hashes and current numerical/PDF validation receipts |
 
 ## Verify and reproduce
 
@@ -128,9 +128,17 @@ The retained subset supports the standalone paper. It includes
 all 20,412 partial-review comparison rows and the 384 baseline image
 configurations used for 1,152 signal-case comparisons. The full-weld processed
 bank is regenerated from the recordings using the exact saved filter recipe.
-Large intermediate survey arrays, caches, duplicate native-time exports, old
-paper versions, GUI builds, toolchains and unrelated experiments are omitted.
-Their required scientific protocols and reconstruction code are retained.
+Replay inputs are stored once, with duplicate logical paths resolved by
+`studies/laser/replay_inputs.json`. Matching comparison records are read directly
+from `paper/evidence.zip`. The replay tools materialize those inputs under
+`output/replay/`; `SAFT_WORKSPACE` selects another empty output directory.
+
+Only helpers and reference data used by the documented replays remain in the
+study tree. Historical packaging, broad survey runners, generated logs and
+unused snapshots are omitted. The complete paper comparison record stays in
+the electronic supplement; new parameter studies use the generic analysis
+workflow. The integrity check rejects unused study files, duplicate contents,
+missing inputs and additions absent from the checked snapshot.
 
 The `.mph` files are model inputs rather than saved time-dependent solutions.
 Open them with COMSOL Multiphysics 6.4 and the relevant physics licences.

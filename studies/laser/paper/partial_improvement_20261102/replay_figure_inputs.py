@@ -3,7 +3,6 @@ import json
 import shutil
 import numpy as np
 import review as r
-import review_confirm as c
 from standalone import ROOT as INPUT_ROOT
 
 def load(path):
@@ -13,7 +12,7 @@ def replay(jobs, destination):
     missing = [j for j in jobs if not (destination/j['id']/'arrays.npz').is_file()]
     if missing:
         print('Replaying figure inputs:', ', '.join(j['id'] for j in missing), flush=True)
-        r.execute(missing, destination, False)
+        r.execute(missing, destination)
 
 def main():
     verified=[]
@@ -44,12 +43,12 @@ def main():
     rows=load(r.DEST/'refinement/metrics.json')['rows']
     for j in jobs:
         check(r.DEST/'refinement'/j['id'],{case:next(x for x in rows if x['id']==j['id'] and x['case']==case) for case in ['lof','reference','difference']})
-    jobs = load(c.D/'protocol.json')['requests']
+    jobs = load(r.CONFIRMATION/'protocol.json')['requests']
     jobs = [j for j in jobs if j['candidate'] in ('right_SLL_LL03','right_SSLSS_band15') and j['label'] in ('fine','wide')]
-    replay([j for j in jobs if not list(c.D.glob('b*/'+j['id']+'/arrays.npz'))], c.D/'bfigure')
-    rows=load(c.D/'metrics.json')['rows']
+    replay([j for j in jobs if not list(r.CONFIRMATION.glob('b*/'+j['id']+'/arrays.npz'))], r.CONFIRMATION/'bfigure')
+    rows=load(r.CONFIRMATION/'metrics.json')['rows']
     for j in jobs:
-        check(c.locate(j['id']).parent,next(x for x in rows if x['id']==j['id']))
+        check(r.locate_confirmation(j['id']).parent,next(x for x in rows if x['id']==j['id']))
     dest = r.DEST/'path_confirmation'
     jobs = load(dest/'protocol.json')['requests']
     jobs=[j for j in jobs if j['candidate'] in (0,9,8) and j['label']=='fine']

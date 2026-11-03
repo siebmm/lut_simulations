@@ -71,6 +71,26 @@
     "command": "python tools/reproduce_figures.py",
     "review_metric_checks": 27,
     "review_figures": 5,
-    "baseline_and_combined_artwork": "regenerated in output/workspace"
+    "baseline_and_combined_artwork": "regenerated from a fresh output/cleanup_verification workspace"
+  },
+  "repository_cleanup": {
+    "status": "passed",
+    "tracked_files_before": 2652,
+    "tracked_files_after": 590,
+    "duplicate_file_groups": 0,
+    "replay_modules": 21,
+    "logical_replay_inputs": 417,
+    "canonical_replay_files": 349,
+    "shared_replay_paths": 58,
+    "inputs_from_existing_supplement": 10,
+    "fresh_replay_checks": {
+      "published_metrics": 9,
+      "baseline_configurations": 384,
+      "baseline_signal_cases": 1152,
+      "review_metrics": 27,
+      "independent_physics_rays": 1400,
+      "general_dataset_tests": 12,
+      "native_interfaces": 4
+    }
   }
 }

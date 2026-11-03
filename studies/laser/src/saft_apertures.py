@@ -1,12 +1,9 @@
-"""Step 5 physics: angular-spectrum dipole launch and traction-free reception.
+"""Independent dipole launch and traction-free reception in an isotropic halfspace.
 
-Local y points into an isotropic halfspace. Convention exp[i omega(t-p*x-q*y)].
-Only normalized magnitudes are used for gates; no inverse gain or phase fitting.
+Local y points into the solid; convention exp[i omega(t-p*x-q*y)].
 """
 import numpy as np
-
-ANGLES = np.linspace(0, 80, 1601)
-THRESHOLDS = [0., .1, .2, .3]
+ANGLES=np.linspace(0,80,1601)
 
 
 def polarization(p, q, mode, cl, cs):
@@ -77,16 +74,3 @@ def directivity(band, cl, cs, width_m=.0005, pulse_fwhm_s=6.5e-9):
 
 def angular_gain(angle_radians, curve):
     return np.interp(np.abs(np.rad2deg(angle_radians)), ANGLES, curve, right=0)
-
-
-def gate(source_angle, receive_angle, curves, mode, threshold):
-    if threshold == 0:
-        return np.ones(np.broadcast_shapes(np.shape(source_angle), np.shape(receive_angle)), bool)
-    return ((angular_gain(source_angle, curves[mode[0]]["source"]) >= threshold)
-            & (angular_gain(receive_angle, curves[mode[1]]["vy"]) >= threshold))
-
-
-def reflected_times(source_x, receiver_x, x, depth, thickness, cs, cr, trigger=0):
-    """Single ID reflection, mode preserved at wall; timings only, not image weights."""
-    return {"wall_before_pixel": trigger+np.hypot(x-source_x, 2*thickness-depth)/cs+np.hypot(receiver_x-x, depth)/cr,
-            "wall_after_pixel": trigger+np.hypot(x-source_x, depth)/cs+np.hypot(receiver_x-x, 2*thickness-depth)/cr}

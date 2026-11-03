@@ -36,5 +36,5 @@ The model inputs are in `../models/`, velocity histories in `../data/`, and
 scientific analysis and figure generators in `../studies/laser/`. From the
 repository root, `python tools/reproduce_main.py` checks the main numerical
 results and `python tools/reproduce_figures.py` regenerates the artwork under
-`output/workspace/`. These workflows preserve the supplied manuscript assets.
+`output/replay/`. These workflows preserve the supplied manuscript assets.
 Extract `evidence.zip` here to obtain the `evidence/` paths cited in the paper.

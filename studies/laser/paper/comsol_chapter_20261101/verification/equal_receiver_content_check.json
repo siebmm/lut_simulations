@@ -1,7 +1,0 @@
-{
-  "status": "passed",
-  "full_image_arrays_unchanged": 104,
-  "all_current_image_configurations_equal_mean": 384,
-  "partial_configurations_recomputed": 280,
-  "no_response_weighting_or_previous_result_narrative": true
-}

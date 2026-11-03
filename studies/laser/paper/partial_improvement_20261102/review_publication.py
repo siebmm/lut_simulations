@@ -1,36 +1,20 @@
-"""Regenerate the final partial-review figures from preserved protocols and reconstructed arrays."""
-import csv,json,re,shutil,sys
-from pathlib import Path
+"""Regenerate the five partial-weld figures from checked reconstructions."""
+import json
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import review as r
-import review_confirm as c
-import settings_review as q
 
-SHORT=r.HERE.parent/'combined_explanatory_saft_20261101'
-EXT=r.HERE.parent/'extended_combined_saft_20261102'
-EXPL=r.HERE.parent/'explanatory_saft_20261101'
-COMSOL=r.HERE.parent/'comsol_chapter_20261101'
-F=r.DEST/'figures'
-for p in (EXT,F):p.mkdir(exist_ok=True)
+F=r.DEST/'figures';F.mkdir(parents=True,exist_ok=True)
 
-def read(p):return p.read_text(encoding='utf-8')
-def load(p):return json.loads(read(p))
-def arr(p):
-    with np.load(p) as a:return dict(a)
-def save(p,t):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(t,encoding='utf-8')
-def fmt(v,n=2):return '--' if v is None else f'{v:.{n}f}'
-def esc(t):return str(t).replace('_',r'\_\allowbreak ').replace('%',r'\%')
-def pathlabel(t):
-    if re.fullmatch(r'\d-\d_[LS]+',t):
-        a,b=t.split('_');i=int(a[0]);return '$'+b[:i]+r'\mid '+b[i:]+'$'
-    return r'\texttt{'+esc(t)+'}'
+def load(path):return json.loads(path.read_text(encoding='utf-8'))
+def arr(path):
+    with np.load(path) as arrays:return dict(arrays)
 
-confirmation=load(c.D/'metrics.json')['rows']
+confirmation=load(r.CONFIRMATION/'metrics.json')['rows']
 def confirmed(name,label):return next(x for x in confirmation if x['candidate']==name and x['label']==label)
-def ca(name,label='fine'):return arr(c.locate(confirmed(name,label)['id']))
+def ca(name,label='fine'):return arr(r.locate_confirmation(confirmed(name,label)['id']))
 tips=np.array(r.s.dataset('partial')['audit']['defect_benchmark_only']['tips_xy_mm'])
 tips[:,1]=25.4-tips[:,1];tips=tips[np.argsort(tips[:,1])]
 plt.rcParams.update({'font.size':10,'axes.titlesize':11,'axes.labelsize':10,'pdf.fonttype':42,'savefig.dpi':200})

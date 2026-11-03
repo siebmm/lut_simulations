@@ -8,7 +8,7 @@ command-line entry points:
 |---|---|
 | `SAFTFilterStudy` | Reconstruction grids or selected points, optional external processed-signal banks, and raw-history export |
 | `SAFTReview` | Reconstruction grids with per-path statistics and the groove-path catalogue |
-| `SAFTAdmissionAudit` | Per-source admission statistics for the appendix's threshold checks |
+| `SAFTAdmissionAudit` | Per-source admission statistics for the paper's threshold checks |
 | `SAFTBatch` | Headless version of the original desktop batch exporter, including geometry checks and `images.npz` |
 
 Build from the repository root using the commands in the top-level README.

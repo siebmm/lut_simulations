@@ -6,18 +6,19 @@ import os
 import sys
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[1]
-STUDY = ROOT / 'studies/laser'
-sys.path.insert(0, str(STUDY / 'paper/filter_study_20261101'))
-import study as s
-sys.path.insert(0, str(STUDY / 'src'))
-from standalone import executable
+from replay_workspace import ROOT, prepare_workspace
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--case', choices=['both', 'full', 'partial'], default='both')
     args = parser.parse_args()
+    work, env = prepare_workspace()
+    STUDY = work/'studies/laser'
+    os.environ['SAFT_REPOSITORY'] = env['SAFT_REPOSITORY']
+    sys.path[:0] = [str(STUDY/'paper/filter_study_20261101'), str(STUDY/'src')]
+    import study as s
+    from standalone import executable
     dest = ROOT / 'output/main'
     s.OUT = dest
     s.LOCAL = ROOT / 'build/filter_work'

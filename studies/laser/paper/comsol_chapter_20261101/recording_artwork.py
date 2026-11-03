@@ -1,7 +1,6 @@
 """Recording figures with data-free legend rows.
 
-Default: regenerate from compact archived plotting data. --collect refreshes
-those data from the original acquisition CSVs in the NDT repository. Filtering,
+Regenerate from the retained recording arrays. Filtering,
 normalization and arrival hypotheses match the original recording figures.
 """
 
@@ -33,87 +32,6 @@ STYLES = ['--', ':', '-.', '-']
 PATHS = ['S | S', 'L | L', 'S | SS', 'SS | S']
 
 
-def collect():
-    sys.path.insert(0, str(ROOT / 'studies/laser/src'))
-    sys.path.insert(0, str(HERE.parent / 'weld_geometry_study_20261030'))
-    from saft_imaging import kernel, filter_record
-    from saft_path_physics import branch
-    from geometry_checks import traces
-    DATA.mkdir(parents=True, exist_ok=True)
-    fingerprints = {}
-    check = {}
-    for kind, source, receiver in [('full', 'shoulder_left', 94), ('partial', 'bead_left', 330)]:
-        directory = _data_root() / (kind + '_weld')
-        d = json.loads((directory / 'dataset.json').read_text())
-        archived = json.loads((HERE / 'data' / (kind + '_dataset.json')).read_text())
-        assert d == archived
-        receivers = d['audit']['receivers']
-        t = np.arange(5001) * .01
-        x = np.array([r['x_m'] * 1000 for r in receivers])
-        groups = np.array([r['group'] for r in receivers])
-        raw = {}
-        for case in (['lof'] if kind == 'full' else ['lof', 'reference']):
-            raw[case] = np.empty((len(receivers), len(t)))
-            for group in ['left', 'weld', 'right']:
-                p = directory / 'sources' / source / case / 'receivers' / (group + '_vy.csv')
-                with p.open() as stream:
-                    ids = [int(v[1:]) for v in stream.readline().strip().split(',')[1:]]
-                raw[case][ids] = np.loadtxt(p, delimiter=',', skiprows=1)[:, 1:].T
-                fingerprints[p.relative_to(ROOT).as_posix()] = hashlib.sha256(p.read_bytes()).hexdigest()
-        h = kernel(.5, 5)
-        filt = {case: filter_record(values, h) for case, values in raw.items()}
-        ref = abs(filt['lof']).max()
-        spectrum = abs(np.fft.rfft(raw['lof'][receiver] * np.hanning(len(t)), 8192))
-        values = dict(time_us=t, receiver_x_mm=x, receiver_groups=groups,
-                      envelope_db=20*np.log10(np.maximum(abs(filt['lof']) / ref, 1e-12)),
-                      bscan_reference_um_s=ref*1e6, receiver=receiver,
-                      frequency_MHz=np.fft.rfftfreq(8192, 1e-8)/1e6,
-                      spectrum_db=20*np.log10(np.maximum(spectrum / spectrum.max(), 1e-8 if kind == 'full' else 1e-9)))
-        if kind == 'partial':
-            filt['difference'] = filt['lof'] - filt['reference']
-        for case, array in filt.items():
-            values[case + '_trace_um_s'] = array[receiver] * 1e6
-        if kind == 'full':
-            mat = d['material']; height = mat['thickness_m']
-            sx = d['audit']['sources'][0]['x_mm']
-            tips = np.array(d['audit']['defect_benchmark_only']['tips_xy_mm'])
-            tips[:, 1] = height*1000 - tips[:, 1]
-            point = tips.mean(axis=0) / 1000
-            paths = []
-            for before, after in [('S', 'S'), ('L', 'L'), ('S', 'SS'), ('SS', 'S')]:
-                inc = branch([sx/1000, 0], point, before, height, mat['cl_m_s'], mat['cs_m_s'])
-                rec = branch(point, np.column_stack([x/1000, np.zeros(len(x))]), after,
-                             height, mat['cl_m_s'], mat['cs_m_s'], outgoing=True)
-                paths.append(.03 + (inc['time'] + rec['time']) * 1e6)
-            values['pixel_paths_us'] = np.array(paths)
-            # Preserve the original trace's independently evaluated arrival values.
-            old = json.loads((ROOT / 'studies/laser/results/full_weld_common_settings_20261030/figure_evidence.json').read_text())
-            values['trace_paths_us'] = np.array(old['ray_times_us'])
-            values['direct_paths_us'] = np.array([.03 + abs(x-sx)*1000/mat[key]
-                                                  for key in ['cl_m_s', 'cs_m_s', 'cr_m_s']])
-            trace = np.genfromtxt(ROOT / 'studies/laser/results/full_weld_common_settings_20261030/numerical/0/trace.csv', delimiter=',', names=True)
-            native = trace['filtered_real_m_s'] + 1j*trace['filtered_imag_m_s']
-            error = float(np.max(abs(filt['lof'][receiver] - native)))
-            assert error < 1e-14
-            check[kind] = {'filter_max_error_against_native_m_s': error}
-        else:
-            modes = ['LL', 'SS', 'SSSS']
-            values['return_modes'] = np.array(modes)
-            arrivals = [[.03 + q['time_us'] for q in traces([-1.5,16.4], [x[receiver],16.4], m, kind)] for m in modes]
-            assert all(len(v) == 1 for v in arrivals)
-            values['return_times_us'] = np.array(arrivals).ravel()
-            old = json.loads((ROOT / 'studies/laser/results/weld_geometry_study_20261030/figure_evidence.json').read_text())['signals']
-            for mode, times in zip(modes, arrivals):
-                np.testing.assert_allclose(times, old['predicted_specimen_return_times_us'][mode], rtol=0, atol=1e-10)
-            check[kind] = {'return_times_match_original': True}
-        np.testing.assert_allclose(ref*1e6, old['bscan_reference_um_s'], rtol=1e-12)
-        check[kind]['bscan_reference_um_s'] = float(ref*1e6)
-        np.savez_compressed(DATA / (kind + '.npz'), **values)
-    provenance = dict(description='Plotting arrays regenerated from the original recording CSVs with unchanged 0.5-5 MHz kernel, spectrum window and arrival hypotheses.',
-                      inputs_sha256=fingerprints, checks=check,
-                      arrays_sha256={p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in DATA.glob('*.npz')})
-    (DATA / 'provenance.json').write_text(json.dumps(provenance, indent=2)+'\n')
-    (HERE / 'verification/recording_figure_check.json').write_text(json.dumps({'status': 'passed', **provenance}, indent=2)+'\n')
 
 
 def bscan(ax, values, title):
@@ -200,6 +118,4 @@ def partial():
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(); parser.add_argument('--collect', action='store_true')
-    if parser.parse_args().collect: collect()
     full(); partial()

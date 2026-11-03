@@ -1,8 +1,0 @@
-{
-  "status": "passed",
-  "configurations": 384,
-  "signal_cases_checked": 1152,
-  "max_contrast_difference_db": 1.4210854715202004e-14,
-  "coordinate_units": "mm; bounds and native point correspondence verified",
-  "support": "all finite image pixels have at least two qualified sources"
-}

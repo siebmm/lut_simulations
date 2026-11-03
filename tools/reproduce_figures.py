@@ -1,10 +1,10 @@
-"""Regenerate final-paper artwork in output/workspace; published PDFs are preserved."""
+"""Regenerate the paper artwork in an isolated replay workspace."""
 import argparse
 from pathlib import Path
 import shutil
 import subprocess
 import sys
-from run_study import ROOT, prepare_workspace
+from replay_workspace import ROOT, prepare_workspace
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -31,7 +31,7 @@ def main():
         run('combined_explanatory_saft_20261101/prepare.py')
     if args.group in ('review','all'):
         run('partial_improvement_20261102/replay_figure_inputs.py')
-    print('Generated artwork is under output/workspace/studies/laser; paper/ is unchanged.')
+    print(f'Generated artwork is under {work}/studies/laser; paper/ is unchanged.')
 
 if __name__ == '__main__':
     main()

@@ -1,5 +1,0 @@
-label,id,stage,cmax_db,near_support_pct,peak_um_s,peak_distance_mm,one_source_near_pct,pristine_peak_um_s,pristine_near_peak_um_s,lof_near_over_pristine_near_db,settings
-"Current baseline; Equal mean, 0.5–5 MHz",all__raw__min2,survey,4.364606401468225,95.75757575757575,16.567599260313386,0.04575830625929792,0.0,6.820095813592791,3.094129143587057,14.574422895779147,settings/saft_partial_baseline.json
-"Earlier improvement; Response weighted, 0.5–5 MHz",all__weighted__min2,survey,8.049989155726005,95.75757575757575,29.722763055891097,0.2748845314911878,0.0,6.640568886166496,6.284872234325341,13.495854521656181,settings/saft_partial_weighted_05_5.json
-"Candidate; Response weighted, 1–5 MHz",all__weighted__min2__band1_5,frequency,8.586371963910059,95.75757575757575,28.64385943952974,0.26869412757270117,0.0,5.711960875934617,4.697707965912633,15.70291037269616,settings/saft_partial_weighted_1_5.json
-"Equal mean, 2–5 MHz",all__raw__min2__band2_5,frequency,7.989050950870771,95.75757575757575,12.270147920847714,0.41869012955205487,0.0,1.533490627834201,0.818633736623897,23.515203199761153,settings/saft_partial_equal_2_5.json

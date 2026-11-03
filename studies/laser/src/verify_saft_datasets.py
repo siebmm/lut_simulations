@@ -18,7 +18,7 @@ import numpy as np
 from scipy.optimize import brentq
 from saft_imaging import kernel, filter_record
 from saft_apertures import ANGLES, directivity, angular_gain, reflection
-from study_paths import REPOSITORY
+from standalone import ROOT as REPOSITORY
 
 
 class PartialReference:

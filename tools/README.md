@@ -18,34 +18,23 @@ the native tools. All paths are discovered relative to this checkout.
 | `python tools/reproduce_main.py --case partial` | Two partial-weld grids only |
 | `python tools/reproduce_figures.py` | Baseline/diagram artwork and final partial-review figures in an isolated workspace |
 | `python tools/reproduce_figures.py --group review` | Only the five revised partial-review figures |
-| `python tools/run_study.py STUDY/SCRIPT.py [arguments]` | Runs an included study script against a writable copy of its protocols/evidence |
 
-`run_study.py` seeds `output/workspace/` once, updates Python source on later
-runs, and preserves generated results between commands. It reads acquisitions
-and executables from this repository, without copying the large CSVs again.
-Use this wrapper for the original study scripts, which write result folders.
-Do not run multiple reconstruction studies simultaneously: their original
-filter-bank working directories are reused between variants.
+The paper replay commands use `replay_workspace.py` to materialize the inputs
+listed in `studies/laser/replay_inputs.json` under `output/replay/`. Shared arrays
+are copied from one canonical file; matching records are read from the paper's
+existing supplement. Source recordings remain in `data/` and are not copied.
+Generated reconstructions can be reused between replay commands.
 
-For other specimens use `analyze.py` and the [public data contract](../saft/FORMAT.md).
-The historical study/reproduction commands retain their original weld-specific
-protocols, labels and reference metrics. New acquisitions need no matching flaw
-coordinates or archived scores.
+Set `SAFT_WORKSPACE` to a fresh directory under `output/` or outside the checkout
+for a clean replay. A source/input fingerprint prevents reuse of results after
+the replay code or definitions change. Do not run the two paper replay commands
+simultaneously; their original filter-bank working paths are shared.
 
-Example filter study sequence:
-
-```sh
-python tools/run_study.py filter_study_20261101/study.py raw
-python tools/run_study.py filter_study_20261101/study.py verify
-python tools/run_study.py filter_study_20261101/study.py run
-python tools/run_study.py filter_study_20261101/study.py summarise
-```
-
-The revised partial-weld atlas uses `partial_improvement_20261102/review.py`
-with `verify`, `atlas`, then `analyse`; its settings, confirmations, refinements
-and source-subset analyses are adjacent. Full surveys can be substantially more
-expensive than the main replay. Their original protocols and complete summary
-records are included, so running every survey is not required to read the paper.
+For other specimens and parameter studies, use `analyze.py` and the
+[public data contract](../saft/FORMAT.md). The retained study modules are internal
+helpers for the fixed paper replays. Historical broad-survey and packaging entry
+points have been removed; the paper's complete comparison records remain in
+`paper/evidence.zip`.
 
 Run the integrity, interface and physics checks before the larger replay.
 The integrity check uses only the Python standard library and diagnoses missing

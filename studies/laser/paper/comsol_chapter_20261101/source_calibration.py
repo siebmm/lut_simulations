@@ -1,8 +1,4 @@
-"""Archive and independently check the existing source-calibration exports.
-
-Default: portable verification from data/source_calibration/*.npz.
---archive: collect original repository exports first. No FE solves or raw edits.
-"""
+"""Independently verify the retained thermoelastic calibration exports."""
 from pathlib import Path
 import hashlib
 import json
@@ -26,65 +22,8 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def read_export(path, nvar):
-    header = next(s for s in path.read_text(encoding='utf-8-sig').splitlines()
-                  if s.startswith('%') and '@ t=' in s)
-    times = np.array([float(s) for s in re.findall(r'@\s*t=([+\-\d.eE]+)', header)])
-    values = np.atleast_2d(np.loadtxt(path, comments='%'))
-    assert values.shape[1] == 2 + len(times)
-    grouped = times.reshape(-1, nvar)
-    assert np.all(grouped == grouped[:, :1]) and np.isfinite(values).all()
-    return grouped[:, 0], values[:, :2], values[:, 2:].reshape(len(values), -1, nvar)
 
 
-def archive():
-    root = HERE.parents[3]
-    origins = {
-        10: root / 'studies/laser/results/thermoelastic_source_calibration',
-        100: root / 'studies/laser/runs/fluence_100_20261009/results/calibration',
-    }
-    DATA.mkdir(parents=True, exist_ok=True)
-    evidence = {'parameters': PARAMS, 'runs': {}, 'units': {
-        'time_s': 's', 'arc_xy_m': 'm; y points upward', 'surface_xy_m': 'm',
-        'thermal_arc': ['ux_m', 'uy_m', 'vx_m_s', 'vy_m_s'],
-        'dipole_arc': ['ux_m', 'uy_m', 'vx_m_s', 'vy_m_s'],
-        'thermal_surface': ['ux_m', 'uy_m', 'vx_m_s', 'vy_m_s', 'temperature_K'],
-        'dipole_surface': ['ux_m', 'uy_m', 'vx_m_s', 'vy_m_s'],
-        'energy': ['time_s', 'full_width_thermal_energy_J_m', 'energy_over_absorbed']},
-        'scope': 'Existing flat-patch numerical source comparisons; no new FE solves.',
-        'fluence_provenance': 'The original historical calibration is 10 J/m2; the isolated 20261009 rerun explicitly sets 100 J/m2. Temperature/energy exports independently confirm the tenfold loading. The production gain is the original 10 J/m2 fit.'}
-    for fluence, folder in origins.items():
-        fields, hashes = {}, {}
-        for key, nvar in [('thermal_arc', 4), ('dipole_arc', 4),
-                          ('thermal_surface', 5), ('dipole_surface', 4)]:
-            path = folder / f'exports/calibration_{key}.txt'
-            time, coords, values = read_export(path, nvar)
-            if 'time_s' in fields:
-                np.testing.assert_allclose(time, fields['time_s'], rtol=0, atol=1e-15)
-            fields['time_s'] = time
-            coord_key = 'arc_xy_m' if key.endswith('_arc') else 'surface_xy_m'
-            if coord_key in fields:
-                np.testing.assert_allclose(coords, fields[coord_key], rtol=0, atol=1e-12)
-            fields[coord_key] = coords
-            fields[key] = values
-            hashes[path.relative_to(root).as_posix()] = sha(path)
-        energy_path = folder / 'exports/calibration_energy_check.txt'
-        fields['energy'] = np.loadtxt(energy_path, comments='%')
-        hashes[energy_path.relative_to(root).as_posix()] = sha(energy_path)
-        stats_path = folder / 'calibration_comparison.json'
-        hashes[stats_path.relative_to(root).as_posix()] = sha(stats_path)
-        target = DATA / f'fluence_{fluence}.npz'
-        np.savez_compressed(target, **fields)
-        evidence['runs'][str(fluence)] = dict(array_file=target.name,
-            array_sha256=sha(target), original_sha256=hashes,
-            historical_statistics=json.loads(stats_path.read_text()))
-    evidence['parameter_source_sha256'] = {
-        p.relative_to(root).as_posix(): sha(p) for p in [
-            root / 'studies/laser/runs/fluence_100_20261009/src/BuildLaserCalibration.java',
-            root / 'studies/laser/runs/fluence_100_20261009/src/analyze_laser_calibration.py',
-            root / 'studies/laser/config/partial_weld.json',
-            root / 'studies/laser/src/partial_weld_laser.py']}
-    (DATA / 'provenance.json').write_text(json.dumps(evidence, indent=2) + '\n')
 
 
 def verify():
@@ -145,11 +84,10 @@ def verify():
     report = {'runs': reports, 'production_A0_Pa': a0, 'production_A_Pa': a,
               'production_peak_lobe_traction_Pa': 2*np.exp(-0.5)*a,
               'status': 'All fit, withheld-angle, temperature, energy and velocity checks reproduce the historical exports.'}
+    (HERE / 'verification').mkdir(parents=True, exist_ok=True)
     (HERE / 'verification/source_calibration_check.json').write_text(json.dumps(report, indent=2)+'\n')
     print(json.dumps(report, indent=2))
 
 
 if __name__ == '__main__':
-    if '--archive' in sys.argv:
-        archive()
     verify()

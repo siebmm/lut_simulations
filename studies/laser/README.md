@@ -1,30 +1,30 @@
-# Scientific analysis and compact evidence
+# Inputs and helpers for the paper replays
 
-The original study names and relative layout are retained so frozen protocols
-and cross-study imports remain traceable. The canonical acquisitions are stored
-once at the repository's `data/`; all native tools share `saft/src/`.
+This directory contains only the inputs and Python helpers used by the
+repository's main-result replay, paper-figure replay and independent weld
+physics check. Use the public commands in `tools/`; new models and parameter
+studies use `tools/analyze.py`.
 
-| Folder under `paper/` | Role in the standalone paper |
+`replay_inputs.json` is the dependency index. It lists the required helper
+modules and maps each logical data path to one canonical file or a member of
+`paper/evidence.zip`. Hashes verify that shared inputs preserve the exact
+scientific bytes. The replay workspace reconstructs the historical relative
+paths without retaining duplicate copies in Git.
+
+| Retained content | Purpose |
 |---|---|
-| `filter_study_20261101` | Exact FIR/IIR/analytic filter definitions, native parity, full-weld selected result and controls |
-| `equal_receiver_study_20261101` | Matched partial-weld baseline comparisons |
-| `partial_improvement_20261102` | 324-path atlas, settings/admission tests, finer/wider/mute checks and final weighted partial result |
-| `partial_acquisition_20261101` | Source/receiver acquisition comparisons |
-| `gate_ablation_20261101` | Physical admission-gate controls |
-| `partial_geometry_paths_20261030` | Finite-wall/corner path hypotheses and independent geometry checks |
-| `comsol_chapter_20261101` | Portable data for 384 image configurations, figure generators and independent array-to-metric verification |
-| `explanatory_saft_20261101`, `combined_explanatory_saft_20261101` | Coupling, coverage, source requirements and path illustrations |
-| Other retained study folders | Earlier baseline, geometry and feasibility dependencies used by these analyses |
+| `paper/comsol_chapter_20261101/` | Reference arrays for all 384 baseline configurations, calibration exports, figure generators and array-to-metric checks |
+| `paper/explanatory_saft_20261101/`, `paper/combined_explanatory_saft_20261101/` | Coupling, coverage, source-count and path diagrams |
+| `paper/filter_study_20261101/study.py` | Exact published filtering, native execution and scoring helpers |
+| `paper/partial_improvement_20261102/` | Reconstruction, comparison and plotting of the final partial-weld figures |
+| `src/` | Repository discovery and independent filtering, boundary-response and ray/focusing checks |
+| Remaining indexed data | Canonical inputs not already available elsewhere or in the supplement |
 
-`results/` contains the frozen scientific summaries, settings and protocols.
-It omits reproducible per-grid intermediate arrays and repeated image CSVs.
-`paper/*/data/` retains compact arrays used by the figure generators, including
-the calibration exports. `src/` contains shared numerical/reference helpers.
-The full electronic supplement is also supplied as `paper/evidence.zip`
-at repository root, preserving the paths named in the standalone paper.
+The historical directory names identify the source studies; no additional
+manuscripts live here. The sole paper is `../../paper/paper.pdf`. All 20,412
+acquisition/path comparison rows, including unsuccessful outcomes, remain in
+`../../paper/evidence.zip`.
 
-Run analyses through `tools/run_study.py` or the main/figure replay tools.
-The sole manuscript and its PDF live in the root `paper/`. This study tree keeps
-historical directory names for computational dependencies; it contains analysis
-code and evidence, not additional manuscripts. Historical manuscript assembly
-and desktop packaging are outside this subset.
+`tools/verify_repository.py` rejects unindexed study files and byte-identical
+copies. Runtime results, logs and temporary workspace copies belong under
+`output/` or `build/`, both excluded from Git.
