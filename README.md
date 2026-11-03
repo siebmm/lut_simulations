@@ -1,4 +1,4 @@
-# 2D elastic-wave analysis and laser-weld reproductions
+# Laser Ultrasonic NDT COMSOL Models Analysed with SAFT
 
 Standalone scientific inputs and analysis for the full weld and the 9 mm
 partial J-bevel weld: original COMSOL models, verified receiver histories,
