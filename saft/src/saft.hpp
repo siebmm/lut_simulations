@@ -25,14 +25,21 @@ struct Point {
 struct Material {
   double cl = 0, cs = 0, cr = 0, h = 0, width = 0, pulse = 0, active = .06;
   int receiverCount = Receivers;
+  int sourceCount = 5, groupCount = 3;
+  double dt = Dt, xMin = -.06, xMax = .06, zMin = 0, zMax = .0254;
+  bool general = false;
+  QStringList signals = {"lof", "reference", "difference"};
 };
 struct Receiver {
   int id = 0, group = 0, groupIndex = 0;
   double x = 0, z = 0;
+  Point normal{0, 1};
+  QString label;
 };
 struct Source {
   QString id, name;
   double x = 0, t0 = 0, z = 0;
+  Point normal{0, 1};
 };
 struct Path {
   QString id, before, after, name;
@@ -44,11 +51,11 @@ struct Config {
           combination = "rms", policy = "minimum", processing = "weighted",
           repairs = "case", screening = "off";
   QStringList cases = {"lof"};
-  std::vector<int> sources = {0, 1, 2, 3, 4}, receivers;
+  std::vector<int> sources, receivers;
   // Missing source key inherits the shared list; an explicit empty list
   // admits no receivers for that source. Always intersect with shared IDs.
   std::map<int, std::vector<int>> sourceReceivers;
-  std::array<bool, 3> groups = {true, true, true};
+  std::vector<bool> groups;
   std::array<bool, 6> mutes = {false, false, false, false, false, false};
   std::array<bool, 4> reflectedScreen{}; // LL, LS/SL, SS, repeated SSSS
   double low = .5, high = 5, x0 = -15, x1 = 15, z0 = .25, z1 = 25.25,
@@ -58,10 +65,10 @@ struct Config {
   double fraction = .25, minimumEffective = 8;
   bool clean = false, coherence = false, freeze = false;
   Point anchor{2.5, 20};
-  explicit Config(int receiverCount = Receivers);
+  explicit Config(int receiverCount = Receivers, int sourceCount = 5, int groupCount = 3);
   void validate(const Material &) const;
   QJsonObject json() const;
-  static Config fromJson(QJsonObject, int receiverCount = Receivers);
+  static Config fromJson(QJsonObject, int receiverCount = Receivers, int sourceCount = 5, int groupCount = 3);
   Vec xs() const;
   Vec zs() const;
 };
@@ -70,6 +77,7 @@ struct Ray {
   Complex wall = 1;
   std::vector<Point> points;
   bool valid = true;
+  Point departure, arrival;
 };
 struct Reflection {
   std::array<Complex, 2> amplitudes, surface;
@@ -77,7 +85,7 @@ struct Reflection {
 Reflection reflect(double angle, char mode, const Material &);
 Ray ray(Point a, Point b, const QString &modes, const Material &,
         bool outgoing = false, bool points = false, double top = 0);
-CVec kernel(double low, double high);
+CVec kernel(double low, double high, double dt = Dt, int half = Half);
 void fft(CVec &, bool inverse = false);
 void parallel(int count, int threads, const std::function<void(int)> &,
               std::atomic_bool *cancel = nullptr);
@@ -111,14 +119,18 @@ struct PulseWindow {
 };
 struct Screening {
   QString basis;
-  std::array<std::array<std::vector<PulseWindow>, Receivers>, 5> windows;
+  std::vector<std::vector<std::vector<PulseWindow>>> windows;
+  explicit Screening(int sources = 5, int receivers = Receivers)
+      : windows(sources, std::vector<std::vector<PulseWindow>>(receivers)) {}
   bool rejects(double time, int source, int receiver) const;
   QJsonObject json() const;
 };
 PulseWindow measurePulse(const CVec &, int receiver, int family,
-                         double predicted, double reach, const Config &);
+                         double predicted, double reach, const Config &,
+                         int samples = Samples, double dt = Dt, double start = 0);
 QJsonObject screeningSelfCheck();
 struct Result {
+  int sourceCount = 5;
   Config config;
   Vec x, z;
   std::vector<Point> points;
@@ -145,7 +157,7 @@ struct Inspection {
   std::array<Vec, 7> arrivals;
   std::vector<int> orderedIds;
   std::vector<Point> path, competingPath;
-  std::array<Support, 5> support;
+  std::vector<Support> support;
   std::shared_ptr<Screening> screening;
   double seconds = 0;
 };
@@ -160,8 +172,30 @@ public:
   QString root, data, cache, fingerprint, datasetName = "Full weld",
                                           datasetKind = "full", manifestHash;
   bool bundled = false;
+  bool general = false, isotropic = false;
+  int samples = Samples, filterHalf = Half;
+  double dt = Dt, startTime = 0;
+  QStringList groupNames = GroupNames, signalCases = {"lof", "reference"};
+  QString primaryCase = "lof", referenceCase = "reference";
+  struct Boundary { QString id; Point a, b, normal; };
+  std::vector<std::vector<Point>> polygons;
+  std::vector<Boundary> boundaries;
+  QString backwallBoundary, surfaceBoundary;
+  QJsonObject description, acquisition;
+  struct Recording { QString file; int source; QString signal, component; };
+  std::vector<Recording> recordings;
   std::vector<Point> surfaceProfile;
   int receiverCount() const { return int(receivers.size()); }
+  int sourceCount() const { return int(sources.size()); }
+  Config config(QJsonObject) const;
+  void loadGeneral(const QJsonObject &);
+  std::shared_ptr<Vec> rawGeneral(int, const QString &, const QString &);
+  bool containsPolygon(Point) const;
+  bool visibleInPolygon(Point, Point) const;
+  Ray polygonRay(Point, Point, const QString &, const QString &, bool) const;
+  double sourceAngle(const Ray &, int) const;
+  double receiverAngle(const Ray &, int) const;
+  Complex receiverResponse(const Ray &, int, const Config &, const Curves &, char) const;
   bool containsSteel(Point) const;
   bool visibleInSteel(Point, Point) const;
   Ray trace(Point, Point, const QString &, bool outgoing = false,
@@ -175,7 +209,7 @@ public:
   QJsonObject audit, arrivalAudit, geometry;
   Material material;
   std::vector<Receiver> receivers;
-  std::array<Source, 5> sources;
+  std::vector<Source> sources;
   std::vector<Path> paths;
   std::array<Point, 2> truth;
   std::map<QString, QString> inputHashes;
@@ -191,7 +225,7 @@ public:
   std::shared_ptr<Vec> raw(int si, QString signal, QString component);
   std::shared_ptr<CVec> filtered(int si, QString signal, const Config &);
   std::shared_ptr<Curves> curves(const Config &);
-  std::array<Support, 5> support(const Config &, Point, QString signal);
+  std::vector<Support> support(const Config &, Point, QString signal);
   double keep(double time, int source, int receiver, const Config &,
               const Screening * = nullptr) const;
   std::shared_ptr<Screening> screeningFor(const Config &, QString signal);
@@ -210,8 +244,8 @@ public:
                          bool knownInitialRest = false);
   int signalHalfSamples() const { return signalHalf; }
   bool signalSampleSupported(int j) const {
-    return j >= 0 && j + 1 < Samples &&
-           (initialRest || j - signalHalf >= 0) && j + 1 + signalHalf < Samples;
+    return j >= 0 && j + 1 < samples &&
+           (initialRest || j - signalHalf >= 0) && j + 1 + signalHalf < samples;
   }
 
 private:
@@ -223,13 +257,13 @@ private:
   std::map<QString, std::shared_ptr<Curves>> curveCache;
   std::map<QString, std::shared_ptr<Screening>> screeningCache;
   std::map<QString, std::vector<std::pair<double, double>>> repairRanges;
-  std::array<std::array<std::array<double, 6>, Receivers>, 5> nuisance;
-  std::array<std::array<double, Receivers>, 5> nuisanceSL{};
-  std::array<std::array<Vec, Receivers>, 5> nuisanceSSSS;
+  std::vector<std::vector<std::array<double, 6>>> nuisance;
+  std::vector<Vec> nuisanceSL;
+  std::vector<std::vector<Vec>> nuisanceSSSS;
   struct Geometry {
     QString key;
     std::vector<Ray> receiving;
-    std::array<std::vector<Ray>, 5> incoming;
+    std::vector<std::vector<Ray>> incoming;
   } geo;
   void prepareGeometry(const Config &, const std::vector<Point> &);
   bool supportClean(double time, int si, QString signal, int group,

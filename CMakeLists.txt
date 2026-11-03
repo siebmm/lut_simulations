@@ -7,7 +7,8 @@ find_package(Qt6 REQUIRED COMPONENTS Core)
 
 set(NATIVE saft/src)
 set(COMMON ${NATIVE}/saft.cpp ${NATIVE}/screening.cpp
-    ${NATIVE}/dataset_geometry.cpp ${NATIVE}/groove_paths.cpp)
+    ${NATIVE}/dataset_geometry.cpp ${NATIVE}/groove_paths.cpp
+    ${NATIVE}/acquisition.cpp ${NATIVE}/polygon_geometry.cpp)
 add_executable(SAFTFilterStudy saft/cli/filter_cli.cpp ${COMMON})
 add_executable(SAFTReview saft/cli/review_cli.cpp ${COMMON})
 add_executable(SAFTAdmissionAudit saft/cli/admission_cli.cpp ${COMMON})

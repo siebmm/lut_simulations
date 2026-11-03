@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "dataset",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": 2
+    },
+    "kind": {
+      "const": "SAFT acquisition dataset"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "geometry": {
+      "type": "string",
+      "minLength": 1
+    },
+    "acquisition": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema",
+    "kind",
+    "name",
+    "geometry",
+    "acquisition"
+  ],
+  "additionalProperties": false
+}

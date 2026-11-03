@@ -169,7 +169,9 @@ QJsonObject Engine::grooveCatalogue() const {
   for (const auto &p:paths) ps.append(QJsonObject{{"id",p.id},{"name",p.name},
       {"before",p.before},{"after",p.after},{"before_via",p.beforeVia},
       {"after_via",p.afterVia},{"family",p.family}});
+  if (general) for(const auto &b:boundaries)
+    fs.append(QJsonObject{{"id",b.id},{"points_m",QJsonArray{QJsonArray{b.a.x,b.a.z},QJsonArray{b.b.x,b.b.z}}}});
   return {{"features",fs},{"paths",ps},
-      {"scope","Experimental same-mode L/S paths: one exposed bevel reflection or one fixed groove-corner timing encounter; optional backwall before or after it. Corner diffraction amplitude/phase is not modelled."}};
+      {"scope",general ? "Direct L/S branches and explicitly ordered finite-boundary reflections, including mode conversion. No corner diffraction." : "Experimental same-mode L/S paths: one exposed bevel reflection or one fixed groove-corner timing encounter; optional backwall before or after it. Corner diffraction amplitude/phase is not modelled."}};
 }
 } // namespace saft

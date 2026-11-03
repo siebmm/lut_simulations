@@ -16,7 +16,7 @@ def sha(path):
         return hashlib.file_digest(stream, 'sha256').hexdigest()
 
 def files():
-    for base in ['data','models','paper','saft','studies','tools','verification']:
+    for base in ['data','models','paper','saft','studies','tools','tests','verification']:
         for p in (ROOT/base).rglob('*'):
             if p.is_file() and not {'build','__pycache__'} & set(p.relative_to(ROOT).parts) and p != MANIFEST:
                 yield p
@@ -55,11 +55,11 @@ def main():
             if not p.is_file() or sha(p)!=entry['sha256']: failures.append(str(p))
         for entry in d['model_evidence']:
             if entry['sha256'] not in model_hashes: failures.append('Missing model evidence: '+entry['path'])
-    for p in list((ROOT/'studies').rglob('*.py'))+list((ROOT/'tools').glob('*.py')):
+    for p in list((ROOT/'studies').rglob('*.py'))+list((ROOT/'tools').glob('*.py'))+list((ROOT/'tests').glob('*.py')):
         ast.parse(p.read_text(encoding='utf-8-sig'), filename=str(p))
     graphics = set()
     cites = set()
-    for name in ['chapter_comsol.tex','appendix_saft_details.tex']:
+    for name in ['paper.tex']:
         text = (ROOT/'paper'/name).read_text(encoding='utf-8-sig')
         graphics.update(re.findall(r'\\includegraphics(?:\[[^]]*\])?\{([^}]+)\}', text))
         cites.update(k.strip() for group in re.findall(r'\\cite\w*\{([^}]+)\}',text) for k in group.split(','))
@@ -68,6 +68,23 @@ def main():
     bib = '\n'.join(p.read_text(encoding='utf-8-sig') for p in (ROOT/'paper').glob('*.bib'))
     missing_cites = sorted(cites-set(re.findall(r'@\w+\s*\{\s*([^,]+)',bib)))
     failures.extend('Missing citation: '+key for key in missing_cites)
+    labels = set(re.findall(r'\\label\{([^}]+)\}', text))
+    refs = set(re.findall(r'\\(?:ref|eqref|pageref)\{([^}]+)\}', text))
+    failures.extend('Missing cross-reference: '+key for key in sorted(refs-labels))
+    for extension, expected in [('tex', 'paper.tex'), ('pdf', 'paper.pdf'), ('bib', 'references.bib')]:
+        if {p.name for p in (ROOT/'paper').glob('*.'+extension)} != {expected}:
+            failures.append('paper/ must contain only the standalone manuscript, PDF and bibliography')
+    actual_figures = {p.relative_to(ROOT/'paper').as_posix() for p in (ROOT/'paper/figures').rglob('*') if p.is_file()}
+    if actual_figures != graphics:
+        failures.append('Paper figure assets must match the manuscript exactly')
+    paper_build = json.loads((ROOT/'verification/paper.json').read_text())
+    expected_inputs = {'paper/paper.tex', 'paper/references.bib'} | {'paper/'+p for p in graphics}
+    if paper_build['status'] != 'passed' or set(paper_build['input_sha256']) != expected_inputs:
+        failures.append('Paper build receipt does not cover all manuscript inputs')
+    for name, digest in paper_build['input_sha256'].items():
+        if sha(ROOT/name) != digest: failures.append('Paper changed since PDF build: '+name)
+    if sha(ROOT/'paper/paper.pdf') != paper_build['pdf_sha256']:
+        failures.append('Paper PDF does not match its build receipt')
     with zipfile.ZipFile(ROOT/'paper/evidence.zip') as z:
         assert z.testzip() is None
         with z.open('evidence/review/review/atlas_metrics.csv') as stream:
@@ -87,7 +104,7 @@ def main():
     report = {'status':'passed','models':len(models),'recordings':recordings,
               'figure_assets':len(graphics),'atlas_rows':rows,'snapshot_files':len(manifest['files']),
               'snapshot_bytes':sum(e['bytes'] for e in manifest['files']),
-              'missing_parent_bibliography_keys':missing_cites}
+              'paper_pages':paper_build['pages'], 'missing_bibliography_keys':missing_cites}
     (ROOT/'output').mkdir(exist_ok=True)
     (ROOT/'output/integrity_check.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report,indent=2))

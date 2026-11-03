@@ -10,7 +10,7 @@ CMakeUserPresets.json
 *.mph.recovery/
 *.class
 
-# LaTeX build products (the supplied appendix PDF is retained)
+# LaTeX build products (the standalone paper PDF is retained)
 *.aux
 *.log
 *.bbl

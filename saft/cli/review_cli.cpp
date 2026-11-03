@@ -13,7 +13,7 @@ int main(int argc,char **argv) {
   Engine engine(argv[1],argv[2]);const auto request=readJson(argv[3]);const QString out=argv[4];QDir().mkpath(out);
   writeJson(out+"/catalogue.json",engine.grooveCatalogue());
   for(auto item:request["requests"].toArray()) {
-   const auto job=item.toObject();auto c=Config::fromJson(job["selection"].toObject(),engine.receiverCount());
+   const auto job=item.toObject();auto c=engine.config(job["selection"].toObject());
    auto r=engine.reconstruct(c);const QString folder=out+"/"+job["id"].toString();QDir().mkpath(folder);
    binary(folder+"/points.f64",r->points);binary(folder+"/x.f64",r->x);binary(folder+"/z.f64",r->z);
    for(const auto &[signal,planes]:r->planes) for(int variant=2;variant<=2;++variant) {

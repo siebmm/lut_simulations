@@ -897,24 +897,6 @@
       }
     ]
   },
-  "paper": {
-    "pages": 83,
-    "unresolved_marker_pages": [],
-    "out_of_page_text": [],
-    "rendered_sample_pages": [
-      1,
-      4,
-      11,
-      16,
-      17,
-      27,
-      41,
-      59,
-      66,
-      82,
-      83
-    ]
-  },
   "native_build": {
     "status": "passed",
     "tools": [

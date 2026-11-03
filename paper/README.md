@@ -1,72 +1,40 @@
-# Final chapter and SAFT appendix
+# Laser-ultrasonic imaging of full and partial welds
 
-- `chapter_comsol.tex`: the user's final COMSOL report chapter, unchanged.
-- `appendix_saft_details.tex`: the detailed SAFT appendix, unchanged.
-- `appendix_preview.pdf`: the existing compiled 67-page appendix.
-- `appendix_preview.tex`: the standalone appendix wrapper.
-- `standalone.tex`: a complete local driver for the final chapter and appendix.
-- `standalone.pdf`: the compiled 83-page chapter and appendix, with all citations resolved.
-- `figures/`: all figures referenced by the chapter and appendix.
-- `chapter_references.bib` and `appendix_references.bib`: cited bibliography
-  entries available in the original document packages. The chapter file restores
-  the original `levesque` key from its documented `levesque-2016` remapping.
+**[Read the complete paper (PDF)](paper.pdf).**
 
-## Integrate into the report
+This is the repository's only manuscript. It contains the full detailed methods,
+source calibration, SAFT definitions, results, negative comparisons, path and
+source-subset registers, and reproduction instructions. It is a self-contained
+article with an abstract, numbered sections, conclusions and its own references.
 
-Copy the two chapter sources into the directory containing your report's
-`main.tex` and merge `figures/` into its figures directory. Include the chapter
-in the main text and the detailed appendix after `\appendix`:
+- `paper.tex`: complete editable LaTeX source.
+- `paper.pdf`: rendered paper, ready to read.
+- `references.bib`: the three cited bibliography entries.
+- `figures/`: exactly the 27 figures cited by the paper.
+- `evidence.zip`: numerical supplement, including all 20,412 acquisition/path
+  rows and the settings, controls and negative outcomes described in the paper.
 
-```latex
-\input{chapter_comsol}
-% ... remaining report chapters ...
-\appendix % once, before the first appendix
-\begin{spacing}{1.25}
-\input{appendix_saft_details}
-\end{spacing}
-```
+## Build the PDF
 
-Place this appendix first to match the chapter's Appendix A references. Merge
-only missing bibliography keys into the report's existing bibliography.
-The report supplies its document class, packages, main bibliography, and any
-other chapters/appendices referenced by these sources. The existing worked
-SAFT example is a separate report appendix.
-
-All cited bibliography entries are included. The five entries absent from the
-initial companion repository were copied from the user's supplied `bibfile.bib`;
-their provenance is recorded in `../verification/bibliography_import.json`.
-`chapter_references.bib` and `appendix_references.bib` have disjoint keys and
-can be used together, as in `standalone.tex`.
-
-## Compile the appendix alone
-
-From this directory, with a suitable TeX installation:
+Install Tectonic, then run from the repository root:
 
 ```sh
-tectonic appendix_preview.tex
-# or
-latexmk -xelatex appendix_preview.tex
+python tools/build_paper.py
 ```
 
-The source wrapper contains the required packages. Its existing PDF is retained
-without changes; the final chapter is an inclusion source, not a standalone
-document.
+Use `--tectonic PATH` if the executable is not on `PATH`. Tectonic downloads its
+standard TeX resources on first use. The build needs no COMSOL, native SAFT tools,
+or Python scientific packages. It writes the finished PDF here, intermediate
+files to `build/paper/`, and a source/PDF hash receipt to `verification/paper.json`.
+Missing references and overfull text boxes fail the build. After an intentional
+edit and rebuild, update the repository snapshot with
+`python tools/verify_repository.py --write-manifest`.
 
-For the chapter and appendix together, run `tectonic standalone.tex` or
-`latexmk -xelatex standalone.tex` from this folder. The final manuscript text
-is preserved, including its literal `XX` pointer to the user's separately
-written worked-example appendix; that editorial pointer is not a build input.
+## Reproduce the evidence
 
-## Supporting research
-
-`evidence.zip` is the complete electronic supplement described in the appendix.
-Extract it here to obtain the named `evidence/` hierarchy, including all 20,412
-partial-weld atlas rows, failed/negative outcomes, source subsets and settings.
-The archive is compressed to avoid hundreds of repeated settings records in
-the working tree.
-
-Both raw SAFT acquisitions are included in `../data/`; scientific scripts,
-compact figure arrays and frozen comparison records are under
-`../studies/laser/`. From the repository root, `python tools/reproduce_main.py`
-checks the main results and `python tools/reproduce_figures.py` regenerates the
-artwork in `output/workspace/` without overwriting these final PDFs or sources.
+The model inputs are in `../models/`, velocity histories in `../data/`, and
+scientific analysis and figure generators in `../studies/laser/`. From the
+repository root, `python tools/reproduce_main.py` checks the main numerical
+results and `python tools/reproduce_figures.py` regenerates the artwork under
+`output/workspace/`. These workflows preserve the supplied manuscript assets.
+Extract `evidence.zip` here to obtain the `evidence/` paths cited in the paper.

@@ -94,15 +94,19 @@ void parallel(int count, int threads, const std::function<void(int)> &fn,
   if (cancel && cancel->load())
     throw Cancelled();
 }
-Config::Config(int count) {
+Config::Config(int count, int sourceCount, int groupCount) {
+  sources.resize(sourceCount);
+  std::iota(sources.begin(), sources.end(), 0);
+  groups.assign(groupCount, true);
   receivers.resize(count);
   std::iota(receivers.begin(), receivers.end(), 0);
 }
 static Vec axis(double a, double b, double step) {
   Vec v;
-  int n = int(std::floor((b - a) / step + 1e-6)) + 1;
-  if (n < 1 || n > 2000000)
+  double count = std::floor((b - a) / step + 1e-6) + 1;
+  if (!std::isfinite(count) || count < 1 || count > 2000000)
     return v;
+  int n = int(count);
   for (int i = 0; i < n; ++i)
     v.push_back(a + i * step);
   return v;
@@ -114,28 +118,29 @@ void Config::validate(const Material &m) const {
        {low, high, x0, x1, z0, z1, spacing, gate, wall, offset, muteWidth,
         cfPower, fraction, minimumEffective, screenTailDb, screenMargin})
     require(std::isfinite(v), "Numeric settings must be finite");
-  require(low > 0 && high > low && high < 50,
-          "Use 0 < low frequency < high frequency < 50 MHz");
-  require(x0 >= -m.active * 1000 && x1 <= m.active * 1000 && x1 > x0 &&
-              z0 > 0 && z1 < m.h * 1000 && z1 > z0,
+  require(low > 0 && high > low && high < .5e-6 / m.dt,
+          "Use 0 < low frequency < high frequency < the sampling Nyquist frequency");
+  require(m.general ? (x1 > x0 && z1 > z0 && x0 >= m.xMin*1000-1e-9 && x1 <= m.xMax*1000+1e-9 && z0 >= m.zMin*1000-1e-9 && z1 <= m.zMax*1000+1e-9) : (x0 >= -m.active * 1000 && x1 <= m.active * 1000 && x1 > x0 &&
+              z0 > 0 && z1 < m.h * 1000 && z1 > z0),
           "Image bounds must lie inside the active plate and have increasing "
           "limits");
-  require(spacing >= .01 && spacing <= 5, "Pixel spacing must be 0.01 to 5 mm");
+  require(spacing > 0 && (m.general || (spacing >= .01 && spacing <= 5)), "Pixel spacing must be positive (legacy weld grids: 0.01 to 5 mm)");
   require(!xs().empty() && !zs().empty() && xs().size() * zs().size() <= 250000,
           "Grid exceeds 250,000 pixels; increase spacing or reduce extent");
-  require(!sources.empty() && sources.size() <= 5,
+  require(!sources.empty() && sources.size() <= size_t(m.sourceCount),
           "Select at least one source");
   std::set<int> ss(sources.begin(), sources.end());
-  require(ss.size() == sources.size() && *ss.begin() >= 0 && *ss.rbegin() < 5,
+  require(ss.size() == sources.size() && *ss.begin() >= 0 && *ss.rbegin() < m.sourceCount,
           "Invalid or duplicate source ID");
   require(!receivers.empty() &&
+              std::set<int>(receivers.begin(),receivers.end()).size() == receivers.size() &&
               std::all_of(receivers.begin(), receivers.end(),
                           [&](int i) { return i >= 0 && i < m.receiverCount; }),
           QString("Receiver IDs must be R0 to R%1").arg(m.receiverCount - 1));
   require(std::any_of(groups.begin(), groups.end(), [](bool b) { return b; }),
           "Select at least one receiver group");
   for (const auto &[source, ids] : sourceReceivers) {
-    require(source >= 0 && source < 5, "Invalid per-source receiver key");
+    require(source >= 0 && source < m.sourceCount, "Invalid per-source receiver key");
     require(
         std::set<int>(ids.begin(), ids.end()).size() == ids.size() &&
             std::all_of(ids.begin(), ids.end(),
@@ -145,7 +150,7 @@ void Config::validate(const Material &m) const {
   require(gate >= 0 && gate <= 1 && wall >= 0 && wall <= 1 && offset >= 0 &&
               offset <= 120,
           "Invalid response gate or source exclusion");
-  require(minimumSources >= 1 && minimumSources <= 5 && minimumReceivers >= 1 &&
+  require(minimumSources >= 1 && minimumSources <= m.sourceCount && minimumReceivers >= 1 &&
               minimumReceivers <= m.receiverCount && minimumEffective >= 0 &&
               minimumEffective <= m.receiverCount && fraction >= 0 &&
               fraction <= 1,
@@ -157,7 +162,7 @@ void Config::validate(const Material &m) const {
               screenMargin <= 3,
           "Invalid pulse-screen tail threshold or timing margin");
   require(
-      QStringList{"vy", "vx"}.contains(component) &&
+      (m.general ? QStringList{"vz", "vx"} : QStringList{"vy", "vx"}).contains(component) &&
           QStringList{"all", "left", "right", "even", "odd"}.contains(
               aperture) &&
           QStringList{"rms", "coherent"}.contains(combination) &&
@@ -169,12 +174,11 @@ void Config::validate(const Material &m) const {
       "Unknown reconstruction option");
   require(!cases.empty(), "Choose an image signal");
   for (const auto &c : cases)
-    require(QStringList{"lof", "reference", "difference"}.contains(c),
+    require(m.signals.contains(c),
             "Unknown image signal");
   if (freeze)
     require(std::isfinite(anchor.x) && std::isfinite(anchor.z) &&
-                std::abs(anchor.x) <= m.active * 1000 && anchor.z > 0 &&
-                anchor.z < m.h * 1000,
+                (m.general ? (anchor.x >= m.xMin*1000 && anchor.x <= m.xMax*1000 && anchor.z >= m.zMin*1000 && anchor.z <= m.zMax*1000) : (std::abs(anchor.x) <= m.active * 1000 && anchor.z > 0 && anchor.z < m.h * 1000)),
             "Set an inspection point inside the plate before freezing its "
             "aperture");
 }
@@ -242,8 +246,8 @@ QJsonObject Config::json() const {
   o["cases"] = QJsonArray::fromStringList(cases);
   return o;
 }
-Config Config::fromJson(QJsonObject o, int receiverCount) {
-  Config c(receiverCount);
+Config Config::fromJson(QJsonObject o, int receiverCount, int sourceCount, int groupCount) {
+  Config c(receiverCount, sourceCount, groupCount);
   for (auto p : std::initializer_list<std::pair<QString, QString *>>{
            {"path", &c.path},
            {"component", &c.component},
@@ -290,7 +294,7 @@ Config Config::fromJson(QJsonObject o, int receiverCount) {
     for (auto it = values.begin(); it != values.end(); ++it) {
       bool ok = false;
       int s = it.key().toInt(&ok);
-      require(ok && s >= 0 && s < 5 && it.value().isArray(),
+      require(ok && s >= 0 && s < sourceCount && it.value().isArray(),
               "Invalid per-source receiver entry");
       auto &ids = c.sourceReceivers[s];
       for (auto id : it.value().toArray()) {
@@ -316,8 +320,8 @@ Config Config::fromJson(QJsonObject o, int receiverCount) {
     }
   if (o.contains("groups")) {
     auto a = o["groups"].toArray();
-    require(a.size() == 3, "Expected three receiver groups");
-    for (int i = 0; i < 3; ++i)
+    require(a.size() == groupCount, "Receiver group selection has the wrong length");
+    for (int i = 0; i < groupCount; ++i)
       c.groups[i] = a[i].toBool();
   }
   if (o.contains("mutes")) {
@@ -486,18 +490,18 @@ void fft(CVec &a, bool inverse) {
     for (auto &z : a)
       z /= n;
 }
-CVec kernel(double low, double high) {
-  CVec h(2 * Half + 1);
+CVec kernel(double low, double high, double dt, int half) {
+  CVec h(2 * half + 1);
   double width = (high - low) * 1e6, centre = (high + low) * .5e6,
          beta = .1102 * (55 - 8.7), normal = 0;
-  for (int n = -Half; n <= Half; ++n) {
-    double t = width * n * Dt, sinc = n ? std::sin(Pi * t) / (Pi * t) : 1,
+  for (int n = -half; n <= half; ++n) {
+    double t = width * n * dt, sinc = n ? std::sin(Pi * t) / (Pi * t) : 1,
            window = std::cyl_bessel_i(
                         0, beta * std::sqrt(std::max(
-                                      0., 1 - std::pow(double(n) / Half, 2)))) /
+                                      0., 1 - std::pow(double(n) / half, 2)))) /
                     std::cyl_bessel_i(0, beta);
-    double value = 2 * width * Dt * sinc * window;
-    h[n + Half] = value * std::polar(1., 2 * Pi * centre * n * Dt);
+    double value = 2 * width * dt * sinc * window;
+    h[n + half] = value * std::polar(1., 2 * Pi * centre * n * dt);
     normal += value;
   }
   for (auto &z : h)
@@ -512,7 +516,10 @@ Engine::Engine(QString directory, QString dataset)
           "Choose an external SAFT dataset folder containing dataset.json");
   {
     data = QDir(dataset).absolutePath();
-    const auto description = readJson(data + "/dataset.json");
+    description = readJson(data + "/dataset.json");
+    if (description["schema"].toInt() == 2) {
+      loadGeneral(description);
+    } else {
     require(description["schema"].toInt() == 1 &&
                 description["kind"] == "SAFT acquisition dataset",
             "Choose a SAFT dataset folder containing dataset.json");
@@ -539,6 +546,7 @@ Engine::Engine(QString directory, QString dataset)
                 std::is_sorted(surfaceProfile.begin(), surfaceProfile.end(),
                                [](Point a, Point b) { return a.x < b.x; }),
             "Invalid surface profile");
+    }
   }
   fingerprint = audit["input_fingerprint"].toString();
   if (bundled)
@@ -567,8 +575,10 @@ Engine::Engine(QString directory, QString dataset)
               .075 - sp["absorber_width_m"].toDouble()};
   require(material.cl > material.cs && material.cs > 0 && material.h > 0,
           "Invalid saved material");
+  if (!general) {
   auto ss = audit["sources"].toArray();
-  require(ss.size() == 5, "Expected five source positions");
+  require(ss.size() == 5, "Expected five source positions in legacy schema 1");
+  sources.resize(ss.size());
   for (int i = 0; i < 5; ++i) {
     auto o = ss[i].toObject();
     sources[i] = {o["id"].toString(), o["id"].toString().replace('_', ' '),
@@ -580,7 +590,7 @@ Engine::Engine(QString directory, QString dataset)
     receivers.push_back({o["receiver_id"].toString().mid(1).toInt(),
                          int(GroupNames.indexOf(o["group"].toString())),
                          o["group_index"].toInt(), o["x_m"].toDouble(),
-                         material.h - o["y_m"].toDouble()});
+                         material.h - o["y_m"].toDouble(), {0,1}, o["receiver_id"].toString()});
   }
   std::sort(receivers.begin(), receivers.end(),
             [](auto a, auto b) { return a.id < b.id; });
@@ -597,7 +607,20 @@ Engine::Engine(QString directory, QString dataset)
   if (!bundled)
     geometry = readJson(data + "/metadata/setup_manifest.json")["polygons_xy_m"]
                    .toObject();
-  for (auto rec : audit["records"].toArray()) {
+  }
+  material.receiverCount = receiverCount();
+  if (general) {
+    auto bounds=geometry["bounds_m"].toArray();
+    material.xMin=bounds[0].toDouble(); material.xMax=bounds[1].toDouble();
+    material.zMin=bounds[2].toDouble(); material.zMax=bounds[3].toDouble();
+  }
+  material.sourceCount = sourceCount();
+  material.groupCount = groupNames.size();
+  material.dt = dt;
+  material.general = general;
+  material.signals = signalCases;
+  if (!primaryCase.isEmpty() && !referenceCase.isEmpty()) material.signals.append("difference");
+  if (!general) for (auto rec : audit["records"].toArray()) {
     auto o = rec.toObject();
     for (auto group : o["groups"].toArray()) {
       auto g = group.toObject();
@@ -605,11 +628,11 @@ Engine::Engine(QString directory, QString dataset)
           repairRanges[o["source"].toString() + "/" + o["case"].toString() +
                        "/" + g["group"].toString()];
       for (auto gap : g["repair_intervals"].toArray())
-        ranges.emplace_back(gap.toObject()["start_us"].toDouble() * 1e-6 - Dt,
-                            gap.toObject()["end_us"].toDouble() * 1e-6 + Dt);
+        ranges.emplace_back(gap.toObject()["start_us"].toDouble() * 1e-6 - dt,
+                            gap.toObject()["end_us"].toDouble() * 1e-6 + dt);
     }
   }
-  for (auto pair : std::vector<std::pair<int, int>>{
+  if (!general) for (auto pair : std::vector<std::pair<int, int>>{
            {1, 1}, {2, 1}, {1, 2}, {2, 2}, {1, 3}, {3, 1}, {2, 3}, {3, 2}}) {
     int n = pair.first + pair.second;
     for (int j = 0; j < (1 << n); ++j) {
@@ -624,9 +647,38 @@ Engine::Engine(QString directory, QString dataset)
     }
   }
   addGroovePaths();
-  for (int s = 0; s < 5; ++s)
+  nuisance.resize(sourceCount(), std::vector<std::array<double,6>>(receiverCount()));
+  nuisanceSL.resize(sourceCount(), Vec(receiverCount()));
+  nuisanceSSSS.resize(sourceCount(), std::vector<Vec>(receiverCount()));
+  signalHalf = filterHalf;
+  for (int s = 0; s < sourceCount(); ++s)
     for (int r = 0; r < receiverCount(); ++r) {
       double dx = std::abs(receivers[r].x - sources[s].x), t = sources[s].t0;
+      if (general) {
+        const Point a{sources[s].x, sources[s].z}, b{receivers[r].x, receivers[r].z};
+        const double missing = std::nan("");
+        nuisance[s][r].fill(missing); nuisanceSL[s][r] = missing;
+        const double distance = std::hypot(a.x-b.x,a.z-b.z);
+        if (visibleInPolygon(a,b)) {
+          nuisance[s][r][1]=(t+distance/material.cl)*1e6;
+          nuisance[s][r][2]=(t+distance/material.cs)*1e6;
+          for (const auto &edge : boundaries) {
+            auto on = [&](Point p) { return std::abs((p.x-edge.a.x)*edge.normal.x+(p.z-edge.a.z)*edge.normal.z)<1e-10 &&
+              (p.x-edge.a.x)*(p.x-edge.b.x)+(p.z-edge.a.z)*(p.z-edge.b.z)<=1e-20; };
+            if(on(a)&&on(b)) nuisance[s][r][0]=(t+distance/material.cr)*1e6;
+          }
+        }
+        if (!backwallBoundary.isEmpty()) {
+          for (const auto &entry : std::vector<std::pair<QString,int>>{{"LL",3},{"LS",4},{"SS",5}})
+            nuisance[s][r][entry.second]=(t+polygonRay(a,b,entry.first,backwallBoundary,false).time)*1e6;
+          nuisanceSL[s][r]=(t+polygonRay(a,b,"SL",backwallBoundary,false).time)*1e6;
+          if (!surfaceBoundary.isEmpty()) {
+            auto echo=polygonRay(a,b,"SSSS",backwallBoundary+"|"+surfaceBoundary+"|"+backwallBoundary,false);
+            if(echo.valid) nuisanceSSSS[s][r].push_back((t+echo.time)*1e6);
+          }
+        }
+        continue;
+      }
       auto ls = ray({sources[s].x, 0}, {receivers[r].x, 0}, "LS", material);
       nuisance[s][r] = {
           (t + dx / material.cr) * 1e6,
@@ -664,14 +716,15 @@ const Path &Engine::path(const QString &id) const {
   return *it;
 }
 std::shared_ptr<Vec> Engine::raw(int si, QString signal, QString component) {
-  require(si >= 0 && si < 5 &&
+  if (general) return rawGeneral(si, signal, component);
+  require(si >= 0 && si < sourceCount() &&
               QStringList{"lof", "reference", "difference"}.contains(signal) &&
               QStringList{"vx", "vy"}.contains(component),
           "Invalid recording request");
   QString key = sources[si].id + "/" + signal + "/" + component;
   if (rawCache.count(key))
     return rawCache[key];
-  auto result = std::make_shared<Vec>(receiverCount() * Samples);
+  auto result = std::make_shared<Vec>(receiverCount() * samples);
   if (signal == "difference") {
     auto a = raw(si, "lof", component), b = raw(si, "reference", component);
     for (size_t i = 0; i < result->size(); ++i)
@@ -679,11 +732,11 @@ std::shared_ptr<Vec> Engine::raw(int si, QString signal, QString component) {
     rawCache[key] = result;
     return result;
   }
-  for (int group = 0; group < 3; ++group) {
+  for (int group = 0; group < groupNames.size(); ++group) {
     if (cancel)
       throw Cancelled();
     QString relative = "sources/" + sources[si].id + "/" + signal +
-                       "/receivers/" + GroupNames[group] + "_" + component +
+                       "/receivers/" + groupNames[group] + "_" + component +
                        ".csv";
     require(inputHashes.count(relative),
             "Recording absent from audit: " + relative);
@@ -694,7 +747,7 @@ std::shared_ptr<Vec> Engine::raw(int si, QString signal, QString component) {
     for (auto &r : receivers)
       if (r.group == group)
         ids.push_back(r.id);
-    qsizetype bytes = qsizetype(ids.size()) * Samples * sizeof(double);
+    qsizetype bytes = qsizetype(ids.size()) * samples * sizeof(double);
     QString stem = cache + "/" + sha(relative.toUtf8());
     QByteArray binary;
     bool loaded = false;
@@ -738,8 +791,8 @@ std::shared_ptr<Vec> Engine::raw(int si, QString signal, QString component) {
         expected += ",R" + QByteArray::number(id);
       require(header == expected, "CSV receiver order changed: " + relative);
       ptr = newline + 1;
-      std::vector<double> parsed(ids.size() * Samples);
-      for (int t = 0; t < Samples; ++t) {
+      std::vector<double> parsed(ids.size() * samples);
+      for (int t = 0; t < samples; ++t) {
         for (int c = -1; c < int(ids.size()); ++c) {
           while (ptr < end &&
                  (*ptr == '\r' || *ptr == '\n' || *ptr == ' ' || *ptr == '\t'))
@@ -750,15 +803,15 @@ std::shared_ptr<Vec> Engine::raw(int si, QString signal, QString component) {
                   "Invalid CSV sample: " + relative);
           ptr = conv.ptr;
           if (c < 0)
-            require(std::abs(value - t * Dt) <= 1e-15, "CSV time grid changed");
+            require(std::abs(value - (startTime + t * dt)) <= 1e-15, "CSV time grid changed");
           else
-            parsed[size_t(c) * Samples + t] = value;
+            parsed[size_t(c) * samples + t] = value;
           if (c + 1 < int(ids.size())) {
             require(ptr < end && *ptr == ',', "CSV column count changed");
             ++ptr;
           }
         }
-        if (t + 1 < Samples)
+        if (t + 1 < samples)
           require(ptr < end && (*ptr == '\r' || *ptr == '\n'),
                   "CSV row length changed");
       }
@@ -778,9 +831,9 @@ std::shared_ptr<Vec> Engine::raw(int si, QString signal, QString component) {
       ++csvParses;
     }
     for (size_t i = 0; i < ids.size(); ++i)
-      std::memcpy(result->data() + size_t(ids[i]) * Samples,
-                  binary.constData() + i * Samples * sizeof(double),
-                  Samples * sizeof(double));
+      std::memcpy(result->data() + size_t(ids[i]) * samples,
+                  binary.constData() + i * samples * sizeof(double),
+                  samples * sizeof(double));
     ++loads[relative];
   }
   rawCache[key] = result;
@@ -802,22 +855,24 @@ std::shared_ptr<CVec> Engine::filtered(int si, QString signal,
   if (filteredCache.size() >= 20)
     filteredCache.clear();
   auto values = raw(si, signal, c.component);
-  auto h = kernel(c.low, c.high);
-  h.resize(8192);
+  auto h = kernel(c.low, c.high, dt, filterHalf);
+  int fftSize = 1;
+  while (fftSize < samples + 2*filterHalf) fftSize *= 2;
+  h.resize(fftSize);
   fft(h);
-  auto out = std::make_shared<CVec>(receiverCount() * Samples);
+  auto out = std::make_shared<CVec>(size_t(receiverCount()) * samples);
   parallel(
       receiverCount(), c.threads,
       [&](int r) {
-        CVec a(8192);
-        for (int t = 0; t < Samples; ++t)
-          a[t] = (*values)[size_t(r) * Samples + t];
+        CVec a(fftSize);
+        for (int t = 0; t < samples; ++t)
+          a[t] = (*values)[size_t(r) * samples + t];
         fft(a);
-        for (int t = 0; t < 8192; ++t)
+        for (int t = 0; t < fftSize; ++t)
           a[t] *= h[t];
         fft(a, true);
-        std::copy_n(a.begin() + Half, Samples,
-                    out->begin() + size_t(r) * Samples);
+        std::copy_n(a.begin() + filterHalf, samples,
+                    out->begin() + size_t(r) * samples);
       },
       &cancel);
   filteredCache[key] = out;
@@ -830,12 +885,21 @@ std::shared_ptr<Curves> Engine::curves(const Config &c) {
   if (curveCache.count(key))
     return curveCache[key];
   auto out = std::make_shared<Curves>();
-  auto h = kernel(c.low, c.high);
-  h.resize(16384);
+  if (isotropic) {
+    for(int mode=0;mode<2;++mode) {
+      out->launch[mode].assign(1601,1.);
+      for(int d=0;d<2;++d) { out->receive[mode][d].assign(1601,1.); out->norm[mode][d]=1.; }
+    }
+    curveCache[key]=out; return out;
+  }
+  auto h = kernel(c.low, c.high, dt, filterHalf);
+  int curveSize=16384;
+  while (curveSize < 2*filterHalf+1) curveSize*=2;
+  h.resize(curveSize);
   fft(h);
-  Vec omega(8191), response(8191);
-  for (int k = 1; k < 8192; ++k) {
-    omega[k - 1] = 2 * Pi * k / (16384 * Dt);
+  Vec omega(curveSize/2-1), response(curveSize/2-1);
+  for (int k = 1; k < curveSize/2; ++k) {
+    omega[k - 1] = 2 * Pi * k / (curveSize * dt);
     response[k - 1] = std::norm(h[k]);
   }
   double sigma = material.pulse / (2 * std::sqrt(2 * std::log(2.)));
@@ -857,10 +921,10 @@ std::shared_ptr<Curves> Engine::curves(const Config &c) {
                            traction(p, qs, 'S', material), {1., 0.});
           double integral = 0, a = p * p * material.width * material.width / 4 +
                                    sigma * sigma;
-          for (int k = 0; k < 8191; ++k)
+          for (int k = 0; k < curveSize/2-1; ++k)
             integral += omega[k] * response[k] *
                         std::exp(-omega[k] * omega[k] * a) *
-                        (k == 0 || k == 8190 ? .5 : 1);
+                        (k == 0 || k == curveSize/2-2 ? .5 : 1);
           integral *= omega[1] - omega[0];
           out->launch[mode][i] =
               std::cos(theta) * std::abs(amp[mode] * p) * std::sqrt(integral);
@@ -894,8 +958,8 @@ static double gain(double angle, const Vec &curve) {
 }
 bool Engine::supportClean(double time, int si, QString signal, int group,
                           const Config &c) const {
-  int j = int(std::floor(time / Dt));
-  double a = (j - signalHalf) * Dt, b = (j + 1 + signalHalf) * Dt;
+  int j = int(std::floor((time - startTime) / dt));
+  double a = startTime + (j - signalHalf) * dt, b = startTime + (j + 1 + signalHalf) * dt;
   if (!signalSampleSupported(j))
     return false;
   if (!c.clean)
@@ -905,7 +969,7 @@ bool Engine::supportClean(double time, int si, QString signal, int group,
                           : QStringList{signal};
   for (auto signalCase : cases) {
     auto it = repairRanges.find(sources[si].id + "/" + signalCase + "/" +
-                                GroupNames[group]);
+                                groupNames[group]);
     if (it != repairRanges.end())
       for (auto gap : it->second)
         if (a <= gap.second && b >= gap.first)
@@ -918,7 +982,7 @@ double Engine::keep(double time, int si, int ri, const Config &c,
   if (screen && screen->rejects(time, si, ri))
     return 0;
   double g = 1;
-  for (int k = 0; k < (datasetKind == "partial" ? 7 : 6); ++k) {
+  for (int k = 0; k < (datasetKind != "full" ? 7 : 6); ++k) {
     const double centre = k == 6 ? nuisanceSL[si][ri] : nuisance[si][ri][k];
     if (c.mutes[k == 6 ? 4 : k] && std::isfinite(centre)) {
       double d = std::abs(time * 1e6 - centre) / c.muteWidth,
@@ -929,7 +993,7 @@ double Engine::keep(double time, int si, int ri, const Config &c,
   return g;
 }
 static bool manual(const Config &c, Point p, const Receiver &r,
-                   const std::array<bool, Receivers> &ids) {
+                   const std::vector<unsigned char> &ids) {
   return ids[r.id] && c.groups[r.group] &&
          (c.aperture == "all" || (c.aperture == "left" && r.x < p.x) ||
           (c.aperture == "right" && r.x >= p.x) ||
@@ -953,13 +1017,14 @@ void Engine::prepareGeometry(const Config &c,
   Geometry next;
   next.key = key;
   next.receiving.resize(points.size() * receiverCount());
+  next.incoming.resize(sourceCount());
   for (auto &v : next.incoming)
     v.resize(points.size());
   auto route = path(c.path);
   parallel(
       int(points.size()), c.threads,
       [&](int i) {
-        for (int s = 0; s < 5; ++s)
+        for (int s = 0; s < sourceCount(); ++s)
           next.incoming[s][i] =
               trace({sources[s].x, sources[s].z}, points[i], route.before, false, false, route.beforeVia);
         for (int r = 0; r < receiverCount(); ++r)
@@ -970,39 +1035,36 @@ void Engine::prepareGeometry(const Config &c,
   geo = std::move(next);
   ++geometryBuilds;
 }
-std::array<Support, 5> Engine::support(const Config &c, Point point,
+std::vector<Support> Engine::support(const Config &c, Point point,
                                        QString signal) {
   auto curve = curves(c);
   auto route = path(c.path);
-  int d = c.component == "vy" ? 1 : 0, mode = route.after.back() == 'S';
-  std::array<bool, Receivers> ids{};
+  std::vector<unsigned char> ids(receiverCount());
   for (int r : c.receivers)
     ids[r] = true;
   Point p{point.x / 1000, point.z / 1000};
-  std::array<Support, 5> result;
-  for (int s = 0; s < 5; ++s) {
+  std::vector<Support> result(sourceCount());
+  for (int s = 0; s < sourceCount(); ++s) {
     auto &out = result[s];
     auto inc = trace({sources[s].x, sources[s].z}, p, route.before, false, false, route.beforeVia);
     if (!inc.valid)
       continue;
-    out.gain = gain(inc.first, curve->launch[route.before.front() == 'S']);
-    out.angle = inc.first * 180 / Pi;
+    out.gain = (isotropic ? 1. : gain(sourceAngle(inc,s), curve->launch[route.before.front() == 'S']));
+    out.angle = sourceAngle(inc,s) * 180 / Pi;
     double eligible = 0, w = 0, w2 = 0;
     for (int r = 0; r < receiverCount(); ++r) {
       auto &rr = receivers[r];
       auto rec = trace(p, {rr.x, rr.z}, route.after, true, false, route.afterVia);
       if (!rec.valid)
         continue;
-      auto surface = reflect(rec.last, route.after.back().toLatin1(), material)
-                         .surface[d] /
-                     curve->norm[mode][d];
+      auto surface = receiverResponse(rec,r,c,*curve,route.after.back().toLatin1());
       auto wall = inc.wall * rec.wall;
       bool allowed = out.gain >= c.gate && std::abs(wall) >= c.wall &&
                      std::abs(surface) >= c.gate &&
-                     std::abs(rec.last) * 180 / Pi <= 80 &&
+                     (isotropic || std::abs(receiverAngle(rec,r)) * 180 / Pi <= 80) &&
                      sourceDistance(s, r) >= c.offset / 1000 - 1e-14 &&
-                     std::abs(rr.x) < material.active &&
-                     std::abs(p.x) < material.active && manual(c, p, rr, ids) &&
+                     (general || std::abs(rr.x) < material.active) &&
+                     (general || std::abs(p.x) < material.active) && manual(c, p, rr, ids) &&
                      (!c.sourceReceivers.count(s) ||
                       std::find(c.sourceReceivers.at(s).begin(),
                                 c.sourceReceivers.at(s).end(),
@@ -1037,6 +1099,8 @@ std::shared_ptr<Result>
 Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
                     const std::vector<Point> *points) {
   c.validate(material);
+  if (general && c.freeze)
+    require(containsPolygon({c.anchor.x/1000,c.anchor.z/1000}), "Frozen aperture anchor is outside the specimen");
   path(c.path);
   QElapsedTimer total, phase;
   total.start();
@@ -1049,6 +1113,7 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
   };
   auto out = std::make_shared<Result>();
   out->config = c;
+  out->sourceCount = sourceCount();
   out->x = c.xs();
   out->z = c.zs();
   if (points)
@@ -1080,18 +1145,17 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
   prepareGeometry(c, out->points);
   out->geometrySeconds = phase.nsecsElapsed() / 1e9;
   phase.restart();
-  std::array<bool, Receivers> ids{};
+  std::vector<unsigned char> ids(receiverCount());
   for (int r : c.receivers)
     ids[r] = true;
-  std::array<std::array<bool, Receivers>, 5> frozen{};
+  std::vector<std::vector<unsigned char>> frozen(sourceCount(), std::vector<unsigned char>(receiverCount()));
   if (c.freeze) {
     auto p = support(c, c.anchor, c.cases.front());
-    for (int s = 0; s < 5; ++s)
+    for (int s = 0; s < sourceCount(); ++s)
       for (int r : p[s].ids)
         frozen[s][r] = true;
   }
   auto route = path(c.path);
-  int column = c.component == "vy" ? 1 : 0, mode = route.after.back() == 'S';
   bool weighted = c.processing == "weighted";
   for (auto signal : c.cases) {
     auto &planes = out->planes[signal];
@@ -1101,7 +1165,7 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
       p.cf.resize(n);
       p.retained.resize(n, std::nan(""));
       p.screened.resize(n, std::nan(""));
-      p.receiverUsage.resize(5 * receiverCount());
+      p.receiverUsage.resize(sourceCount() * receiverCount());
       p.stats.resize(n * c.sources.size());
       p.effective.resize(n * c.sources.size());
       p.valid.resize(n * c.sources.size());
@@ -1114,11 +1178,12 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
     std::array<Plane, 3> *planes;
     const Screening *screen;
     std::vector<const CVec *> signals;
-    std::array<std::array<std::vector<std::pair<double, double>>, 3>, 5> gaps;
+    std::vector<std::vector<std::vector<std::pair<double, double>>>> gaps;
   };
   std::vector<CaseContext> contexts;
   for (const auto &signal : c.cases) {
     CaseContext ctx;
+    ctx.gaps.resize(sourceCount(), std::vector<std::vector<std::pair<double,double>>>(groupNames.size()));
     ctx.planes = &out->planes.at(signal);
     ctx.screen = out->screening.at(signal).get();
     for (const auto &data : signals.at(signal))
@@ -1128,11 +1193,11 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
                                     ? QStringList{"lof", "reference"}
                                     : QStringList{signal};
       for (int source : c.sources)
-        for (int group = 0; group < 3; ++group)
+        for (int group = 0; group < groupNames.size(); ++group)
           for (const auto &repairCase : repairCases) {
             auto found =
                 repairRanges.find(sources[source].id + "/" + repairCase + "/" +
-                                  GroupNames[group]);
+                                  groupNames[group]);
             if (found != repairRanges.end())
               ctx.gaps[source][group].insert(ctx.gaps[source][group].end(),
                                              found->second.begin(),
@@ -1141,9 +1206,9 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
     }
     contexts.push_back(std::move(ctx));
   }
-  std::array<std::array<bool, Receivers>, 5> offsetAllowed{};
-  std::array<std::array<bool, Receivers>, 5> sourceIdsAllowed{};
-  std::array<bool, Receivers> manuallyEnabled{};
+  std::vector<std::vector<unsigned char>> offsetAllowed(sourceCount(), std::vector<unsigned char>(receiverCount()));
+  std::vector<std::vector<unsigned char>> sourceIdsAllowed(sourceCount(), std::vector<unsigned char>(receiverCount()));
+  std::vector<unsigned char> manuallyEnabled(receiverCount());
   for (int r = 0; r < receiverCount(); ++r) {
     manuallyEnabled[r] = ids[r] && c.groups[receivers[r].group];
     for (int source : c.sources) {
@@ -1154,22 +1219,23 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
               found->second.end();
       offsetAllowed[source][r] =
           sourceDistance(source, r) >= c.offset / 1000 - 1e-14 &&
-          std::abs(receivers[r].x) < material.active;
+          (general || std::abs(receivers[r].x) < material.active);
     }
   }
   const int sector =
       QStringList{"all", "left", "right", "even", "odd"}.indexOf(c.aperture);
   tell("Summing admitted measurements");
   std::mutex usageMutex;
-  using UsedIds = std::array<std::array<std::bitset<Receivers>, 5>, 3>;
+  using UsedIds = std::array<std::vector<std::vector<unsigned char>>, 3>;
   parallel(
       int((n + 31) / 32), c.threads,
       [&](int block) {
         std::vector<std::array<std::vector<quint64>, 3>> usage(c.cases.size());
         for (auto &entry : usage)
           for (auto &variant : entry)
-            variant.resize(5 * receiverCount());
+            variant.resize(sourceCount() * receiverCount());
         std::vector<UsedIds> used(c.cases.size());
+        for(auto &entry:used) for(auto &variant:entry) variant.resize(sourceCount(), std::vector<unsigned char>(receiverCount()));
         for (size_t i = size_t(block) * 32;
              i < std::min(n, size_t(block + 1) * 32); ++i) {
           if (cancel)
@@ -1177,12 +1243,12 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
           for (auto &entry : used)
             for (auto &variant : entry)
               for (auto &source : variant)
-                source.reset();
+                std::fill(source.begin(),source.end(),0);
           Point p = out->points[i];
-          if (datasetKind == "partial" && !containsSteel(p))
+          if (datasetKind != "full" && !containsSteel(p))
             continue;
-          std::array<Ray, Receivers> localReceiving;
-          std::array<Ray, 5> localIncoming;
+          std::vector<Ray> localReceiving(receiverCount());
+          std::vector<Ray> localIncoming(sourceCount());
           bool cached = !geo.receiving.empty();
           if (!cached) {
             for (int r = 0; r < receiverCount(); ++r)
@@ -1192,7 +1258,7 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
               localIncoming[s] =
                   trace({sources[s].x, sources[s].z}, p, route.before, false, false, route.beforeVia);
           }
-          std::array<Complex, Receivers> surface;
+          std::vector<Complex> surface(receiverCount());
           for (int r = 0; r < receiverCount(); ++r) {
             auto &rec = cached ? geo.receiving[size_t(i) * receiverCount() + r]
                                : localReceiving[r];
@@ -1200,11 +1266,7 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
               surface[r] = 0;
               continue;
             }
-            surface[r] =
-                (column ? -1. : 1.) *
-                reflect(rec.last, route.after.back().toLatin1(), material)
-                    .surface[column] /
-                curve->norm[mode][column];
+            surface[r] = receiverResponse(rec,r,c,*curve,route.after.back().toLatin1());
           }
           for (size_t oi = 0; oi < c.sources.size(); ++oi) {
             int s = c.sources[oi];
@@ -1212,7 +1274,7 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
             if (!inc.valid)
               continue;
             double launch =
-                gain(inc.first, curve->launch[route.before.front() == 'S']);
+                (isotropic ? 1. : gain(sourceAngle(inc,s), curve->launch[route.before.front() == 'S']));
             if (launch < c.gate)
               continue;
             for (int r = 0; r < receiverCount(); ++r) {
@@ -1224,8 +1286,8 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
                 continue;
               auto wall = inc.wall * rec.wall;
               if (std::abs(wall) < c.wall || std::abs(surface[r]) < c.gate ||
-                  std::abs(rec.last) * 180 / Pi > 80 || !offsetAllowed[s][r] ||
-                  std::abs(p.x) >= material.active)
+                  (!isotropic && std::abs(receiverAngle(rec,r)) * 180 / Pi > 80) || !offsetAllowed[s][r] ||
+                  (!general && std::abs(p.x) >= material.active))
                 continue;
               bool selected =
                   c.freeze ? frozen[s][r]
@@ -1235,13 +1297,13 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
                                   (sector == 3 && r % 2 == 0) ||
                                   (sector == 4 && r % 2 == 1));
               double time = sources[s].t0 + inc.time + rec.time;
-              double fraction = time / Dt;
-              int j = int(std::floor(fraction));
+              double fraction = (time - startTime) / dt;
+              int j = int(std::floor(std::clamp(fraction,-1.,double(samples))));
               fraction -= j;
-              bool completeFilter = signalSampleSupported(j);
-              double supportFirst = (j - signalHalf) * Dt,
-                     supportLast = (j + 1 + signalHalf) * Dt;
-              j = std::clamp(j, 0, Samples - 2);
+              bool completeFilter = std::isfinite(fraction) && signalSampleSupported(j);
+              double supportFirst = startTime + (j - signalHalf) * dt,
+                     supportLast = startTime + (j + 1 + signalHalf) * dt;
+              j = std::clamp(j, 0, samples - 2);
               double g = keep(time, s, r, c);
               Complex response = weighted ? wall * surface[r] : Complex(1.);
               double weight = std::abs(response);
@@ -1260,8 +1322,8 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
                 Complex value = 0;
                 if (usable) {
                   const auto &a = *ctx.signals[oi];
-                  value = (1 - fraction) * a[size_t(r) * Samples + j] +
-                          fraction * a[size_t(r) * Samples + j + 1];
+                  value = (1 - fraction) * a[size_t(r) * samples + j] +
+                          fraction * a[size_t(r) * samples + j + 1];
                 }
                 for (int v = 0; v < 3; ++v) {
                   if (v && !selected)
@@ -1277,7 +1339,7 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
                     continue;
                   Complex val = value * (v == 2 ? g : 1.);
                   ++st.count;
-                  used[caseIndex][v][s].set(r);
+                  used[caseIndex][v][s][r]=1;
                   st.weight += weight;
                   st.weight2 += weight * weight;
                   st.sum += val * std::conj(response);
@@ -1340,7 +1402,7 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
                   if (plane.valid[oi * n + i]) {
                     int source = c.sources[oi];
                     for (int r = 0; r < receiverCount(); ++r)
-                      if (used[caseIndex][v][source].test(r))
+                      if (used[caseIndex][v][source][r])
                         ++usage[caseIndex][v][source * receiverCount() + r];
                   }
                 plane.amplitude[i] = c.combination == "rms"
@@ -1354,7 +1416,7 @@ Engine::reconstruct(const Config &c, std::function<void(QString)> progress,
         std::lock_guard<std::mutex> lock(usageMutex);
         for (int ci = 0; ci < c.cases.size(); ++ci)
           for (int v = 0; v < 3; ++v)
-            for (int k = 0; k < 5 * receiverCount(); ++k)
+            for (int k = 0; k < sourceCount() * receiverCount(); ++k)
               (*contexts[ci].planes)[v].receiverUsage[k] += usage[ci][v][k];
       },
       &cancel);
@@ -1371,6 +1433,7 @@ std::shared_ptr<Inspection> Engine::inspect(const Config &c, int s, int rid,
                                             QString signal, QString competitor,
                                             bool hasPoint, Point point) {
   c.validate(material);
+  require(s >= 0 && s < sourceCount(), "Invalid source");
   require(rid >= 0 && rid < receiverCount(), "Invalid receiver");
   QElapsedTimer t;
   t.start();
@@ -1398,8 +1461,8 @@ std::shared_ptr<Inspection> Engine::inspect(const Config &c, int s, int rid,
   std::sort(out->orderedIds.begin(), out->orderedIds.end(),
             [&](int a, int b) { return receivers[a].x < receivers[b].x; });
   if (hasPoint) {
-    require(point.z > 0 && point.z < material.h * 1000,
-            "Inspection depth must lie inside the plate");
+    require(general ? containsPolygon({point.x/1000,point.z/1000}) : (point.z > 0 && point.z < material.h * 1000),
+            "Inspection point must lie inside the specimen");
     out->support = support(c, point, signal);
   }
   for (int r = 0; r < receiverCount(); ++r) {
@@ -1444,6 +1507,8 @@ QJsonObject Engine::provenance() const {
       {"dataset_folder", data},
       {"dataset_manifest_sha256", manifestHash},
       {"receiver_count", receiverCount()},
+      {"source_count", sourceCount()},
+      {"sampling", QJsonObject{{"samples",samples},{"dt_s",dt},{"start_s",startTime},{"filter_half_samples",filterHalf}}},
       {"sources", audit["sources"]},
       {"receivers", audit["receivers"]},
       {"geometry", geometry},
@@ -1466,6 +1531,11 @@ QJsonObject Engine::provenance() const {
                        "audited source SHA256; reuse requires unchanged source "
                        "size and mtime. Full input recheck is explicit."},
       {"saved_model_audit", arrivalAudit["model_inputs"]}};
+  if (general) {
+    result["depth_origin"]="Dataset x,z coordinates in metres; no implicit coordinate transform";
+    result["ray_model"]="Homogeneous isotropic 2D bulk rays in polygonal domains; explicit finite free-surface reflections obey Fermat travel time and Snell conversion; no diffraction, attenuation, or heterogeneous refraction";
+    result["response_model"]=acquisition["response"];
+  }
   QString manifest =
       QCoreApplication::applicationDirPath() + "/implementation.json";
   if (QFileInfo::exists(manifest))
@@ -1571,7 +1641,7 @@ static void exportNpz(const QString &filename, const Result &result) {
     for (const auto &p : planes)
       usage.insert(usage.end(), p.receiverUsage.begin(), p.receiverUsage.end());
     write(signal.toUtf8() + "_receiver_usage", "<u8",
-          {3, 5, planes[0].receiverUsage.size() / 5}, usage.data(),
+          {3, size_t(result.sourceCount), planes[0].receiverUsage.size() / size_t(result.sourceCount)}, usage.data(),
           usage.size() * sizeof(quint64));
     CVec means;
     std::vector<unsigned char> valid;
@@ -1635,11 +1705,11 @@ void Engine::exportResult(const QString &folder, const Result &r,
                  "depth_mm\n";
   for (auto signal : r.config.cases)
     for (int v = 0; v < 3; ++v)
-      for (int s = 0; s < 5; ++s)
+      for (int s = 0; s < sourceCount(); ++s)
         for (int id = 0; id < receiverCount(); ++id) {
           const auto &plane = r.planes.at(signal)[v];
           usageStream << signal << "," << variants[v] << "," << sources[s].id
-                      << "," << sources[s].x * 1000 << ",R" << id << ","
+                      << "," << sources[s].x * 1000 << "," << receivers[id].label << ","
                       << receivers[id].x * 1000 << ","
                       << plane.receiverUsage[s * receiverCount() + id] << ","
                       << plane.supportedPixels << "," << sources[s].z * 1000
@@ -1683,11 +1753,11 @@ void Engine::exportInspection(const QString &folder, const Inspection &e) {
   QTextStream f(&file);
   f.setRealNumberPrecision(17);
   f << "time_us,raw_m_s,filtered_real_m_s,filtered_imag_m_s,arrival_keep\n";
-  for (int t = 0; t < Samples; ++t) {
-    size_t k = size_t(e.receiver) * Samples + t;
-    f << t * .01 << "," << e.raw[k] << "," << e.filtered[k].real() << ","
+  for (int t = 0; t < samples; ++t) {
+    size_t k = size_t(e.receiver) * samples + t;
+    f << (startTime + t * dt) * 1e6 << "," << e.raw[k] << "," << e.filtered[k].real() << ","
       << e.filtered[k].imag() << ","
-      << keep(t * Dt, e.source, e.receiver, e.config, e.screening.get())
+      << keep(startTime + t * dt, e.source, e.receiver, e.config, e.screening.get())
       << "\n";
   }
   writeJson(folder + "/trace_settings.json",
@@ -1704,6 +1774,7 @@ void Engine::exportInspection(const QString &folder, const Inspection &e) {
 }
 QJsonObject Engine::verifyInputs(std::function<void(QString)> progress) {
   int count = 0;
+  if (general) for (const auto &recording:recordings) raw(recording.source,recording.signal,recording.component);
   if (bundled) {
     require(shaFile(data + "/dataset.json") == manifestHash,
             "Dataset geometry changed; reopen the folder");
@@ -1735,9 +1806,9 @@ QJsonObject Engine::verifyInputs(std::function<void(QString)> progress) {
       {"created_utc", QDateTime::currentDateTimeUtc().toString(Qt::ISODate)}};
 }
 void Engine::setSignalProvider(SignalProvider provider, int half, bool rest) {
-  require(half >= 0 && half < Samples / 2, "Invalid signal support half-width");
+  require(half >= 0 && half < samples / 2, "Invalid signal support half-width");
   signalProvider = std::move(provider);
-  signalHalf = signalProvider ? half : Half;
+  signalHalf = signalProvider ? half : filterHalf;
   initialRest = signalProvider && rest;
   filteredCache.clear();
   screeningCache.clear();

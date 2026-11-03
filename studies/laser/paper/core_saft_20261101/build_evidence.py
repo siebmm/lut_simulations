@@ -117,9 +117,6 @@ def main():
             shutil.copy2(SOURCE/f'figures/comsol/{name}.{ext}', figs/f'{name}.{ext}')
         target = HERE/'verification/figure_layout'; target.mkdir(parents=True, exist_ok=True)
         shutil.copy2(SOURCE/f'verification/figure_layout/{name}.json', target/f'{name}.json')
-    if not (HERE/'core_heading_style.tex').exists():
-        shutil.copy2(SOURCE/'comsol_heading_style.tex', HERE/'core_heading_style.tex')
-    shutil.copy2(SOURCE/'comsol_references.bib', HERE/'core_references.bib')
     shutil.copy2(SOURCE/'figure_layout.py', HERE/'figure_layout.py')
     write(HERE/'verification/data_check.json', dict(status='passed', images=22, principal_images=5,
         signal='lof', equal_receiver_averaging=True, coherence=True, pulse_screening='LSR', common_filter=True,

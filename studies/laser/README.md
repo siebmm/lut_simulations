@@ -4,7 +4,7 @@ The original study names and relative layout are retained so frozen protocols
 and cross-study imports remain traceable. The canonical acquisitions are stored
 once at the repository's `data/`; all native tools share `saft/src/`.
 
-| Folder under `paper/` | Role in the final chapter/appendix |
+| Folder under `paper/` | Role in the standalone paper |
 |---|---|
 | `filter_study_20261101` | Exact FIR/IIR/analytic filter definitions, native parity, full-weld selected result and controls |
 | `equal_receiver_study_20261101` | Matched partial-weld baseline comparisons |
@@ -20,9 +20,11 @@ once at the repository's `data/`; all native tools share `saft/src/`.
 It omits reproducible per-grid intermediate arrays and repeated image CSVs.
 `paper/*/data/` retains compact arrays used by the figure generators, including
 the calibration exports. `src/` contains shared numerical/reference helpers.
-The full electronic appendix supplement is also supplied as `paper/evidence.zip`
-at repository root, preserving the paths named in the final appendix.
+The full electronic supplement is also supplied as `paper/evidence.zip`
+at repository root, preserving the paths named in the standalone paper.
 
 Run analyses through `tools/run_study.py` or the main/figure replay tools.
-The final manuscript sources live only in the root `paper/`; historical
-manuscript assembly and desktop packaging are outside this subset.
+The sole manuscript and its PDF live in the root `paper/`. This study tree keeps
+historical directory names for computational dependencies; it contains analysis
+code and evidence, not additional manuscripts. Historical manuscript assembly
+and desktop packaging are outside this subset.

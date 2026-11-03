@@ -1,0 +1,7 @@
+{
+  "schema": 2,
+  "kind": "SAFT acquisition dataset",
+  "name": "Synthetic polygon with a void",
+  "geometry": "geometry.json",
+  "acquisition": "acquisition.json"
+}

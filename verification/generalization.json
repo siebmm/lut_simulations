@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "date": "2026-11-03",
+  "scope": "General 2D acquisition and SAFT extension; archived weld reconstruction regression. No finite-element solve.",
+  "native_source_sha256": {
+    "acquisition.cpp": "e10c9502eb8482959500642173c72c798682153527c9ebf767b977c47c30b061",
+    "dataset_geometry.cpp": "fdf5410e8f7f15279bb3411d1491e568804b9a985a6e12f4f2f268cc0ca74686",
+    "groove_paths.cpp": "dd46d7d2f74653a37d8508c74a8b25f1ffd739812883e84e580427997697b92a",
+    "polygon_geometry.cpp": "52b509d6624b90b9fef8c6a025e3eda050333100acac23b5f56879bd4145e259",
+    "saft.cpp": "bbdc7a2780ad641d23d2ea057877d3a75453b916a09111a327199ed6818b4a10",
+    "saft.hpp": "34c9c116e308892a267a4bb1f9566503234b21d796d505ce6b111f21f6caed75",
+    "screening.cpp": "721f331b486b08f1b62e46e34d80b00ee58f4970ea197493c323e2d24f2601cb"
+  },
+  "native_executable_sha256": {
+    "SAFTAdmissionAudit.exe": "bc4735aec54940b8c56ed8da8e9e00ae2c871d26004be41502a4f584fa389d00",
+    "SAFTBatch.exe": "6b82984613fa08488968bef9692981287f836ae2e494213b4783b90dbb1a532b",
+    "SAFTFilterStudy.exe": "22c980ec3b98db08f5403344f2a02b28072c609ede85692f30d55aa997a406e6",
+    "SAFTReview.exe": "d0e68e422bdb91b922daf2ed4b55599031d058f6988e455cd64f89625bee3bc7"
+  },
+  "general_dataset_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 12,
+    "coverage": [
+      "All four native exporters",
+      "Independent analytic FIR, time interpolation and focusing",
+      "Finite and mode-converted boundary reflection times",
+      "Polygon void and visibility checks",
+      "Rotated and translated laser response and velocity components",
+      "350 receivers and 9001 samples",
+      "Arbitrary case names and optional baseline",
+      "Sampling-aware pulse screening and trace export",
+      "External complex signal banks",
+      "Malformed geometry, missing records, CSV headers/times/nonfinite values and Nyquist rejection"
+    ]
+  },
+  "legacy_physics": {
+    "rays": 1400,
+    "max_time_error_s": 1.0079692072326174e-19,
+    "max_amplitude_error_m_s": 3.239731616658248e-17
+  },
+  "legacy_published_metrics": {
+    "passed": 9,
+    "lof_contrasts_db": {
+      "full/all": 12.792504704272893,
+      "partial/muted_025": 14.44693730867755,
+      "partial/unmuted_025": 9.086229748872757
+    }
+  },
+  "synthetic_example": {
+    "sources": 7,
+    "receivers": 13,
+    "samples": 2401,
+    "dt_s": 2e-08,
+    "start_s": -2e-06,
+    "expected_target_m": [
+      0.003,
+      0.012
+    ],
+    "actual_peak_m": [
+      0.003,
+      0.012
+    ]
+  },
+  "limits": [
+    "Homogeneous isotropic 2D elastic bulk rays with explicit polygon boundaries; no heterogeneous refraction, 3D propagation or diffraction.",
+    "Synthetic histories verify computational behavior; they are not an independent finite-element or experimental validation.",
+    "Frozen publication studies retain their original data, scientific protocols and reference metrics; new models use the generic analysis workflow."
+  ],
+  "legacy_figures": {
+    "status": "passed",
+    "command": "python tools/reproduce_figures.py",
+    "review_metric_checks": 27,
+    "review_figures": 5,
+    "baseline_and_combined_artwork": "regenerated in output/workspace"
+  }
+}

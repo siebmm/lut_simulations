@@ -53,8 +53,7 @@ int main(int argc, char **argv) {
                         engine.verifyInputs({}));
       for (int i = 0; i < batch.size(); ++i) {
         auto job = batch[i].toObject();
-        auto c = saft::Config::fromJson(job["selection"].toObject(),
-                                        engine.receiverCount());
+        auto c = engine.config(job["selection"].toObject());
         std::vector<saft::Point> points;
         for (auto v : job["points_m"].toArray()) {
           auto a = v.toArray();
@@ -63,6 +62,8 @@ int main(int argc, char **argv) {
         if (job["clear_memory"].toBool())
           engine.clearMemory();
         if (job["forbid_reference"].toBool()) {
+          if (engine.general) for(const auto &r:engine.recordings)
+            if(r.signal==engine.referenceCase) engine.inputHashes.erase(r.file);
           for (auto it = engine.inputHashes.begin();
                it != engine.inputHashes.end();)
             if (it->first.contains("/reference/"))
@@ -85,8 +86,8 @@ int main(int argc, char **argv) {
         if (job["inspect"].isObject()) {
           auto q = job["inspect"].toObject();
           auto inspection = engine.inspect(
-              c, q["source"].toInt(), q["receiver"].toInt(94),
-              q["signal"].toString("lof"), q["competitor"].toString("1-2_SSS"),
+              c, q["source"].toInt(), q["receiver"].toInt(engine.general?0:94),
+              q["signal"].toString(engine.primaryCase), q["competitor"].toString(engine.general?"1-1_SS":"1-2_SSS"),
               q["has_point"].toBool(),
               {q["x_mm"].toDouble(2.5), q["depth_mm"].toDouble(20)});
           engine.exportInspection(folder, *inspection);

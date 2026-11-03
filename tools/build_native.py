@@ -21,7 +21,8 @@ def main():
     env['PATH'] = os.pathsep.join([str(qmake.parent), str(make.parent), env.get('PATH', '')])
     build = ROOT / 'build/qmake'
     build.mkdir(parents=True, exist_ok=True)
-    common = ['saft.cpp', 'screening.cpp', 'dataset_geometry.cpp', 'groove_paths.cpp']
+    common = ['saft.cpp', 'screening.cpp', 'dataset_geometry.cpp', 'groove_paths.cpp',
+              'acquisition.cpp', 'polygon_geometry.cpp']
     for target, cli in [('SAFTFilterStudy', 'filter'), ('SAFTReview', 'review'),
                         ('SAFTAdmissionAudit', 'admission'), ('SAFTBatch', 'batch')]:
         sources = [ROOT / 'saft/src' / name for name in common] + [ROOT / f'saft/cli/{cli}_cli.cpp']

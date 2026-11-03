@@ -6,28 +6,32 @@ namespace saft {
 // Times are seconds internally. The search identifies a packet near a known
 // direct-arrival guide; it is not a wave-mode decomposition or defect detector.
 PulseWindow measurePulse(const CVec &trace, int receiver, int family,
-                         double predicted, double reach, const Config &c) {
+                         double predicted, double reach, const Config &c, int samples, double dt, double start) {
   PulseWindow w;
   w.family = family;
   w.predicted = w.peakTime = predicted;
   const double search = .25e-6, margin = c.screenMargin * 1e-6;
   w.first = predicted - reach - margin;
   w.last = predicted + reach + margin;
-  int lo = std::max(0, int(std::ceil((predicted - search) / Dt)));
-  int hi = std::min(Samples - 1, int(std::floor((predicted + search) / Dt)));
+  if (!std::isfinite(predicted) || predicted+search < start || predicted-search > start+(samples-1)*dt) {
+    w.limited=true;
+    return w;
+  }
+  int lo = std::max(0, int(std::ceil((predicted - search - start) / dt)));
+  int hi = std::min(samples - 1, int(std::floor((predicted + search - start) / dt)));
   if (lo > hi) {
     w.limited = true;
     return w;
   }
   auto envelope = [&](int j) {
-    return std::abs(trace[size_t(receiver) * Samples + j]);
+    return std::abs(trace[size_t(receiver) * samples + j]);
   };
   int seed = lo;
   for (int j = lo; j <= hi; ++j)
     if (envelope(j) > envelope(seed))
       seed = j;
   w.peak = envelope(seed);
-  w.peakTime = seed * Dt;
+  w.peakTime = start + seed * dt;
   // An exactly zero packet cannot contaminate a recording.
   if (w.peak == 0) {
     w.first = w.last = predicted;
@@ -37,27 +41,27 @@ PulseWindow measurePulse(const CVec &trace, int receiver, int family,
   w.measured = true;
   w.limited = seed == lo || seed == hi;
   const double threshold = w.peak * std::pow(10., -c.screenTailDb / 20.);
-  const int maximum = int(std::ceil(reach / Dt)), quietSamples = 15; // 0.15 us
+  const int maximum = int(std::ceil(reach / dt)), quietsamples = std::max(1, int(std::ceil(.15e-6/dt))); // 0.15 us
   auto edge = [&](int direction) {
     int lastAbove = seed, quiet = 0;
     for (int d = 1; d <= maximum; ++d) {
       int j = seed + direction * d;
-      if (j < 0 || j >= Samples) {
+      if (j < 0 || j >= samples) {
         w.limited = true;
         return seed + direction * maximum;
       }
       if (envelope(j) >= threshold) {
         lastAbove = j;
         quiet = 0;
-      } else if (++quiet >= quietSamples) {
+      } else if (++quiet >= quietsamples) {
         return lastAbove;
       }
     }
     w.limited = true;
     return seed + direction * maximum;
   };
-  w.first = std::min(predicted, edge(-1) * Dt) - margin;
-  w.last = std::max(predicted, edge(1) * Dt) + margin;
+  w.first = std::min(predicted, start + edge(-1) * dt) - margin;
+  w.last = std::max(predicted, start + edge(1) * dt) + margin;
   return w;
 }
 
@@ -70,8 +74,8 @@ bool Screening::rejects(double time, int source, int receiver) const {
 
 QJsonObject Screening::json() const {
   QJsonArray rows;
-  for (int s = 0; s < 5; ++s)
-    for (int r = 0; r < Receivers; ++r)
+  for (int s = 0; s < int(windows.size()); ++s)
+    for (int r = 0; r < int(windows[s].size()); ++r)
       for (const auto &w : windows[s][r])
         rows.append(QJsonObject{{"source", s},
                                 {"receiver", r},
@@ -88,8 +92,8 @@ QJsonObject Screening::json() const {
           {"search_halfwidth_us", .25},
           {"quiet_duration_us", .15},
           {"interpretation",
-           "LOF-only pulse measurement for LOF and difference; reference uses "
-           "its own recording. Limited windows do not certify uncontaminated "
+           "Each case uses its own pulse measurement; a difference uses its "
+           "declared minuend. Limited windows do not certify uncontaminated "
            "samples outside the guard."}};
 }
 
@@ -99,7 +103,7 @@ std::shared_ptr<Screening> Engine::screeningFor(const Config &c,
       std::none_of(c.reflectedScreen.begin(), c.reflectedScreen.end(),
                    [](bool on) { return on; }))
     return {};
-  QString basis = signal == "difference" ? "lof" : signal;
+  QString basis = signal == "difference" ? primaryCase : signal;
   QJsonArray selected;
   for (int s : c.sources)
     selected.append(s);
@@ -120,7 +124,7 @@ std::shared_ptr<Screening> Engine::screeningFor(const Config &c,
   auto found = screeningCache.find(key);
   if (found != screeningCache.end())
     return found->second;
-  auto result = std::make_shared<Screening>();
+  auto result = std::make_shared<Screening>(sourceCount(),receiverCount());
   result->basis = basis;
   // Choose nuisance families, independently of the desired imaging route.
   // Family order follows MuteNames: Rayleigh, direct L, direct S.
@@ -141,17 +145,17 @@ std::shared_ptr<Screening> Engine::screeningFor(const Config &c,
         // Bound the packet search by the FIR support plus source footprint
         // travel time and three saved pulse widths. This is a finite search
         // limit, not a claim that all clutter ends at this time.
-        double reach = signalHalfSamples() * Dt + material.width / speed + 3 * material.pulse;
+        double reach = signalHalfSamples() * dt + material.width / speed + 3 * material.pulse;
         result->windows[s][r].push_back(measurePulse(
-            *trace, r, family, nuisance[s][r][family] * 1e-6, reach, c));
+            *trace, r, family, nuisance[s][r][family] * 1e-6, reach, c, samples, dt, startTime));
       }
       auto append = [&](int family, double predictedUs, double speed) {
         if (!std::isfinite(predictedUs))
           return;
         const double reach =
-            signalHalfSamples() * Dt + material.width / speed + 3 * material.pulse;
+            signalHalfSamples() * dt + material.width / speed + 3 * material.pulse;
         result->windows[s][r].push_back(
-            measurePulse(*trace, r, family, predictedUs * 1e-6, reach, c));
+            measurePulse(*trace, r, family, predictedUs * 1e-6, reach, c, samples, dt, startTime));
       };
       if (c.reflectedScreen[0])
         append(3, nuisance[s][r][3], material.cl);

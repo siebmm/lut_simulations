@@ -1,0 +1,28 @@
+{
+  "requests": [
+    {
+      "id": "direct",
+      "selection": {
+        "path": "1-1_LL",
+        "component": "vz",
+        "cases": ["measurement", "baseline", "difference"],
+        "processing": "raw",
+        "low_MHz": 0.5,
+        "high_MHz": 5,
+        "x_min_mm": -18,
+        "x_max_mm": 22,
+        "depth_min_mm": 1,
+        "depth_max_mm": 26,
+        "spacing_mm": 0.25,
+        "minimum_receivers": 3,
+        "minimum_effective_receivers": 3,
+        "minimum_sources": 2,
+        "threads": 4
+      }
+    }
+  ],
+  "regions": {
+    "target": [[0.002, 0.011], [0.004, 0.011], [0.004, 0.013], [0.002, 0.013]],
+    "background": [[-0.018, 0.017], [0.02, 0.017], [0.02, 0.021], [-0.018, 0.021]]
+  }
+}

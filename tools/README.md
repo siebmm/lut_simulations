@@ -5,6 +5,11 @@ the native tools. All paths are discovered relative to this checkout.
 
 | Command | Result |
 |---|---|
+| `python tools/build_paper.py` | Compile the sole standalone paper to `paper/paper.pdf` with Tectonic; verify references and record source/PDF hashes |
+| `python tools/make_example.py` | Generate a non-weld polygon dataset with deterministic synthetic histories in `output/example_dataset` |
+| `python tools/validate_dataset.py DATASET` | Validate a schema-2 geometry/acquisition and every CSV, or check an archived schema-1 dataset's hashes |
+| `python tools/analyze.py --dataset DATASET --request REQUEST --output OUTPUT` | General reconstruction, images and summaries, with optional user-defined region contrasts |
+| `python -m unittest discover -s tests -v` | General-dataset interface, geometry, sampling and independent numerical regressions; requires built tools |
 | `python tools/verify_repository.py` | Snapshot, model and acquisition checksums, Python syntax, final figure assets and complete survey-row count |
 | `python tools/verify_interfaces.py` | Nine supported pixels, three signal cases, and agreement across all four native exporters |
 | `python studies/laser/src/verify_saft_datasets.py` | Independent ray/focusing physics, channel mapping, air masks, muting and dataset isolation; writes `output/physics_check/check.json` |
@@ -21,6 +26,11 @@ and executables from this repository, without copying the large CSVs again.
 Use this wrapper for the original study scripts, which write result folders.
 Do not run multiple reconstruction studies simultaneously: their original
 filter-bank working directories are reused between variants.
+
+For other specimens use `analyze.py` and the [public data contract](../saft/FORMAT.md).
+The historical study/reproduction commands retain their original weld-specific
+protocols, labels and reference metrics. New acquisitions need no matching flaw
+coordinates or archived scores.
 
 Example filter study sequence:
 

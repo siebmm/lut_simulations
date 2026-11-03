@@ -1,17 +1,43 @@
-# Laser-weld models and SAFT
+# 2D elastic-wave analysis and laser-weld reproductions
 
 Standalone scientific inputs and analysis for the full weld and the 9 mm
 partial J-bevel weld: original COMSOL models, verified receiver histories,
-headless C++ SAFT, final chapter/appendix, and their numerical evidence.
+headless C++ SAFT, a complete standalone paper, and its numerical evidence.
+
+**Read the [full paper (PDF)](paper/paper.pdf): Laser-ultrasonic imaging of full
+and partial welds.** It includes the detailed methods, results and complete
+comparison registers.
+
+The shared SAFT engine also accepts other homogeneous, isotropic 2D specimens.
+Supply separate geometry and acquisition JSON files plus velocity-history CSVs.
+Polygonal boundaries and voids, material speeds, source/receiver layouts, case
+names, sample counts and time intervals are defined by the dataset.
+
+## Analyze your own model
+
+After installing the dependencies and building the native tools below:
+
+```sh
+python tools/validate_dataset.py path/to/my_dataset
+python tools/analyze.py --dataset path/to/my_dataset --request path/to/analysis.json --output output/my_analysis
+```
+
+See [the input format and examples](saft/FORMAT.md) for the geometry, CSV contract,
+supported physics, reflected paths and analysis settings. Start with a runnable
+non-weld example using `python tools/make_example.py`; then use its
+`output/example_dataset/analysis.json` with `tools/analyze.py`. Results include
+numerical arrays, images, support/peak summaries and optional region contrasts.
+The frozen weld studies below retain their original protocols and metric checks.
 
 | Directory | Contents |
 |---|---|
 | [models/](models/README.md) | Full-weld and partial-weld COMSOL model inputs, acquisition metadata, and model checksums |
 | [data/](data/README.md) | Both acquisition manifests and all 120 velocity-history CSVs |
 | [saft/](saft/README.md) | C++17 reconstruction engine and four headless scientific exporters |
-| [paper/](paper/README.md) | Final chapter, detailed appendix, figures, bibliography, appendix PDF and electronic supplement |
+| [paper/](paper/README.md) | One complete standalone paper, its rendered PDF, source, cited figures, bibliography and electronic supplement |
 | [studies/laser/](studies/laser/README.md) | Analysis/figure scripts, frozen protocols, comparison records and compact figure arrays |
 | [tools/](tools/README.md) | Integrity checks, main-result replay and isolated study/figure runners |
+| [tests/](tests/test_general_datasets.py) | General-dataset contract and independent numerical regressions |
 | `verification/` | Import provenance, snapshot hashes and validation receipts |
 
 ## Verify and reproduce
@@ -98,7 +124,7 @@ runtime-library directories to the replay environment.
 
 ## Scope
 
-The retained subset covers the final chapter and detailed appendix. It includes
+The retained subset supports the standalone paper. It includes
 all 20,412 partial-review comparison rows and the 384 baseline image
 configurations used for 1,152 signal-case comparisons. The full-weld processed
 bank is regenerated from the recordings using the exact saved filter recipe.
@@ -108,8 +134,8 @@ Their required scientific protocols and reconstruction code are retained.
 
 The `.mph` files are model inputs rather than saved time-dependent solutions.
 Open them with COMSOL Multiphysics 6.4 and the relevant physics licences.
-The model files and scientific document contents are preserved from the
+The model files and detailed scientific evidence are preserved from the
 original package. Repeating finite-element solves requires COMSOL; replaying
 SAFT and regenerating the figures does not. COMSOL solves were not repeated
-during packaging. See [paper/README.md](paper/README.md) for report integration
-and the standalone LaTeX driver. All cited bibliography entries are included.
+during packaging. See [paper/README.md](paper/README.md) to rebuild the paper
+with `python tools/build_paper.py`. All cited bibliography entries are included.

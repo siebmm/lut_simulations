@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "geometry",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": 2
+    },
+    "coordinate_system": {
+      "const": "x_z_m"
+    },
+    "material": {
+      "type": "object",
+      "properties": {
+        "cl_m_s": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "cs_m_s": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "cr_m_s": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "rho_kg_m3": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "required": [
+        "cl_m_s",
+        "cs_m_s",
+        "cr_m_s",
+        "rho_kg_m3"
+      ],
+      "additionalProperties": false
+    },
+    "loops": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "enum": [
+              "outer",
+              "hole"
+            ]
+          },
+          "vertices_m": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "minItems": 3
+          },
+          "boundary_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+            },
+            "minItems": 3
+          }
+        },
+        "required": [
+          "role",
+          "vertices_m",
+          "boundary_ids"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "paths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+          },
+          "source": {
+            "type": "object",
+            "properties": {
+              "modes": {
+                "type": "string",
+                "pattern": "^[LS]{1,5}$"
+              },
+              "boundaries": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "modes",
+              "boundaries"
+            ],
+            "additionalProperties": false
+          },
+          "receiver": {
+            "type": "object",
+            "properties": {
+              "modes": {
+                "type": "string",
+                "pattern": "^[LS]{1,5}$"
+              },
+              "boundaries": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "modes",
+              "boundaries"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "source",
+          "receiver"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "screening_boundaries": {
+      "type": "object",
+      "properties": {
+        "backwall": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+        },
+        "surface": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema",
+    "coordinate_system",
+    "material",
+    "loops"
+  ],
+  "additionalProperties": false
+}

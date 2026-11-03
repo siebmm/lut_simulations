@@ -29,12 +29,14 @@ Ray absent() {
 }
 } // namespace
 bool Engine::containsSteel(Point p) const {
+  if (general) return containsPolygon(p);
   if (datasetKind == "full")
     return p.z >= 0 && p.z <= material.h;
   return p.z >= surfaceDepth(surfaceProfile, p.x) - tolerance &&
          p.z <= material.h + tolerance;
 }
 bool Engine::visibleInSteel(Point a, Point b) const {
+  if (general) return visibleInPolygon(a,b);
   if (!containsSteel(a) || !containsSteel(b))
     return false;
   if (datasetKind == "full")
@@ -60,6 +62,7 @@ double Engine::sourceDistance(int s, int r) const {
 }
 Ray Engine::trace(Point a, Point b, const QString &modes, bool outgoing,
                   bool points, const QString &via) const {
+  if (general) return polygonRay(a,b,modes,via,points);
   if (!via.isEmpty())
     return grooveRay(a, b, modes, via, outgoing, points);
   if (modes == "SSSS") {

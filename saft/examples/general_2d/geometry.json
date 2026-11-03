@@ -1,0 +1,22 @@
+{
+  "schema": 2,
+  "coordinate_system": "x_z_m",
+  "material": {"cl_m_s": 6000, "cs_m_s": 3200, "cr_m_s": 2950, "rho_kg_m3": 7800},
+  "loops": [
+    {
+      "role": "outer",
+      "vertices_m": [[-0.02, 0], [0.025, 0], [0.023, 0.027], [-0.02, 0.022]],
+      "boundary_ids": ["top", "right", "bottom", "left"]
+    },
+    {
+      "role": "hole",
+      "vertices_m": [[-0.012, 0.01], [-0.012, 0.014], [-0.008, 0.014], [-0.008, 0.01]],
+      "boundary_ids": ["void_left", "void_bottom", "void_right", "void_top"]
+    }
+  ],
+  "screening_boundaries": {"backwall": "bottom", "surface": "top"},
+  "paths": [
+    {"id": "bottom_LL_L", "source": {"modes": "LL", "boundaries": ["bottom"]}, "receiver": {"modes": "L", "boundaries": []}},
+    {"id": "bottom_LS_S", "source": {"modes": "LS", "boundaries": ["bottom"]}, "receiver": {"modes": "S", "boundaries": []}}
+  ]
+}

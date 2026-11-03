@@ -1,0 +1,439 @@
+{
+  "schema": 2,
+  "velocity_units": "m/s",
+  "sampling": {
+    "samples": 2401,
+    "dt_s": 2e-08,
+    "start_s": -2e-06
+  },
+  "filter_half_samples": 128,
+  "response": {
+    "model": "isotropic"
+  },
+  "sources": [
+    {
+      "id": "shot0",
+      "position_m": [
+        -0.014,
+        0.0
+      ],
+      "trigger_s": 0.0,
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "shot1",
+      "position_m": [
+        -0.009000000000000001,
+        0.0
+      ],
+      "trigger_s": 3e-08,
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "shot2",
+      "position_m": [
+        -0.004,
+        0.0
+      ],
+      "trigger_s": 6e-08,
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "shot3",
+      "position_m": [
+        0.0009999999999999992,
+        0.0
+      ],
+      "trigger_s": 8.999999999999999e-08,
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "shot4",
+      "position_m": [
+        0.006,
+        0.0
+      ],
+      "trigger_s": 1.2e-07,
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "shot5",
+      "position_m": [
+        0.011000000000000001,
+        0.0
+      ],
+      "trigger_s": 1.5e-07,
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "shot6",
+      "position_m": [
+        0.016,
+        0.0
+      ],
+      "trigger_s": 1.7999999999999997e-07,
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "receivers": [
+    {
+      "id": "sensor0",
+      "position_m": [
+        -0.017,
+        0.0
+      ],
+      "group": "array",
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "sensor1",
+      "position_m": [
+        -0.013916666666666667,
+        0.0
+      ],
+      "group": "array",
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "sensor2",
+      "position_m": [
+        -0.010833333333333334,
+        0.0
+      ],
+      "group": "array",
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "sensor3",
+      "position_m": [
+        -0.00775,
+        0.0
+      ],
+      "group": "array",
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "sensor4",
+      "position_m": [
+        -0.004666666666666666,
+        0.0
+      ],
+      "group": "array",
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "sensor5",
+      "position_m": [
+        -0.0015833333333333324,
+        0.0
+      ],
+      "group": "array",
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "sensor6",
+      "position_m": [
+        0.0015000000000000013,
+        0.0
+      ],
+      "group": "array",
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "sensor7",
+      "position_m": [
+        0.004583333333333335,
+        0.0
+      ],
+      "group": "array",
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "sensor8",
+      "position_m": [
+        0.007666666666666669,
+        0.0
+      ],
+      "group": "array",
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "sensor9",
+      "position_m": [
+        0.010750000000000003,
+        0.0
+      ],
+      "group": "array",
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "sensor10",
+      "position_m": [
+        0.013833333333333336,
+        0.0
+      ],
+      "group": "array",
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "sensor11",
+      "position_m": [
+        0.01691666666666667,
+        0.0
+      ],
+      "group": "array",
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "id": "sensor12",
+      "position_m": [
+        0.02,
+        0.0
+      ],
+      "group": "array",
+      "inward_normal": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "cases": [
+    "measurement",
+    "baseline"
+  ],
+  "components": [
+    "vx",
+    "vz"
+  ],
+  "difference": {
+    "minuend": "measurement",
+    "subtrahend": "baseline"
+  },
+  "recordings": [
+    {
+      "source": "shot0",
+      "case": "measurement",
+      "component": "vx",
+      "path": "histories/shot0_measurement_vx.csv"
+    },
+    {
+      "source": "shot0",
+      "case": "measurement",
+      "component": "vz",
+      "path": "histories/shot0_measurement_vz.csv"
+    },
+    {
+      "source": "shot0",
+      "case": "baseline",
+      "component": "vx",
+      "path": "histories/shot0_baseline_vx.csv"
+    },
+    {
+      "source": "shot0",
+      "case": "baseline",
+      "component": "vz",
+      "path": "histories/shot0_baseline_vz.csv"
+    },
+    {
+      "source": "shot1",
+      "case": "measurement",
+      "component": "vx",
+      "path": "histories/shot1_measurement_vx.csv"
+    },
+    {
+      "source": "shot1",
+      "case": "measurement",
+      "component": "vz",
+      "path": "histories/shot1_measurement_vz.csv"
+    },
+    {
+      "source": "shot1",
+      "case": "baseline",
+      "component": "vx",
+      "path": "histories/shot1_baseline_vx.csv"
+    },
+    {
+      "source": "shot1",
+      "case": "baseline",
+      "component": "vz",
+      "path": "histories/shot1_baseline_vz.csv"
+    },
+    {
+      "source": "shot2",
+      "case": "measurement",
+      "component": "vx",
+      "path": "histories/shot2_measurement_vx.csv"
+    },
+    {
+      "source": "shot2",
+      "case": "measurement",
+      "component": "vz",
+      "path": "histories/shot2_measurement_vz.csv"
+    },
+    {
+      "source": "shot2",
+      "case": "baseline",
+      "component": "vx",
+      "path": "histories/shot2_baseline_vx.csv"
+    },
+    {
+      "source": "shot2",
+      "case": "baseline",
+      "component": "vz",
+      "path": "histories/shot2_baseline_vz.csv"
+    },
+    {
+      "source": "shot3",
+      "case": "measurement",
+      "component": "vx",
+      "path": "histories/shot3_measurement_vx.csv"
+    },
+    {
+      "source": "shot3",
+      "case": "measurement",
+      "component": "vz",
+      "path": "histories/shot3_measurement_vz.csv"
+    },
+    {
+      "source": "shot3",
+      "case": "baseline",
+      "component": "vx",
+      "path": "histories/shot3_baseline_vx.csv"
+    },
+    {
+      "source": "shot3",
+      "case": "baseline",
+      "component": "vz",
+      "path": "histories/shot3_baseline_vz.csv"
+    },
+    {
+      "source": "shot4",
+      "case": "measurement",
+      "component": "vx",
+      "path": "histories/shot4_measurement_vx.csv"
+    },
+    {
+      "source": "shot4",
+      "case": "measurement",
+      "component": "vz",
+      "path": "histories/shot4_measurement_vz.csv"
+    },
+    {
+      "source": "shot4",
+      "case": "baseline",
+      "component": "vx",
+      "path": "histories/shot4_baseline_vx.csv"
+    },
+    {
+      "source": "shot4",
+      "case": "baseline",
+      "component": "vz",
+      "path": "histories/shot4_baseline_vz.csv"
+    },
+    {
+      "source": "shot5",
+      "case": "measurement",
+      "component": "vx",
+      "path": "histories/shot5_measurement_vx.csv"
+    },
+    {
+      "source": "shot5",
+      "case": "measurement",
+      "component": "vz",
+      "path": "histories/shot5_measurement_vz.csv"
+    },
+    {
+      "source": "shot5",
+      "case": "baseline",
+      "component": "vx",
+      "path": "histories/shot5_baseline_vx.csv"
+    },
+    {
+      "source": "shot5",
+      "case": "baseline",
+      "component": "vz",
+      "path": "histories/shot5_baseline_vz.csv"
+    },
+    {
+      "source": "shot6",
+      "case": "measurement",
+      "component": "vx",
+      "path": "histories/shot6_measurement_vx.csv"
+    },
+    {
+      "source": "shot6",
+      "case": "measurement",
+      "component": "vz",
+      "path": "histories/shot6_measurement_vz.csv"
+    },
+    {
+      "source": "shot6",
+      "case": "baseline",
+      "component": "vx",
+      "path": "histories/shot6_baseline_vx.csv"
+    },
+    {
+      "source": "shot6",
+      "case": "baseline",
+      "component": "vz",
+      "path": "histories/shot6_baseline_vz.csv"
+    }
+  ]
+}

@@ -18,7 +18,7 @@ int main(int argc,char **argv) {
     QDir().mkpath(out);
     for(auto value:request["requests"].toArray()) {
       const auto job=value.toObject();
-      auto config=Config::fromJson(job["selection"].toObject(),engine.receiverCount());
+      auto config=engine.config(job["selection"].toObject());
       auto result=engine.reconstruct(config);
       const QString folder=out+"/"+job["id"].toString();QDir().mkpath(folder);
       binary(folder+"/points.f64",result->points);

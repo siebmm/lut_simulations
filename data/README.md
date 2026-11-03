@@ -1,5 +1,10 @@
 # Canonical SAFT acquisitions
 
+These are the archived weld regression datasets. New models use the separate
+[geometry/acquisition contract](../saft/FORMAT.md); they do not need this weld
+layout or these source/receiver/sample counts. Keep generated data in `output/`
+or an external dataset directory and pass it explicitly to `tools/analyze.py`.
+
 `full_weld/` and `partial_weld/` each contain `dataset.json` and 60 CSVs:
 five sources × reference/LOF × left/right/weld receiver groups × vx/vy.
 Both manifests include the material, geometry, source/receiver coordinates,

@@ -1,0 +1,241 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "acquisition",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": 2
+    },
+    "velocity_units": {
+      "const": "m/s"
+    },
+    "sampling": {
+      "type": "object",
+      "properties": {
+        "samples": {
+          "type": "integer",
+          "minimum": 3,
+          "maximum": 100000000
+        },
+        "dt_s": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "start_s": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "samples",
+        "dt_s",
+        "start_s"
+      ],
+      "additionalProperties": false
+    },
+    "filter_half_samples": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1000000
+    },
+    "response": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "model": {
+              "const": "isotropic"
+            }
+          },
+          "required": [
+            "model"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "model": {
+              "const": "laser_free_surface"
+            },
+            "line_half_width_m": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "pulse_fwhm_s": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          },
+          "required": [
+            "model",
+            "line_half_width_m",
+            "pulse_fwhm_s"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+          },
+          "position_m": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "trigger_s": {
+            "type": "number"
+          },
+          "inward_normal": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "required": [
+          "id",
+          "position_m",
+          "trigger_s"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "receivers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+          },
+          "position_m": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "group": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+          },
+          "inward_normal": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "required": [
+          "id",
+          "position_m",
+          "group"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "vx",
+          "vz"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "difference": {
+      "type": "object",
+      "properties": {
+        "minuend": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+        },
+        "subtrahend": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+        }
+      },
+      "required": [
+        "minuend",
+        "subtrahend"
+      ],
+      "additionalProperties": false
+    },
+    "recordings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+          },
+          "case": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]*$"
+          },
+          "component": {
+            "enum": [
+              "vx",
+              "vz"
+            ]
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "source",
+          "case",
+          "component",
+          "path"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "velocity_units",
+    "sampling",
+    "filter_half_samples",
+    "response",
+    "sources",
+    "receivers",
+    "cases",
+    "components",
+    "recordings"
+  ],
+  "additionalProperties": false
+}

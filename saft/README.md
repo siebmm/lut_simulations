@@ -14,6 +14,11 @@ command-line entry points:
 Build from the repository root using the commands in the top-level README.
 Qt 6 Core must be available at runtime as well as when compiling.
 
+For a new model, use [the schema-2 geometry and acquisition format](FORMAT.md).
+All four executables share this reader and support variable source/receiver
+counts, timing, arbitrary case names, and finite polygon boundaries with voids.
+`tools/analyze.py` provides validation, reconstruction, plots and metrics.
+
 ## Inputs
 
 The filter, review and admission programs take four positional arguments:
@@ -31,12 +36,13 @@ SAFTFilterStudy ROOT DATASET REQUEST OUTPUT
   `selection` object parsed by `Config::fromJson` in `src/saft.cpp`.
 - `OUTPUT`: the directory for generated arrays and JSON provenance.
 
-The acquisition manifest has schema 1 and kind `SAFT acquisition dataset`.
+The archived weld acquisition manifest has schema 1 and kind `SAFT acquisition dataset`.
 It supplies material, geometry, source/receiver coordinates, audit hashes, and
 repair information. Receiver histories are referenced under
 `sources/<source>/<reference|lof>/receivers/<left|right|weld>_<vx|vy>.csv`.
-The existing engine expects five sources, at most 337 receivers, and 5,001
-samples at 10 ns intervals. A COMSOL `.mph` file is not a SAFT dataset.
+The legacy schema-1 adapter expects five sources, at most 337 receivers, and
+5,001 samples at 10 ns intervals. Schema 2 reads these dimensions and its
+recording paths from `acquisition.json`. A COMSOL `.mph` file is not a SAFT dataset.
 
 ## Partial-weld example
 
@@ -61,4 +67,4 @@ retained figure generators and reconstructs the additional review grids needed.
 The older geometry studies use `SAFTBatch --dataset DATASET --compute REQUEST
 --output OUTPUT`, with optional `--repository ROOT`. It exports the same
 numbered folders and arrays as the original desktop application's compute mode.
-All four tools share the unchanged reconstruction/physics source in `src/`.
+All four tools share the reconstruction and physics source in `src/`.
