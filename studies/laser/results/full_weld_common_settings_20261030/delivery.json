@@ -1,0 +1,19 @@
+{
+  "pdf": "C:\\Users\\siebm\\Documents\\COMSOL\\NDT\\output\\pdf\\full_weld_common_settings_report_v2.pdf",
+  "pdf_bytes": 2132652,
+  "pdf_sha256": "e3c7794ed72721f8435c39ee0aa76c8bed18aae33f9ca91f6610eb90b8888fe9",
+  "source_bundle": "C:\\Users\\siebm\\Documents\\COMSOL\\NDT\\output\\pdf\\full_weld_common_settings_report_v2_sources.zip",
+  "bundle_bytes": 43090152,
+  "compact_numerical_runs": 124,
+  "input_hashes_unchanged": true,
+  "pdf_pages": 23,
+  "all_pages_visually_reviewed": true,
+  "layout_warnings": 0,
+  "independent_bundle_rebuild": {
+    "bundle_crc_passed": true,
+    "independent_bundle_compilation_passed": true,
+    "all_pages_text_and_pixels_identical": true,
+    "pages": 23,
+    "compact_runs": 124
+  }
+}

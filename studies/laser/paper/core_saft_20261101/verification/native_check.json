@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "executable_sha256": "6d24d1d9c7e791bb4193b88eb76032094bb568f3aaaf1fdfd74d521354886a3d",
+  "checks": [
+    {
+      "kind": "full",
+      "path": "1-1_LL",
+      "pixels": 24563,
+      "max_absolute_difference_m_s": 6.638620724105579e-20
+    },
+    {
+      "kind": "partial",
+      "path": "1-2_SSS",
+      "pixels": 13137,
+      "max_absolute_difference_m_s": 6.437450399132683e-19
+    }
+  ],
+  "signal_cases": [
+    "lof"
+  ]
+}

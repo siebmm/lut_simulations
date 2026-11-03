@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "figure": "filter_response",
+  "legend_count": 1,
+  "legends": [
+    {
+      "labels": [
+        "0.5-5 MHz; 657 taps",
+        "0-5 MHz; 257 taps"
+      ],
+      "bounds_figure_fraction": [
+        0.3378522544283413,
+        0.024076082862523527,
+        0.3906400966183575,
+        0.06026365348399247
+      ],
+      "data_or_label_collisions": []
+    }
+  ],
+  "check": "Rendered legend bounds inside canvas and outside all data axes and their text."
+}

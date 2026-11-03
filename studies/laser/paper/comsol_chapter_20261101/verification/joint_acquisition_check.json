@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "identical_reduced_support_masks": true,
+  "baseline_contains_reduced_support": true,
+  "saved_settings_match_computed_selection": true,
+  "scientific_configurations": 25,
+  "reproduction_controls": 1,
+  "metric_cases_checked": 78
+}

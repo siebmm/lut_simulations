@@ -1,7 +1,7 @@
 # Local builds, acquisition datasets, and reconstruction outputs
 /build/
-/data/
 /output/
+**/build/
 CMakeUserPresets.json
 
 # COMSOL working files

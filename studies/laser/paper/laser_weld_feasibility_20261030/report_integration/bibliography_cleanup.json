@@ -1,0 +1,23 @@
+{
+  "input_entries": 34,
+  "unique_entries": 33,
+  "removed_duplicate_keys": {
+    "levesque": "levesque-2016"
+  },
+  "paper_citations": [
+    "dolz-2024",
+    "holmes",
+    "levesque-2016",
+    "nicolson23",
+    "nicolson24",
+    "stratoudaki",
+    "tu",
+    "wilcox"
+  ],
+  "all_paper_citations_resolve": true,
+  "notes": [
+    "Unique citation keys retained, including the original Unicode Drabenstedt key.",
+    "Use the key map for any unavailable thesis chapters that cite removed duplicates.",
+    "BibTeX-safe accents and ampersands; normalized DOI prefixes; no publication-date changes."
+  ]
+}

@@ -1,0 +1,2410 @@
+{
+  "rows": [
+    {
+      "id": "baseline__1-2_SSS__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 29.72276305589214,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "near": {
+        "um_s": 29.72276305589214,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "background": {
+        "um_s": 11.764940133844595,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 21.95,
+        "distance_mm": 1.0275549439186504
+      },
+      "cmax_db": 8.04998915572596,
+      "c99_db": 11.229903818070062
+    },
+    {
+      "id": "baseline__1-2_SSS__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 6.64056888616671,
+        "x_mm": 7.5,
+        "depth_mm": 24.95,
+        "distance_mm": 6.236368723355697
+      },
+      "near": {
+        "um_s": 6.284872234325564,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 18.65,
+        "distance_mm": 0.022278436856529246
+      },
+      "background": {
+        "um_s": 6.64056888616671,
+        "x_mm": 7.5,
+        "depth_mm": 24.95,
+        "distance_mm": 6.236368723355697
+      },
+      "cmax_db": -0.4781766584453975,
+      "c99_db": 0.1409499949469153
+    },
+    {
+      "id": "baseline__1-2_SSS__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 50.81459615090281,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "near": {
+        "um_s": 50.81459615090281,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "background": {
+        "um_s": 19.81355420698791,
+        "x_mm": 1.8000000000000007,
+        "depth_mm": 18.849999999999998,
+        "distance_mm": 1.0104407803625144
+      },
+      "cmax_db": 8.18052181939007,
+      "c99_db": 13.197869406778606
+    },
+    {
+      "id": "baseline__1-1_SS__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "baseline",
+      "path": "1-1_SS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 34.9499739541077,
+        "x_mm": 0.8000000000000007,
+        "depth_mm": 17.45,
+        "distance_mm": 2.2723931099084482
+      },
+      "near": {
+        "um_s": 1.8155401461509835,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.41869012955205487
+      },
+      "background": {
+        "um_s": 34.9499739541077,
+        "x_mm": 0.8000000000000007,
+        "depth_mm": 17.45,
+        "distance_mm": 2.2723931099084482
+      },
+      "cmax_db": -25.688819994690544,
+      "c99_db": -9.312162595494343
+    },
+    {
+      "id": "baseline__1-1_SS__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "baseline",
+      "path": "1-1_SS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 31.690652476276455,
+        "x_mm": 0.8000000000000007,
+        "depth_mm": 17.45,
+        "distance_mm": 2.2723931099084482
+      },
+      "near": {
+        "um_s": 0.7131064338157167,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 18.15,
+        "distance_mm": 0.32470211751499706
+      },
+      "background": {
+        "um_s": 31.690652476276455,
+        "x_mm": 0.8000000000000007,
+        "depth_mm": 17.45,
+        "distance_mm": 2.2723931099084482
+      },
+      "cmax_db": -32.9555365232542,
+      "c99_db": -14.449256966253753
+    },
+    {
+      "id": "baseline__1-1_SS__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "baseline",
+      "path": "1-1_SS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 8.873596918851364,
+        "x_mm": 7.200000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 6.211467056271689
+      },
+      "near": {
+        "um_s": 5.925768543967887,
+        "x_mm": 3.0,
+        "depth_mm": 21.049999999999997,
+        "distance_mm": 0.3103190676698488
+      },
+      "background": {
+        "um_s": 8.873596918851364,
+        "x_mm": 7.200000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 6.211467056271689
+      },
+      "cmax_db": -3.5071002567500003,
+      "c99_db": 9.875480175892795
+    },
+    {
+      "id": "baseline__1-1_LL__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "baseline",
+      "path": "1-1_LL",
+      "support_pct": 91.74849661262084,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 55.82356060400736,
+        "x_mm": -2.5999999999999996,
+        "depth_mm": 16.95,
+        "distance_mm": 5.639857597485996
+      },
+      "near": {
+        "um_s": 16.51983866653034,
+        "x_mm": 3.1000000000000014,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.49616185078459135
+      },
+      "background": {
+        "um_s": 55.82356060400736,
+        "x_mm": -2.5999999999999996,
+        "depth_mm": 16.95,
+        "distance_mm": 5.639857597485996
+      },
+      "cmax_db": -10.576234641029476,
+      "c99_db": -8.144646122910412
+    },
+    {
+      "id": "baseline__1-1_LL__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "baseline",
+      "path": "1-1_LL",
+      "support_pct": 91.74849661262084,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 55.84438908844338,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 16.95,
+        "distance_mm": 1.5350884181293436
+      },
+      "near": {
+        "um_s": 14.015177808786273,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.4378086020790649
+      },
+      "background": {
+        "um_s": 55.84438908844338,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 16.95,
+        "distance_mm": 1.5350884181293436
+      },
+      "cmax_db": -12.007618647014695,
+      "c99_db": -9.578440905031782
+    },
+    {
+      "id": "baseline__1-1_LL__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "baseline",
+      "path": "1-1_LL",
+      "support_pct": 91.74849661262084,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 8.391969743950536,
+        "x_mm": 5.9,
+        "depth_mm": 25.25,
+        "distance_mm": 5.3455165085256375
+      },
+      "near": {
+        "um_s": 6.42381946989386,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 18.65,
+        "distance_mm": 0.2220043438074433
+      },
+      "background": {
+        "um_s": 8.391969743950536,
+        "x_mm": 5.9,
+        "depth_mm": 25.25,
+        "distance_mm": 5.3455165085256375
+      },
+      "cmax_db": -2.321411640783281,
+      "c99_db": 3.1847156489117383
+    },
+    {
+      "id": "baseline__3-2_SSSSS__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "baseline",
+      "path": "3-2_SSSSS",
+      "support_pct": 44.2033949912461,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 0.7440915322253441,
+        "x_mm": -1.2999999999999998,
+        "depth_mm": 16.849999999999998,
+        "distance_mm": 4.437185415869454
+      },
+      "near": {
+        "um_s": 0.4449246871236205,
+        "x_mm": 3.200000000000001,
+        "depth_mm": 19.45,
+        "distance_mm": 0.41904214203965584
+      },
+      "background": {
+        "um_s": 0.7440915322253441,
+        "x_mm": -1.2999999999999998,
+        "depth_mm": 16.849999999999998,
+        "distance_mm": 4.437185415869454
+      },
+      "cmax_db": -4.466797171499841,
+      "c99_db": -0.30709319843579086
+    },
+    {
+      "id": "baseline__3-2_SSSSS__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "baseline",
+      "path": "3-2_SSSSS",
+      "support_pct": 44.2033949912461,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 0.03847194450460066,
+        "x_mm": -1.8999999999999995,
+        "depth_mm": 19.15,
+        "distance_mm": 4.689669272081555
+      },
+      "near": {
+        "um_s": 0.017532357863038067,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 20.75,
+        "distance_mm": 0.01223588222180394
+      },
+      "background": {
+        "um_s": 0.03847194450460066,
+        "x_mm": -1.8999999999999995,
+        "depth_mm": 19.15,
+        "distance_mm": 4.689669272081555
+      },
+      "cmax_db": -6.826076217878219,
+      "c99_db": -3.569669816073776
+    },
+    {
+      "id": "baseline__3-2_SSSSS__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "baseline",
+      "path": "3-2_SSSSS",
+      "support_pct": 44.2033949912461,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 1.4872777997630553,
+        "x_mm": 2.0,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.9307529233610746
+      },
+      "near": {
+        "um_s": 1.3529573865558788,
+        "x_mm": 3.200000000000001,
+        "depth_mm": 18.15,
+        "distance_mm": 0.48611379604820665
+      },
+      "background": {
+        "um_s": 1.428086152368818,
+        "x_mm": 2.0,
+        "depth_mm": 17.849999999999998,
+        "distance_mm": 1.035997600545558
+      },
+      "cmax_db": -0.46940579858644943,
+      "c99_db": 4.696947110497307
+    },
+    {
+      "id": "baseline__1-2_SSS__shoulders",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 5.374134124990485,
+      "near_support_pct": 0.0,
+      "peak": {
+        "um_s": 2.3894187841370815,
+        "x_mm": 0.5,
+        "depth_mm": 23.45,
+        "distance_mm": 3.317633807637995
+      },
+      "near": null,
+      "background": {
+        "um_s": 2.3894187841370815,
+        "x_mm": 0.5,
+        "depth_mm": 23.45,
+        "distance_mm": 3.317633807637995
+      },
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "baseline__1-2_SSS__shoulders",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 5.374134124990485,
+      "near_support_pct": 0.0,
+      "peak": {
+        "um_s": 1.5492805955489948,
+        "x_mm": 0.0,
+        "depth_mm": 21.75,
+        "distance_mm": 2.8119325338010412
+      },
+      "near": null,
+      "background": {
+        "um_s": 1.5492805955489948,
+        "x_mm": 0.0,
+        "depth_mm": 21.75,
+        "distance_mm": 2.8119325338010412
+      },
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "baseline__1-2_SSS__shoulders",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 5.374134124990485,
+      "near_support_pct": 0.0,
+      "peak": {
+        "um_s": 3.839278255560494,
+        "x_mm": 0.5999999999999996,
+        "depth_mm": 23.25,
+        "distance_mm": 3.10217875818673
+      },
+      "near": null,
+      "background": {
+        "um_s": 3.839278255560494,
+        "x_mm": 0.5999999999999996,
+        "depth_mm": 23.25,
+        "distance_mm": 3.10217875818673
+      },
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "baseline__1-2_SSS__central",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 40.610489457258126,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 25.474236839134143,
+        "x_mm": 2.5,
+        "depth_mm": 20.25,
+        "distance_mm": 0.23812976729419175
+      },
+      "near": {
+        "um_s": 25.474236839134143,
+        "x_mm": 2.5,
+        "depth_mm": 20.25,
+        "distance_mm": 0.23812976729419175
+      },
+      "background": {
+        "um_s": 13.708922645729928,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 21.95,
+        "distance_mm": 1.0275549439186504
+      },
+      "cmax_db": 5.381957126803582,
+      "c99_db": 8.79734239479044
+    },
+    {
+      "id": "baseline__1-2_SSS__central",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 40.610489457258126,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 7.23629966271028,
+        "x_mm": -7.2,
+        "depth_mm": 25.25,
+        "distance_mm": 10.787351635988564
+      },
+      "near": {
+        "um_s": 4.709512698381741,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 19.65,
+        "distance_mm": 0.16966838756449937
+      },
+      "background": {
+        "um_s": 7.23629966271028,
+        "x_mm": -7.2,
+        "depth_mm": 25.25,
+        "distance_mm": 10.787351635988564
+      },
+      "cmax_db": -3.7308114182544845,
+      "c99_db": -2.2659141167867727
+    },
+    {
+      "id": "baseline__1-2_SSS__central",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 40.610489457258126,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 61.39480239217361,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "near": {
+        "um_s": 61.39480239217361,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "background": {
+        "um_s": 14.665534669903222,
+        "x_mm": 3.1000000000000014,
+        "depth_mm": 21.95,
+        "distance_mm": 1.060505425715279
+      },
+      "cmax_db": 12.436674098683538,
+      "c99_db": 13.537574061420187
+    },
+    {
+      "id": "baseline__1-2_SSS__plate",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 30.050506755889398,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "near": {
+        "um_s": 30.050506755889398,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "background": {
+        "um_s": 11.941640600965155,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 21.95,
+        "distance_mm": 1.0275549439186504
+      },
+      "cmax_db": 8.015756074442553,
+      "c99_db": 11.302838142101743
+    },
+    {
+      "id": "baseline__1-2_SSS__plate",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 7.739620584974962,
+        "x_mm": 7.5,
+        "depth_mm": 24.95,
+        "distance_mm": 6.236368723355697
+      },
+      "near": {
+        "um_s": 6.376824167674809,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 18.65,
+        "distance_mm": 0.022278436856529246
+      },
+      "background": {
+        "um_s": 7.739620584974962,
+        "x_mm": 7.5,
+        "depth_mm": 24.95,
+        "distance_mm": 6.236368723355697
+      },
+      "cmax_db": -1.6823045793029747,
+      "c99_db": -0.8075232442654273
+    },
+    {
+      "id": "baseline__1-2_SSS__plate",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 51.22951454416553,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "near": {
+        "um_s": 51.22951454416553,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "background": {
+        "um_s": 19.843250778188025,
+        "x_mm": 1.8000000000000007,
+        "depth_mm": 18.849999999999998,
+        "distance_mm": 1.0104407803625144
+      },
+      "cmax_db": 8.238148389331725,
+      "c99_db": 13.10032732021477
+    },
+    {
+      "id": "baseline__1-2_SSS__floor",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 30.067747583162063,
+      "near_support_pct": 94.84848484848484,
+      "peak": {
+        "um_s": 46.3403188557793,
+        "x_mm": -2.6999999999999993,
+        "depth_mm": 22.849999999999998,
+        "distance_mm": 5.719540016825679
+      },
+      "near": {
+        "um_s": 25.46202588675593,
+        "x_mm": 2.5,
+        "depth_mm": 18.15,
+        "distance_mm": 0.4592725280257441
+      },
+      "background": {
+        "um_s": 46.3403188557793,
+        "x_mm": -2.6999999999999993,
+        "depth_mm": 22.849999999999998,
+        "distance_mm": 5.719540016825679
+      },
+      "cmax_db": -5.201321247766649,
+      "c99_db": -4.228644570701503
+    },
+    {
+      "id": "baseline__1-2_SSS__floor",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 30.067747583162063,
+      "near_support_pct": 94.84848484848484,
+      "peak": {
+        "um_s": 50.37131041562842,
+        "x_mm": -5.0,
+        "depth_mm": 20.75,
+        "distance_mm": 7.703925466022694
+      },
+      "near": {
+        "um_s": 38.29587062527949,
+        "x_mm": 2.3000000000000007,
+        "depth_mm": 20.65,
+        "distance_mm": 0.4169212917479283
+      },
+      "background": {
+        "um_s": 50.37131041562842,
+        "x_mm": -5.0,
+        "depth_mm": 20.75,
+        "distance_mm": 7.703925466022694
+      },
+      "cmax_db": -2.3806260385088365,
+      "c99_db": -2.322056459630012
+    },
+    {
+      "id": "baseline__1-2_SSS__floor",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 30.067747583162063,
+      "near_support_pct": 94.84848484848484,
+      "peak": {
+        "um_s": 39.91698646339071,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 18.45,
+        "distance_mm": 0.0703308547671063
+      },
+      "near": {
+        "um_s": 39.91698646339071,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 18.45,
+        "distance_mm": 0.0703308547671063
+      },
+      "background": {
+        "um_s": 35.96225647299158,
+        "x_mm": 4.700000000000001,
+        "depth_mm": 24.15,
+        "distance_mm": 3.7583300239352977
+      },
+      "cmax_db": 0.9062162554205018,
+      "c99_db": 1.5481405665841284
+    },
+    {
+      "id": "baseline__1-2_SSS__shoulders_plate",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 5.374134124990485,
+      "near_support_pct": 0.0,
+      "peak": {
+        "um_s": 2.473044348803645,
+        "x_mm": 0.5,
+        "depth_mm": 23.45,
+        "distance_mm": 3.317633807637995
+      },
+      "near": null,
+      "background": {
+        "um_s": 2.473044348803645,
+        "x_mm": 0.5,
+        "depth_mm": 23.45,
+        "distance_mm": 3.317633807637995
+      },
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "baseline__1-2_SSS__shoulders_plate",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 5.374134124990485,
+      "near_support_pct": 0.0,
+      "peak": {
+        "um_s": 1.5649442166245628,
+        "x_mm": 0.0,
+        "depth_mm": 21.75,
+        "distance_mm": 2.8119325338010412
+      },
+      "near": null,
+      "background": {
+        "um_s": 1.5649442166245628,
+        "x_mm": 0.0,
+        "depth_mm": 21.75,
+        "distance_mm": 2.8119325338010412
+      },
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "baseline__1-2_SSS__shoulders_plate",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 5.374134124990485,
+      "near_support_pct": 0.0,
+      "peak": {
+        "um_s": 3.895721996974707,
+        "x_mm": 0.5999999999999996,
+        "depth_mm": 23.15,
+        "distance_mm": 3.0293576975557777
+      },
+      "near": null,
+      "background": {
+        "um_s": 3.895721996974707,
+        "x_mm": 0.5999999999999996,
+        "depth_mm": 23.15,
+        "distance_mm": 3.0293576975557777
+      },
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "baseline__1-2_SSS__wide",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 3.677902416280409,
+      "near_support_pct": 94.33962264150944,
+      "peak": {
+        "um_s": 29.72276305589214,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "near": {
+        "um_s": 29.72276305589214,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "background": {
+        "um_s": 10.075526293017612,
+        "x_mm": -0.5,
+        "depth_mm": 18.0,
+        "distance_mm": 3.364509205975761
+      },
+      "cmax_db": 9.396428773990351,
+      "c99_db": 11.298358428782954
+    },
+    {
+      "id": "baseline__1-2_SSS__wide",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 3.677902416280409,
+      "near_support_pct": 94.33962264150944,
+      "peak": {
+        "um_s": 7.263926820251035,
+        "x_mm": 7.75,
+        "depth_mm": 24.75,
+        "distance_mm": 6.308831685270155
+      },
+      "near": {
+        "um_s": 6.282411955536235,
+        "x_mm": 2.75,
+        "depth_mm": 18.5,
+        "distance_mm": 0.08006030703070013
+      },
+      "background": {
+        "um_s": 7.263926820251035,
+        "x_mm": 7.75,
+        "depth_mm": 24.75,
+        "distance_mm": 6.308831685270155
+      },
+      "cmax_db": -1.2609009872254644,
+      "c99_db": -0.25394042637768904
+    },
+    {
+      "id": "baseline__1-2_SSS__wide",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 3.677902416280409,
+      "near_support_pct": 94.33962264150944,
+      "peak": {
+        "um_s": 38.85170636540564,
+        "x_mm": 2.5,
+        "depth_mm": 19.5,
+        "distance_mm": 0.2773817344763997
+      },
+      "near": {
+        "um_s": 38.85170636540564,
+        "x_mm": 2.5,
+        "depth_mm": 19.5,
+        "distance_mm": 0.2773817344763997
+      },
+      "background": {
+        "um_s": 15.0543642093041,
+        "x_mm": 1.75,
+        "depth_mm": 18.75,
+        "distance_mm": 1.065605852724538
+      },
+      "cmax_db": 8.234953581346433,
+      "c99_db": 10.68394117243159
+    },
+    {
+      "id": "baseline__1-2_SSS__finer",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 62.521844333915844,
+      "near_support_pct": 95.81749049429658,
+      "peak": {
+        "um_s": 30.345695467759246,
+        "x_mm": 3.0500000000000007,
+        "depth_mm": 18.349999999999998,
+        "distance_mm": 0.24774789589942603
+      },
+      "near": {
+        "um_s": 30.345695467759246,
+        "x_mm": 3.0500000000000007,
+        "depth_mm": 18.349999999999998,
+        "distance_mm": 0.24774789589942603
+      },
+      "background": {
+        "um_s": 11.764940133844595,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 21.95,
+        "distance_mm": 1.0275549439186504
+      },
+      "cmax_db": 8.23014747147867,
+      "c99_db": 11.3447950086865
+    },
+    {
+      "id": "baseline__1-2_SSS__finer",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 62.521844333915844,
+      "near_support_pct": 95.81749049429658,
+      "peak": {
+        "um_s": 6.64056888616671,
+        "x_mm": 7.5,
+        "depth_mm": 24.95,
+        "distance_mm": 6.236368723355697
+      },
+      "near": {
+        "um_s": 6.314282500671857,
+        "x_mm": 2.75,
+        "depth_mm": 18.599999999999998,
+        "distance_mm": 0.07482671140640586
+      },
+      "background": {
+        "um_s": 6.64056888616671,
+        "x_mm": 7.5,
+        "depth_mm": 24.95,
+        "distance_mm": 6.236368723355697
+      },
+      "cmax_db": -0.4376255584592521,
+      "c99_db": 0.21791195152104983
+    },
+    {
+      "id": "baseline__1-2_SSS__finer",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "baseline",
+      "path": "1-2_SSS",
+      "support_pct": 62.521844333915844,
+      "near_support_pct": 95.81749049429658,
+      "peak": {
+        "um_s": 50.81459615090281,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "near": {
+        "um_s": 50.81459615090281,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "background": {
+        "um_s": 19.81355420698791,
+        "x_mm": 1.8000000000000007,
+        "depth_mm": 18.849999999999998,
+        "distance_mm": 1.0104407803625144
+      },
+      "cmax_db": 8.18052181939007,
+      "c99_db": 13.131693826009819
+    },
+    {
+      "id": "band1_5__1-2_SSS__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "band1_5",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 28.643859439530786,
+        "x_mm": 3.1000000000000014,
+        "depth_mm": 18.45,
+        "distance_mm": 0.26869412757270117
+      },
+      "near": {
+        "um_s": 28.643859439530786,
+        "x_mm": 3.1000000000000014,
+        "depth_mm": 18.45,
+        "distance_mm": 0.26869412757270117
+      },
+      "background": {
+        "um_s": 10.658913448454188,
+        "x_mm": -0.5999999999999996,
+        "depth_mm": 17.849999999999998,
+        "distance_mm": 3.486981454289509
+      },
+      "cmax_db": 8.58637196391007,
+      "c99_db": 11.729114328468368
+    },
+    {
+      "id": "band1_5__1-2_SSS__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "band1_5",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 5.7119608759348175,
+        "x_mm": 0.5999999999999996,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 2.270583684634132
+      },
+      "near": {
+        "um_s": 4.697707965912811,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 18.65,
+        "distance_mm": 0.022278436856529246
+      },
+      "background": {
+        "um_s": 5.7119608759348175,
+        "x_mm": 0.5999999999999996,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 2.270583684634132
+      },
+      "cmax_db": -1.6979841762775836,
+      "c99_db": -0.3202455219143374
+    },
+    {
+      "id": "band1_5__1-2_SSS__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "band1_5",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 50.081911507639525,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "near": {
+        "um_s": 50.081911507639525,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "background": {
+        "um_s": 18.28839871334028,
+        "x_mm": 1.8000000000000007,
+        "depth_mm": 18.849999999999998,
+        "distance_mm": 1.0104407803625144
+      },
+      "cmax_db": 8.75010430220771,
+      "c99_db": 11.710300150721885
+    },
+    {
+      "id": "band1_5__1-1_SS__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "band1_5",
+      "path": "1-1_SS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 30.938517528474613,
+        "x_mm": 0.8000000000000007,
+        "depth_mm": 17.45,
+        "distance_mm": 2.2723931099084482
+      },
+      "near": {
+        "um_s": 4.5848149971100245,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.4775471908874906
+      },
+      "background": {
+        "um_s": 30.938517528474613,
+        "x_mm": 0.8000000000000007,
+        "depth_mm": 17.45,
+        "distance_mm": 2.2723931099084482
+      },
+      "cmax_db": -16.583553677182007,
+      "c99_db": -0.847849428177647
+    },
+    {
+      "id": "band1_5__1-1_SS__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "band1_5",
+      "path": "1-1_SS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 27.691740506114726,
+        "x_mm": 0.8000000000000007,
+        "depth_mm": 17.45,
+        "distance_mm": 2.2723931099084482
+      },
+      "near": {
+        "um_s": 1.1330486017079087,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 18.349999999999998,
+        "distance_mm": 0.13579926777326784
+      },
+      "background": {
+        "um_s": 27.691740506114726,
+        "x_mm": 0.8000000000000007,
+        "depth_mm": 17.45,
+        "distance_mm": 2.2723931099084482
+      },
+      "cmax_db": -27.762034282058337,
+      "c99_db": -11.175474138622263
+    },
+    {
+      "id": "band1_5__1-1_SS__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "band1_5",
+      "path": "1-1_SS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 8.446325022646747,
+        "x_mm": 7.200000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 6.211467056271689
+      },
+      "near": {
+        "um_s": 5.435579545525473,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 21.049999999999997,
+        "distance_mm": 0.3119683809795675
+      },
+      "background": {
+        "um_s": 8.446325022646747,
+        "x_mm": 7.200000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 6.211467056271689
+      },
+      "cmax_db": -3.828438675710414,
+      "c99_db": 11.86917484565692
+    },
+    {
+      "id": "band1_5__1-1_LL__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "band1_5",
+      "path": "1-1_LL",
+      "support_pct": 91.74849661262084,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 52.682196224042244,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 16.95,
+        "distance_mm": 1.5350884181293436
+      },
+      "near": {
+        "um_s": 12.40181904481759,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 18.549999999999997,
+        "distance_mm": 0.22723793943173778
+      },
+      "background": {
+        "um_s": 52.682196224042244,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 16.95,
+        "distance_mm": 1.5350884181293436
+      },
+      "cmax_db": -12.563569626976562,
+      "c99_db": -10.013053273610806
+    },
+    {
+      "id": "band1_5__1-1_LL__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "band1_5",
+      "path": "1-1_LL",
+      "support_pct": 91.74849661262084,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 51.885943069645265,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 16.95,
+        "distance_mm": 1.5350884181293436
+      },
+      "near": {
+        "um_s": 10.273714785685016,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.4378086020790649
+      },
+      "background": {
+        "um_s": 51.885943069645265,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 16.95,
+        "distance_mm": 1.5350884181293436
+      },
+      "cmax_db": -14.066444198719964,
+      "c99_db": -11.559366048979825
+    },
+    {
+      "id": "band1_5__1-1_LL__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "band1_5",
+      "path": "1-1_LL",
+      "support_pct": 91.74849661262084,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 5.943966362706459,
+        "x_mm": 6.0,
+        "depth_mm": 25.25,
+        "distance_mm": 5.405957425386509
+      },
+      "near": {
+        "um_s": 5.007503981052136,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 18.549999999999997,
+        "distance_mm": 0.4269638463826536
+      },
+      "background": {
+        "um_s": 5.943966362706459,
+        "x_mm": 6.0,
+        "depth_mm": 25.25,
+        "distance_mm": 5.405957425386509
+      },
+      "cmax_db": -1.4891007964258953,
+      "c99_db": 1.9732437479164613
+    },
+    {
+      "id": "band1_5__3-2_SSSSS__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "band1_5",
+      "path": "3-2_SSSSS",
+      "support_pct": 44.2033949912461,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 0.940171115701774,
+        "x_mm": -1.2999999999999998,
+        "depth_mm": 17.25,
+        "distance_mm": 4.307509067526455
+      },
+      "near": {
+        "um_s": 0.45148686771580776,
+        "x_mm": 3.200000000000001,
+        "depth_mm": 19.15,
+        "distance_mm": 0.40334135516677266
+      },
+      "background": {
+        "um_s": 0.940171115701774,
+        "x_mm": -1.2999999999999998,
+        "depth_mm": 17.25,
+        "distance_mm": 4.307509067526455
+      },
+      "cmax_db": -6.3712356375128785,
+      "c99_db": -2.358639527741491
+    },
+    {
+      "id": "band1_5__3-2_SSSSS__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "band1_5",
+      "path": "3-2_SSSSS",
+      "support_pct": 44.2033949912461,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 0.04266600671992635,
+        "x_mm": -1.8999999999999995,
+        "depth_mm": 19.549999999999997,
+        "distance_mm": 4.668734889584377
+      },
+      "near": {
+        "um_s": 0.009398604023888658,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 20.75,
+        "distance_mm": 0.01223588222180394
+      },
+      "background": {
+        "um_s": 0.04266600671992635,
+        "x_mm": -1.8999999999999995,
+        "depth_mm": 19.549999999999997,
+        "distance_mm": 4.668734889584377
+      },
+      "cmax_db": -13.140372897250252,
+      "c99_db": -6.53952811306853
+    },
+    {
+      "id": "band1_5__3-2_SSSSS__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "band1_5",
+      "path": "3-2_SSSSS",
+      "support_pct": 44.2033949912461,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 1.4566744144995136,
+        "x_mm": 3.200000000000001,
+        "depth_mm": 18.15,
+        "distance_mm": 0.48611379604820665
+      },
+      "near": {
+        "um_s": 1.4566744144995136,
+        "x_mm": 3.200000000000001,
+        "depth_mm": 18.15,
+        "distance_mm": 0.48611379604820665
+      },
+      "background": {
+        "um_s": 1.0938615619504042,
+        "x_mm": -1.1999999999999993,
+        "depth_mm": 16.849999999999998,
+        "distance_mm": 4.344219086019312
+      },
+      "cmax_db": 2.4880026122775294,
+      "c99_db": 5.156570245431288
+    },
+    {
+      "id": "bp_short_matched_guard__1-2_SSS__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "bp_short_matched_guard",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 29.189863435575695,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "near": {
+        "um_s": 29.189863435575695,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "background": {
+        "um_s": 11.83805820278723,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 21.95,
+        "distance_mm": 1.0275549439186504
+      },
+      "cmax_db": 7.839031845312563,
+      "c99_db": 11.340807996840805
+    },
+    {
+      "id": "bp_short_matched_guard__1-2_SSS__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "bp_short_matched_guard",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 6.488144302947366,
+        "x_mm": 7.5,
+        "depth_mm": 24.95,
+        "distance_mm": 6.236368723355697
+      },
+      "near": {
+        "um_s": 5.9808095793219795,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 18.65,
+        "distance_mm": 0.022278436856529246
+      },
+      "background": {
+        "um_s": 6.488144302947366,
+        "x_mm": 7.5,
+        "depth_mm": 24.95,
+        "distance_mm": 6.236368723355697
+      },
+      "cmax_db": -0.7072105032847287,
+      "c99_db": -0.09535578549808148
+    },
+    {
+      "id": "bp_short_matched_guard__1-2_SSS__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "bp_short_matched_guard",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 50.585931538924356,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "near": {
+        "um_s": 50.585931538924356,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "background": {
+        "um_s": 19.729619217158234,
+        "x_mm": 1.8000000000000007,
+        "depth_mm": 18.849999999999998,
+        "distance_mm": 1.0104407803625144
+      },
+      "cmax_db": 8.178220970090962,
+      "c99_db": 12.962251116550338
+    },
+    {
+      "id": "bp_short_matched_guard__1-1_SS__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "bp_short_matched_guard",
+      "path": "1-1_SS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 34.111426924183505,
+        "x_mm": 0.8000000000000007,
+        "depth_mm": 17.45,
+        "distance_mm": 2.2723931099084482
+      },
+      "near": {
+        "um_s": 1.450173665668144,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.41869012955205487
+      },
+      "background": {
+        "um_s": 34.111426924183505,
+        "x_mm": 0.8000000000000007,
+        "depth_mm": 17.45,
+        "distance_mm": 2.2723931099084482
+      },
+      "cmax_db": -27.4295974510851,
+      "c99_db": -9.308440816545332
+    },
+    {
+      "id": "bp_short_matched_guard__1-1_SS__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "bp_short_matched_guard",
+      "path": "1-1_SS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 31.037419022528976,
+        "x_mm": 0.8000000000000007,
+        "depth_mm": 17.45,
+        "distance_mm": 2.2723931099084482
+      },
+      "near": {
+        "um_s": 0.3690396810192167,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 18.15,
+        "distance_mm": 0.32470211751499706
+      },
+      "background": {
+        "um_s": 31.037419022528976,
+        "x_mm": 0.8000000000000007,
+        "depth_mm": 17.45,
+        "distance_mm": 2.2723931099084482
+      },
+      "cmax_db": -38.496250665232175,
+      "c99_db": -18.470989967501005
+    },
+    {
+      "id": "bp_short_matched_guard__1-1_SS__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "bp_short_matched_guard",
+      "path": "1-1_SS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 8.93463419326479,
+        "x_mm": 7.200000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 6.211467056271689
+      },
+      "near": {
+        "um_s": 5.749664105926204,
+        "x_mm": 3.0,
+        "depth_mm": 21.15,
+        "distance_mm": 0.3504324639128069
+      },
+      "background": {
+        "um_s": 8.93463419326479,
+        "x_mm": 7.200000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 6.211467056271689
+      },
+      "cmax_db": -3.828686040704961,
+      "c99_db": 10.278392245433235
+    },
+    {
+      "id": "bp_short_matched_guard__1-1_LL__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "bp_short_matched_guard",
+      "path": "1-1_LL",
+      "support_pct": 91.74849661262084,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 55.22511998172724,
+        "x_mm": -2.5999999999999996,
+        "depth_mm": 16.95,
+        "distance_mm": 5.639857597485996
+      },
+      "near": {
+        "um_s": 16.021259715685527,
+        "x_mm": 3.1000000000000014,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.49616185078459135
+      },
+      "background": {
+        "um_s": 55.22511998172724,
+        "x_mm": -2.5999999999999996,
+        "depth_mm": 16.95,
+        "distance_mm": 5.639857597485996
+      },
+      "cmax_db": -10.748800147977153,
+      "c99_db": -8.29737065242088
+    },
+    {
+      "id": "bp_short_matched_guard__1-1_LL__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "bp_short_matched_guard",
+      "path": "1-1_LL",
+      "support_pct": 91.74849661262084,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 55.286107925515566,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 16.95,
+        "distance_mm": 1.5350884181293436
+      },
+      "near": {
+        "um_s": 13.644224685698905,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.4378086020790649
+      },
+      "background": {
+        "um_s": 55.286107925515566,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 16.95,
+        "distance_mm": 1.5350884181293436
+      },
+      "cmax_db": -12.15334309386473,
+      "c99_db": -9.656986642066343
+    },
+    {
+      "id": "bp_short_matched_guard__1-1_LL__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "bp_short_matched_guard",
+      "path": "1-1_LL",
+      "support_pct": 91.74849661262084,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 7.9990638605790165,
+        "x_mm": 5.9,
+        "depth_mm": 25.25,
+        "distance_mm": 5.3455165085256375
+      },
+      "near": {
+        "um_s": 6.130568560261454,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 18.65,
+        "distance_mm": 0.2220043438074433
+      },
+      "background": {
+        "um_s": 7.9990638605790165,
+        "x_mm": 5.9,
+        "depth_mm": 25.25,
+        "distance_mm": 5.3455165085256375
+      },
+      "cmax_db": -2.310768206717324,
+      "c99_db": 3.0618748203374757
+    },
+    {
+      "id": "bp_short_matched_guard__3-2_SSSSS__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "bp_short_matched_guard",
+      "path": "3-2_SSSSS",
+      "support_pct": 44.2033949912461,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 0.7429870304218409,
+        "x_mm": -1.2999999999999998,
+        "depth_mm": 17.049999999999997,
+        "distance_mm": 4.368251868976148
+      },
+      "near": {
+        "um_s": 0.4393906142412725,
+        "x_mm": 3.200000000000001,
+        "depth_mm": 19.15,
+        "distance_mm": 0.40334135516677266
+      },
+      "background": {
+        "um_s": 0.7429870304218409,
+        "x_mm": -1.2999999999999998,
+        "depth_mm": 17.049999999999997,
+        "distance_mm": 4.368251868976148
+      },
+      "cmax_db": -4.5626091400339295,
+      "c99_db": -0.7643528839407205
+    },
+    {
+      "id": "bp_short_matched_guard__3-2_SSSSS__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "bp_short_matched_guard",
+      "path": "3-2_SSSSS",
+      "support_pct": 44.2033949912461,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 0.031478376003945006,
+        "x_mm": -1.8999999999999995,
+        "depth_mm": 19.549999999999997,
+        "distance_mm": 4.668734889584377
+      },
+      "near": {
+        "um_s": 0.018544624101362157,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 20.75,
+        "distance_mm": 0.01223588222180394
+      },
+      "background": {
+        "um_s": 0.031478376003945006,
+        "x_mm": -1.8999999999999995,
+        "depth_mm": 19.549999999999997,
+        "distance_mm": 4.668734889584377
+      },
+      "cmax_db": -4.595885680390879,
+      "c99_db": -1.0911161864486187
+    },
+    {
+      "id": "bp_short_matched_guard__3-2_SSSSS__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "bp_short_matched_guard",
+      "path": "3-2_SSSSS",
+      "support_pct": 44.2033949912461,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 1.39811486218324,
+        "x_mm": 2.0,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.9307529233610746
+      },
+      "near": {
+        "um_s": 1.2937659014462195,
+        "x_mm": 3.200000000000001,
+        "depth_mm": 18.15,
+        "distance_mm": 0.48611379604820665
+      },
+      "background": {
+        "um_s": 1.3329567724157856,
+        "x_mm": 2.0,
+        "depth_mm": 17.849999999999998,
+        "distance_mm": 1.035997600545558
+      },
+      "cmax_db": -0.2592072973741985,
+      "c99_db": 4.392921177570802
+    },
+    {
+      "id": "lp_short_matched_guard__1-2_SSS__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "lp_short_matched_guard",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 28.715389353473316,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "near": {
+        "um_s": 28.715389353473316,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "background": {
+        "um_s": 13.058734600254137,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 21.95,
+        "distance_mm": 1.0275549439186504
+      },
+      "cmax_db": 6.84427227428722,
+      "c99_db": 11.313675592706876
+    },
+    {
+      "id": "lp_short_matched_guard__1-2_SSS__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "lp_short_matched_guard",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 7.429030315821965,
+        "x_mm": 7.5,
+        "depth_mm": 24.95,
+        "distance_mm": 6.236368723355697
+      },
+      "near": {
+        "um_s": 5.798652122015356,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 18.65,
+        "distance_mm": 0.022278436856529246
+      },
+      "background": {
+        "um_s": 7.429030315821965,
+        "x_mm": 7.5,
+        "depth_mm": 24.95,
+        "distance_mm": 6.236368723355697
+      },
+      "cmax_db": -2.1521015129195966,
+      "c99_db": -1.5636635063901616
+    },
+    {
+      "id": "lp_short_matched_guard__1-2_SSS__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "lp_short_matched_guard",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 50.94181773880305,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "near": {
+        "um_s": 50.94181773880305,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "background": {
+        "um_s": 20.23938188775791,
+        "x_mm": 1.8000000000000007,
+        "depth_mm": 18.849999999999998,
+        "distance_mm": 1.0104407803625144
+      },
+      "cmax_db": 8.01754385391478,
+      "c99_db": 13.238664147550296
+    },
+    {
+      "id": "lp_short_matched_guard__1-1_SS__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "lp_short_matched_guard",
+      "path": "1-1_SS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 29.25273713255919,
+        "x_mm": -0.7999999999999998,
+        "depth_mm": 17.45,
+        "distance_mm": 3.771706458021505
+      },
+      "near": {
+        "um_s": 1.891667932833859,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 20.849999999999998,
+        "distance_mm": 0.3065911470238825
+      },
+      "background": {
+        "um_s": 29.25273713255919,
+        "x_mm": -0.7999999999999998,
+        "depth_mm": 17.45,
+        "distance_mm": 3.771706458021505
+      },
+      "cmax_db": -23.786432134690877,
+      "c99_db": -4.876427139972723
+    },
+    {
+      "id": "lp_short_matched_guard__1-1_SS__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "lp_short_matched_guard",
+      "path": "1-1_SS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 28.48175098640933,
+        "x_mm": 0.8000000000000007,
+        "depth_mm": 17.45,
+        "distance_mm": 2.2723931099084482
+      },
+      "near": {
+        "um_s": 0.19498868339880324,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 21.049999999999997,
+        "distance_mm": 0.12899627675503084
+      },
+      "background": {
+        "um_s": 28.48175098640933,
+        "x_mm": 0.8000000000000007,
+        "depth_mm": 17.45,
+        "distance_mm": 2.2723931099084482
+      },
+      "cmax_db": -43.29114556537131,
+      "c99_db": -22.29493208915143
+    },
+    {
+      "id": "lp_short_matched_guard__1-1_SS__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "lp_short_matched_guard",
+      "path": "1-1_SS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 9.179593272840679,
+        "x_mm": 7.200000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 6.211467056271689
+      },
+      "near": {
+        "um_s": 5.950794207665963,
+        "x_mm": 3.0,
+        "depth_mm": 21.15,
+        "distance_mm": 0.3504324639128069
+      },
+      "background": {
+        "um_s": 9.179593272840679,
+        "x_mm": 7.200000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 6.211467056271689
+      },
+      "cmax_db": -3.764970148109801,
+      "c99_db": 7.11841333277074
+    },
+    {
+      "id": "lp_short_matched_guard__1-1_LL__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "lp_short_matched_guard",
+      "path": "1-1_LL",
+      "support_pct": 91.74849661262084,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 56.34025863612926,
+        "x_mm": -2.5999999999999996,
+        "depth_mm": 16.95,
+        "distance_mm": 5.639857597485996
+      },
+      "near": {
+        "um_s": 16.806922952468735,
+        "x_mm": 3.0,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.4500572515181808
+      },
+      "background": {
+        "um_s": 56.34025863612926,
+        "x_mm": -2.5999999999999996,
+        "depth_mm": 16.95,
+        "distance_mm": 5.639857597485996
+      },
+      "cmax_db": -10.506612543591139,
+      "c99_db": -7.9568143184682665
+    },
+    {
+      "id": "lp_short_matched_guard__1-1_LL__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "lp_short_matched_guard",
+      "path": "1-1_LL",
+      "support_pct": 91.74849661262084,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 56.38801347960195,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 16.95,
+        "distance_mm": 1.5350884181293436
+      },
+      "near": {
+        "um_s": 15.185712614596497,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.4378086020790649
+      },
+      "background": {
+        "um_s": 56.38801347960195,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 16.95,
+        "distance_mm": 1.5350884181293436
+      },
+      "cmax_db": -11.395032363442322,
+      "c99_db": -8.85631140586763
+    },
+    {
+      "id": "lp_short_matched_guard__1-1_LL__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "lp_short_matched_guard",
+      "path": "1-1_LL",
+      "support_pct": 91.74849661262084,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 8.51930297967671,
+        "x_mm": 5.9,
+        "depth_mm": 25.25,
+        "distance_mm": 5.3455165085256375
+      },
+      "near": {
+        "um_s": 5.962593558037358,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 18.75,
+        "distance_mm": 0.01704484123223475
+      },
+      "background": {
+        "um_s": 8.51930297967671,
+        "x_mm": 5.9,
+        "depth_mm": 25.25,
+        "distance_mm": 5.3455165085256375
+      },
+      "cmax_db": -3.0993771436844026,
+      "c99_db": 3.020160484466979
+    },
+    {
+      "id": "lp_short_matched_guard__3-2_SSSSS__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "lp_short_matched_guard",
+      "path": "3-2_SSSSS",
+      "support_pct": 44.2033949912461,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 0.7256912150306863,
+        "x_mm": -1.2999999999999998,
+        "depth_mm": 17.049999999999997,
+        "distance_mm": 4.368251868976148
+      },
+      "near": {
+        "um_s": 0.4612749010705721,
+        "x_mm": 3.1000000000000014,
+        "depth_mm": 19.65,
+        "distance_mm": 0.32964637981278755
+      },
+      "background": {
+        "um_s": 0.7256912150306863,
+        "x_mm": -1.2999999999999998,
+        "depth_mm": 17.049999999999997,
+        "distance_mm": 4.368251868976148
+      },
+      "cmax_db": -3.9358408262101436,
+      "c99_db": -0.6408051583148435
+    },
+    {
+      "id": "lp_short_matched_guard__3-2_SSSSS__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "lp_short_matched_guard",
+      "path": "3-2_SSSSS",
+      "support_pct": 44.2033949912461,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 0.055209960068479065,
+        "x_mm": -3.8,
+        "depth_mm": 20.549999999999997,
+        "distance_mm": 6.513795049375124
+      },
+      "near": {
+        "um_s": 0.04104032810950729,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 20.95,
+        "distance_mm": 0.0017686909732151906
+      },
+      "background": {
+        "um_s": 0.055209960068479065,
+        "x_mm": -3.8,
+        "depth_mm": 20.549999999999997,
+        "distance_mm": 6.513795049375124
+      },
+      "cmax_db": -2.5761321762259497,
+      "c99_db": 0.001514761633126162
+    },
+    {
+      "id": "lp_short_matched_guard__3-2_SSSSS__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "lp_short_matched_guard",
+      "path": "3-2_SSSSS",
+      "support_pct": 44.2033949912461,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 1.484009589017937,
+        "x_mm": 2.0,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.9307529233610746
+      },
+      "near": {
+        "um_s": 1.23887706016117,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.75,
+        "distance_mm": 0.36416069889112074
+      },
+      "background": {
+        "um_s": 1.3992823841278854,
+        "x_mm": 2.1000000000000014,
+        "depth_mm": 17.75,
+        "distance_mm": 1.024895649742706
+      },
+      "cmax_db": -1.0575431078578537,
+      "c99_db": 4.4173028236271925
+    },
+    {
+      "id": "lp_short_matched_guard__1-2_SSS__finer",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "lp_short_matched_guard",
+      "path": "1-2_SSS",
+      "support_pct": 62.521844333915844,
+      "near_support_pct": 95.81749049429658,
+      "peak": {
+        "um_s": 28.803578847632604,
+        "x_mm": 3.0,
+        "depth_mm": 18.299999999999997,
+        "distance_mm": 0.23730570927685046
+      },
+      "near": {
+        "um_s": 28.803578847632604,
+        "x_mm": 3.0,
+        "depth_mm": 18.299999999999997,
+        "distance_mm": 0.23730570927685046
+      },
+      "background": {
+        "um_s": 13.058734600254137,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 21.95,
+        "distance_mm": 1.0275549439186504
+      },
+      "cmax_db": 6.870907133628304,
+      "c99_db": 11.189208196338814
+    },
+    {
+      "id": "lp_short_matched_guard__1-2_SSS__finer",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "lp_short_matched_guard",
+      "path": "1-2_SSS",
+      "support_pct": 62.521844333915844,
+      "near_support_pct": 95.81749049429658,
+      "peak": {
+        "um_s": 7.429030315821965,
+        "x_mm": 7.5,
+        "depth_mm": 24.95,
+        "distance_mm": 6.236368723355697
+      },
+      "near": {
+        "um_s": 5.8609224500425,
+        "x_mm": 2.75,
+        "depth_mm": 18.599999999999998,
+        "distance_mm": 0.07482671140640586
+      },
+      "background": {
+        "um_s": 7.429030315821965,
+        "x_mm": 7.5,
+        "depth_mm": 24.95,
+        "distance_mm": 6.236368723355697
+      },
+      "cmax_db": -2.0593231124424034,
+      "c99_db": -1.4413583720901892
+    },
+    {
+      "id": "lp_short_matched_guard__1-2_SSS__finer",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "lp_short_matched_guard",
+      "path": "1-2_SSS",
+      "support_pct": 62.521844333915844,
+      "near_support_pct": 95.81749049429658,
+      "peak": {
+        "um_s": 50.94181773880305,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "near": {
+        "um_s": 50.94181773880305,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "background": {
+        "um_s": 20.23938188775791,
+        "x_mm": 1.8000000000000007,
+        "depth_mm": 18.849999999999998,
+        "distance_mm": 1.0104407803625144
+      },
+      "cmax_db": 8.01754385391478,
+      "c99_db": 13.148788871804598
+    },
+    {
+      "id": "lp_short_initial_rest__1-2_SSS__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "lp_short_initial_rest",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 28.715389353473316,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "near": {
+        "um_s": 28.715389353473316,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "background": {
+        "um_s": 13.058734600254137,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 21.95,
+        "distance_mm": 1.0275549439186504
+      },
+      "cmax_db": 6.84427227428722,
+      "c99_db": 11.313675592706876
+    },
+    {
+      "id": "lp_short_initial_rest__1-2_SSS__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "lp_short_initial_rest",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 7.429030315821965,
+        "x_mm": 7.5,
+        "depth_mm": 24.95,
+        "distance_mm": 6.236368723355697
+      },
+      "near": {
+        "um_s": 5.798652122015356,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 18.65,
+        "distance_mm": 0.022278436856529246
+      },
+      "background": {
+        "um_s": 7.429030315821965,
+        "x_mm": 7.5,
+        "depth_mm": 24.95,
+        "distance_mm": 6.236368723355697
+      },
+      "cmax_db": -2.1521015129195966,
+      "c99_db": -1.5636635063901616
+    },
+    {
+      "id": "lp_short_initial_rest__1-2_SSS__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "lp_short_initial_rest",
+      "path": "1-2_SSS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 50.94181773880305,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "near": {
+        "um_s": 50.94181773880305,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.349999999999998,
+        "distance_mm": 0.3850950813882984
+      },
+      "background": {
+        "um_s": 20.23938188775791,
+        "x_mm": 1.8000000000000007,
+        "depth_mm": 18.849999999999998,
+        "distance_mm": 1.0104407803625144
+      },
+      "cmax_db": 8.01754385391478,
+      "c99_db": 13.238664147550296
+    },
+    {
+      "id": "lp_short_initial_rest__1-1_SS__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "lp_short_initial_rest",
+      "path": "1-1_SS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 29.25273713255919,
+        "x_mm": -0.7999999999999998,
+        "depth_mm": 17.45,
+        "distance_mm": 3.771706458021505
+      },
+      "near": {
+        "um_s": 1.9312992185102584,
+        "x_mm": 3.0,
+        "depth_mm": 21.049999999999997,
+        "distance_mm": 0.3103190676698488
+      },
+      "background": {
+        "um_s": 29.25273713255919,
+        "x_mm": -0.7999999999999998,
+        "depth_mm": 17.45,
+        "distance_mm": 3.771706458021505
+      },
+      "cmax_db": -23.6063388762363,
+      "c99_db": -4.696333881518149
+    },
+    {
+      "id": "lp_short_initial_rest__1-1_SS__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "lp_short_initial_rest",
+      "path": "1-1_SS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 28.48175098640933,
+        "x_mm": 0.8000000000000007,
+        "depth_mm": 17.45,
+        "distance_mm": 2.2723931099084482
+      },
+      "near": {
+        "um_s": 0.197023587640347,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 20.95,
+        "distance_mm": 0.19795721597769886
+      },
+      "background": {
+        "um_s": 28.48175098640933,
+        "x_mm": 0.8000000000000007,
+        "depth_mm": 17.45,
+        "distance_mm": 2.2723931099084482
+      },
+      "cmax_db": -43.20096924320592,
+      "c99_db": -22.286664184955352
+    },
+    {
+      "id": "lp_short_initial_rest__1-1_SS__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "lp_short_initial_rest",
+      "path": "1-1_SS",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 9.179593272840679,
+        "x_mm": 7.200000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 6.211467056271689
+      },
+      "near": {
+        "um_s": 5.885253327553877,
+        "x_mm": 3.0,
+        "depth_mm": 21.15,
+        "distance_mm": 0.3504324639128069
+      },
+      "background": {
+        "um_s": 9.179593272840679,
+        "x_mm": 7.200000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 6.211467056271689
+      },
+      "cmax_db": -3.8611655492216816,
+      "c99_db": 7.143859846514663
+    },
+    {
+      "id": "lp_short_initial_rest__1-1_LL__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "lp_short_initial_rest",
+      "path": "1-1_LL",
+      "support_pct": 91.74849661262084,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 56.34025863612926,
+        "x_mm": -2.5999999999999996,
+        "depth_mm": 16.95,
+        "distance_mm": 5.639857597485996
+      },
+      "near": {
+        "um_s": 16.806922910057583,
+        "x_mm": 3.0,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.4500572515181808
+      },
+      "background": {
+        "um_s": 56.34025863612926,
+        "x_mm": -2.5999999999999996,
+        "depth_mm": 16.95,
+        "distance_mm": 5.639857597485996
+      },
+      "cmax_db": -10.506612565509402,
+      "c99_db": -7.931854961498296
+    },
+    {
+      "id": "lp_short_initial_rest__1-1_LL__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "lp_short_initial_rest",
+      "path": "1-1_LL",
+      "support_pct": 91.74849661262084,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 56.38801347960195,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 16.95,
+        "distance_mm": 1.5350884181293436
+      },
+      "near": {
+        "um_s": 15.185712589342142,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.4378086020790649
+      },
+      "background": {
+        "um_s": 56.38801347960195,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 16.95,
+        "distance_mm": 1.5350884181293436
+      },
+      "cmax_db": -11.39503237788725,
+      "c99_db": -8.8277274788523
+    },
+    {
+      "id": "lp_short_initial_rest__1-1_LL__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "lp_short_initial_rest",
+      "path": "1-1_LL",
+      "support_pct": 91.74849661262084,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 8.158761995022944,
+        "x_mm": 6.100000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 5.467559293438248
+      },
+      "near": {
+        "um_s": 5.962711471220296,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 18.75,
+        "distance_mm": 0.01704484123223475
+      },
+      "background": {
+        "um_s": 8.158761995022944,
+        "x_mm": 6.100000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 5.467559293438248
+      },
+      "cmax_db": -2.723609387266052,
+      "c99_db": 3.10204328099672
+    },
+    {
+      "id": "lp_short_initial_rest__3-2_SSSSS__fine",
+      "kind": "partial",
+      "case": "lof",
+      "variant": "lp_short_initial_rest",
+      "path": "3-2_SSSSS",
+      "support_pct": 44.2033949912461,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 0.7256912150306863,
+        "x_mm": -1.2999999999999998,
+        "depth_mm": 17.049999999999997,
+        "distance_mm": 4.368251868976148
+      },
+      "near": {
+        "um_s": 0.4612749010705721,
+        "x_mm": 3.1000000000000014,
+        "depth_mm": 19.65,
+        "distance_mm": 0.32964637981278755
+      },
+      "background": {
+        "um_s": 0.7256912150306863,
+        "x_mm": -1.2999999999999998,
+        "depth_mm": 17.049999999999997,
+        "distance_mm": 4.368251868976148
+      },
+      "cmax_db": -3.9358408262101436,
+      "c99_db": -0.6408051583148435
+    },
+    {
+      "id": "lp_short_initial_rest__3-2_SSSSS__fine",
+      "kind": "partial",
+      "case": "reference",
+      "variant": "lp_short_initial_rest",
+      "path": "3-2_SSSSS",
+      "support_pct": 44.2033949912461,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 0.055209960068479065,
+        "x_mm": -3.8,
+        "depth_mm": 20.549999999999997,
+        "distance_mm": 6.513795049375124
+      },
+      "near": {
+        "um_s": 0.04104032810950729,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 20.95,
+        "distance_mm": 0.0017686909732151906
+      },
+      "background": {
+        "um_s": 0.055209960068479065,
+        "x_mm": -3.8,
+        "depth_mm": 20.549999999999997,
+        "distance_mm": 6.513795049375124
+      },
+      "cmax_db": -2.5761321762259497,
+      "c99_db": 0.001514761633126162
+    },
+    {
+      "id": "lp_short_initial_rest__3-2_SSSSS__fine",
+      "kind": "partial",
+      "case": "difference",
+      "variant": "lp_short_initial_rest",
+      "path": "3-2_SSSSS",
+      "support_pct": 44.2033949912461,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 1.484009589017937,
+        "x_mm": 2.0,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.9307529233610746
+      },
+      "near": {
+        "um_s": 1.23887706016117,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 19.75,
+        "distance_mm": 0.36416069889112074
+      },
+      "background": {
+        "um_s": 1.3992823841278854,
+        "x_mm": 2.1000000000000014,
+        "depth_mm": 17.75,
+        "distance_mm": 1.024895649742706
+      },
+      "cmax_db": -1.0575431078578537,
+      "c99_db": 4.4173028236271925
+    }
+  ]
+}

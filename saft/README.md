@@ -1,20 +1,22 @@
 # C++ SAFT tool
 
 `src/` contains the reconstruction engine, weld geometry and ray paths,
-wall response, and packet screening. `cli/` contains the two existing
+wall response, and packet screening. `cli/` contains four
 command-line entry points:
 
 | Executable | Purpose |
 |---|---|
 | `SAFTFilterStudy` | Reconstruction grids or selected points, optional external processed-signal banks, and raw-history export |
 | `SAFTReview` | Reconstruction grids with per-path statistics and the groove-path catalogue |
+| `SAFTAdmissionAudit` | Per-source admission statistics for the appendix's threshold checks |
+| `SAFTBatch` | Headless version of the original desktop batch exporter, including geometry checks and `images.npz` |
 
 Build from the repository root using the commands in the top-level README.
 Qt 6 Core must be available at runtime as well as when compiling.
 
 ## Inputs
 
-Both programs take four positional arguments:
+The filter, review and admission programs take four positional arguments:
 
 ```text
 SAFTReview ROOT DATASET REQUEST OUTPUT
@@ -22,9 +24,9 @@ SAFTFilterStudy ROOT DATASET REQUEST OUTPUT
 ```
 
 - `ROOT`: a writable working directory; caches go to `ROOT/build/saft_cache/`.
-- `DATASET`: an external SAFT acquisition folder with `dataset.json` and its
-  receiver CSV files. Supply the full-weld or partial-weld dataset from the full
-  AllseasNDT study. Dataset paths are resolved from the current working directory.
+- `DATASET`: `data/full_weld` or `data/partial_weld`, each containing
+  `dataset.json` and its receiver histories. Paths are resolved from the current
+  working directory.
 - `REQUEST`: a JSON object with a `requests` array. Each job has an `id` and a
   `selection` object parsed by `Config::fromJson` in `src/saft.cpp`.
 - `OUTPUT`: the directory for generated arrays and JSON provenance.
@@ -39,11 +41,11 @@ samples at 10 ns intervals. A COMSOL `.mph` file is not a SAFT dataset.
 ## Partial-weld example
 
 `examples/partial_weld.json` retains the final 0.025 mm muted reconstruction
-and its matched unmuted control, including their original selections. With
-the external partial-weld acquisition available, run from the repository root:
+and its matched unmuted control, including their original selections. Run from
+the repository root:
 
 ```powershell
-.\build\bin\SAFTReview.exe . "C:\path\to\partial_weld" saft/examples/partial_weld.json output/partial
+.\build\bin\SAFTReview.exe . data/partial_weld saft/examples/partial_weld.json output/partial
 ```
 
 For multi-configuration builds, use `build/bin/Release/SAFTReview.exe`.
@@ -51,7 +53,12 @@ On Linux/macOS, use `./build/bin/SAFTReview`. These fine grids require several
 GB of working memory/cache space and can take time to compute.
 
 Outputs include grid coordinates, binary float64/complex128 arrays, request
-settings, timing, and provenance. The analysis scripts that combine these
-arrays into the paper's metrics and figures remain in the full study. Its
-full-weld result also uses a custom processed-signal bank; the default engine
-filter alone does not reproduce that result.
+settings, timing, and provenance. `python tools/reproduce_main.py` regenerates
+the full-weld processed bank, runs the published grids, and verifies metrics
+against the included archive. `python tools/reproduce_figures.py` uses the
+retained figure generators and reconstructs the additional review grids needed.
+
+The older geometry studies use `SAFTBatch --dataset DATASET --compute REQUEST
+--output OUTPUT`, with optional `--repository ROOT`. It exports the same
+numbered folders and arrays as the original desktop application's compute mode.
+All four tools share the unchanged reconstruction/physics source in `src/`.

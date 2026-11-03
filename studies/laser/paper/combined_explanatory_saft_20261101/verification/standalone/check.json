@@ -1,0 +1,209 @@
+{
+  "pages": 17,
+  "words": 7054,
+  "checks": [
+    {
+      "page": 1,
+      "words": 411,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 2,
+      "words": 577,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 3,
+      "words": 433,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 4,
+      "words": 454,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 5,
+      "words": 479,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 6,
+      "words": 330,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 7,
+      "words": 550,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 8,
+      "words": 470,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 9,
+      "words": 419,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 10,
+      "words": 411,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 11,
+      "words": 459,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 12,
+      "words": 329,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 13,
+      "words": 381,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 14,
+      "words": 359,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 15,
+      "words": 408,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 16,
+      "words": 434,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 17,
+      "words": 150,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    }
+  ],
+  "fonts": {
+    "IHAIZV+LMRoman12-Bold-Identity-H": {
+      "type": "Type0",
+      "embedded_bytes": 6473
+    },
+    "BZIVMZ+LMRoman10-Regular-Identity-H": {
+      "type": "Type0",
+      "embedded_bytes": 10933
+    },
+    "YEUUOC+CMMI10": {
+      "type": "Type1",
+      "embedded_bytes": 6460
+    },
+    "AKHCZK+CMR10": {
+      "type": "Type1",
+      "embedded_bytes": 4166
+    },
+    "VDVGTR+CMSY8": {
+      "type": "Type1",
+      "embedded_bytes": 1173
+    },
+    "CAFSZL+CMSY10": {
+      "type": "Type1",
+      "embedded_bytes": 1843
+    },
+    "DDIEWW+CMMI8": {
+      "type": "Type1",
+      "embedded_bytes": 2912
+    },
+    "FKPJSN+CMR8": {
+      "type": "Type1",
+      "embedded_bytes": 1537
+    },
+    "IXFAWU+LMRoman9-Regular-Identity-H": {
+      "type": "Type0",
+      "embedded_bytes": 9189
+    },
+    "PVTTLK+CMBX10": {
+      "type": "Type1",
+      "embedded_bytes": 818
+    },
+    "JAGKKY+CMMIB10": {
+      "type": "Type1",
+      "embedded_bytes": 596
+    },
+    "GCWXDV+DejaVuSans-Oblique": {
+      "type": "Type0",
+      "embedded_bytes": 3392
+    },
+    "BMQQDV+DejaVuSans": {
+      "type": "Type0",
+      "embedded_bytes": 14780
+    },
+    "NOMARO+CMEX10": {
+      "type": "Type1",
+      "embedded_bytes": 1072
+    },
+    "KPXLOM+CMR6": {
+      "type": "Type1",
+      "embedded_bytes": 392
+    },
+    "UTACNV+CMMI6": {
+      "type": "Type1",
+      "embedded_bytes": 432
+    },
+    "FZDNHS+CMMI9": {
+      "type": "Type1",
+      "embedded_bytes": 678
+    },
+    "DZGKAF+CMSY9": {
+      "type": "Type1",
+      "embedded_bytes": 326
+    },
+    "GJMHKB+CMR7": {
+      "type": "Type1",
+      "embedded_bytes": 788
+    },
+    "TQTHRL+LMRoman10-Italic-Identity-H": {
+      "type": "Type0",
+      "embedded_bytes": 4082
+    }
+  },
+  "warnings": [],
+  "sha256": "151e1b2ae344f6b419f696292181444c86732c8984f462a361e507adaf27b6f5"
+}

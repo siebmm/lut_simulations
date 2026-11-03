@@ -1,0 +1,182 @@
+{
+  "parameters": {
+    "E_Pa": 212442565550.3707,
+    "nu": 0.2889775930054178,
+    "rho_kg_m3": 7859.97504274123,
+    "k_W_m_K": 52.0,
+    "cp_J_kg_K": 480.0,
+    "alpha_K_inv": 1.1e-05,
+    "ambient_K": 293.15,
+    "w0_m": 0.0005,
+    "pulse_fwhm_s": 6.5e-09,
+    "pulse_centre_s": 3e-08,
+    "production_fluence_J_m2": 100.0,
+    "production_multiplier": 1.0844342935972646
+  },
+  "runs": {
+    "10": {
+      "array_file": "fluence_10.npz",
+      "array_sha256": "6cbde63aa30c8abf7f1d4bec3a420d5a244526ec95b4c0569f3c6aebd47854ca",
+      "original_sha256": {
+        "studies/laser/results/thermoelastic_source_calibration/exports/calibration_thermal_arc.txt": "4ab92ff3d4aa0f16e699d578e0e6bdfc0af9980e389ddfb2e6795a4546286315",
+        "studies/laser/results/thermoelastic_source_calibration/exports/calibration_dipole_arc.txt": "6cbb7208e5b207e392dce34ab43d75e2d44511dcecda4e67de3d7b94c4617d08",
+        "studies/laser/results/thermoelastic_source_calibration/exports/calibration_thermal_surface.txt": "6571b6d1cf7748cc52dcfde44732f91c04519fa4374f7ed4132c27d0dd582859",
+        "studies/laser/results/thermoelastic_source_calibration/exports/calibration_dipole_surface.txt": "af22ec814a7a101eadc00c4609c32ffbc47e27c82562420619fbd7983b4f428b",
+        "studies/laser/results/thermoelastic_source_calibration/exports/calibration_energy_check.txt": "71e0031ea6f8131e9be9f7de1a83dd54ca67b4aa826e7e97f77d8d7f2c6d9f06",
+        "studies/laser/results/thermoelastic_source_calibration/calibration_comparison.json": "14df4c083210adad42d550cf5570f16584e520e8df3a0e5c55367ddc211f5d3f"
+      },
+      "historical_statistics": {
+        "output_samples": 451,
+        "dt_s": 2e-09,
+        "bulk_receivers": 7,
+        "surface_receivers": 5,
+        "peak_surface_temperature_K": 300.9837578755015,
+        "peak_temperature_rise_K": 7.833757875501533,
+        "thermal_1D_analytic_relative_L2_error": 0.0006925172168335446,
+        "displacement_derivative_vs_velocity_relative_L2_error": 0.00048056019106728633,
+        "peak_thermal_arc_displacement_m": 1.4209020762135125e-11,
+        "peak_thermal_surface_vertical_displacement_m": 8.105437632426456e-11,
+        "filter": "Zero-phase fourth-order Butterworth low-pass, 5 MHz cutoff",
+        "fit_receivers_deg_from_downward_vertical": [
+          14.999999999999998,
+          29.999999999999996,
+          45.0,
+          59.99999999999999,
+          75.0
+        ],
+        "fit_window_s": [
+          1.2e-07,
+          8.2e-07
+        ],
+        "least_squares_dipole_scale": 1.0844342935972646,
+        "fit_relative_L2_error": 0.009307603907173586,
+        "per_angle_deg": [
+          0.0,
+          14.999999999999998,
+          29.999999999999996,
+          45.0,
+          59.99999999999999,
+          75.0,
+          90.0
+        ],
+        "per_angle_relative_L2_error": [
+          0.010944985247692662,
+          0.008874433869982894,
+          0.009112970375995393,
+          0.011147235528484296,
+          0.00886693081619707,
+          0.008924107600268025,
+          0.012738200532458454
+        ],
+        "status": "Numerical source comparison; not experimental calibration or convergence certification",
+        "final_full_width_thermal_energy_J_per_m": 0.0062665305744010035,
+        "final_thermal_energy_over_absorbed_energy": 0.9999935990227831,
+        "final_thermal_energy_relative_error": 6.400977216935999e-06
+      }
+    },
+    "100": {
+      "array_file": "fluence_100.npz",
+      "array_sha256": "f52b37bcefb3d436e9654345fb79816970b53dec7c921d8063c43a5df45c96d4",
+      "original_sha256": {
+        "studies/laser/runs/fluence_100_20261009/results/calibration/exports/calibration_thermal_arc.txt": "cf195bc1add1612c7196f2d8cd0a49360b8e38165d561b5d41097b0d3a7cd227",
+        "studies/laser/runs/fluence_100_20261009/results/calibration/exports/calibration_dipole_arc.txt": "bf3b93653b0662b2f05c7e5f36ba109c8cac27361fd39a8dbc8f96b77f761bf6",
+        "studies/laser/runs/fluence_100_20261009/results/calibration/exports/calibration_thermal_surface.txt": "0723063f3e2367fc5a15b66895e26be23b4baab82d4d2786bcbbf568048c6c50",
+        "studies/laser/runs/fluence_100_20261009/results/calibration/exports/calibration_dipole_surface.txt": "98de281955a786bf1ff34cc457e9c1c3df55929ae5c58ed7d577bd0cd961f32a",
+        "studies/laser/runs/fluence_100_20261009/results/calibration/exports/calibration_energy_check.txt": "fd721a0cc0ddb89271a844249c0a9afbb2b90007c2d0912361bdebc447179967",
+        "studies/laser/runs/fluence_100_20261009/results/calibration/calibration_comparison.json": "83b796723f105f04948d1232e99ddbdb227598bed8fc13f8a2527ada6dfcc868"
+      },
+      "historical_statistics": {
+        "absorbed_fluence_J_per_m2": 100.0,
+        "output_samples": 451,
+        "dt_s": 2e-09,
+        "bulk_receivers": 7,
+        "surface_receivers": 5,
+        "peak_surface_temperature_K": 371.4875787550213,
+        "peak_temperature_rise_K": 78.3375787550213,
+        "thermal_1D_analytic_relative_L2_error": 0.0006925172150595132,
+        "displacement_derivative_vs_velocity_relative_L2_error": 0.000480560190531602,
+        "peak_thermal_arc_displacement_m": 1.4209020803450006e-10,
+        "peak_thermal_surface_vertical_displacement_m": 8.105437637978318e-10,
+        "filter": "Zero-phase fourth-order Butterworth low-pass, 5 MHz cutoff",
+        "fit_receivers_deg_from_downward_vertical": [
+          14.999999999999998,
+          29.999999999999996,
+          45.0,
+          59.99999999999999,
+          75.0
+        ],
+        "fit_window_s": [
+          1.2e-07,
+          8.2e-07
+        ],
+        "least_squares_dipole_scale": 1.0844342938670577,
+        "fit_relative_L2_error": 0.009307603802692405,
+        "per_angle_deg": [
+          0.0,
+          14.999999999999998,
+          29.999999999999996,
+          45.0,
+          59.99999999999999,
+          75.0,
+          90.0
+        ],
+        "per_angle_relative_L2_error": [
+          0.010944985475920621,
+          0.00887443357014141,
+          0.009112969953481249,
+          0.011147235324154904,
+          0.008866931310417265,
+          0.008924107615808414,
+          0.012738200199215887
+        ],
+        "status": "Numerical source comparison; not experimental calibration or convergence certification",
+        "final_full_width_thermal_energy_J_per_m": 0.06266530639112003,
+        "final_thermal_energy_over_absorbed_energy": 0.9999936093491028,
+        "final_thermal_energy_relative_error": 6.390650897247774e-06
+      }
+    }
+  },
+  "units": {
+    "time_s": "s",
+    "arc_xy_m": "m; y points upward",
+    "surface_xy_m": "m",
+    "thermal_arc": [
+      "ux_m",
+      "uy_m",
+      "vx_m_s",
+      "vy_m_s"
+    ],
+    "dipole_arc": [
+      "ux_m",
+      "uy_m",
+      "vx_m_s",
+      "vy_m_s"
+    ],
+    "thermal_surface": [
+      "ux_m",
+      "uy_m",
+      "vx_m_s",
+      "vy_m_s",
+      "temperature_K"
+    ],
+    "dipole_surface": [
+      "ux_m",
+      "uy_m",
+      "vx_m_s",
+      "vy_m_s"
+    ],
+    "energy": [
+      "time_s",
+      "full_width_thermal_energy_J_m",
+      "energy_over_absorbed"
+    ]
+  },
+  "scope": "Existing flat-patch numerical source comparisons; no new FE solves.",
+  "fluence_provenance": "The original historical calibration is 10 J/m2; the isolated 20261009 rerun explicitly sets 100 J/m2. Temperature/energy exports independently confirm the tenfold loading. The production gain is the original 10 J/m2 fit.",
+  "parameter_source_sha256": {
+    "studies/laser/runs/fluence_100_20261009/src/BuildLaserCalibration.java": "5ba87128ea3039fb403cc024a3a1f49745198df4a5462acb8319edf5acbbd347",
+    "studies/laser/runs/fluence_100_20261009/src/analyze_laser_calibration.py": "63547d613757c9a96730e71a84802fd44f552891751c4914fe9022ef1f39c1fa",
+    "studies/laser/config/partial_weld.json": "c47532d28631e0e374abd49bc1c21b6f57a2c7044009a272a2bd9a39626ee1a3",
+    "studies/laser/src/partial_weld_laser.py": "b053f355008c9cbb77ed13e6ee3bfec90c5351f66befe93677260b217ab1afcd"
+  }
+}

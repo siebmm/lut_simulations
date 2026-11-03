@@ -1,0 +1,605 @@
+[
+  {
+    "kind": "partial",
+    "path": "1-2_SSS",
+    "name": "weighted_fine",
+    "case": "lof",
+    "metrics": {
+      "supported": 32557,
+      "support_pct": 62.521844333915844,
+      "near_support_pct": 95.81749049429658,
+      "peak": {
+        "um_s": 30.345695467758112,
+        "x_mm": 3.0500000000000007,
+        "depth_mm": 18.349999999999998,
+        "distance_mm": 0.24774789589942603
+      },
+      "near": {
+        "um_s": 30.345695467758112,
+        "x_mm": 3.0500000000000007,
+        "depth_mm": 18.349999999999998,
+        "distance_mm": 0.24774789589942603
+      },
+      "background": {
+        "um_s": 11.76494013384412,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 21.95,
+        "distance_mm": 1.0275549439186504
+      },
+      "background_p99_um_s": 8.219726074272534,
+      "cmax_db": 8.230147471478697,
+      "c99_db": 11.344795008686502
+    }
+  },
+  {
+    "kind": "partial",
+    "path": "1-2_SSS",
+    "name": "weighted_wide",
+    "case": "lof",
+    "metrics": {
+      "supported": 1341,
+      "support_pct": 3.677902416280409,
+      "near_support_pct": 94.33962264150944,
+      "peak": {
+        "um_s": 29.722763055891097,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "near": {
+        "um_s": 29.722763055891097,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "background": {
+        "um_s": 10.07552629301725,
+        "x_mm": -0.5,
+        "depth_mm": 18.0,
+        "distance_mm": 3.364509205975761
+      },
+      "background_p99_um_s": 8.09415017732857,
+      "cmax_db": 9.396428773990358,
+      "c99_db": 11.29835842878295
+    }
+  },
+  {
+    "kind": "partial",
+    "path": "1-2_SSS",
+    "name": "band1_weighted_fine",
+    "case": "lof",
+    "metrics": {
+      "supported": 32553,
+      "support_pct": 62.514162809901485,
+      "near_support_pct": 95.81749049429658,
+      "peak": {
+        "um_s": 30.46731296786619,
+        "x_mm": 3.0500000000000007,
+        "depth_mm": 18.349999999999998,
+        "distance_mm": 0.24774789589942603
+      },
+      "near": {
+        "um_s": 30.46731296786619,
+        "x_mm": 3.0500000000000007,
+        "depth_mm": 18.349999999999998,
+        "distance_mm": 0.24774789589942603
+      },
+      "background": {
+        "um_s": 10.709658762642063,
+        "x_mm": -0.6499999999999995,
+        "depth_mm": 17.75,
+        "distance_mm": 3.5550277282026244
+      },
+      "background_p99_um_s": 7.595819271389836,
+      "cmax_db": 9.081170409276366,
+      "c99_db": 12.06519061655017
+    }
+  },
+  {
+    "kind": "partial",
+    "path": "1-2_SSS",
+    "name": "band1_weighted_wide",
+    "case": "lof",
+    "metrics": {
+      "supported": 1343,
+      "support_pct": 3.683387729354653,
+      "near_support_pct": 94.33962264150944,
+      "peak": {
+        "um_s": 28.289279125915364,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "near": {
+        "um_s": 28.289279125915364,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "background": {
+        "um_s": 9.805944091245276,
+        "x_mm": -0.5,
+        "depth_mm": 18.0,
+        "distance_mm": 3.364509205975761
+      },
+      "background_p99_um_s": 7.243201730165786,
+      "cmax_db": 9.202649360472027,
+      "c99_db": 11.833825998270033
+    }
+  },
+  {
+    "kind": "partial",
+    "path": "1-2_SSS",
+    "name": "weighted_plate",
+    "case": "lof",
+    "metrics": {
+      "supported": 8185,
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 30.050506755888318,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "near": {
+        "um_s": 30.050506755888318,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "background": {
+        "um_s": 11.94164060096468,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 21.95,
+        "distance_mm": 1.0275549439186504
+      },
+      "background_p99_um_s": 8.179182394686357,
+      "cmax_db": 8.015756074442585,
+      "c99_db": 11.302838142101706
+    }
+  },
+  {
+    "kind": "partial",
+    "path": "1-2_SSS",
+    "name": "weighted_floor",
+    "case": "lof",
+    "metrics": {
+      "supported": 3950,
+      "support_pct": 30.067747583162063,
+      "near_support_pct": 94.84848484848484,
+      "peak": {
+        "um_s": 46.34031885577722,
+        "x_mm": -2.6999999999999993,
+        "depth_mm": 22.849999999999998,
+        "distance_mm": 5.71954001682568
+      },
+      "near": {
+        "um_s": 25.462025886756734,
+        "x_mm": 2.5,
+        "depth_mm": 18.15,
+        "distance_mm": 0.4592725280257441
+      },
+      "background": {
+        "um_s": 46.34031885577722,
+        "x_mm": -2.6999999999999993,
+        "depth_mm": 22.849999999999998,
+        "distance_mm": 5.71954001682568
+      },
+      "background_p99_um_s": 41.43097787699057,
+      "cmax_db": -5.201321247765986,
+      "c99_db": -4.228644570700825
+    }
+  },
+  {
+    "kind": "partial",
+    "path": "1-2_SSS",
+    "name": "weighted_left",
+    "case": "lof",
+    "metrics": {
+      "supported": 8185,
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 58.004045316274826,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 18.15,
+        "distance_mm": 0.32470211751499706
+      },
+      "near": {
+        "um_s": 58.004045316274826,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 18.15,
+        "distance_mm": 0.32470211751499706
+      },
+      "background": {
+        "um_s": 29.570566548774792,
+        "x_mm": -3.3999999999999995,
+        "depth_mm": 19.849999999999998,
+        "distance_mm": 6.150978404843354
+      },
+      "background_p99_um_s": 29.006815855950187,
+      "cmax_db": 5.851972756497315,
+      "c99_db": 6.019164504870273
+    }
+  },
+  {
+    "kind": "partial",
+    "path": "1-2_SSS",
+    "name": "weighted_right",
+    "case": "lof",
+    "metrics": {
+      "supported": 8185,
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 30.738892717166244,
+        "x_mm": 1.0999999999999996,
+        "depth_mm": 19.65,
+        "distance_mm": 1.6676126896963621
+      },
+      "near": {
+        "um_s": 23.061693994575187,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 21.349999999999998,
+        "distance_mm": 0.48666131420584596
+      },
+      "background": {
+        "um_s": 30.738892717166244,
+        "x_mm": 1.0999999999999996,
+        "depth_mm": 19.65,
+        "distance_mm": 1.6676126896963621
+      },
+      "background_p99_um_s": 27.77917596015858,
+      "cmax_db": -2.4959402801548825,
+      "c99_db": -1.6165630703156688
+    }
+  },
+  {
+    "kind": "partial",
+    "path": "1-2_SSS",
+    "name": "weighted_shoulders",
+    "case": "lof",
+    "metrics": {
+      "supported": 706,
+      "support_pct": 5.374134124990485,
+      "near_support_pct": 0.0,
+      "peak": {
+        "um_s": 2.3894187841370433,
+        "x_mm": 0.5,
+        "depth_mm": 23.45,
+        "distance_mm": 3.317633807637995
+      },
+      "near": null,
+      "background": {
+        "um_s": 2.3894187841370433,
+        "x_mm": 0.5,
+        "depth_mm": 23.45,
+        "distance_mm": 3.317633807637995
+      },
+      "background_p99_um_s": 2.3455993074382926,
+      "cmax_db": null,
+      "c99_db": null
+    }
+  },
+  {
+    "kind": "partial",
+    "path": "1-2_SSS",
+    "name": "weighted_central",
+    "case": "lof",
+    "metrics": {
+      "supported": 5335,
+      "support_pct": 40.610489457258126,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 25.474236839133468,
+        "x_mm": 2.5,
+        "depth_mm": 20.25,
+        "distance_mm": 0.23812976729419172
+      },
+      "near": {
+        "um_s": 25.474236839133468,
+        "x_mm": 2.5,
+        "depth_mm": 20.25,
+        "distance_mm": 0.23812976729419172
+      },
+      "background": {
+        "um_s": 13.708922645729327,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 21.95,
+        "distance_mm": 1.0275549439186504
+      },
+      "background_p99_um_s": 9.251966732027613,
+      "cmax_db": 5.381957126803732,
+      "c99_db": 8.797342394790507
+    }
+  },
+  {
+    "kind": "partial",
+    "path": "1-2_SSS",
+    "name": "weighted_without_S3",
+    "case": "lof",
+    "metrics": {
+      "supported": 6682,
+      "support_pct": 50.86397198751618,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 25.51484679633201,
+        "x_mm": 2.5,
+        "depth_mm": 20.25,
+        "distance_mm": 0.23812976729419172
+      },
+      "near": {
+        "um_s": 25.51484679633201,
+        "x_mm": 2.5,
+        "depth_mm": 20.25,
+        "distance_mm": 0.23812976729419172
+      },
+      "background": {
+        "um_s": 11.76494013384412,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 21.95,
+        "distance_mm": 1.0275549439186504
+      },
+      "background_p99_um_s": 8.157651752952642,
+      "cmax_db": 6.724064867162067,
+      "c99_db": 9.904556068961075
+    }
+  },
+  {
+    "kind": "partial",
+    "path": "1-2_SSS",
+    "name": "weighted_without_S4",
+    "case": "lof",
+    "metrics": {
+      "supported": 6989,
+      "support_pct": 53.20088300220751,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 25.474236839133468,
+        "x_mm": 2.5,
+        "depth_mm": 20.25,
+        "distance_mm": 0.23812976729419172
+      },
+      "near": {
+        "um_s": 25.474236839133468,
+        "x_mm": 2.5,
+        "depth_mm": 20.25,
+        "distance_mm": 0.23812976729419172
+      },
+      "background": {
+        "um_s": 13.708922645729327,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 21.95,
+        "distance_mm": 1.0275549439186504
+      },
+      "background_p99_um_s": 8.951322645395043,
+      "cmax_db": 5.381957126803732,
+      "c99_db": 9.08427941810943
+    }
+  },
+  {
+    "kind": "partial",
+    "path": "1-2_SSS",
+    "name": "weighted_central_plate",
+    "case": "lof",
+    "metrics": {
+      "supported": 5335,
+      "support_pct": 40.610489457258126,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 25.562335734305908,
+        "x_mm": 2.5,
+        "depth_mm": 20.25,
+        "distance_mm": 0.23812976729419172
+      },
+      "near": {
+        "um_s": 25.562335734305908,
+        "x_mm": 2.5,
+        "depth_mm": 20.25,
+        "distance_mm": 0.23812976729419172
+      },
+      "background": {
+        "um_s": 13.805086348866702,
+        "x_mm": 2.4000000000000004,
+        "depth_mm": 21.95,
+        "distance_mm": 1.0275549439186504
+      },
+      "background_p99_um_s": 9.261386035075875,
+      "cmax_db": 5.351228142269585,
+      "c99_db": 8.81849095226627
+    }
+  },
+  {
+    "kind": "partial",
+    "path": "1-2_SSS",
+    "name": "baseline_central",
+    "case": "lof",
+    "metrics": {
+      "supported": 5335,
+      "support_pct": 40.610489457258126,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 20.26456580979964,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 19.95,
+        "distance_mm": 0.045758306259297915
+      },
+      "near": {
+        "um_s": 20.26456580979964,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 19.95,
+        "distance_mm": 0.045758306259297915
+      },
+      "background": {
+        "um_s": 7.383695434139279,
+        "x_mm": 0.40000000000000036,
+        "depth_mm": 17.75,
+        "distance_mm": 2.5355049201004074
+      },
+      "background_p99_um_s": 5.272764737168614,
+      "cmax_db": 8.769270570569013,
+      "c99_db": 11.693978175040566
+    }
+  },
+  {
+    "kind": "full",
+    "path": "1-1_SS",
+    "name": "shoulders_plate",
+    "case": "lof",
+    "metrics": {
+      "supported": 8701,
+      "support_pct": 66.23277765090964,
+      "near_support_pct": 92.72727272727272,
+      "peak": {
+        "um_s": 5.588848763587867,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 20.95,
+        "distance_mm": 0.0017686909732151895
+      },
+      "near": {
+        "um_s": 5.588848763587867,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 20.95,
+        "distance_mm": 0.0017686909732151895
+      },
+      "background": {
+        "um_s": 2.4455848769891184,
+        "x_mm": 5.300000000000001,
+        "depth_mm": 21.849999999999998,
+        "distance_mm": 2.744886791424756
+      },
+      "background_p99_um_s": 0.804601767032728,
+      "cmax_db": 7.178792349249235,
+      "c99_db": 16.83482751164742
+    }
+  },
+  {
+    "kind": "full",
+    "path": "1-1_LL",
+    "name": "shoulders_plate",
+    "case": "lof",
+    "metrics": {
+      "supported": 8613,
+      "support_pct": 65.56291390728477,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 2.1203998186945063,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 20.95,
+        "distance_mm": 0.09809426250224185
+      },
+      "near": {
+        "um_s": 2.1203998186945063,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 20.95,
+        "distance_mm": 0.09809426250224185
+      },
+      "background": {
+        "um_s": 0.9864142894064817,
+        "x_mm": -3.6999999999999997,
+        "depth_mm": 24.45,
+        "distance_mm": 7.286901151410554
+      },
+      "background_p99_um_s": 0.47672240788462417,
+      "cmax_db": 6.6471680700946365,
+      "c99_db": 12.963043848257456
+    }
+  },
+  {
+    "kind": "full",
+    "path": "1-2_SSS",
+    "name": "shoulders_plate",
+    "case": "lof",
+    "metrics": {
+      "supported": 8701,
+      "support_pct": 66.23277765090964,
+      "near_support_pct": 92.72727272727272,
+      "peak": {
+        "um_s": 10.676471038930499,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 20.65,
+        "distance_mm": 0.08239347562935863
+      },
+      "near": {
+        "um_s": 10.676471038930499,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 20.65,
+        "distance_mm": 0.08239347562935863
+      },
+      "background": {
+        "um_s": 5.619579346611396,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 21.95,
+        "distance_mm": 1.0025038023013781
+      },
+      "background_p99_um_s": 3.7444066032417016,
+      "cmax_db": 5.574478372751109,
+      "c99_db": 9.10089447759169
+    }
+  },
+  {
+    "kind": "full",
+    "path": "2-1_SSS",
+    "name": "shoulders_plate",
+    "case": "lof",
+    "metrics": {
+      "supported": 12307,
+      "support_pct": 93.6819669635381,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 4.204260684362371,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 18.349999999999998,
+        "distance_mm": 0.12172258869192831
+      },
+      "near": {
+        "um_s": 4.204260684362371,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 18.349999999999998,
+        "distance_mm": 0.12172258869192831
+      },
+      "background": {
+        "um_s": 2.406329787437326,
+        "x_mm": 0.0,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 2.8624814329087553
+      },
+      "background_p99_um_s": 1.7501225219245626,
+      "cmax_db": 4.846689788097393,
+      "c99_db": 7.612423657178626
+    }
+  },
+  {
+    "kind": "full",
+    "path": "1-1_SS",
+    "name": "baseline_shoulders",
+    "case": "lof",
+    "metrics": {
+      "supported": 8701,
+      "support_pct": 66.23277765090964,
+      "near_support_pct": 92.72727272727272,
+      "peak": {
+        "um_s": 5.417838791070997,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 20.95,
+        "distance_mm": 0.0017686909732151895
+      },
+      "near": {
+        "um_s": 5.417838791070997,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 20.95,
+        "distance_mm": 0.0017686909732151895
+      },
+      "background": {
+        "um_s": 2.1427753271686267,
+        "x_mm": 5.300000000000001,
+        "depth_mm": 21.849999999999998,
+        "distance_mm": 2.744886791424756
+      },
+      "background_p99_um_s": 0.8199291343594779,
+      "cmax_db": 8.056988825776154,
+      "c99_db": 16.400995199807383
+    }
+  }
+]

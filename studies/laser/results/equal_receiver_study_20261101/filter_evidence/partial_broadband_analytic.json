@@ -1,0 +1,61 @@
+{
+  "dataset_fingerprint": "fd34529e7a01bb6b521cbf1d8ee4d9cda8548eecbd3723797a6fdf93eb1420e5",
+  "variant": {
+    "name": "broadband_analytic",
+    "method": "broadband_analytic",
+    "support_half_samples": 328,
+    "known_initial_rest": false
+  },
+  "energy": [
+    {
+      "case": "lof",
+      "source": 0,
+      "above_5MHz_fraction": 0.01816798797105801
+    },
+    {
+      "case": "lof",
+      "source": 1,
+      "above_5MHz_fraction": 0.10659965362791403
+    },
+    {
+      "case": "lof",
+      "source": 2,
+      "above_5MHz_fraction": 0.0983733755061195
+    },
+    {
+      "case": "lof",
+      "source": 3,
+      "above_5MHz_fraction": 0.10703570745769135
+    },
+    {
+      "case": "lof",
+      "source": 4,
+      "above_5MHz_fraction": 0.017565837776928186
+    },
+    {
+      "case": "reference",
+      "source": 0,
+      "above_5MHz_fraction": 0.018252732547655526
+    },
+    {
+      "case": "reference",
+      "source": 1,
+      "above_5MHz_fraction": 0.11036956957264166
+    },
+    {
+      "case": "reference",
+      "source": 2,
+      "above_5MHz_fraction": 0.10384098587151269
+    },
+    {
+      "case": "reference",
+      "source": 3,
+      "above_5MHz_fraction": 0.10972786034024803
+    },
+    {
+      "case": "reference",
+      "source": 4,
+      "above_5MHz_fraction": 0.018307552553987003
+    }
+  ]
+}

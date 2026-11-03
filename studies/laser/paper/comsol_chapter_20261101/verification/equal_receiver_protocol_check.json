@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "configurations": 280,
+  "sole_selection_difference": "processing: equal receiver mean",
+  "same_filters_geometry_and_gates": true,
+  "protocol_sha256": "561a29ce602d6f4850059bfb5ea41994ea4d0acebcaa80f06479998a3ae90683"
+}

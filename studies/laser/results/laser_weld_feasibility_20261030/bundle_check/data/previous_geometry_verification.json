@@ -1,0 +1,14 @@
+{
+  "full": {
+    "rays": 648,
+    "valid_rays": 648,
+    "max_time_error_us": 1.2434497875801753e-14,
+    "max_vertex_error_mm": 1.7763568394002505e-14
+  },
+  "partial": {
+    "rays": 648,
+    "valid_rays": 434,
+    "max_time_error_us": 2.708944180085382e-14,
+    "max_vertex_error_mm": 7.105427357601002e-15
+  }
+}

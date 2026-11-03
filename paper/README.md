@@ -4,6 +4,8 @@
 - `appendix_saft_details.tex`: the detailed SAFT appendix, unchanged.
 - `appendix_preview.pdf`: the existing compiled 67-page appendix.
 - `appendix_preview.tex`: the standalone appendix wrapper.
+- `standalone.tex`: a complete local driver for the final chapter and appendix.
+- `standalone.pdf`: the compiled 83-page chapter and appendix, with all citations resolved.
 - `figures/`: all figures referenced by the chapter and appendix.
 - `chapter_references.bib` and `appendix_references.bib`: cited bibliography
   entries available in the original document packages. The chapter file restores
@@ -30,10 +32,11 @@ The report supplies its document class, packages, main bibliography, and any
 other chapters/appendices referenced by these sources. The existing worked
 SAFT example is a separate report appendix.
 
-Five chapter citation keys were not supplied in the original package:
-`comsol-elastic-mesh`, `kaiser-1974`, `scipy-kaiserord`, `wan-2017`, and
-`yu-2021`. These must come from the parent report's bibliography. No replacement
-entries have been invented. The standalone appendix has all of its cited entries.
+All cited bibliography entries are included. The five entries absent from the
+initial companion repository were copied from the user's supplied `bibfile.bib`;
+their provenance is recorded in `../verification/bibliography_import.json`.
+`chapter_references.bib` and `appendix_references.bib` have disjoint keys and
+can be used together, as in `standalone.tex`.
 
 ## Compile the appendix alone
 
@@ -49,10 +52,21 @@ The source wrapper contains the required packages. Its existing PDF is retained
 without changes; the final chapter is an inclusion source, not a standalone
 document.
 
+For the chapter and appendix together, run `tectonic standalone.tex` or
+`latexmk -xelatex standalone.tex` from this folder. The final manuscript text
+is preserved, including its literal `XX` pointer to the user's separately
+written worked-example appendix; that editorial pointer is not a build input.
+
 ## Supporting research
 
-The appendix describes an electronic evidence supplement. That supplement,
-raw acquisition data, figure-generation scripts, study comparisons, and
-verification reports belong to the full AllseasNDT study and are deliberately
-not duplicated here. References to those records in the scientific text are
-preserved. This folder contains the documents and their compilation assets.
+`evidence.zip` is the complete electronic supplement described in the appendix.
+Extract it here to obtain the named `evidence/` hierarchy, including all 20,412
+partial-weld atlas rows, failed/negative outcomes, source subsets and settings.
+The archive is compressed to avoid hundreds of repeated settings records in
+the working tree.
+
+Both raw SAFT acquisitions are included in `../data/`; scientific scripts,
+compact figure arrays and frozen comparison records are under
+`../studies/laser/`. From the repository root, `python tools/reproduce_main.py`
+checks the main results and `python tools/reproduce_figures.py` regenerates the
+artwork in `output/workspace/` without overwriting these final PDFs or sources.

@@ -1,0 +1,5 @@
+{
+  "status": "passed",
+  "settings_sha256": "ff044567f4f72ec71b79eb04590946bdda1cd0727acd5785a811aa910e383aed",
+  "check": "Native replay of the exported candidate selection agrees with the study LOF amplitude, source count, means and validity arrays. GUI interaction was not tested."
+}

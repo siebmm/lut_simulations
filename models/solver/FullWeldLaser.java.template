@@ -1,0 +1,135 @@
+import com.comsol.model.*;
+import com.comsol.model.util.*;
+import java.nio.file.*;
+import java.util.*;
+
+/** One model per JVM. Never saves an MPH file. Constants supplied by run.py. */
+public class PortableLaser {
+ static final String ROOT="__ROOT__", OUTPUT="__OUTPUT__", MODE="__MODE__", KIND="__KIND__";
+ static Path root, out;
+ static final double[] TIMES={0,0.5,1,2,4,8,12,20,30,40,50}; // microseconds
+ static final String[] GROUPS={"left","right","weld","source"};
+ static Map<String,List<String>> columns=new LinkedHashMap<>();
+ static void receiver(Model m,String id,String group,int index,double x,double y) {
+  double[] xx=m.result().dataset(group).getDoubleArray("pointx");
+  double[] yy=m.result().dataset(group).getDoubleArray("pointy");
+  if(index>=xx.length||index>=yy.length||Math.abs(xx[index]-x)>1e-12||Math.abs(yy[index]-y)>1e-12)
+   throw new IllegalStateException("Receiver metadata differs from MPH: "+id);
+  probe(m,id,group,x,y,new String[]{"vx","vy"},"m/s");
+ }
+ static void probe(Model m,String id,String group,double x,double y,String[] expr,String unit) {
+  String tag="portable"+id;
+  m.component("comp1").probe().create(tag,"DomainPoint");
+  m.component("comp1").probe(tag).set("coords2",new double[][]{{x,y}});
+  m.component("comp1").probe(tag).set("bndsnap2",true);
+  for(String old:m.component("comp1").probe(tag).feature().tags())
+   m.component("comp1").probe(tag).feature().remove(old);
+  for(int j=0;j<expr.length;j++) {
+   String f="e"+j,name=id+"_"+expr[j];
+   m.component("comp1").probe(tag).create(f,"PointExpr");
+   m.component("comp1").probe(tag).feature(f).set("expr",expr[j]);
+   m.component("comp1").probe(tag).feature(f).set("unit",unit);
+   m.component("comp1").probe(tag).feature(f).set("probename",name);
+   m.component("comp1").probe(tag).feature(f).set("descractive",true);
+   m.component("comp1").probe(tag).feature(f).set("descr",name);
+   m.component("comp1").probe(tag).feature(f).set("table","raw_"+group);
+   columns.get(group).add(name);
+  }
+  m.component("comp1").probe(tag).genResult("sol1");
+ }
+ static void configure(Model m) throws Exception {
+  m.modelPath(root.toString());
+  // Displacement is postprocessing only; keep the physical velocity/strain system.
+  m.component("comp1").physics("elte").feature("eltem1").feature().remove("cdisp1");
+  m.sol("sol1").feature("v1").updateVariables();
+  for(String t:m.result().tags())m.result().remove(t);
+  // Remove inherited outputs/probes; none may write to an old machine's path.
+  for(String t:m.result().export().tags())m.result().export().remove(t);
+  for(String t:m.component("comp1").probe().tags())m.component("comp1").probe().remove(t);
+  for(String g:GROUPS) {
+   columns.put(g,new ArrayList<>());
+   m.result().table().create("raw_"+g,"Table");
+   m.result().table("raw_"+g).set("storetable","inmodel");
+   m.result().table("raw_"+g).set("tablebuffersize",250000);
+  }
+  // __RECEIVER_PROBES__
+  double w=m.param().evaluate("laser_w0"),y=m.param().evaluate("laser_y");
+  probe(m,"Sminus","source",-w/2,y,new String[]{"laser_tx"},"Pa");
+  probe(m,"Splus","source",w/2,y,new String[]{"laser_tx"},"Pa");
+  // genResult creates probe plots; keep only the tables/evaluation features.
+  for(String t:m.result().tags())m.result().remove(t);
+  // Probes record every internal step; only eleven full-field states are retained.
+  for(String f:m.sol("sol1").feature("v1").feature().tags())
+   if(m.sol("sol1").feature("v1").feature(f).hasProperty("usestoresel"))
+    m.sol("sol1").feature("v1").feature(f).set("usestoresel","all");
+  m.sol("sol1").feature("t1").set("control","user");
+  m.sol("sol1").feature("t1").set("tlist","0 0.5e-6 1e-6 2e-6 4e-6 8e-6 12e-6 20e-6 30e-6 40e-6 50e-6");
+  m.sol("sol1").feature("t1").set("tout","tlist");
+  m.sol("sol1").feature("t1").set("probesel","all");
+  m.sol("sol1").feature("t1").set("probefreq","tsteps");
+  m.sol("sol1").feature("t1").set("plot","off");
+  m.sol("sol1").feature("t1").set("storeudot",false);
+  System.out.println("OPTIMIZED_CONFIGURED displacement_removed=true probe_storage=inmodel probe_capacity=250000 snapshots=10");
+  m.result().dataset().create("portableField","Solution");
+  m.result().dataset("portableField").set("solution","sol1");
+  m.result().numerical().create("portableGrid","Interp");
+  m.result().numerical("portableGrid").set("data","portableField");
+  m.result().numerical("portableGrid").set("expr",new String[]{"vx","vy"});
+  m.result().numerical("portableGrid").set("unit",new String[]{"m/s","m/s"});
+  m.result().numerical("portableGrid").set("ext",0);
+  m.result().numerical("portableGrid").set("coorderr",false);
+  m.result().numerical("portableGrid").selection().geom("geom1",2);
+  m.result().numerical("portableGrid").selection().all();
+  m.result().table().create("fieldExport","Table");
+  m.result().table("fieldExport").set("tablebuffersize",500000);
+ }
+ static void exportProbes(Model m) throws Exception {
+  for(String g:GROUPS) {
+   String tag="raw_"+g;
+   // Preserve the native table even if canonical header validation fails.
+   m.result().table(tag).save(out.resolve(g+"_native.txt").toString());
+   String[] headers=m.result().table(tag).getColumnHeaders();
+   System.out.println("PROBE_HEADERS "+g+"|"+String.join("|",headers));
+  }
+ }
+ static void snapshots(Model m) throws Exception {
+  int nx=1501,ny=255;double[][] xy=new double[2][nx*ny];
+  for(int j=0;j<ny;j++)for(int i=0;i<nx;i++) {
+   int k=j*nx+i;xy[0][k]=-.075+i*.0001;xy[1][k]=j*.0001;
+  }
+  m.result().numerical("portableGrid").setInterpolationCoordinates(xy);
+  for(int s=1;s<TIMES.length;s++) {
+   m.result().numerical("portableGrid").set("solnum",new int[]{s+1});
+   double[][][] v=m.result().numerical("portableGrid").getData();
+   Path file=out.resolve(String.format(Locale.ROOT,"field_%04.1fus.txt",TIMES[s]));
+   double[][] rows=new double[nx*ny][4];
+   for(int k=0;k<rows.length;k++)rows[k]=new double[]{xy[0][k],xy[1][k],v[0][0][k],v[1][0][k]};
+   m.result().table("fieldExport").clearTableData();
+   m.result().table("fieldExport").setTableData(rows);
+   m.result().table("fieldExport").setColumnHeaders(new String[]{"x_m","y_m","vx_m_s","vy_m_s"});
+   m.result().table("fieldExport").save(file.toString());
+   System.out.println("SNAPSHOT_OK "+file.getFileName());
+  }
+ }
+ public static void main(String[] args) throws Exception {
+  String mode=MODE,kind=KIND;
+  if(!Arrays.asList("configure","solve").contains(mode)||!Arrays.asList("reference","lof").contains(kind))
+   throw new IllegalArgumentException("Launch through run.py");
+  root=Paths.get(ROOT).toAbsolutePath();
+  out=Paths.get(OUTPUT).toAbsolutePath();
+  Model m=ModelUtil.load("Laser",root.resolve("models/"+kind+".mph").toString());
+  try {
+   if(m.param().evaluate("laser_source")!=1 || m.component("comp1").physics("elte").feature("frac1").isActive()!=kind.equals("lof"))
+    throw new IllegalStateException("Incorrect source or fracture state");
+   configure(m);
+   for(String g:new String[]{"left","right","weld"})
+    if(columns.get(g).size()!=2*m.result().dataset(g).getDoubleArray("pointx").length)
+     throw new IllegalStateException("Receiver count mismatch: "+g);
+   System.out.println("PORTABLE_CONFIGURED "+kind+" receivers="+(columns.get("left").size()+columns.get("right").size()+columns.get("weld").size())/2);
+   if(mode.equals("configure"))return;
+   m.sol("sol1").runAll();
+   exportProbes(m);snapshots(m);
+   System.out.println("PORTABLE_EXPORT_OK "+kind);
+  } finally { ModelUtil.remove("Laser"); }
+ }
+}

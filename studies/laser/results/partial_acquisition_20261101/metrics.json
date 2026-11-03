@@ -1,0 +1,2059 @@
+{
+  "rows": [
+    {
+      "id": "survey__1-1_SS",
+      "path": "1-1_SS",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 40.37081339712918,
+      "near_support_pct": 50.602409638554214,
+      "peak": {
+        "um_s": 28.060533019156058,
+        "x_mm": 0.7000000000000011,
+        "depth_mm": 17.45,
+        "distance_mm": 2.362233136976428
+      },
+      "near": {
+        "um_s": 1.5893595825624263,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 21.049999999999997,
+        "distance_mm": 0.08252937201535258
+      },
+      "background": {
+        "um_s": 28.060533019156058,
+        "x_mm": 0.7000000000000011,
+        "depth_mm": 17.45,
+        "distance_mm": 2.362233136976428
+      },
+      "cmax_db": -24.937475032651342,
+      "c99_db": -14.280934194190941
+    },
+    {
+      "id": "survey__1-1_SS",
+      "path": "1-1_SS",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 40.37081339712918,
+      "near_support_pct": 50.602409638554214,
+      "peak": {
+        "um_s": 24.773665776668363,
+        "x_mm": 0.7000000000000011,
+        "depth_mm": 17.45,
+        "distance_mm": 2.362233136976428
+      },
+      "near": {
+        "um_s": 0.0706293871790165,
+        "x_mm": 2.3000000000000007,
+        "depth_mm": 21.049999999999997,
+        "distance_mm": 0.4092619314810508
+      },
+      "background": {
+        "um_s": 24.773665776668363,
+        "x_mm": 0.7000000000000011,
+        "depth_mm": 17.45,
+        "distance_mm": 2.362233136976428
+      },
+      "cmax_db": -50.90009672238586,
+      "c99_db": -38.92424595972496
+    },
+    {
+      "id": "survey__1-1_SS",
+      "path": "1-1_SS",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 40.37081339712918,
+      "near_support_pct": 50.602409638554214,
+      "peak": {
+        "um_s": 7.973060001454139,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 21.049999999999997,
+        "distance_mm": 0.08252937201535258
+      },
+      "near": {
+        "um_s": 7.973060001454139,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 21.049999999999997,
+        "distance_mm": 0.08252937201535258
+      },
+      "background": {
+        "um_s": 6.504800038565319,
+        "x_mm": 7.100000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 6.139421312222926
+      },
+      "cmax_db": 1.7678216353581766,
+      "c99_db": 12.755086643645509
+    },
+    {
+      "id": "survey__1-1_LL",
+      "path": "1-1_LL",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 74.46172248803828,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 53.5401762027288,
+        "x_mm": -2.5,
+        "depth_mm": 17.049999999999997,
+        "distance_mm": 5.517075652957364
+      },
+      "near": {
+        "um_s": 18.55282949964344,
+        "x_mm": 3.1000000000000014,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.49616185078459135
+      },
+      "background": {
+        "um_s": 53.5401762027288,
+        "x_mm": -2.5,
+        "depth_mm": 17.049999999999997,
+        "distance_mm": 5.517075652957364
+      },
+      "cmax_db": -9.205392854013558,
+      "c99_db": -7.666143705918259
+    },
+    {
+      "id": "survey__1-1_LL",
+      "path": "1-1_LL",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 74.46172248803828,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 53.55473327179356,
+        "x_mm": 2.5,
+        "depth_mm": 17.049999999999997,
+        "distance_mm": 1.4558078125046185
+      },
+      "near": {
+        "um_s": 15.384866876835051,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.4378086020790649
+      },
+      "background": {
+        "um_s": 53.55473327179356,
+        "x_mm": 2.5,
+        "depth_mm": 17.049999999999997,
+        "distance_mm": 1.4558078125046185
+      },
+      "cmax_db": -10.834082358982675,
+      "c99_db": -9.372665443185296
+    },
+    {
+      "id": "survey__1-1_LL",
+      "path": "1-1_LL",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 74.46172248803828,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 7.816600714167765,
+        "x_mm": 6.100000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 5.467559293438248
+      },
+      "near": {
+        "um_s": 7.4551635749219205,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 18.65,
+        "distance_mm": 0.12214139033198626
+      },
+      "background": {
+        "um_s": 7.816600714167765,
+        "x_mm": 6.100000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 5.467559293438248
+      },
+      "cmax_db": -0.4112150234735352,
+      "c99_db": 3.9124866504263416
+    },
+    {
+      "id": "survey__1-1_LS",
+      "path": "1-1_LS",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 74.46172248803828,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 70.31957268641824,
+        "x_mm": -1.0999999999999996,
+        "depth_mm": 17.65,
+        "distance_mm": 4.015956227836714
+      },
+      "near": {
+        "um_s": 12.890779346520395,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.4378086020790649
+      },
+      "background": {
+        "um_s": 70.31957268641824,
+        "x_mm": -1.0999999999999996,
+        "depth_mm": 17.65,
+        "distance_mm": 4.015956227836714
+      },
+      "cmax_db": -14.735940967986913,
+      "c99_db": -12.846915228247251
+    },
+    {
+      "id": "survey__1-1_LS",
+      "path": "1-1_LS",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 74.46172248803828,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 71.65920496344202,
+        "x_mm": 1.0999999999999996,
+        "depth_mm": 17.849999999999998,
+        "distance_mm": 1.8386586294272065
+      },
+      "near": {
+        "um_s": 12.579296050306334,
+        "x_mm": 2.5,
+        "depth_mm": 18.25,
+        "distance_mm": 0.3967823622638405
+      },
+      "background": {
+        "um_s": 71.65920496344202,
+        "x_mm": 1.0999999999999996,
+        "depth_mm": 17.849999999999998,
+        "distance_mm": 1.8386586294272065
+      },
+      "cmax_db": -15.112312944979443,
+      "c99_db": -13.252510465104903
+    },
+    {
+      "id": "survey__1-1_LS",
+      "path": "1-1_LS",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 74.46172248803828,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 6.561151704379424,
+        "x_mm": 1.3000000000000007,
+        "depth_mm": 17.65,
+        "distance_mm": 1.736348376512582
+      },
+      "near": {
+        "um_s": 2.583567118605922,
+        "x_mm": 2.5,
+        "depth_mm": 21.049999999999997,
+        "distance_mm": 0.2171479055906933
+      },
+      "background": {
+        "um_s": 6.561151704379424,
+        "x_mm": 1.3000000000000007,
+        "depth_mm": 17.65,
+        "distance_mm": 1.736348376512582
+      },
+      "cmax_db": -8.095206617524568,
+      "c99_db": -0.799175578214149
+    },
+    {
+      "id": "survey__1-1_SL",
+      "path": "1-1_SL",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 40.37081339712918,
+      "near_support_pct": 50.602409638554214,
+      "peak": {
+        "um_s": 25.50873554184166,
+        "x_mm": 1.9000000000000004,
+        "depth_mm": 25.25,
+        "distance_mm": 4.35676359882696
+      },
+      "near": {
+        "um_s": 2.594702783213483,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 20.65,
+        "distance_mm": 0.017469477846098407
+      },
+      "background": {
+        "um_s": 25.50873554184166,
+        "x_mm": 1.9000000000000004,
+        "depth_mm": 25.25,
+        "distance_mm": 4.35676359882696
+      },
+      "cmax_db": -19.85202627318185,
+      "c99_db": -17.57856575540808
+    },
+    {
+      "id": "survey__1-1_SL",
+      "path": "1-1_SL",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 40.37081339712918,
+      "near_support_pct": 50.602409638554214,
+      "peak": {
+        "um_s": 22.087758363894096,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 25.25,
+        "distance_mm": 4.287152723869045
+      },
+      "near": {
+        "um_s": 0.21814067815900343,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 20.65,
+        "distance_mm": 0.18225642910481565
+      },
+      "background": {
+        "um_s": 22.087758363894096,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 25.25,
+        "distance_mm": 4.287152723869045
+      },
+      "cmax_db": -40.10829967221669,
+      "c99_db": -39.50391272017567
+    },
+    {
+      "id": "survey__1-1_SL",
+      "path": "1-1_SL",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 40.37081339712918,
+      "near_support_pct": 50.602409638554214,
+      "peak": {
+        "um_s": 19.09699116995515,
+        "x_mm": 4.5,
+        "depth_mm": 25.25,
+        "distance_mm": 4.645098659072847
+      },
+      "near": {
+        "um_s": 6.63254854081011,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 21.049999999999997,
+        "distance_mm": 0.08252937201535258
+      },
+      "background": {
+        "um_s": 19.09699116995515,
+        "x_mm": 4.5,
+        "depth_mm": 25.25,
+        "distance_mm": 4.645098659072847
+      },
+      "cmax_db": -9.185690204108322,
+      "c99_db": -4.372493618615259
+    },
+    {
+      "id": "survey__1-2_SSS",
+      "path": "1-2_SSS",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 40.37081339712918,
+      "near_support_pct": 50.602409638554214,
+      "peak": {
+        "um_s": 16.379651305992972,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 20.25,
+        "distance_mm": 0.038403860343275906
+      },
+      "near": {
+        "um_s": 16.379651305992972,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 20.25,
+        "distance_mm": 0.038403860343275906
+      },
+      "background": {
+        "um_s": 6.801465614212037,
+        "x_mm": 7.100000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 6.139421312222926
+      },
+      "cmax_db": 7.634042907876475,
+      "c99_db": 9.662214861260004
+    },
+    {
+      "id": "survey__1-2_SSS",
+      "path": "1-2_SSS",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 40.37081339712918,
+      "near_support_pct": 50.602409638554214,
+      "peak": {
+        "um_s": 3.8974879167142658,
+        "x_mm": -6.7,
+        "depth_mm": 24.65,
+        "distance_mm": 10.096388963450998
+      },
+      "near": {
+        "um_s": 1.0704840052337543,
+        "x_mm": 3.1000000000000014,
+        "depth_mm": 20.25,
+        "distance_mm": 0.36104795355855396
+      },
+      "background": {
+        "um_s": 3.8974879167142658,
+        "x_mm": -6.7,
+        "depth_mm": 24.65,
+        "distance_mm": 10.096388963450998
+      },
+      "cmax_db": -11.224091896301683,
+      "c99_db": -8.2849840187991
+    },
+    {
+      "id": "survey__1-2_SSS",
+      "path": "1-2_SSS",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 40.37081339712918,
+      "near_support_pct": 50.602409638554214,
+      "peak": {
+        "um_s": 24.228899293164993,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 19.849999999999998,
+        "distance_mm": 0.05933824284045359
+      },
+      "near": {
+        "um_s": 24.228899293164993,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 19.849999999999998,
+        "distance_mm": 0.05933824284045359
+      },
+      "background": {
+        "um_s": 9.968098463907518,
+        "x_mm": 6.700000000000001,
+        "depth_mm": 24.65,
+        "distance_mm": 5.436372720138339
+      },
+      "cmax_db": 7.714427310971081,
+      "c99_db": 9.820671507684898
+    },
+    {
+      "id": "survey__2-1_SSS",
+      "path": "2-1_SSS",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 70.8732057416268,
+      "near_support_pct": 86.74698795180723,
+      "peak": {
+        "um_s": 7.234197274385422,
+        "x_mm": 7.100000000000001,
+        "depth_mm": 25.049999999999997,
+        "distance_mm": 6.001623453114001
+      },
+      "near": {
+        "um_s": 1.5260438618909586,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.4378086020790649
+      },
+      "background": {
+        "um_s": 7.234197274385422,
+        "x_mm": 7.100000000000001,
+        "depth_mm": 25.049999999999997,
+        "distance_mm": 6.001623453114001
+      },
+      "cmax_db": -13.516466625611054,
+      "c99_db": -11.405968165480163
+    },
+    {
+      "id": "survey__2-1_SSS",
+      "path": "2-1_SSS",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 70.8732057416268,
+      "near_support_pct": 86.74698795180723,
+      "peak": {
+        "um_s": 3.746903929242515,
+        "x_mm": -7.5,
+        "depth_mm": 25.049999999999997,
+        "distance_mm": 10.987468248688678
+      },
+      "near": {
+        "um_s": 0.6292006310957011,
+        "x_mm": 3.3000000000000007,
+        "depth_mm": 18.849999999999998,
+        "distance_mm": 0.48750352176934647
+      },
+      "background": {
+        "um_s": 3.746903929242515,
+        "x_mm": -7.5,
+        "depth_mm": 25.049999999999997,
+        "distance_mm": 10.987468248688678
+      },
+      "cmax_db": -15.497668167114682,
+      "c99_db": -10.410187312939016
+    },
+    {
+      "id": "survey__2-1_SSS",
+      "path": "2-1_SSS",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 70.8732057416268,
+      "near_support_pct": 86.74698795180723,
+      "peak": {
+        "um_s": 10.54345783678302,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 18.45,
+        "distance_mm": 0.13302753125758957
+      },
+      "near": {
+        "um_s": 10.54345783678302,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 18.45,
+        "distance_mm": 0.13302753125758957
+      },
+      "background": {
+        "um_s": 9.700261664749467,
+        "x_mm": 3.5,
+        "depth_mm": 17.65,
+        "distance_mm": 1.0557731007538924
+      },
+      "cmax_db": 0.7239923221721609,
+      "c99_db": 2.5923005835805957
+    },
+    {
+      "id": "survey__1-2_LLL",
+      "path": "1-2_LLL",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 76.19617224880383,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 18.00750586351397,
+        "x_mm": 1.3000000000000007,
+        "depth_mm": 16.65,
+        "distance_mm": 2.376942532871318
+      },
+      "near": {
+        "um_s": 7.474685791036909,
+        "x_mm": 3.1000000000000014,
+        "depth_mm": 18.45,
+        "distance_mm": 0.26869412757270117
+      },
+      "background": {
+        "um_s": 18.00750586351397,
+        "x_mm": 1.3000000000000007,
+        "depth_mm": 16.65,
+        "distance_mm": 2.376942532871318
+      },
+      "cmax_db": -7.637212473253224,
+      "c99_db": -2.254409267305511
+    },
+    {
+      "id": "survey__1-2_LLL",
+      "path": "1-2_LLL",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 76.19617224880383,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 23.778590291274472,
+        "x_mm": -0.09999999999999964,
+        "depth_mm": 16.65,
+        "distance_mm": 3.4495079459473983
+      },
+      "near": {
+        "um_s": 6.16251826099371,
+        "x_mm": 2.3000000000000007,
+        "depth_mm": 20.45,
+        "distance_mm": 0.427388482996517
+      },
+      "background": {
+        "um_s": 23.778590291274472,
+        "x_mm": -0.09999999999999964,
+        "depth_mm": 16.65,
+        "distance_mm": 3.4495079459473983
+      },
+      "cmax_db": -11.728557695694562,
+      "c99_db": -4.650349923164636
+    },
+    {
+      "id": "survey__1-2_LLL",
+      "path": "1-2_LLL",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 76.19617224880383,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 15.10284180507782,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 20.049999999999997,
+        "distance_mm": 0.04887105159186484
+      },
+      "near": {
+        "um_s": 15.10284180507782,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 20.049999999999997,
+        "distance_mm": 0.04887105159186484
+      },
+      "background": {
+        "um_s": 8.102315378345788,
+        "x_mm": 6.100000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 5.467559293438248
+      },
+      "cmax_db": 5.408990590709603,
+      "c99_db": 6.025700789844698
+    },
+    {
+      "id": "survey__2-1_LLL",
+      "path": "2-1_LLL",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 40.66985645933015,
+      "near_support_pct": 0.0,
+      "peak": {
+        "um_s": 6.6551612098363435,
+        "x_mm": 7.5,
+        "depth_mm": 22.65,
+        "distance_mm": 5.08553636596429
+      },
+      "near": null,
+      "background": {
+        "um_s": 6.6551612098363435,
+        "x_mm": 7.5,
+        "depth_mm": 22.65,
+        "distance_mm": 5.08553636596429
+      },
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__2-1_LLL",
+      "path": "2-1_LLL",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 40.66985645933015,
+      "near_support_pct": 0.0,
+      "peak": {
+        "um_s": 5.344796163436115,
+        "x_mm": 7.5,
+        "depth_mm": 23.849999999999998,
+        "distance_mm": 5.598280091742415
+      },
+      "near": null,
+      "background": {
+        "um_s": 5.344796163436115,
+        "x_mm": 7.5,
+        "depth_mm": 23.849999999999998,
+        "distance_mm": 5.598280091742415
+      },
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__2-1_LLL",
+      "path": "2-1_LLL",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 40.66985645933015,
+      "near_support_pct": 0.0,
+      "peak": {
+        "um_s": 9.123504151961255,
+        "x_mm": 7.5,
+        "depth_mm": 23.25,
+        "distance_mm": 5.314292996963226
+      },
+      "near": null,
+      "background": {
+        "um_s": 9.123504151961255,
+        "x_mm": 7.5,
+        "depth_mm": 23.25,
+        "distance_mm": 5.314292996963226
+      },
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__1-3_SSSS",
+      "path": "1-3_SSSS",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 40.37081339712918,
+      "near_support_pct": 50.602409638554214,
+      "peak": {
+        "um_s": 1.6497738521999759,
+        "x_mm": -2.5,
+        "depth_mm": 25.25,
+        "distance_mm": 6.737129626222248
+      },
+      "near": {
+        "um_s": 0.3400690397789392,
+        "x_mm": 2.5,
+        "depth_mm": 21.049999999999997,
+        "distance_mm": 0.2171479055906933
+      },
+      "background": {
+        "um_s": 1.6497738521999759,
+        "x_mm": -2.5,
+        "depth_mm": 25.25,
+        "distance_mm": 6.737129626222248
+      },
+      "cmax_db": -13.71714641828831,
+      "c99_db": -6.154832122029534
+    },
+    {
+      "id": "survey__1-3_SSSS",
+      "path": "1-3_SSSS",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 40.37081339712918,
+      "near_support_pct": 50.602409638554214,
+      "peak": {
+        "um_s": 2.8076859253211834,
+        "x_mm": -2.3,
+        "depth_mm": 25.25,
+        "distance_mm": 6.583963356889552
+      },
+      "near": {
+        "um_s": 0.055101155135949056,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 19.849999999999998,
+        "distance_mm": 0.05933824284045359
+      },
+      "background": {
+        "um_s": 2.8076859253211834,
+        "x_mm": -2.3,
+        "depth_mm": 25.25,
+        "distance_mm": 6.583963356889552
+      },
+      "cmax_db": -34.14375642923906,
+      "c99_db": -28.49230052209368
+    },
+    {
+      "id": "survey__1-3_SSSS",
+      "path": "1-3_SSSS",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 40.37081339712918,
+      "near_support_pct": 50.602409638554214,
+      "peak": {
+        "um_s": 1.9395235213487958,
+        "x_mm": 0.5,
+        "depth_mm": 17.849999999999998,
+        "distance_mm": 2.412242782223171
+      },
+      "near": {
+        "um_s": 1.1010902750095095,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 21.049999999999997,
+        "distance_mm": 0.08252937201535258
+      },
+      "background": {
+        "um_s": 1.9395235213487958,
+        "x_mm": 0.5,
+        "depth_mm": 17.849999999999998,
+        "distance_mm": 2.412242782223171
+      },
+      "cmax_db": -4.91744247844856,
+      "c99_db": 1.7198752169376381
+    },
+    {
+      "id": "survey__2-2_SSSS",
+      "path": "2-2_SSSS",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 70.8732057416268,
+      "near_support_pct": 86.74698795180723,
+      "peak": {
+        "um_s": 9.961450502627578,
+        "x_mm": -2.3,
+        "depth_mm": 23.849999999999998,
+        "distance_mm": 5.772131638554434
+      },
+      "near": {
+        "um_s": 0.12277031163353315,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 18.65,
+        "distance_mm": 0.0775845166189278
+      },
+      "background": {
+        "um_s": 9.961450502627578,
+        "x_mm": -2.3,
+        "depth_mm": 23.849999999999998,
+        "distance_mm": 5.772131638554434
+      },
+      "cmax_db": -38.18458446207373,
+      "c99_db": -34.00171169584574
+    },
+    {
+      "id": "survey__2-2_SSSS",
+      "path": "2-2_SSSS",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 70.8732057416268,
+      "near_support_pct": 86.74698795180723,
+      "peak": {
+        "um_s": 2.633467963578125,
+        "x_mm": -7.3,
+        "depth_mm": 25.25,
+        "distance_mm": 10.879206146419587
+      },
+      "near": {
+        "um_s": 0.01848486866535717,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 20.849999999999998,
+        "distance_mm": 0.19272362035340437
+      },
+      "background": {
+        "um_s": 2.633467963578125,
+        "x_mm": -7.3,
+        "depth_mm": 25.25,
+        "distance_mm": 10.879206146419587
+      },
+      "cmax_db": -43.074233404408346,
+      "c99_db": -28.488105234225365
+    },
+    {
+      "id": "survey__2-2_SSSS",
+      "path": "2-2_SSSS",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 70.8732057416268,
+      "near_support_pct": 86.74698795180723,
+      "peak": {
+        "um_s": 11.365123654940444,
+        "x_mm": -1.8999999999999995,
+        "depth_mm": 24.049999999999997,
+        "distance_mm": 5.538034795619812
+      },
+      "near": {
+        "um_s": 0.1458584822040326,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 18.65,
+        "distance_mm": 0.0775845166189278
+      },
+      "background": {
+        "um_s": 11.365123654940444,
+        "x_mm": -1.8999999999999995,
+        "depth_mm": 24.049999999999997,
+        "distance_mm": 5.538034795619812
+      },
+      "cmax_db": -37.83284950596077,
+      "c99_db": -34.218837407439494
+    },
+    {
+      "id": "survey__3-1_SSSS",
+      "path": "3-1_SSSS",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 0.0,
+      "near_support_pct": 0.0,
+      "peak": null,
+      "near": null,
+      "background": null,
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__3-1_SSSS",
+      "path": "3-1_SSSS",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 0.0,
+      "near_support_pct": 0.0,
+      "peak": null,
+      "near": null,
+      "background": null,
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__3-1_SSSS",
+      "path": "3-1_SSSS",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 0.0,
+      "near_support_pct": 0.0,
+      "peak": null,
+      "near": null,
+      "background": null,
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__1-3_LLLL",
+      "path": "1-3_LLLL",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 76.19617224880383,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 12.646910576725702,
+        "x_mm": 1.3000000000000007,
+        "depth_mm": 16.65,
+        "distance_mm": 2.376942532871318
+      },
+      "near": {
+        "um_s": 11.618070500402707,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.42299701785498184
+      },
+      "background": {
+        "um_s": 12.646910576725702,
+        "x_mm": 1.3000000000000007,
+        "depth_mm": 16.65,
+        "distance_mm": 2.376942532871318
+      },
+      "cmax_db": -0.7370088051377737,
+      "c99_db": 8.261055758995631
+    },
+    {
+      "id": "survey__1-3_LLLL",
+      "path": "1-3_LLLL",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 76.19617224880383,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 18.156116723540404,
+        "x_mm": -0.09999999999999964,
+        "depth_mm": 16.65,
+        "distance_mm": 3.4495079459473983
+      },
+      "near": {
+        "um_s": 12.024484828948275,
+        "x_mm": 2.9000000000000004,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.42299701785498184
+      },
+      "background": {
+        "um_s": 18.156116723540404,
+        "x_mm": -0.09999999999999964,
+        "depth_mm": 16.65,
+        "distance_mm": 3.4495079459473983
+      },
+      "cmax_db": -3.5791297472090604,
+      "c99_db": 1.9110408514871255
+    },
+    {
+      "id": "survey__1-3_LLLL",
+      "path": "1-3_LLLL",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 76.19617224880383,
+      "near_support_pct": 100.0,
+      "peak": {
+        "um_s": 11.046478179835939,
+        "x_mm": -3.3,
+        "depth_mm": 17.25,
+        "distance_mm": 6.251570467988409
+      },
+      "near": {
+        "um_s": 0.12567394849252586,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.4378086020790649
+      },
+      "background": {
+        "um_s": 11.046478179835939,
+        "x_mm": -3.3,
+        "depth_mm": 17.25,
+        "distance_mm": 6.251570467988409
+      },
+      "cmax_db": -38.879571576680725,
+      "c99_db": -37.0203866677906
+    },
+    {
+      "id": "survey__2-2_LLLL",
+      "path": "2-2_LLLL",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 40.66985645933015,
+      "near_support_pct": 0.0,
+      "peak": {
+        "um_s": 5.9095380632234455,
+        "x_mm": 4.9,
+        "depth_mm": 21.849999999999998,
+        "distance_mm": 2.3696176335123016
+      },
+      "near": null,
+      "background": {
+        "um_s": 5.9095380632234455,
+        "x_mm": 4.9,
+        "depth_mm": 21.849999999999998,
+        "distance_mm": 2.3696176335123016
+      },
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__2-2_LLLL",
+      "path": "2-2_LLLL",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 40.66985645933015,
+      "near_support_pct": 0.0,
+      "peak": {
+        "um_s": 4.205699044112278,
+        "x_mm": -6.1,
+        "depth_mm": 25.25,
+        "distance_mm": 9.787495781983802
+      },
+      "near": null,
+      "background": {
+        "um_s": 4.205699044112278,
+        "x_mm": -6.1,
+        "depth_mm": 25.25,
+        "distance_mm": 9.787495781983802
+      },
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__2-2_LLLL",
+      "path": "2-2_LLLL",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 40.66985645933015,
+      "near_support_pct": 0.0,
+      "peak": {
+        "um_s": 7.620246589644903,
+        "x_mm": 6.100000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 5.467559293438248
+      },
+      "near": null,
+      "background": {
+        "um_s": 7.620246589644903,
+        "x_mm": 6.100000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 5.467559293438248
+      },
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__3-1_LLLL",
+      "path": "3-1_LLLL",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 0.0,
+      "near_support_pct": 0.0,
+      "peak": null,
+      "near": null,
+      "background": null,
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__3-1_LLLL",
+      "path": "3-1_LLLL",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 0.0,
+      "near_support_pct": 0.0,
+      "peak": null,
+      "near": null,
+      "background": null,
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__3-1_LLLL",
+      "path": "3-1_LLLL",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 0.0,
+      "near_support_pct": 0.0,
+      "peak": null,
+      "near": null,
+      "background": null,
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__2-3_SSSSS",
+      "path": "2-3_SSSSS",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 70.8732057416268,
+      "near_support_pct": 86.74698795180723,
+      "peak": {
+        "um_s": 8.514840752023915,
+        "x_mm": -6.1,
+        "depth_mm": 18.65,
+        "distance_mm": 8.910081296172237
+      },
+      "near": {
+        "um_s": 0.7468545788853945,
+        "x_mm": 3.3000000000000007,
+        "depth_mm": 19.049999999999997,
+        "distance_mm": 0.4979707130179352
+      },
+      "background": {
+        "um_s": 8.514840752023915,
+        "x_mm": -6.1,
+        "depth_mm": 18.65,
+        "distance_mm": 8.910081296172237
+      },
+      "cmax_db": -21.13880964144561,
+      "c99_db": -20.99232802551938
+    },
+    {
+      "id": "survey__2-3_SSSSS",
+      "path": "2-3_SSSSS",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 70.8732057416268,
+      "near_support_pct": 86.74698795180723,
+      "peak": {
+        "um_s": 9.176493766860416,
+        "x_mm": 6.300000000000001,
+        "depth_mm": 17.849999999999998,
+        "distance_mm": 3.522664941081039
+      },
+      "near": {
+        "um_s": 0.17935487967288816,
+        "x_mm": 3.3000000000000007,
+        "depth_mm": 19.049999999999997,
+        "distance_mm": 0.4979707130179352
+      },
+      "background": {
+        "um_s": 9.176493766860416,
+        "x_mm": 6.300000000000001,
+        "depth_mm": 17.849999999999998,
+        "distance_mm": 3.522664941081039
+      },
+      "cmax_db": -34.17927154023141,
+      "c99_db": -34.08390977838737
+    },
+    {
+      "id": "survey__2-3_SSSSS",
+      "path": "2-3_SSSSS",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 70.8732057416268,
+      "near_support_pct": 86.74698795180723,
+      "peak": {
+        "um_s": 7.353237686434294,
+        "x_mm": 6.700000000000001,
+        "depth_mm": 16.65,
+        "distance_mm": 4.273828335484107
+      },
+      "near": {
+        "um_s": 1.441305230488818,
+        "x_mm": 3.1000000000000014,
+        "depth_mm": 19.65,
+        "distance_mm": 0.32964637981278755
+      },
+      "background": {
+        "um_s": 7.353237686434294,
+        "x_mm": 6.700000000000001,
+        "depth_mm": 16.65,
+        "distance_mm": 4.273828335484107
+      },
+      "cmax_db": -14.154452833368262,
+      "c99_db": -13.48397577164145
+    },
+    {
+      "id": "survey__3-2_SSSSS",
+      "path": "3-2_SSSSS",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 0.0,
+      "near_support_pct": 0.0,
+      "peak": null,
+      "near": null,
+      "background": null,
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__3-2_SSSSS",
+      "path": "3-2_SSSSS",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 0.0,
+      "near_support_pct": 0.0,
+      "peak": null,
+      "near": null,
+      "background": null,
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__3-2_SSSSS",
+      "path": "3-2_SSSSS",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 0.0,
+      "near_support_pct": 0.0,
+      "peak": null,
+      "near": null,
+      "background": null,
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__2-3_LLLLL",
+      "path": "2-3_LLLLL",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 40.66985645933015,
+      "near_support_pct": 0.0,
+      "peak": {
+        "um_s": 2.2819283812395486,
+        "x_mm": 7.100000000000001,
+        "depth_mm": 19.45,
+        "distance_mm": 4.313697327582495
+      },
+      "near": null,
+      "background": {
+        "um_s": 2.2819283812395486,
+        "x_mm": 7.100000000000001,
+        "depth_mm": 19.45,
+        "distance_mm": 4.313697327582495
+      },
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__2-3_LLLLL",
+      "path": "2-3_LLLLL",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 40.66985645933015,
+      "near_support_pct": 0.0,
+      "peak": {
+        "um_s": 0.49401262847946903,
+        "x_mm": -7.5,
+        "depth_mm": 19.25,
+        "distance_mm": 10.276761071082873
+      },
+      "near": null,
+      "background": {
+        "um_s": 0.49401262847946903,
+        "x_mm": -7.5,
+        "depth_mm": 19.25,
+        "distance_mm": 10.276761071082873
+      },
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__2-3_LLLLL",
+      "path": "2-3_LLLLL",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 40.66985645933015,
+      "near_support_pct": 0.0,
+      "peak": {
+        "um_s": 1.8057619677414958,
+        "x_mm": 6.300000000000001,
+        "depth_mm": 18.849999999999998,
+        "distance_mm": 3.483392126033068
+      },
+      "near": null,
+      "background": {
+        "um_s": 1.8057619677414958,
+        "x_mm": 6.300000000000001,
+        "depth_mm": 18.849999999999998,
+        "distance_mm": 3.483392126033068
+      },
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__3-2_LLLLL",
+      "path": "3-2_LLLLL",
+      "spacing_mm": 0.2,
+      "case": "lof",
+      "support_pct": 0.0,
+      "near_support_pct": 0.0,
+      "peak": null,
+      "near": null,
+      "background": null,
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__3-2_LLLLL",
+      "path": "3-2_LLLLL",
+      "spacing_mm": 0.2,
+      "case": "reference",
+      "support_pct": 0.0,
+      "near_support_pct": 0.0,
+      "peak": null,
+      "near": null,
+      "background": null,
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "survey__3-2_LLLLL",
+      "path": "3-2_LLLLL",
+      "spacing_mm": 0.2,
+      "case": "difference",
+      "support_pct": 0.0,
+      "near_support_pct": 0.0,
+      "peak": null,
+      "near": null,
+      "background": null,
+      "cmax_db": null,
+      "c99_db": null
+    },
+    {
+      "id": "fine__both_sides",
+      "path": "1-2_SSS",
+      "spacing_mm": 0.1,
+      "case": "lof",
+      "support_pct": 40.610489457258126,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 20.51539029456214,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 19.95,
+        "distance_mm": 0.04575830625929792
+      },
+      "near": {
+        "um_s": 20.51539029456214,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 19.95,
+        "distance_mm": 0.04575830625929792
+      },
+      "background": {
+        "um_s": 7.383695434139279,
+        "x_mm": 0.40000000000000036,
+        "depth_mm": 17.75,
+        "distance_mm": 2.5355049201004074
+      },
+      "cmax_db": 8.87612018371842,
+      "c99_db": 11.489320591560164,
+      "common_support_joint": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 20.51539029456214,
+          "x_mm": 2.8000000000000007,
+          "depth_mm": 19.95,
+          "distance_mm": 0.04575830625929792
+        },
+        "near": {
+          "um_s": 20.51539029456214,
+          "x_mm": 2.8000000000000007,
+          "depth_mm": 19.95,
+          "distance_mm": 0.04575830625929792
+        },
+        "background": {
+          "um_s": 7.383695434139279,
+          "x_mm": 0.40000000000000036,
+          "depth_mm": 17.75,
+          "distance_mm": 2.5355049201004074
+        },
+        "cmax_db": 8.87612018371842,
+        "c99_db": 11.489320591560164
+      },
+      "common_support_all": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 16.567599260313386,
+          "x_mm": 2.8000000000000007,
+          "depth_mm": 19.95,
+          "distance_mm": 0.04575830625929792
+        },
+        "near": {
+          "um_s": 16.567599260313386,
+          "x_mm": 2.8000000000000007,
+          "depth_mm": 19.95,
+          "distance_mm": 0.04575830625929792
+        },
+        "background": {
+          "um_s": 7.383695434139279,
+          "x_mm": 0.40000000000000036,
+          "depth_mm": 17.75,
+          "distance_mm": 2.5355049201004074
+        },
+        "cmax_db": 7.019716136173333,
+        "c99_db": 11.129125379901732
+      }
+    },
+    {
+      "id": "fine__both_sides",
+      "path": "1-2_SSS",
+      "spacing_mm": 0.1,
+      "case": "reference",
+      "support_pct": 40.610489457258126,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 3.929362068991266,
+        "x_mm": -7.2,
+        "depth_mm": 25.25,
+        "distance_mm": 10.787351635988564
+      },
+      "near": {
+        "um_s": 1.1922508753561567,
+        "x_mm": 3.200000000000001,
+        "depth_mm": 20.349999999999998,
+        "distance_mm": 0.4661445026583053
+      },
+      "background": {
+        "um_s": 3.929362068991266,
+        "x_mm": -7.2,
+        "depth_mm": 25.25,
+        "distance_mm": 10.787351635988564
+      },
+      "cmax_db": -10.359087970481866,
+      "c99_db": -7.6472520056713575,
+      "common_support_joint": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 3.929362068991266,
+          "x_mm": -7.2,
+          "depth_mm": 25.25,
+          "distance_mm": 10.787351635988564
+        },
+        "near": {
+          "um_s": 1.1922508753561567,
+          "x_mm": 3.200000000000001,
+          "depth_mm": 20.349999999999998,
+          "distance_mm": 0.4661445026583053
+        },
+        "background": {
+          "um_s": 3.929362068991266,
+          "x_mm": -7.2,
+          "depth_mm": 25.25,
+          "distance_mm": 10.787351635988564
+        },
+        "cmax_db": -10.359087970481866,
+        "c99_db": -7.6472520056713575
+      },
+      "common_support_all": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 2.997194530247892,
+          "x_mm": -7.2,
+          "depth_mm": 25.25,
+          "distance_mm": 10.787351635988564
+        },
+        "near": {
+          "um_s": 0.9607624667634266,
+          "x_mm": 3.200000000000001,
+          "depth_mm": 20.349999999999998,
+          "distance_mm": 0.4661445026583053
+        },
+        "background": {
+          "um_s": 2.997194530247892,
+          "x_mm": -7.2,
+          "depth_mm": 25.25,
+          "distance_mm": 10.787351635988564
+        },
+        "cmax_db": -9.88197805641166,
+        "c99_db": -6.948087689694002
+      }
+    },
+    {
+      "id": "fine__both_sides",
+      "path": "1-2_SSS",
+      "spacing_mm": 0.1,
+      "case": "difference",
+      "support_pct": 40.610489457258126,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 25.45464907720744,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 19.75,
+        "distance_mm": 0.06457183846474787
+      },
+      "near": {
+        "um_s": 25.45464907720744,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 19.75,
+        "distance_mm": 0.06457183846474787
+      },
+      "background": {
+        "um_s": 10.195884063669077,
+        "x_mm": 6.800000000000001,
+        "depth_mm": 24.75,
+        "distance_mm": 5.577677140390994
+      },
+      "cmax_db": 7.946844512747891,
+      "c99_db": 10.175384973509932,
+      "common_support_joint": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 25.45464907720744,
+          "x_mm": 2.700000000000001,
+          "depth_mm": 19.75,
+          "distance_mm": 0.06457183846474787
+        },
+        "near": {
+          "um_s": 25.45464907720744,
+          "x_mm": 2.700000000000001,
+          "depth_mm": 19.75,
+          "distance_mm": 0.06457183846474787
+        },
+        "background": {
+          "um_s": 10.195884063669077,
+          "x_mm": 6.800000000000001,
+          "depth_mm": 24.75,
+          "distance_mm": 5.577677140390994
+        },
+        "cmax_db": 7.946844512747891,
+        "c99_db": 10.175384973509932
+      },
+      "common_support_all": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 20.400291404037244,
+          "x_mm": 2.700000000000001,
+          "depth_mm": 19.75,
+          "distance_mm": 0.06457183846474787
+        },
+        "near": {
+          "um_s": 20.400291404037244,
+          "x_mm": 2.700000000000001,
+          "depth_mm": 19.75,
+          "distance_mm": 0.06457183846474787
+        },
+        "background": {
+          "um_s": 8.00600919496596,
+          "x_mm": 6.800000000000001,
+          "depth_mm": 24.75,
+          "distance_mm": 5.577677140390994
+        },
+        "cmax_db": 8.124405730121792,
+        "c99_db": 10.230014588085705
+      }
+    },
+    {
+      "id": "fine__left_only",
+      "path": "1-2_SSS",
+      "spacing_mm": 0.1,
+      "case": "lof",
+      "support_pct": 40.610489457258126,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 37.2060851950177,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 19.75,
+        "distance_mm": 0.06457183846474787
+      },
+      "near": {
+        "um_s": 37.2060851950177,
+        "x_mm": 2.700000000000001,
+        "depth_mm": 19.75,
+        "distance_mm": 0.06457183846474787
+      },
+      "background": {
+        "um_s": 11.816397753953277,
+        "x_mm": -7.2,
+        "depth_mm": 25.25,
+        "distance_mm": 10.787351635988564
+      },
+      "cmax_db": 9.962577495368386,
+      "c99_db": 13.27332600895632,
+      "common_support_joint": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 37.2060851950177,
+          "x_mm": 2.700000000000001,
+          "depth_mm": 19.75,
+          "distance_mm": 0.06457183846474787
+        },
+        "near": {
+          "um_s": 37.2060851950177,
+          "x_mm": 2.700000000000001,
+          "depth_mm": 19.75,
+          "distance_mm": 0.06457183846474787
+        },
+        "background": {
+          "um_s": 11.816397753953277,
+          "x_mm": -7.2,
+          "depth_mm": 25.25,
+          "distance_mm": 10.787351635988564
+        },
+        "cmax_db": 9.962577495368386,
+        "c99_db": 13.27332600895632
+      },
+      "common_support_all": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 16.567599260313386,
+          "x_mm": 2.8000000000000007,
+          "depth_mm": 19.95,
+          "distance_mm": 0.04575830625929792
+        },
+        "near": {
+          "um_s": 16.567599260313386,
+          "x_mm": 2.8000000000000007,
+          "depth_mm": 19.95,
+          "distance_mm": 0.04575830625929792
+        },
+        "background": {
+          "um_s": 7.383695434139279,
+          "x_mm": 0.40000000000000036,
+          "depth_mm": 17.75,
+          "distance_mm": 2.5355049201004074
+        },
+        "cmax_db": 7.019716136173333,
+        "c99_db": 11.129125379901732
+      }
+    },
+    {
+      "id": "fine__left_only",
+      "path": "1-2_SSS",
+      "spacing_mm": 0.1,
+      "case": "reference",
+      "support_pct": 40.610489457258126,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 11.70266835300909,
+        "x_mm": -7.2,
+        "depth_mm": 25.25,
+        "distance_mm": 10.787351635988564
+      },
+      "near": {
+        "um_s": 0.25925918044975643,
+        "x_mm": 2.3000000000000007,
+        "depth_mm": 19.25,
+        "distance_mm": 0.4901916304880497
+      },
+      "background": {
+        "um_s": 11.70266835300909,
+        "x_mm": -7.2,
+        "depth_mm": 25.25,
+        "distance_mm": 10.787351635988564
+      },
+      "cmax_db": -33.09101507415313,
+      "c99_db": -29.622951990803163,
+      "common_support_joint": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 11.70266835300909,
+          "x_mm": -7.2,
+          "depth_mm": 25.25,
+          "distance_mm": 10.787351635988564
+        },
+        "near": {
+          "um_s": 0.25925918044975643,
+          "x_mm": 2.3000000000000007,
+          "depth_mm": 19.25,
+          "distance_mm": 0.4901916304880497
+        },
+        "background": {
+          "um_s": 11.70266835300909,
+          "x_mm": -7.2,
+          "depth_mm": 25.25,
+          "distance_mm": 10.787351635988564
+        },
+        "cmax_db": -33.09101507415313,
+        "c99_db": -29.622951990803163
+      },
+      "common_support_all": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 2.997194530247892,
+          "x_mm": -7.2,
+          "depth_mm": 25.25,
+          "distance_mm": 10.787351635988564
+        },
+        "near": {
+          "um_s": 0.9607624667634266,
+          "x_mm": 3.200000000000001,
+          "depth_mm": 20.349999999999998,
+          "distance_mm": 0.4661445026583053
+        },
+        "background": {
+          "um_s": 2.997194530247892,
+          "x_mm": -7.2,
+          "depth_mm": 25.25,
+          "distance_mm": 10.787351635988564
+        },
+        "cmax_db": -9.88197805641166,
+        "c99_db": -6.948087689694002
+      }
+    },
+    {
+      "id": "fine__left_only",
+      "path": "1-2_SSS",
+      "spacing_mm": 0.1,
+      "case": "difference",
+      "support_pct": 40.610489457258126,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 43.004168485543275,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 19.65,
+        "distance_mm": 0.16966838756449937
+      },
+      "near": {
+        "um_s": 43.004168485543275,
+        "x_mm": 2.6000000000000014,
+        "depth_mm": 19.65,
+        "distance_mm": 0.16966838756449937
+      },
+      "background": {
+        "um_s": 13.827971397496604,
+        "x_mm": 2.200000000000001,
+        "depth_mm": 21.849999999999998,
+        "distance_mm": 1.0147444458701498
+      },
+      "cmax_db": 9.855041643086984,
+      "c99_db": 14.777499128457949,
+      "common_support_joint": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 43.004168485543275,
+          "x_mm": 2.6000000000000014,
+          "depth_mm": 19.65,
+          "distance_mm": 0.16966838756449937
+        },
+        "near": {
+          "um_s": 43.004168485543275,
+          "x_mm": 2.6000000000000014,
+          "depth_mm": 19.65,
+          "distance_mm": 0.16966838756449937
+        },
+        "background": {
+          "um_s": 13.827971397496604,
+          "x_mm": 2.200000000000001,
+          "depth_mm": 21.849999999999998,
+          "distance_mm": 1.0147444458701498
+        },
+        "cmax_db": 9.855041643086984,
+        "c99_db": 14.777499128457949
+      },
+      "common_support_all": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 20.400291404037244,
+          "x_mm": 2.700000000000001,
+          "depth_mm": 19.75,
+          "distance_mm": 0.06457183846474787
+        },
+        "near": {
+          "um_s": 20.400291404037244,
+          "x_mm": 2.700000000000001,
+          "depth_mm": 19.75,
+          "distance_mm": 0.06457183846474787
+        },
+        "background": {
+          "um_s": 8.00600919496596,
+          "x_mm": 6.800000000000001,
+          "depth_mm": 24.75,
+          "distance_mm": 5.577677140390994
+        },
+        "cmax_db": 8.124405730121792,
+        "c99_db": 10.230014588085705
+      }
+    },
+    {
+      "id": "fine__right_only",
+      "path": "1-2_SSS",
+      "spacing_mm": 0.1,
+      "case": "lof",
+      "support_pct": 40.610489457258126,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 22.098357918691477,
+        "x_mm": 2.1000000000000014,
+        "depth_mm": 19.75,
+        "distance_mm": 0.6637495593174919
+      },
+      "near": {
+        "um_s": 21.832609080549727,
+        "x_mm": 2.3000000000000007,
+        "depth_mm": 20.049999999999997,
+        "distance_mm": 0.4483228654936947
+      },
+      "background": {
+        "um_s": 21.358921405670294,
+        "x_mm": 1.0,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 1.8788428564002562
+      },
+      "cmax_db": 0.19052641988006846,
+      "c99_db": 1.3400153643936772,
+      "common_support_joint": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 22.098357918691477,
+          "x_mm": 2.1000000000000014,
+          "depth_mm": 19.75,
+          "distance_mm": 0.6637495593174919
+        },
+        "near": {
+          "um_s": 21.832609080549727,
+          "x_mm": 2.3000000000000007,
+          "depth_mm": 20.049999999999997,
+          "distance_mm": 0.4483228654936947
+        },
+        "background": {
+          "um_s": 21.358921405670294,
+          "x_mm": 1.0,
+          "depth_mm": 18.049999999999997,
+          "distance_mm": 1.8788428564002562
+        },
+        "cmax_db": 0.19052641988006846,
+        "c99_db": 1.3400153643936772
+      },
+      "common_support_all": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 16.567599260313386,
+          "x_mm": 2.8000000000000007,
+          "depth_mm": 19.95,
+          "distance_mm": 0.04575830625929792
+        },
+        "near": {
+          "um_s": 16.567599260313386,
+          "x_mm": 2.8000000000000007,
+          "depth_mm": 19.95,
+          "distance_mm": 0.04575830625929792
+        },
+        "background": {
+          "um_s": 7.383695434139279,
+          "x_mm": 0.40000000000000036,
+          "depth_mm": 17.75,
+          "distance_mm": 2.5355049201004074
+        },
+        "cmax_db": 7.019716136173333,
+        "c99_db": 11.129125379901732
+      }
+    },
+    {
+      "id": "fine__right_only",
+      "path": "1-2_SSS",
+      "spacing_mm": 0.1,
+      "case": "reference",
+      "support_pct": 40.610489457258126,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 11.697001478415537,
+        "x_mm": 7.200000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 6.211467056271689
+      },
+      "near": {
+        "um_s": 4.379125423805762,
+        "x_mm": 3.200000000000001,
+        "depth_mm": 20.349999999999998,
+        "distance_mm": 0.4661445026583053
+      },
+      "background": {
+        "um_s": 11.697001478415537,
+        "x_mm": 7.200000000000001,
+        "depth_mm": 25.25,
+        "distance_mm": 6.211467056271689
+      },
+      "cmax_db": -8.53374321348777,
+      "c99_db": -5.058239111990462,
+      "common_support_joint": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 11.697001478415537,
+          "x_mm": 7.200000000000001,
+          "depth_mm": 25.25,
+          "distance_mm": 6.211467056271689
+        },
+        "near": {
+          "um_s": 4.379125423805762,
+          "x_mm": 3.200000000000001,
+          "depth_mm": 20.349999999999998,
+          "distance_mm": 0.4661445026583053
+        },
+        "background": {
+          "um_s": 11.697001478415537,
+          "x_mm": 7.200000000000001,
+          "depth_mm": 25.25,
+          "distance_mm": 6.211467056271689
+        },
+        "cmax_db": -8.53374321348777,
+        "c99_db": -5.058239111990462
+      },
+      "common_support_all": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 2.997194530247892,
+          "x_mm": -7.2,
+          "depth_mm": 25.25,
+          "distance_mm": 10.787351635988564
+        },
+        "near": {
+          "um_s": 0.9607624667634266,
+          "x_mm": 3.200000000000001,
+          "depth_mm": 20.349999999999998,
+          "distance_mm": 0.4661445026583053
+        },
+        "background": {
+          "um_s": 2.997194530247892,
+          "x_mm": -7.2,
+          "depth_mm": 25.25,
+          "distance_mm": 10.787351635988564
+        },
+        "cmax_db": -9.88197805641166,
+        "c99_db": -6.948087689694002
+      }
+    },
+    {
+      "id": "fine__right_only",
+      "path": "1-2_SSS",
+      "spacing_mm": 0.1,
+      "case": "difference",
+      "support_pct": 40.610489457258126,
+      "near_support_pct": 48.484848484848484,
+      "peak": {
+        "um_s": 30.81054562078988,
+        "x_mm": 5.9,
+        "depth_mm": 23.65,
+        "distance_mm": 4.1749810699987435
+      },
+      "near": {
+        "um_s": 18.396916704172728,
+        "x_mm": 3.200000000000001,
+        "depth_mm": 20.349999999999998,
+        "distance_mm": 0.4661445026583053
+      },
+      "background": {
+        "um_s": 30.81054562078988,
+        "x_mm": 5.9,
+        "depth_mm": 23.65,
+        "distance_mm": 4.1749810699987435
+      },
+      "cmax_db": -4.479086945222555,
+      "c99_db": -2.9768296113888364,
+      "common_support_joint": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 30.81054562078988,
+          "x_mm": 5.9,
+          "depth_mm": 23.65,
+          "distance_mm": 4.1749810699987435
+        },
+        "near": {
+          "um_s": 18.396916704172728,
+          "x_mm": 3.200000000000001,
+          "depth_mm": 20.349999999999998,
+          "distance_mm": 0.4661445026583053
+        },
+        "background": {
+          "um_s": 30.81054562078988,
+          "x_mm": 5.9,
+          "depth_mm": 23.65,
+          "distance_mm": 4.1749810699987435
+        },
+        "cmax_db": -4.479086945222555,
+        "c99_db": -2.9768296113888364
+      },
+      "common_support_all": {
+        "support_pct": 40.610489457258126,
+        "near_support_pct": 48.484848484848484,
+        "peak": {
+          "um_s": 20.400291404037244,
+          "x_mm": 2.700000000000001,
+          "depth_mm": 19.75,
+          "distance_mm": 0.06457183846474787
+        },
+        "near": {
+          "um_s": 20.400291404037244,
+          "x_mm": 2.700000000000001,
+          "depth_mm": 19.75,
+          "distance_mm": 0.06457183846474787
+        },
+        "background": {
+          "um_s": 8.00600919496596,
+          "x_mm": 6.800000000000001,
+          "depth_mm": 24.75,
+          "distance_mm": 5.577677140390994
+        },
+        "cmax_db": 8.124405730121792,
+        "c99_db": 10.230014588085705
+      }
+    },
+    {
+      "id": "control__all",
+      "path": "1-2_SSS",
+      "spacing_mm": 0.1,
+      "case": "lof",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 16.567599260313386,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 19.95,
+        "distance_mm": 0.04575830625929792
+      },
+      "near": {
+        "um_s": 16.567599260313386,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 19.95,
+        "distance_mm": 0.04575830625929792
+      },
+      "background": {
+        "um_s": 10.02372771973125,
+        "x_mm": 1.5999999999999996,
+        "depth_mm": 18.95,
+        "distance_mm": 1.2049330916891359
+      },
+      "cmax_db": 4.364606401468225,
+      "c99_db": 8.744212436885144
+    },
+    {
+      "id": "control__all",
+      "path": "1-2_SSS",
+      "spacing_mm": 0.1,
+      "case": "reference",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 6.820095813592791,
+        "x_mm": -6.9,
+        "depth_mm": 23.25,
+        "distance_mm": 9.868451873768706
+      },
+      "near": {
+        "um_s": 3.094129143587057,
+        "x_mm": 3.0,
+        "depth_mm": 18.25,
+        "distance_mm": 0.2748845314911878
+      },
+      "background": {
+        "um_s": 6.820095813592791,
+        "x_mm": -6.9,
+        "depth_mm": 23.25,
+        "distance_mm": 9.868451873768706
+      },
+      "cmax_db": -6.8650407907778375,
+      "c99_db": -5.642410486423222
+    },
+    {
+      "id": "control__all",
+      "path": "1-2_SSS",
+      "spacing_mm": 0.1,
+      "case": "difference",
+      "support_pct": 62.30494024510923,
+      "near_support_pct": 95.75757575757575,
+      "peak": {
+        "um_s": 32.74330308079798,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.41869012955205487
+      },
+      "near": {
+        "um_s": 32.74330308079798,
+        "x_mm": 2.8000000000000007,
+        "depth_mm": 18.049999999999997,
+        "distance_mm": 0.41869012955205487
+      },
+      "background": {
+        "um_s": 9.12958941315475,
+        "x_mm": 1.5999999999999996,
+        "depth_mm": 19.75,
+        "distance_mm": 1.1630643266947807
+      },
+      "cmax_db": 11.093424834164885,
+      "c99_db": 12.444780280385892
+    }
+  ]
+}

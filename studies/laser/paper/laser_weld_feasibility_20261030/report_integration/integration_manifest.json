@@ -1,0 +1,41 @@
+{
+  "source_sha256": "aeda8334efbbe63cc8ae35a6da8b25b9d7f3e1a668ad4d31ad8e5ee763058a1a",
+  "figures": [
+    "F01_geometry",
+    "F02_physics",
+    "F03_core_images",
+    "F04_improvement",
+    "F05_wide_field",
+    "F06_acquisition"
+  ],
+  "citations": 8,
+  "labels": 22,
+  "tables_inlined": 3,
+  "main_preamble_changes": [
+    "merge caption options",
+    "merge xcolor options"
+  ],
+  "bibliography": {
+    "input_entries": 34,
+    "unique_entries": 33,
+    "removed_duplicate_keys": {
+      "levesque": "levesque-2016"
+    },
+    "paper_citations": [
+      "dolz-2024",
+      "holmes",
+      "levesque-2016",
+      "nicolson23",
+      "nicolson24",
+      "stratoudaki",
+      "tu",
+      "wilcox"
+    ],
+    "all_paper_citations_resolve": true,
+    "notes": [
+      "Unique citation keys retained, including the original Unicode Drabenstedt key.",
+      "Use the key map for any unavailable thesis chapters that cite removed duplicates.",
+      "BibTeX-safe accents and ampersands; normalized DOI prefixes; no publication-date changes."
+    ]
+  }
+}

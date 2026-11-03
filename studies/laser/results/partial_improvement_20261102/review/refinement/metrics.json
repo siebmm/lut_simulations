@@ -1,0 +1,148 @@
+{
+  "rows": [
+    {
+      "id": "muted_025",
+      "case": "lof",
+      "cmax_db": 14.446937308677551,
+      "near_support_pct": 96.90172970918076,
+      "support_pct": 63.235187730593935,
+      "near_um_s": 58.636282413847894,
+      "background_um_s": 11.112699289441569,
+      "peak_distance_mm": 0.07111383299511585,
+      "peak_x_mm": 2.700000000000001,
+      "peak_depth_mm": 19.625
+    },
+    {
+      "id": "muted_025",
+      "case": "reference",
+      "cmax_db": -10.562333927071698,
+      "near_support_pct": 96.90172970918076,
+      "support_pct": 63.235187730593935,
+      "near_um_s": 2.5252615369158495,
+      "background_um_s": 8.519675631744443,
+      "peak_distance_mm": 2.130521758716562,
+      "peak_x_mm": 0.875,
+      "peak_depth_mm": 17.625
+    },
+    {
+      "id": "muted_025",
+      "case": "difference",
+      "cmax_db": 10.174274444363034,
+      "near_support_pct": 96.90172970918076,
+      "support_pct": 63.235187730593935,
+      "near_um_s": 67.76215084651564,
+      "background_um_s": 21.002619301448394,
+      "peak_distance_mm": 0.07111383299511585,
+      "peak_x_mm": 2.700000000000001,
+      "peak_depth_mm": 19.625
+    },
+    {
+      "id": "muted_shifted",
+      "case": "lof",
+      "cmax_db": 14.45207627595238,
+      "near_support_pct": 96.88212927756655,
+      "support_pct": 63.344961240310084,
+      "near_um_s": 58.36383461238832,
+      "background_um_s": 11.054522915970319,
+      "peak_distance_mm": 0.0986963691761276,
+      "peak_x_mm": 2.6750000000000007,
+      "peak_depth_mm": 19.575000000000003
+    },
+    {
+      "id": "muted_shifted",
+      "case": "reference",
+      "cmax_db": -10.58152219055809,
+      "near_support_pct": 96.88212927756655,
+      "support_pct": 63.344961240310084,
+      "near_um_s": 2.519689062130012,
+      "background_um_s": 8.519675631744443,
+      "peak_distance_mm": 2.130521758716562,
+      "peak_x_mm": 0.875,
+      "peak_depth_mm": 17.625
+    },
+    {
+      "id": "muted_shifted",
+      "case": "difference",
+      "cmax_db": 10.302368138482192,
+      "near_support_pct": 96.88212927756655,
+      "support_pct": 63.344961240310084,
+      "near_um_s": 67.56219494730925,
+      "background_um_s": 20.63409109275559,
+      "peak_distance_mm": 0.0986963691761276,
+      "peak_x_mm": 2.6750000000000007,
+      "peak_depth_mm": 19.575000000000003
+    },
+    {
+      "id": "unmuted_025",
+      "case": "lof",
+      "cmax_db": 9.086229748872757,
+      "near_support_pct": 96.90172970918076,
+      "support_pct": 64.22387807760013,
+      "near_um_s": 30.532298740203228,
+      "background_um_s": 10.726252485063812,
+      "peak_distance_mm": 0.29090424355654465,
+      "peak_x_mm": 3.0500000000000007,
+      "peak_depth_mm": 18.275
+    },
+    {
+      "id": "unmuted_025",
+      "case": "reference",
+      "cmax_db": -1.7204500677972425,
+      "near_support_pct": 96.90172970918076,
+      "support_pct": 64.22387807760013,
+      "near_um_s": 4.689927148758783,
+      "background_um_s": 5.717268652198495,
+      "peak_distance_mm": 2.246014588567755,
+      "peak_x_mm": 0.625,
+      "peak_depth_mm": 18.049999999999997
+    },
+    {
+      "id": "unmuted_025",
+      "case": "difference",
+      "cmax_db": 8.790963873031199,
+      "near_support_pct": 96.90172970918076,
+      "support_pct": 64.22387807760013,
+      "near_um_s": 49.651357693902305,
+      "background_um_s": 18.046082352848448,
+      "peak_distance_mm": 0.3850950813882984,
+      "peak_x_mm": 2.4000000000000004,
+      "peak_depth_mm": 19.349999999999998
+    },
+    {
+      "id": "unmuted_shifted",
+      "case": "lof",
+      "cmax_db": 9.073195782445,
+      "near_support_pct": 96.88212927756655,
+      "support_pct": 64.32558139534883,
+      "near_um_s": 30.483075251163033,
+      "background_um_s": 10.72504169092538,
+      "peak_distance_mm": 0.3100911834471872,
+      "peak_x_mm": 3.075000000000001,
+      "peak_depth_mm": 18.275000000000002
+    },
+    {
+      "id": "unmuted_shifted",
+      "case": "reference",
+      "cmax_db": -1.7379277138467115,
+      "near_support_pct": 96.88212927756655,
+      "support_pct": 64.32558139534883,
+      "near_um_s": 4.680341072140351,
+      "background_um_s": 5.717074984577429,
+      "peak_distance_mm": 2.2507954782827446,
+      "peak_x_mm": 0.625,
+      "peak_depth_mm": 18.025000000000002
+    },
+    {
+      "id": "unmuted_shifted",
+      "case": "difference",
+      "cmax_db": 9.208292814421121,
+      "near_support_pct": 96.88212927756655,
+      "support_pct": 64.32558139534883,
+      "near_um_s": 49.40104245853331,
+      "background_um_s": 17.112815684653544,
+      "peak_distance_mm": 0.3562041463012128,
+      "peak_x_mm": 2.4250000000000007,
+      "peak_depth_mm": 19.425
+    }
+  ]
+}

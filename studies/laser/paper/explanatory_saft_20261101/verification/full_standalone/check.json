@@ -1,0 +1,303 @@
+{
+  "pages": 27,
+  "words": 11005,
+  "checks": [
+    {
+      "page": 1,
+      "words": 412,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 2,
+      "words": 513,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 3,
+      "words": 343,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 4,
+      "words": 458,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 5,
+      "words": 446,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 6,
+      "words": 425,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 7,
+      "words": 204,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 8,
+      "words": 375,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 9,
+      "words": 533,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 10,
+      "words": 426,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 11,
+      "words": 468,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 12,
+      "words": 429,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 13,
+      "words": 479,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 14,
+      "words": 447,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 15,
+      "words": 421,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 16,
+      "words": 365,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 17,
+      "words": 396,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 18,
+      "words": 474,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 19,
+      "words": 452,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 20,
+      "words": 432,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 21,
+      "words": 479,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 22,
+      "words": 185,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 23,
+      "words": 415,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 24,
+      "words": 385,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 25,
+      "words": 545,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 26,
+      "words": 348,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    },
+    {
+      "page": 27,
+      "words": 150,
+      "outside": [],
+      "unresolved": false,
+      "replacement": 0
+    }
+  ],
+  "fonts": {
+    "IHAIZV+LMRoman12-Bold-Identity-H": {
+      "type": "Type0",
+      "embedded_bytes": 7508
+    },
+    "BZIVMZ+LMRoman10-Regular-Identity-H": {
+      "type": "Type0",
+      "embedded_bytes": 10852
+    },
+    "IXFAWU+LMRoman10-Italic-Identity-H": {
+      "type": "Type0",
+      "embedded_bytes": 7024
+    },
+    "DDIEWW+CMMI10": {
+      "type": "Type1",
+      "embedded_bytes": 8741
+    },
+    "FKPJSN+CMR10": {
+      "type": "Type1",
+      "embedded_bytes": 4587
+    },
+    "PVTTLK+CMSY8": {
+      "type": "Type1",
+      "embedded_bytes": 1146
+    },
+    "TQTHRL+LMRoman9-Regular-Identity-H": {
+      "type": "Type0",
+      "embedded_bytes": 8908
+    },
+    "JAGKKY+CMSY10": {
+      "type": "Type1",
+      "embedded_bytes": 1584
+    },
+    "NOMARO+CMMI8": {
+      "type": "Type1",
+      "embedded_bytes": 4282
+    },
+    "GCWXDV+DejaVuSans-Oblique": {
+      "type": "Type0",
+      "embedded_bytes": 3220
+    },
+    "BMQQDV+DejaVuSans": {
+      "type": "Type0",
+      "embedded_bytes": 14660
+    },
+    "KPXLOM+CMR8": {
+      "type": "Type1",
+      "embedded_bytes": 4427
+    },
+    "UTACNV+CMR6": {
+      "type": "Type1",
+      "embedded_bytes": 1289
+    },
+    "FZDNHS+CMMI6": {
+      "type": "Type1",
+      "embedded_bytes": 1071
+    },
+    "DZGKAF+CMEX10": {
+      "type": "Type1",
+      "embedded_bytes": 1437
+    },
+    "GJMHKB+CMMIB10": {
+      "type": "Type1",
+      "embedded_bytes": 1279
+    },
+    "NITCSQ+CMR9": {
+      "type": "Type1",
+      "embedded_bytes": 603
+    },
+    "UBBQTN+CMSY6": {
+      "type": "Type1",
+      "embedded_bytes": 365
+    },
+    "YEUUOC+LMRoman8-Regular-Identity-H": {
+      "type": "Type0",
+      "embedded_bytes": 549
+    },
+    "AKHCZK+LMRoman6-Regular-Identity-H": {
+      "type": "Type0",
+      "embedded_bytes": 548
+    },
+    "VDVGTR+LMRoman9-Italic-Identity-H": {
+      "type": "Type0",
+      "embedded_bytes": 3984
+    },
+    "CAFSZL+LMMono9-Regular-Identity-H": {
+      "type": "Type0",
+      "embedded_bytes": 3183
+    },
+    "LPOGEQ+CMMI9": {
+      "type": "Type1",
+      "embedded_bytes": 1500
+    },
+    "GQYLQL+CMSY9": {
+      "type": "Type1",
+      "embedded_bytes": 423
+    },
+    "WXMALW+CMR7": {
+      "type": "Type1",
+      "embedded_bytes": 1217
+    },
+    "XKCNTN+CMMI7": {
+      "type": "Type1",
+      "embedded_bytes": 432
+    }
+  },
+  "warnings": [],
+  "sha256": "b7e7bde5b020f9ee57c08e9170fe4720e0ecb1e8a3d48a7c327429e698f28180"
+}

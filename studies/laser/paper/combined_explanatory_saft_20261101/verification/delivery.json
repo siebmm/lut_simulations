@@ -1,0 +1,27 @@
+{
+  "deliverables": {
+    "combined_explanatory_saft_paper.pdf": "151e1b2ae344f6b419f696292181444c86732c8984f462a361e507adaf27b6f5",
+    "combined_explanatory_saft_latex.zip": "980255a6e2e25e91077fd2a6681a30d766eb7786573e7909fc1eeeeb130d8671"
+  },
+  "bundle_files": {
+    "chapter_comsol.tex": "e7b82b71e359cc6db0bfb6bbbde98dc75f5c1995aa2eacf7abc3f74e897e9926",
+    "figures\\combined_explanatory\\geometry.pdf": "e0f24f4cd2ba8e179c1415b2a2a1e36c07475383853a4c3e409481ce1cca64f7",
+    "figures\\combined_explanatory\\source_calibration.pdf": "0a0650bf919ac9ed02ef7d21d10e0689a7a35dbeb736d05389b5758c8359de9e",
+    "figures\\combined_explanatory\\path_examples.pdf": "fde298d541f28bf0ed55d39401c652eae8490b73cc456308fa5a1f7ce909ca79",
+    "figures\\combined_explanatory\\coupling.pdf": "0523eb8454e26679a27eec5909812311143f2f8e09d692800c9039b2cc8e2c11",
+    "figures\\combined_explanatory\\full_common_paths.pdf": "1421646fe5a85e251f503e28b127662c4d148a669698ae8f1ad62fcc3cd1b54a",
+    "figures\\combined_explanatory\\primary_full.pdf": "34f440bc837808d7ab0082221d8427602abb72663019b26a01814957fd90153a",
+    "figures\\combined_explanatory\\partial_joint.pdf": "51d7a263bb5e95f9fce901d0767a9fd82d3dda47e828ba95152ecba8fa313649",
+    "figures\\combined_explanatory\\partial_source_threshold.pdf": "4bc659ea0598686dd384ac247fa6d8816fe94596e6fb987c444eed0c5df6a213"
+  },
+  "preserved_papers": {
+    "full_weld_explanatory_paper.pdf": "b7e7bde5b020f9ee57c08e9170fe4720e0ecb1e8a3d48a7c327429e698f28180",
+    "partial_weld_explanatory_paper.pdf": "2bd196ce8d36e359d3c48a2c2019881a59e7fc0c2c08252e4fe0d1ee6ef1d8f6",
+    "combined_core_saft_paper.pdf": "a355a1951a8f633a527554f1cd248f53d4f484a3858707e10446a14e162f80d0",
+    "full_weld_simulation_paper.pdf": "1b9b95bdec009a816eb86dd516b5152de6846c493c0cfc7874ad66fcd6f88785",
+    "partial_weld_simulation_paper.pdf": "20ae90ecca3f4b0e846ef129a8f9a5b496968186bdda40e2b2625c3c7c0c8c9f",
+    "comsol_chapter_and_appendices.pdf": "9ed2107d275669bdd35e6141825fd029218c2253fedea46f73e95d5cd19139bb"
+  },
+  "pages": 17,
+  "word_count": 7054
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "file": "saft_partial_response_comparison.saftblend",
+    "layers": 4,
+    "exact_Qt_readback": true,
+    "sha256": "b45c1172971367a5e29679241567e28eab2863eeb9a077573238d980b31b3ae6"
+  },
+  {
+    "file": "saft_full_shoulders_plates.saftblend",
+    "layers": 4,
+    "exact_Qt_readback": true,
+    "sha256": "d6e98c267ea160a17b57342aee0845d48d0a931ed02b2ab8bc2b0c7b7bdb9456"
+  }
+]

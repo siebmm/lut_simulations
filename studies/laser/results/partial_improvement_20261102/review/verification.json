@@ -1,0 +1,248 @@
+{
+  "status": "passed",
+  "native_checks": 16,
+  "signal_case_checks": 48,
+  "checks": [
+    {
+      "id": "p019_all_all_min2",
+      "case": "lof",
+      "max_error": 5.082197683525802e-20
+    },
+    {
+      "id": "p019_all_all_min2",
+      "case": "reference",
+      "max_error": 2.710505431213761e-20
+    },
+    {
+      "id": "p019_all_all_min2",
+      "case": "difference",
+      "max_error": 1.0164395367051604e-19
+    },
+    {
+      "id": "p019_sides_weld_min2",
+      "case": "lof",
+      "max_error": 4.0657581468206416e-20
+    },
+    {
+      "id": "p019_sides_weld_min2",
+      "case": "reference",
+      "max_error": 2.456395547037471e-20
+    },
+    {
+      "id": "p019_sides_weld_min2",
+      "case": "difference",
+      "max_error": 1.4230153513872246e-19
+    },
+    {
+      "id": "p019_right_source3",
+      "case": "lof",
+      "max_error": 1.6940658945086007e-20
+    },
+    {
+      "id": "p019_right_source3",
+      "case": "reference",
+      "max_error": 1.6940658945086007e-20
+    },
+    {
+      "id": "p019_right_source3",
+      "case": "difference",
+      "max_error": 4.743384504624082e-20
+    },
+    {
+      "id": "p019_left_weld_source1",
+      "case": "lof",
+      "max_error": 4.0657581468206416e-20
+    },
+    {
+      "id": "p019_left_weld_source1",
+      "case": "reference",
+      "max_error": 4.743384504624082e-20
+    },
+    {
+      "id": "p019_left_weld_source1",
+      "case": "difference",
+      "max_error": 8.470329472543003e-21
+    },
+    {
+      "id": "p016_all_all_min2",
+      "case": "lof",
+      "max_error": 6.606856988583543e-20
+    },
+    {
+      "id": "p016_all_all_min2",
+      "case": "reference",
+      "max_error": 6.776263578034403e-20
+    },
+    {
+      "id": "p016_all_all_min2",
+      "case": "difference",
+      "max_error": 3.7269449679189215e-20
+    },
+    {
+      "id": "p016_sides_weld_min2",
+      "case": "lof",
+      "max_error": 7.453889935837843e-20
+    },
+    {
+      "id": "p016_sides_weld_min2",
+      "case": "reference",
+      "max_error": 8.470329472543003e-20
+    },
+    {
+      "id": "p016_sides_weld_min2",
+      "case": "difference",
+      "max_error": 6.098637220230962e-20
+    },
+    {
+      "id": "p016_right_source3",
+      "case": "lof",
+      "max_error": 1.3552527156068805e-20
+    },
+    {
+      "id": "p016_right_source3",
+      "case": "reference",
+      "max_error": 2.710505431213761e-20
+    },
+    {
+      "id": "p016_right_source3",
+      "case": "difference",
+      "max_error": 5.421010862427522e-20
+    },
+    {
+      "id": "p016_left_weld_source1",
+      "case": "lof",
+      "max_error": 4.0657581468206416e-20
+    },
+    {
+      "id": "p016_left_weld_source1",
+      "case": "reference",
+      "max_error": 4.743384504624082e-20
+    },
+    {
+      "id": "p016_left_weld_source1",
+      "case": "difference",
+      "max_error": 1.6940658945086007e-20
+    },
+    {
+      "id": "p127_all_all_min2",
+      "case": "lof",
+      "max_error": 1.9058241313221758e-21
+    },
+    {
+      "id": "p127_all_all_min2",
+      "case": "reference",
+      "max_error": 2.3822801641527197e-22
+    },
+    {
+      "id": "p127_all_all_min2",
+      "case": "difference",
+      "max_error": 4.0234064994579266e-21
+    },
+    {
+      "id": "p127_sides_weld_min2",
+      "case": "lof",
+      "max_error": 1.852884572118782e-22
+    },
+    {
+      "id": "p127_sides_weld_min2",
+      "case": "reference",
+      "max_error": 7.940933880509066e-23
+    },
+    {
+      "id": "p127_sides_weld_min2",
+      "case": "difference",
+      "max_error": 4.764560328305439e-22
+    },
+    {
+      "id": "p127_right_source3",
+      "case": "lof",
+      "max_error": 5.293955920339377e-23
+    },
+    {
+      "id": "p127_right_source3",
+      "case": "reference",
+      "max_error": 6.617444900424221e-23
+    },
+    {
+      "id": "p127_right_source3",
+      "case": "difference",
+      "max_error": 2.117582368135751e-22
+    },
+    {
+      "id": "p127_left_weld_source1",
+      "case": "lof",
+      "max_error": 3.705769144237564e-22
+    },
+    {
+      "id": "p127_left_weld_source1",
+      "case": "reference",
+      "max_error": 1.3234889800848443e-22
+    },
+    {
+      "id": "p127_left_weld_source1",
+      "case": "difference",
+      "max_error": 5.293955920339377e-22
+    },
+    {
+      "id": "p000_all_all_min2",
+      "case": "lof",
+      "max_error": 2.0328790734103208e-20
+    },
+    {
+      "id": "p000_all_all_min2",
+      "case": "reference",
+      "max_error": 3.3881317890172014e-20
+    },
+    {
+      "id": "p000_all_all_min2",
+      "case": "difference",
+      "max_error": 1.6093625997831706e-20
+    },
+    {
+      "id": "p000_sides_weld_min2",
+      "case": "lof",
+      "max_error": 2.0328790734103208e-20
+    },
+    {
+      "id": "p000_sides_weld_min2",
+      "case": "reference",
+      "max_error": 3.3881317890172014e-20
+    },
+    {
+      "id": "p000_sides_weld_min2",
+      "case": "difference",
+      "max_error": 2.0328790734103208e-20
+    },
+    {
+      "id": "p000_right_source3",
+      "case": "lof",
+      "max_error": 2.0328790734103208e-20
+    },
+    {
+      "id": "p000_right_source3",
+      "case": "reference",
+      "max_error": 4.743384504624082e-20
+    },
+    {
+      "id": "p000_right_source3",
+      "case": "difference",
+      "max_error": 3.3881317890172014e-20
+    },
+    {
+      "id": "p000_left_weld_source1",
+      "case": "lof",
+      "max_error": 2.710505431213761e-20
+    },
+    {
+      "id": "p000_left_weld_source1",
+      "case": "reference",
+      "max_error": 2.710505431213761e-20
+    },
+    {
+      "id": "p000_left_weld_source1",
+      "case": "difference",
+      "max_error": 3.3881317890172014e-21
+    }
+  ],
+  "exporter_sha256": "5ce8f4867d0be29a92320270fe6bf1a962c4f14780b8e3c812323bb925023d28"
+}

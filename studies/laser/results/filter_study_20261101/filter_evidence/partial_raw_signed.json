@@ -1,0 +1,61 @@
+{
+  "dataset_fingerprint": "fd34529e7a01bb6b521cbf1d8ee4d9cda8548eecbd3723797a6fdf93eb1420e5",
+  "variant": {
+    "name": "raw_signed",
+    "method": "raw_signed",
+    "support_half_samples": 0,
+    "known_initial_rest": false
+  },
+  "energy": [
+    {
+      "case": "lof",
+      "source": 0,
+      "above_5MHz_fraction": 0.018117750797469443
+    },
+    {
+      "case": "lof",
+      "source": 1,
+      "above_5MHz_fraction": 0.10619992638508002
+    },
+    {
+      "case": "lof",
+      "source": 2,
+      "above_5MHz_fraction": 0.09801800498857717
+    },
+    {
+      "case": "lof",
+      "source": 3,
+      "above_5MHz_fraction": 0.10663877117329056
+    },
+    {
+      "case": "lof",
+      "source": 4,
+      "above_5MHz_fraction": 0.017516200665330706
+    },
+    {
+      "case": "reference",
+      "source": 0,
+      "above_5MHz_fraction": 0.018202375172375555
+    },
+    {
+      "case": "reference",
+      "source": 1,
+      "above_5MHz_fraction": 0.10993051654212256
+    },
+    {
+      "case": "reference",
+      "source": 2,
+      "above_5MHz_fraction": 0.103441935672417
+    },
+    {
+      "case": "reference",
+      "source": 3,
+      "above_5MHz_fraction": 0.10928987912919834
+    },
+    {
+      "case": "reference",
+      "source": 4,
+      "above_5MHz_fraction": 0.01825714964120804
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "id": "S_LL_right",
+      "settings_sha256": "1dbedb823dfccf77ffafef899958a5aea90881e5cd8a5e1ed9d39e3347ec005e"
+    },
+    {
+      "id": "SSL_SS_left",
+      "settings_sha256": "62576d29ce2e02018ff2de88735e2bc61c446a893bed34d40806ca5301cc1339"
+    },
+    {
+      "id": "SSL_SS_two",
+      "settings_sha256": "5a5692db81f13a5cb49289eae1fb5a88bec0cdba4e427a542130ee86501fecda"
+    }
+  ],
+  "method": "Native LOF-only replay of each exported preset agrees with the three-case study; GUI interaction was not tested."
+}

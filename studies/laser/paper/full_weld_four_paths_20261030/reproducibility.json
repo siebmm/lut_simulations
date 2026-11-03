@@ -1,0 +1,51 @@
+{
+  "scope": "Full weld only; original four blend recipes; no partial-weld or reduced-receiver results",
+  "dataset_fingerprint": "c3c1a5b2b587a17f6336ccfc20c46ec6c093f084d53c4ee50d6a00013a62a07b",
+  "input_files": {
+    "saft_paths_full_weld_all.saftblend": "8510464721ef76f0e40840fd58092302a49f1aef6fbe7c430c5256563fd1296d",
+    "saft_settings_full_weld_all.json": "e53d37df8918a17d6f532375c78cacee3c84f8b0d973d1c4113ddf21a4565a66",
+    "studies\\laser\\saft_data\\full_weld\\dataset.json": "db8cb2678f31464a59aca74af1aae6acfc50083446ec2b95f7d3fdcb8427679e",
+    "studies\\laser\\build\\desktop_cpp\\SAFTWorkbench\\SAFTWorkbenchCpp_20261030_092409_758.exe": "d8cf6a80c2907fb07eba9fca2b1e71d0741fcce41d70c754abdd5dd3f298f693"
+  },
+  "reconstructions": 90,
+  "counts_by_grid": {
+    "0.05": 4,
+    "0.1": 9,
+    "0.2": 73,
+    "0.25": 4
+  },
+  "reproduction": [
+    {
+      "path": "1-1_SS",
+      "equal_mask": true,
+      "max_abs_m_s": 4.658681209898652e-21
+    },
+    {
+      "path": "1-1_LL",
+      "equal_mask": true,
+      "max_abs_m_s": 4.446922973085077e-21
+    },
+    {
+      "path": "1-2_SSS",
+      "equal_mask": true,
+      "max_abs_m_s": 1.1011428314305904e-20
+    },
+    {
+      "path": "2-1_SSS",
+      "equal_mask": true,
+      "max_abs_m_s": 3.3881317890172014e-21
+    }
+  ],
+  "figure_evidence": {
+    "independent_filter_max_error_m_s": 2.17992725795907e-17,
+    "trace_source": 0,
+    "trace_receiver": 94,
+    "ray_times_us": [
+      16.951744453905746,
+      9.24865951348232,
+      19.546468277717025,
+      19.971524468262018
+    ],
+    "bscan_reference_um_s": 1459.3762085189558
+  }
+}

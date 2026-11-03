@@ -1,0 +1,130 @@
+{
+  "wide01": {
+    "lof": {
+      "cmax_db": 15.765436801365194,
+      "near_support_pct": 96.66666666666667,
+      "support_pct": 3.7642990745121625,
+      "near_um_s": 58.361950263544735,
+      "background_um_s": 9.50293931889659,
+      "peak_distance_mm": 0.06980543408904037,
+      "peak_x_mm": 2.700000000000003,
+      "peak_depth_mm": 19.650000000000002
+    },
+    "reference": {
+      "cmax_db": -9.699139806264215,
+      "near_support_pct": 96.66666666666667,
+      "support_pct": 3.7642990745121625,
+      "near_um_s": 2.4101940762695895,
+      "background_um_s": 7.362223627932687,
+      "peak_distance_mm": 1.9999801095290528,
+      "peak_x_mm": 0.9000000000000057,
+      "peak_depth_mm": 17.95
+    },
+    "difference": {
+      "cmax_db": 10.27931439304907,
+      "near_support_pct": 96.66666666666667,
+      "support_pct": 3.7642990745121625,
+      "near_um_s": 67.41659134150262,
+      "background_um_s": 20.644343215421152,
+      "peak_distance_mm": 0.06980543408904037,
+      "peak_x_mm": 2.700000000000003,
+      "peak_depth_mm": 19.650000000000002
+    }
+  },
+  "cf2": {
+    "lof": {
+      "cmax_db": 12.854819735044583,
+      "near_support_pct": 95.18072289156626,
+      "support_pct": 63.45693779904307,
+      "near_um_s": 12.554950253448117,
+      "background_um_s": 2.858077555888841,
+      "peak_distance_mm": 0.26869412757270117,
+      "peak_x_mm": 3.1000000000000014,
+      "peak_depth_mm": 18.45
+    },
+    "reference": {
+      "cmax_db": -1.0144504424736571,
+      "near_support_pct": 95.18072289156626,
+      "support_pct": 63.45693779904307,
+      "near_um_s": 0.8034233553171883,
+      "background_um_s": 0.9029568033220813,
+      "peak_distance_mm": 0.8425710990029718,
+      "peak_x_mm": 2.1000000000000014,
+      "peak_depth_mm": 18.049999999999997
+    },
+    "difference": {
+      "cmax_db": 9.623636345466315,
+      "near_support_pct": 95.18072289156626,
+      "support_pct": 63.45693779904307,
+      "near_um_s": 21.781763072942994,
+      "background_um_s": 7.193019083349246,
+      "peak_distance_mm": 0.36104795355855396,
+      "peak_x_mm": 3.1000000000000014,
+      "peak_depth_mm": 20.25
+    }
+  },
+  "fraction1": {
+    "lof": {
+      "cmax_db": 8.716094330985989,
+      "near_support_pct": 95.18072289156626,
+      "support_pct": 63.45693779904307,
+      "near_um_s": 28.276110914230735,
+      "background_um_s": 10.366089638381315,
+      "peak_distance_mm": 0.26869412757270117,
+      "peak_x_mm": 3.1000000000000014,
+      "peak_depth_mm": 18.45
+    },
+    "reference": {
+      "cmax_db": -1.4123738451927403,
+      "near_support_pct": 95.18072289156626,
+      "support_pct": 63.45693779904307,
+      "near_um_s": 4.611464365779684,
+      "background_um_s": 5.425722143061568,
+      "peak_distance_mm": 2.4710130036846736,
+      "peak_x_mm": 0.5,
+      "peak_depth_mm": 17.65
+    },
+    "difference": {
+      "cmax_db": 7.327857473193299,
+      "near_support_pct": 95.18072289156626,
+      "support_pct": 63.45693779904307,
+      "near_um_s": 38.894784394857126,
+      "background_um_s": 16.730098377967295,
+      "peak_distance_mm": 0.27999853228854693,
+      "peak_x_mm": 2.5,
+      "peak_depth_mm": 19.45
+    }
+  },
+  "coherent": {
+    "lof": {
+      "cmax_db": 9.31220351426058,
+      "near_support_pct": 95.18072289156626,
+      "support_pct": 63.45693779904307,
+      "near_um_s": 19.53380698299821,
+      "background_um_s": 6.686159250088639,
+      "peak_distance_mm": 0.26869412757270117,
+      "peak_x_mm": 3.1000000000000014,
+      "peak_depth_mm": 18.45
+    },
+    "reference": {
+      "cmax_db": -1.621440785605266,
+      "near_support_pct": 95.18072289156626,
+      "support_pct": 63.45693779904307,
+      "near_um_s": 2.906446388836864,
+      "background_um_s": 3.502953367022318,
+      "peak_distance_mm": 10.879206146419587,
+      "peak_x_mm": -7.3,
+      "peak_depth_mm": 25.25
+    },
+    "difference": {
+      "cmax_db": 8.042154990624702,
+      "near_support_pct": 95.18072289156626,
+      "support_pct": 63.45693779904307,
+      "near_um_s": 30.96091143819714,
+      "background_um_s": 12.266085499894817,
+      "peak_distance_mm": 0.27999853228854693,
+      "peak_x_mm": 2.5,
+      "peak_depth_mm": 19.45
+    }
+  }
+}

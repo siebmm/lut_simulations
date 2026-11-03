@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "anchor": "current_equal",
+      "case": "lof",
+      "maximum_difference": 3.3881317890172014e-21
+    },
+    {
+      "anchor": "current_equal",
+      "case": "reference",
+      "maximum_difference": 1.6940658945086007e-21
+    },
+    {
+      "anchor": "current_equal",
+      "case": "difference",
+      "maximum_difference": 3.3881317890172014e-21
+    },
+    {
+      "anchor": "weighted_1_5",
+      "case": "lof",
+      "maximum_difference": 3.3881317890172014e-21
+    },
+    {
+      "anchor": "weighted_1_5",
+      "case": "reference",
+      "maximum_difference": 1.6940658945086007e-21
+    },
+    {
+      "anchor": "weighted_1_5",
+      "case": "difference",
+      "maximum_difference": 6.776263578034403e-21
+    }
+  ],
+  "native_executable_sha256": "cb4328c05b2b71e8b684309f4695f2a2d13d2f1008ee9ec5f5d36e771fb34e55",
+  "exporter_sha256": "b71ea8b615e6f5942c59c6e90b77ef2abd14b2fbbc095bf0b1c8b2578868d9cf"
+}

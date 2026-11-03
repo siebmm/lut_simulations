@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "figure": "partial_lof_atlas",
+  "legend_count": 0,
+  "legends": [],
+  "check": "Rendered legend bounds inside canvas and outside all data axes and their text."
+}

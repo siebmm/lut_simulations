@@ -29,7 +29,7 @@ study (`sol1`) with output paths set for your installation.
 reference/defect model pair. The five source definitions are in
 `partial_weld/metadata/multisource.json`. To run another shot, configure
 `laser_x`, `laser_y`, and the `sourceFace` boundary selection for that source;
-the full study's batch runner performs these steps automatically.
+the source and receiver definitions needed for this are retained locally.
 
 ## Metadata
 
@@ -39,6 +39,13 @@ x/y convention; the paper and SAFT use depth = plate thickness - y. Historical
 paths inside the original setup metadata describe the source study and are not
 dependencies of this repository.
 
-The much larger simulation histories, solved fields, repair records, and batch
-execution infrastructure remain part of the full AllseasNDT study. Use that
-study for end-to-end simulation and reconstruction reproduction.
+The canonical receiver histories and repair information are included in
+`../data/`. `solver/` retains original Java calibration and receiver-export
+templates plus the native-step postprocessor. These templates describe the
+original simulation setup; configure paths and solver/runtime settings for
+your COMSOL installation before using them. The saved `.mph` inputs remain
+the authoritative models, and no new COMSOL solve was performed during packaging.
+
+Solved field snapshots, original native-time probe tables and machine-specific
+batch-control infrastructure are omitted. They are not required to reconstruct
+the published images from the included acquisitions.

@@ -1,0 +1,22 @@
+{
+  "full": {
+    "bounds": {
+      "x_min_mm": -6,
+      "x_max_mm": 6,
+      "depth_min_mm": 5,
+      "depth_max_mm": 25.25
+    },
+    "source_file": "saft_settings_full_weld_all.json",
+    "source_sha256": "e53d37df8918a17d6f532375c78cacee3c84f8b0d973d1c4113ddf21a4565a66",
+    "basis": "User saved full-weld image extent, also present in all four supplied blend layers. Display annotation, not a change to this paper matched-window reconstruction."
+  },
+  "partial": {
+    "bounds": {
+      "x_min_mm": -7.5,
+      "x_max_mm": 7.5,
+      "depth_min_mm": 16.65,
+      "depth_max_mm": 25.25
+    },
+    "basis": "Partial-weld study primary grid."
+  }
+}

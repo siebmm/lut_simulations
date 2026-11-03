@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-10-30T12:38:15.942738+00:00",
+  "stage": "Confirmation after first follow-up; same known flaw, not independent validation.",
+  "reason": "Response weighting improved partial S|SS Cmax at unchanged support; test finer/wider fields and acquisition groups. Preserve original followup_protocol.json, whose candidate was band1.",
+  "primary_candidate": "weighted: 0.5-5 MHz with known receiver/wall response weighting",
+  "secondary_candidate": "band1_weighted: 1-5 MHz and response weighting",
+  "no_search": "No additional gate, margin, crop or pulse-screening search.",
+  "first_stage_results_sha256": "e4c9fe8eea7631d4e131af04f889e363dd722875da28755c03ac20fd37bf5266"
+}

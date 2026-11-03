@@ -1,0 +1,3027 @@
+{
+    "features": [
+        {
+            "family": "corner",
+            "index": 1,
+            "key": "corner:1",
+            "label": "left lip corner",
+            "points_m": [
+                [
+                    -0.0035533975315786143,
+                    0
+                ]
+            ]
+        },
+        {
+            "family": "corner",
+            "index": 2,
+            "key": "corner:2",
+            "label": "left bevel knee",
+            "points_m": [
+                [
+                    -0.0035533975315786143,
+                    0.004699999999999999
+                ]
+            ]
+        },
+        {
+            "family": "corner",
+            "index": 3,
+            "key": "corner:3",
+            "label": "left floor corner",
+            "points_m": [
+                [
+                    -0.0029402265139670328,
+                    0.016399999999999998
+                ]
+            ]
+        },
+        {
+            "family": "corner",
+            "index": 4,
+            "key": "corner:4",
+            "label": "right floor corner",
+            "points_m": [
+                [
+                    0.0029402265139670328,
+                    0.016399999999999998
+                ]
+            ]
+        },
+        {
+            "family": "corner",
+            "index": 5,
+            "key": "corner:5",
+            "label": "right bevel knee",
+            "points_m": [
+                [
+                    0.0035533975315786143,
+                    0.004699999999999999
+                ]
+            ]
+        },
+        {
+            "family": "corner",
+            "index": 6,
+            "key": "corner:6",
+            "label": "right lip corner",
+            "points_m": [
+                [
+                    0.0035533975315786143,
+                    0
+                ]
+            ]
+        },
+        {
+            "family": "wall",
+            "index": 2,
+            "key": "wall:2",
+            "label": "left bevel",
+            "points_m": [
+                [
+                    -0.0035533975315786143,
+                    0.004699999999999999
+                ],
+                [
+                    -0.0029402265139670328,
+                    0.016399999999999998
+                ]
+            ]
+        },
+        {
+            "family": "wall",
+            "index": 4,
+            "key": "wall:4",
+            "label": "right bevel",
+            "points_m": [
+                [
+                    0.0029402265139670328,
+                    0.016399999999999998
+                ],
+                [
+                    0.0035533975315786143,
+                    0.004699999999999999
+                ]
+            ]
+        }
+    ],
+    "paths": [
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "L",
+            "before_via": "",
+            "family": "",
+            "id": "1-1_LL",
+            "name": "L | L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "L",
+            "before_via": "",
+            "family": "",
+            "id": "1-1_LS",
+            "name": "L | S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "S",
+            "before_via": "",
+            "family": "",
+            "id": "1-1_SL",
+            "name": "S | L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "S",
+            "before_via": "",
+            "family": "",
+            "id": "1-1_SS",
+            "name": "S | S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "",
+            "family": "",
+            "id": "2-1_LLL",
+            "name": "LL | L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "",
+            "family": "",
+            "id": "2-1_LLS",
+            "name": "LL | S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LS",
+            "before_via": "",
+            "family": "",
+            "id": "2-1_LSL",
+            "name": "LS | L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "LS",
+            "before_via": "",
+            "family": "",
+            "id": "2-1_LSS",
+            "name": "LS | S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "SL",
+            "before_via": "",
+            "family": "",
+            "id": "2-1_SLL",
+            "name": "SL | L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SL",
+            "before_via": "",
+            "family": "",
+            "id": "2-1_SLS",
+            "name": "SL | S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "",
+            "family": "",
+            "id": "2-1_SSL",
+            "name": "SS | L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "",
+            "family": "",
+            "id": "2-1_SSS",
+            "name": "SS | S"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "L",
+            "before_via": "",
+            "family": "",
+            "id": "1-2_LLL",
+            "name": "L | LL"
+        },
+        {
+            "after": "LS",
+            "after_via": "",
+            "before": "L",
+            "before_via": "",
+            "family": "",
+            "id": "1-2_LLS",
+            "name": "L | LS"
+        },
+        {
+            "after": "SL",
+            "after_via": "",
+            "before": "L",
+            "before_via": "",
+            "family": "",
+            "id": "1-2_LSL",
+            "name": "L | SL"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "L",
+            "before_via": "",
+            "family": "",
+            "id": "1-2_LSS",
+            "name": "L | SS"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "S",
+            "before_via": "",
+            "family": "",
+            "id": "1-2_SLL",
+            "name": "S | LL"
+        },
+        {
+            "after": "LS",
+            "after_via": "",
+            "before": "S",
+            "before_via": "",
+            "family": "",
+            "id": "1-2_SLS",
+            "name": "S | LS"
+        },
+        {
+            "after": "SL",
+            "after_via": "",
+            "before": "S",
+            "before_via": "",
+            "family": "",
+            "id": "1-2_SSL",
+            "name": "S | SL"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "S",
+            "before_via": "",
+            "family": "",
+            "id": "1-2_SSS",
+            "name": "S | SS"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "",
+            "family": "",
+            "id": "2-2_LLLL",
+            "name": "LL | LL"
+        },
+        {
+            "after": "LS",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "",
+            "family": "",
+            "id": "2-2_LLLS",
+            "name": "LL | LS"
+        },
+        {
+            "after": "SL",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "",
+            "family": "",
+            "id": "2-2_LLSL",
+            "name": "LL | SL"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "",
+            "family": "",
+            "id": "2-2_LLSS",
+            "name": "LL | SS"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LS",
+            "before_via": "",
+            "family": "",
+            "id": "2-2_LSLL",
+            "name": "LS | LL"
+        },
+        {
+            "after": "LS",
+            "after_via": "",
+            "before": "LS",
+            "before_via": "",
+            "family": "",
+            "id": "2-2_LSLS",
+            "name": "LS | LS"
+        },
+        {
+            "after": "SL",
+            "after_via": "",
+            "before": "LS",
+            "before_via": "",
+            "family": "",
+            "id": "2-2_LSSL",
+            "name": "LS | SL"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "LS",
+            "before_via": "",
+            "family": "",
+            "id": "2-2_LSSS",
+            "name": "LS | SS"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "SL",
+            "before_via": "",
+            "family": "",
+            "id": "2-2_SLLL",
+            "name": "SL | LL"
+        },
+        {
+            "after": "LS",
+            "after_via": "",
+            "before": "SL",
+            "before_via": "",
+            "family": "",
+            "id": "2-2_SLLS",
+            "name": "SL | LS"
+        },
+        {
+            "after": "SL",
+            "after_via": "",
+            "before": "SL",
+            "before_via": "",
+            "family": "",
+            "id": "2-2_SLSL",
+            "name": "SL | SL"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SL",
+            "before_via": "",
+            "family": "",
+            "id": "2-2_SLSS",
+            "name": "SL | SS"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "",
+            "family": "",
+            "id": "2-2_SSLL",
+            "name": "SS | LL"
+        },
+        {
+            "after": "LS",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "",
+            "family": "",
+            "id": "2-2_SSLS",
+            "name": "SS | LS"
+        },
+        {
+            "after": "SL",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "",
+            "family": "",
+            "id": "2-2_SSSL",
+            "name": "SS | SL"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "",
+            "family": "",
+            "id": "2-2_SSSS",
+            "name": "SS | SS"
+        },
+        {
+            "after": "LLL",
+            "after_via": "",
+            "before": "L",
+            "before_via": "",
+            "family": "",
+            "id": "1-3_LLLL",
+            "name": "L | LLL"
+        },
+        {
+            "after": "LLS",
+            "after_via": "",
+            "before": "L",
+            "before_via": "",
+            "family": "",
+            "id": "1-3_LLLS",
+            "name": "L | LLS"
+        },
+        {
+            "after": "LSL",
+            "after_via": "",
+            "before": "L",
+            "before_via": "",
+            "family": "",
+            "id": "1-3_LLSL",
+            "name": "L | LSL"
+        },
+        {
+            "after": "LSS",
+            "after_via": "",
+            "before": "L",
+            "before_via": "",
+            "family": "",
+            "id": "1-3_LLSS",
+            "name": "L | LSS"
+        },
+        {
+            "after": "SLL",
+            "after_via": "",
+            "before": "L",
+            "before_via": "",
+            "family": "",
+            "id": "1-3_LSLL",
+            "name": "L | SLL"
+        },
+        {
+            "after": "SLS",
+            "after_via": "",
+            "before": "L",
+            "before_via": "",
+            "family": "",
+            "id": "1-3_LSLS",
+            "name": "L | SLS"
+        },
+        {
+            "after": "SSL",
+            "after_via": "",
+            "before": "L",
+            "before_via": "",
+            "family": "",
+            "id": "1-3_LSSL",
+            "name": "L | SSL"
+        },
+        {
+            "after": "SSS",
+            "after_via": "",
+            "before": "L",
+            "before_via": "",
+            "family": "",
+            "id": "1-3_LSSS",
+            "name": "L | SSS"
+        },
+        {
+            "after": "LLL",
+            "after_via": "",
+            "before": "S",
+            "before_via": "",
+            "family": "",
+            "id": "1-3_SLLL",
+            "name": "S | LLL"
+        },
+        {
+            "after": "LLS",
+            "after_via": "",
+            "before": "S",
+            "before_via": "",
+            "family": "",
+            "id": "1-3_SLLS",
+            "name": "S | LLS"
+        },
+        {
+            "after": "LSL",
+            "after_via": "",
+            "before": "S",
+            "before_via": "",
+            "family": "",
+            "id": "1-3_SLSL",
+            "name": "S | LSL"
+        },
+        {
+            "after": "LSS",
+            "after_via": "",
+            "before": "S",
+            "before_via": "",
+            "family": "",
+            "id": "1-3_SLSS",
+            "name": "S | LSS"
+        },
+        {
+            "after": "SLL",
+            "after_via": "",
+            "before": "S",
+            "before_via": "",
+            "family": "",
+            "id": "1-3_SSLL",
+            "name": "S | SLL"
+        },
+        {
+            "after": "SLS",
+            "after_via": "",
+            "before": "S",
+            "before_via": "",
+            "family": "",
+            "id": "1-3_SSLS",
+            "name": "S | SLS"
+        },
+        {
+            "after": "SSL",
+            "after_via": "",
+            "before": "S",
+            "before_via": "",
+            "family": "",
+            "id": "1-3_SSSL",
+            "name": "S | SSL"
+        },
+        {
+            "after": "SSS",
+            "after_via": "",
+            "before": "S",
+            "before_via": "",
+            "family": "",
+            "id": "1-3_SSSS",
+            "name": "S | SSS"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "",
+            "family": "",
+            "id": "3-1_LLLL",
+            "name": "LLL | L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "",
+            "family": "",
+            "id": "3-1_LLLS",
+            "name": "LLL | S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLS",
+            "before_via": "",
+            "family": "",
+            "id": "3-1_LLSL",
+            "name": "LLS | L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "LLS",
+            "before_via": "",
+            "family": "",
+            "id": "3-1_LLSS",
+            "name": "LLS | S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LSL",
+            "before_via": "",
+            "family": "",
+            "id": "3-1_LSLL",
+            "name": "LSL | L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "LSL",
+            "before_via": "",
+            "family": "",
+            "id": "3-1_LSLS",
+            "name": "LSL | S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LSS",
+            "before_via": "",
+            "family": "",
+            "id": "3-1_LSSL",
+            "name": "LSS | L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "LSS",
+            "before_via": "",
+            "family": "",
+            "id": "3-1_LSSS",
+            "name": "LSS | S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "SLL",
+            "before_via": "",
+            "family": "",
+            "id": "3-1_SLLL",
+            "name": "SLL | L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SLL",
+            "before_via": "",
+            "family": "",
+            "id": "3-1_SLLS",
+            "name": "SLL | S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "SLS",
+            "before_via": "",
+            "family": "",
+            "id": "3-1_SLSL",
+            "name": "SLS | L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SLS",
+            "before_via": "",
+            "family": "",
+            "id": "3-1_SLSS",
+            "name": "SLS | S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "SSL",
+            "before_via": "",
+            "family": "",
+            "id": "3-1_SSLL",
+            "name": "SSL | L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSL",
+            "before_via": "",
+            "family": "",
+            "id": "3-1_SSLS",
+            "name": "SSL | S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "",
+            "family": "",
+            "id": "3-1_SSSL",
+            "name": "SSS | L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "",
+            "family": "",
+            "id": "3-1_SSSS",
+            "name": "SSS | S"
+        },
+        {
+            "after": "LLL",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_LLLLL",
+            "name": "LL | LLL"
+        },
+        {
+            "after": "LLS",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_LLLLS",
+            "name": "LL | LLS"
+        },
+        {
+            "after": "LSL",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_LLLSL",
+            "name": "LL | LSL"
+        },
+        {
+            "after": "LSS",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_LLLSS",
+            "name": "LL | LSS"
+        },
+        {
+            "after": "SLL",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_LLSLL",
+            "name": "LL | SLL"
+        },
+        {
+            "after": "SLS",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_LLSLS",
+            "name": "LL | SLS"
+        },
+        {
+            "after": "SSL",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_LLSSL",
+            "name": "LL | SSL"
+        },
+        {
+            "after": "SSS",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_LLSSS",
+            "name": "LL | SSS"
+        },
+        {
+            "after": "LLL",
+            "after_via": "",
+            "before": "LS",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_LSLLL",
+            "name": "LS | LLL"
+        },
+        {
+            "after": "LLS",
+            "after_via": "",
+            "before": "LS",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_LSLLS",
+            "name": "LS | LLS"
+        },
+        {
+            "after": "LSL",
+            "after_via": "",
+            "before": "LS",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_LSLSL",
+            "name": "LS | LSL"
+        },
+        {
+            "after": "LSS",
+            "after_via": "",
+            "before": "LS",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_LSLSS",
+            "name": "LS | LSS"
+        },
+        {
+            "after": "SLL",
+            "after_via": "",
+            "before": "LS",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_LSSLL",
+            "name": "LS | SLL"
+        },
+        {
+            "after": "SLS",
+            "after_via": "",
+            "before": "LS",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_LSSLS",
+            "name": "LS | SLS"
+        },
+        {
+            "after": "SSL",
+            "after_via": "",
+            "before": "LS",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_LSSSL",
+            "name": "LS | SSL"
+        },
+        {
+            "after": "SSS",
+            "after_via": "",
+            "before": "LS",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_LSSSS",
+            "name": "LS | SSS"
+        },
+        {
+            "after": "LLL",
+            "after_via": "",
+            "before": "SL",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_SLLLL",
+            "name": "SL | LLL"
+        },
+        {
+            "after": "LLS",
+            "after_via": "",
+            "before": "SL",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_SLLLS",
+            "name": "SL | LLS"
+        },
+        {
+            "after": "LSL",
+            "after_via": "",
+            "before": "SL",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_SLLSL",
+            "name": "SL | LSL"
+        },
+        {
+            "after": "LSS",
+            "after_via": "",
+            "before": "SL",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_SLLSS",
+            "name": "SL | LSS"
+        },
+        {
+            "after": "SLL",
+            "after_via": "",
+            "before": "SL",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_SLSLL",
+            "name": "SL | SLL"
+        },
+        {
+            "after": "SLS",
+            "after_via": "",
+            "before": "SL",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_SLSLS",
+            "name": "SL | SLS"
+        },
+        {
+            "after": "SSL",
+            "after_via": "",
+            "before": "SL",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_SLSSL",
+            "name": "SL | SSL"
+        },
+        {
+            "after": "SSS",
+            "after_via": "",
+            "before": "SL",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_SLSSS",
+            "name": "SL | SSS"
+        },
+        {
+            "after": "LLL",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_SSLLL",
+            "name": "SS | LLL"
+        },
+        {
+            "after": "LLS",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_SSLLS",
+            "name": "SS | LLS"
+        },
+        {
+            "after": "LSL",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_SSLSL",
+            "name": "SS | LSL"
+        },
+        {
+            "after": "LSS",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_SSLSS",
+            "name": "SS | LSS"
+        },
+        {
+            "after": "SLL",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_SSSLL",
+            "name": "SS | SLL"
+        },
+        {
+            "after": "SLS",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_SSSLS",
+            "name": "SS | SLS"
+        },
+        {
+            "after": "SSL",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_SSSSL",
+            "name": "SS | SSL"
+        },
+        {
+            "after": "SSS",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "",
+            "family": "",
+            "id": "2-3_SSSSS",
+            "name": "SS | SSS"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_LLLLL",
+            "name": "LLL | LL"
+        },
+        {
+            "after": "LS",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_LLLLS",
+            "name": "LLL | LS"
+        },
+        {
+            "after": "SL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_LLLSL",
+            "name": "LLL | SL"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_LLLSS",
+            "name": "LLL | SS"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLS",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_LLSLL",
+            "name": "LLS | LL"
+        },
+        {
+            "after": "LS",
+            "after_via": "",
+            "before": "LLS",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_LLSLS",
+            "name": "LLS | LS"
+        },
+        {
+            "after": "SL",
+            "after_via": "",
+            "before": "LLS",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_LLSSL",
+            "name": "LLS | SL"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "LLS",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_LLSSS",
+            "name": "LLS | SS"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LSL",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_LSLLL",
+            "name": "LSL | LL"
+        },
+        {
+            "after": "LS",
+            "after_via": "",
+            "before": "LSL",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_LSLLS",
+            "name": "LSL | LS"
+        },
+        {
+            "after": "SL",
+            "after_via": "",
+            "before": "LSL",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_LSLSL",
+            "name": "LSL | SL"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "LSL",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_LSLSS",
+            "name": "LSL | SS"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LSS",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_LSSLL",
+            "name": "LSS | LL"
+        },
+        {
+            "after": "LS",
+            "after_via": "",
+            "before": "LSS",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_LSSLS",
+            "name": "LSS | LS"
+        },
+        {
+            "after": "SL",
+            "after_via": "",
+            "before": "LSS",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_LSSSL",
+            "name": "LSS | SL"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "LSS",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_LSSSS",
+            "name": "LSS | SS"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "SLL",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_SLLLL",
+            "name": "SLL | LL"
+        },
+        {
+            "after": "LS",
+            "after_via": "",
+            "before": "SLL",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_SLLLS",
+            "name": "SLL | LS"
+        },
+        {
+            "after": "SL",
+            "after_via": "",
+            "before": "SLL",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_SLLSL",
+            "name": "SLL | SL"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SLL",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_SLLSS",
+            "name": "SLL | SS"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "SLS",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_SLSLL",
+            "name": "SLS | LL"
+        },
+        {
+            "after": "LS",
+            "after_via": "",
+            "before": "SLS",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_SLSLS",
+            "name": "SLS | LS"
+        },
+        {
+            "after": "SL",
+            "after_via": "",
+            "before": "SLS",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_SLSSL",
+            "name": "SLS | SL"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SLS",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_SLSSS",
+            "name": "SLS | SS"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "SSL",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_SSLLL",
+            "name": "SSL | LL"
+        },
+        {
+            "after": "LS",
+            "after_via": "",
+            "before": "SSL",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_SSLLS",
+            "name": "SSL | LS"
+        },
+        {
+            "after": "SL",
+            "after_via": "",
+            "before": "SSL",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_SSLSL",
+            "name": "SSL | SL"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSL",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_SSLSS",
+            "name": "SSL | SS"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_SSSLL",
+            "name": "SSS | LL"
+        },
+        {
+            "after": "LS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_SSSLS",
+            "name": "SSS | LS"
+        },
+        {
+            "after": "SL",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_SSSSL",
+            "name": "SSS | SL"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "",
+            "family": "",
+            "id": "3-2_SSSSS",
+            "name": "SSS | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "corner:1",
+            "family": "corner",
+            "id": "exp_corner_1_S_tx_direct_1",
+            "name": "Exp: S-left lip corner-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "corner:1",
+            "family": "corner",
+            "id": "exp_corner_1_S_tx_direct_2",
+            "name": "Exp: S-left lip corner-S | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:1:id-first",
+            "family": "corner",
+            "id": "exp_corner_1_S_tx_id_1",
+            "name": "Exp: S-ID-S-left lip corner-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:1:id-first",
+            "family": "corner",
+            "id": "exp_corner_1_S_tx_id_2",
+            "name": "Exp: S-ID-S-left lip corner-S | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:1:id-last",
+            "family": "corner",
+            "id": "exp_corner_1_S_tx_pixel-id_1",
+            "name": "Exp: S-left lip corner-S-ID-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:1:id-last",
+            "family": "corner",
+            "id": "exp_corner_1_S_tx_pixel-id_2",
+            "name": "Exp: S-left lip corner-S-ID-S | SS"
+        },
+        {
+            "after": "SS",
+            "after_via": "corner:1",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_1_S_rx_direct_1",
+            "name": "Exp: S | S-left lip corner-S"
+        },
+        {
+            "after": "SS",
+            "after_via": "corner:1",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_1_S_rx_direct_2",
+            "name": "Exp: SS | S-left lip corner-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:1:id-last",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_1_S_rx_id_1",
+            "name": "Exp: S | S-left lip corner-S-ID-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:1:id-last",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_1_S_rx_id_2",
+            "name": "Exp: SS | S-left lip corner-S-ID-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:1:id-first",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_1_S_rx_pixel-id_1",
+            "name": "Exp: S | S-ID-S-left lip corner-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:1:id-first",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_1_S_rx_pixel-id_2",
+            "name": "Exp: SS | S-ID-S-left lip corner-S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "corner:1",
+            "family": "corner",
+            "id": "exp_corner_1_L_tx_direct_1",
+            "name": "Exp: L-left lip corner-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "corner:1",
+            "family": "corner",
+            "id": "exp_corner_1_L_tx_direct_2",
+            "name": "Exp: L-left lip corner-L | LL"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:1:id-first",
+            "family": "corner",
+            "id": "exp_corner_1_L_tx_id_1",
+            "name": "Exp: L-ID-L-left lip corner-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:1:id-first",
+            "family": "corner",
+            "id": "exp_corner_1_L_tx_id_2",
+            "name": "Exp: L-ID-L-left lip corner-L | LL"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:1:id-last",
+            "family": "corner",
+            "id": "exp_corner_1_L_tx_pixel-id_1",
+            "name": "Exp: L-left lip corner-L-ID-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:1:id-last",
+            "family": "corner",
+            "id": "exp_corner_1_L_tx_pixel-id_2",
+            "name": "Exp: L-left lip corner-L-ID-L | LL"
+        },
+        {
+            "after": "LL",
+            "after_via": "corner:1",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_1_L_rx_direct_1",
+            "name": "Exp: L | L-left lip corner-L"
+        },
+        {
+            "after": "LL",
+            "after_via": "corner:1",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_1_L_rx_direct_2",
+            "name": "Exp: LL | L-left lip corner-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:1:id-last",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_1_L_rx_id_1",
+            "name": "Exp: L | L-left lip corner-L-ID-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:1:id-last",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_1_L_rx_id_2",
+            "name": "Exp: LL | L-left lip corner-L-ID-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:1:id-first",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_1_L_rx_pixel-id_1",
+            "name": "Exp: L | L-ID-L-left lip corner-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:1:id-first",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_1_L_rx_pixel-id_2",
+            "name": "Exp: LL | L-ID-L-left lip corner-L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "corner:2",
+            "family": "corner",
+            "id": "exp_corner_2_S_tx_direct_1",
+            "name": "Exp: S-left bevel knee-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "corner:2",
+            "family": "corner",
+            "id": "exp_corner_2_S_tx_direct_2",
+            "name": "Exp: S-left bevel knee-S | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:2:id-first",
+            "family": "corner",
+            "id": "exp_corner_2_S_tx_id_1",
+            "name": "Exp: S-ID-S-left bevel knee-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:2:id-first",
+            "family": "corner",
+            "id": "exp_corner_2_S_tx_id_2",
+            "name": "Exp: S-ID-S-left bevel knee-S | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:2:id-last",
+            "family": "corner",
+            "id": "exp_corner_2_S_tx_pixel-id_1",
+            "name": "Exp: S-left bevel knee-S-ID-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:2:id-last",
+            "family": "corner",
+            "id": "exp_corner_2_S_tx_pixel-id_2",
+            "name": "Exp: S-left bevel knee-S-ID-S | SS"
+        },
+        {
+            "after": "SS",
+            "after_via": "corner:2",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_2_S_rx_direct_1",
+            "name": "Exp: S | S-left bevel knee-S"
+        },
+        {
+            "after": "SS",
+            "after_via": "corner:2",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_2_S_rx_direct_2",
+            "name": "Exp: SS | S-left bevel knee-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:2:id-last",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_2_S_rx_id_1",
+            "name": "Exp: S | S-left bevel knee-S-ID-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:2:id-last",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_2_S_rx_id_2",
+            "name": "Exp: SS | S-left bevel knee-S-ID-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:2:id-first",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_2_S_rx_pixel-id_1",
+            "name": "Exp: S | S-ID-S-left bevel knee-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:2:id-first",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_2_S_rx_pixel-id_2",
+            "name": "Exp: SS | S-ID-S-left bevel knee-S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "corner:2",
+            "family": "corner",
+            "id": "exp_corner_2_L_tx_direct_1",
+            "name": "Exp: L-left bevel knee-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "corner:2",
+            "family": "corner",
+            "id": "exp_corner_2_L_tx_direct_2",
+            "name": "Exp: L-left bevel knee-L | LL"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:2:id-first",
+            "family": "corner",
+            "id": "exp_corner_2_L_tx_id_1",
+            "name": "Exp: L-ID-L-left bevel knee-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:2:id-first",
+            "family": "corner",
+            "id": "exp_corner_2_L_tx_id_2",
+            "name": "Exp: L-ID-L-left bevel knee-L | LL"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:2:id-last",
+            "family": "corner",
+            "id": "exp_corner_2_L_tx_pixel-id_1",
+            "name": "Exp: L-left bevel knee-L-ID-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:2:id-last",
+            "family": "corner",
+            "id": "exp_corner_2_L_tx_pixel-id_2",
+            "name": "Exp: L-left bevel knee-L-ID-L | LL"
+        },
+        {
+            "after": "LL",
+            "after_via": "corner:2",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_2_L_rx_direct_1",
+            "name": "Exp: L | L-left bevel knee-L"
+        },
+        {
+            "after": "LL",
+            "after_via": "corner:2",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_2_L_rx_direct_2",
+            "name": "Exp: LL | L-left bevel knee-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:2:id-last",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_2_L_rx_id_1",
+            "name": "Exp: L | L-left bevel knee-L-ID-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:2:id-last",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_2_L_rx_id_2",
+            "name": "Exp: LL | L-left bevel knee-L-ID-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:2:id-first",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_2_L_rx_pixel-id_1",
+            "name": "Exp: L | L-ID-L-left bevel knee-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:2:id-first",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_2_L_rx_pixel-id_2",
+            "name": "Exp: LL | L-ID-L-left bevel knee-L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "corner:3",
+            "family": "corner",
+            "id": "exp_corner_3_S_tx_direct_1",
+            "name": "Exp: S-left floor corner-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "corner:3",
+            "family": "corner",
+            "id": "exp_corner_3_S_tx_direct_2",
+            "name": "Exp: S-left floor corner-S | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:3:id-first",
+            "family": "corner",
+            "id": "exp_corner_3_S_tx_id_1",
+            "name": "Exp: S-ID-S-left floor corner-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:3:id-first",
+            "family": "corner",
+            "id": "exp_corner_3_S_tx_id_2",
+            "name": "Exp: S-ID-S-left floor corner-S | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:3:id-last",
+            "family": "corner",
+            "id": "exp_corner_3_S_tx_pixel-id_1",
+            "name": "Exp: S-left floor corner-S-ID-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:3:id-last",
+            "family": "corner",
+            "id": "exp_corner_3_S_tx_pixel-id_2",
+            "name": "Exp: S-left floor corner-S-ID-S | SS"
+        },
+        {
+            "after": "SS",
+            "after_via": "corner:3",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_3_S_rx_direct_1",
+            "name": "Exp: S | S-left floor corner-S"
+        },
+        {
+            "after": "SS",
+            "after_via": "corner:3",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_3_S_rx_direct_2",
+            "name": "Exp: SS | S-left floor corner-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:3:id-last",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_3_S_rx_id_1",
+            "name": "Exp: S | S-left floor corner-S-ID-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:3:id-last",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_3_S_rx_id_2",
+            "name": "Exp: SS | S-left floor corner-S-ID-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:3:id-first",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_3_S_rx_pixel-id_1",
+            "name": "Exp: S | S-ID-S-left floor corner-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:3:id-first",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_3_S_rx_pixel-id_2",
+            "name": "Exp: SS | S-ID-S-left floor corner-S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "corner:3",
+            "family": "corner",
+            "id": "exp_corner_3_L_tx_direct_1",
+            "name": "Exp: L-left floor corner-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "corner:3",
+            "family": "corner",
+            "id": "exp_corner_3_L_tx_direct_2",
+            "name": "Exp: L-left floor corner-L | LL"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:3:id-first",
+            "family": "corner",
+            "id": "exp_corner_3_L_tx_id_1",
+            "name": "Exp: L-ID-L-left floor corner-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:3:id-first",
+            "family": "corner",
+            "id": "exp_corner_3_L_tx_id_2",
+            "name": "Exp: L-ID-L-left floor corner-L | LL"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:3:id-last",
+            "family": "corner",
+            "id": "exp_corner_3_L_tx_pixel-id_1",
+            "name": "Exp: L-left floor corner-L-ID-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:3:id-last",
+            "family": "corner",
+            "id": "exp_corner_3_L_tx_pixel-id_2",
+            "name": "Exp: L-left floor corner-L-ID-L | LL"
+        },
+        {
+            "after": "LL",
+            "after_via": "corner:3",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_3_L_rx_direct_1",
+            "name": "Exp: L | L-left floor corner-L"
+        },
+        {
+            "after": "LL",
+            "after_via": "corner:3",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_3_L_rx_direct_2",
+            "name": "Exp: LL | L-left floor corner-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:3:id-last",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_3_L_rx_id_1",
+            "name": "Exp: L | L-left floor corner-L-ID-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:3:id-last",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_3_L_rx_id_2",
+            "name": "Exp: LL | L-left floor corner-L-ID-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:3:id-first",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_3_L_rx_pixel-id_1",
+            "name": "Exp: L | L-ID-L-left floor corner-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:3:id-first",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_3_L_rx_pixel-id_2",
+            "name": "Exp: LL | L-ID-L-left floor corner-L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "corner:4",
+            "family": "corner",
+            "id": "exp_corner_4_S_tx_direct_1",
+            "name": "Exp: S-right floor corner-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "corner:4",
+            "family": "corner",
+            "id": "exp_corner_4_S_tx_direct_2",
+            "name": "Exp: S-right floor corner-S | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:4:id-first",
+            "family": "corner",
+            "id": "exp_corner_4_S_tx_id_1",
+            "name": "Exp: S-ID-S-right floor corner-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:4:id-first",
+            "family": "corner",
+            "id": "exp_corner_4_S_tx_id_2",
+            "name": "Exp: S-ID-S-right floor corner-S | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:4:id-last",
+            "family": "corner",
+            "id": "exp_corner_4_S_tx_pixel-id_1",
+            "name": "Exp: S-right floor corner-S-ID-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:4:id-last",
+            "family": "corner",
+            "id": "exp_corner_4_S_tx_pixel-id_2",
+            "name": "Exp: S-right floor corner-S-ID-S | SS"
+        },
+        {
+            "after": "SS",
+            "after_via": "corner:4",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_4_S_rx_direct_1",
+            "name": "Exp: S | S-right floor corner-S"
+        },
+        {
+            "after": "SS",
+            "after_via": "corner:4",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_4_S_rx_direct_2",
+            "name": "Exp: SS | S-right floor corner-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:4:id-last",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_4_S_rx_id_1",
+            "name": "Exp: S | S-right floor corner-S-ID-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:4:id-last",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_4_S_rx_id_2",
+            "name": "Exp: SS | S-right floor corner-S-ID-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:4:id-first",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_4_S_rx_pixel-id_1",
+            "name": "Exp: S | S-ID-S-right floor corner-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:4:id-first",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_4_S_rx_pixel-id_2",
+            "name": "Exp: SS | S-ID-S-right floor corner-S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "corner:4",
+            "family": "corner",
+            "id": "exp_corner_4_L_tx_direct_1",
+            "name": "Exp: L-right floor corner-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "corner:4",
+            "family": "corner",
+            "id": "exp_corner_4_L_tx_direct_2",
+            "name": "Exp: L-right floor corner-L | LL"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:4:id-first",
+            "family": "corner",
+            "id": "exp_corner_4_L_tx_id_1",
+            "name": "Exp: L-ID-L-right floor corner-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:4:id-first",
+            "family": "corner",
+            "id": "exp_corner_4_L_tx_id_2",
+            "name": "Exp: L-ID-L-right floor corner-L | LL"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:4:id-last",
+            "family": "corner",
+            "id": "exp_corner_4_L_tx_pixel-id_1",
+            "name": "Exp: L-right floor corner-L-ID-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:4:id-last",
+            "family": "corner",
+            "id": "exp_corner_4_L_tx_pixel-id_2",
+            "name": "Exp: L-right floor corner-L-ID-L | LL"
+        },
+        {
+            "after": "LL",
+            "after_via": "corner:4",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_4_L_rx_direct_1",
+            "name": "Exp: L | L-right floor corner-L"
+        },
+        {
+            "after": "LL",
+            "after_via": "corner:4",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_4_L_rx_direct_2",
+            "name": "Exp: LL | L-right floor corner-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:4:id-last",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_4_L_rx_id_1",
+            "name": "Exp: L | L-right floor corner-L-ID-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:4:id-last",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_4_L_rx_id_2",
+            "name": "Exp: LL | L-right floor corner-L-ID-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:4:id-first",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_4_L_rx_pixel-id_1",
+            "name": "Exp: L | L-ID-L-right floor corner-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:4:id-first",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_4_L_rx_pixel-id_2",
+            "name": "Exp: LL | L-ID-L-right floor corner-L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "corner:5",
+            "family": "corner",
+            "id": "exp_corner_5_S_tx_direct_1",
+            "name": "Exp: S-right bevel knee-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "corner:5",
+            "family": "corner",
+            "id": "exp_corner_5_S_tx_direct_2",
+            "name": "Exp: S-right bevel knee-S | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:5:id-first",
+            "family": "corner",
+            "id": "exp_corner_5_S_tx_id_1",
+            "name": "Exp: S-ID-S-right bevel knee-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:5:id-first",
+            "family": "corner",
+            "id": "exp_corner_5_S_tx_id_2",
+            "name": "Exp: S-ID-S-right bevel knee-S | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:5:id-last",
+            "family": "corner",
+            "id": "exp_corner_5_S_tx_pixel-id_1",
+            "name": "Exp: S-right bevel knee-S-ID-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:5:id-last",
+            "family": "corner",
+            "id": "exp_corner_5_S_tx_pixel-id_2",
+            "name": "Exp: S-right bevel knee-S-ID-S | SS"
+        },
+        {
+            "after": "SS",
+            "after_via": "corner:5",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_5_S_rx_direct_1",
+            "name": "Exp: S | S-right bevel knee-S"
+        },
+        {
+            "after": "SS",
+            "after_via": "corner:5",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_5_S_rx_direct_2",
+            "name": "Exp: SS | S-right bevel knee-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:5:id-last",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_5_S_rx_id_1",
+            "name": "Exp: S | S-right bevel knee-S-ID-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:5:id-last",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_5_S_rx_id_2",
+            "name": "Exp: SS | S-right bevel knee-S-ID-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:5:id-first",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_5_S_rx_pixel-id_1",
+            "name": "Exp: S | S-ID-S-right bevel knee-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:5:id-first",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_5_S_rx_pixel-id_2",
+            "name": "Exp: SS | S-ID-S-right bevel knee-S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "corner:5",
+            "family": "corner",
+            "id": "exp_corner_5_L_tx_direct_1",
+            "name": "Exp: L-right bevel knee-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "corner:5",
+            "family": "corner",
+            "id": "exp_corner_5_L_tx_direct_2",
+            "name": "Exp: L-right bevel knee-L | LL"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:5:id-first",
+            "family": "corner",
+            "id": "exp_corner_5_L_tx_id_1",
+            "name": "Exp: L-ID-L-right bevel knee-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:5:id-first",
+            "family": "corner",
+            "id": "exp_corner_5_L_tx_id_2",
+            "name": "Exp: L-ID-L-right bevel knee-L | LL"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:5:id-last",
+            "family": "corner",
+            "id": "exp_corner_5_L_tx_pixel-id_1",
+            "name": "Exp: L-right bevel knee-L-ID-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:5:id-last",
+            "family": "corner",
+            "id": "exp_corner_5_L_tx_pixel-id_2",
+            "name": "Exp: L-right bevel knee-L-ID-L | LL"
+        },
+        {
+            "after": "LL",
+            "after_via": "corner:5",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_5_L_rx_direct_1",
+            "name": "Exp: L | L-right bevel knee-L"
+        },
+        {
+            "after": "LL",
+            "after_via": "corner:5",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_5_L_rx_direct_2",
+            "name": "Exp: LL | L-right bevel knee-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:5:id-last",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_5_L_rx_id_1",
+            "name": "Exp: L | L-right bevel knee-L-ID-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:5:id-last",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_5_L_rx_id_2",
+            "name": "Exp: LL | L-right bevel knee-L-ID-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:5:id-first",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_5_L_rx_pixel-id_1",
+            "name": "Exp: L | L-ID-L-right bevel knee-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:5:id-first",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_5_L_rx_pixel-id_2",
+            "name": "Exp: LL | L-ID-L-right bevel knee-L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "corner:6",
+            "family": "corner",
+            "id": "exp_corner_6_S_tx_direct_1",
+            "name": "Exp: S-right lip corner-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "corner:6",
+            "family": "corner",
+            "id": "exp_corner_6_S_tx_direct_2",
+            "name": "Exp: S-right lip corner-S | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:6:id-first",
+            "family": "corner",
+            "id": "exp_corner_6_S_tx_id_1",
+            "name": "Exp: S-ID-S-right lip corner-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:6:id-first",
+            "family": "corner",
+            "id": "exp_corner_6_S_tx_id_2",
+            "name": "Exp: S-ID-S-right lip corner-S | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:6:id-last",
+            "family": "corner",
+            "id": "exp_corner_6_S_tx_pixel-id_1",
+            "name": "Exp: S-right lip corner-S-ID-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "corner:6:id-last",
+            "family": "corner",
+            "id": "exp_corner_6_S_tx_pixel-id_2",
+            "name": "Exp: S-right lip corner-S-ID-S | SS"
+        },
+        {
+            "after": "SS",
+            "after_via": "corner:6",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_6_S_rx_direct_1",
+            "name": "Exp: S | S-right lip corner-S"
+        },
+        {
+            "after": "SS",
+            "after_via": "corner:6",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_6_S_rx_direct_2",
+            "name": "Exp: SS | S-right lip corner-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:6:id-last",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_6_S_rx_id_1",
+            "name": "Exp: S | S-right lip corner-S-ID-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:6:id-last",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_6_S_rx_id_2",
+            "name": "Exp: SS | S-right lip corner-S-ID-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:6:id-first",
+            "before": "S",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_6_S_rx_pixel-id_1",
+            "name": "Exp: S | S-ID-S-right lip corner-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "corner:6:id-first",
+            "before": "SS",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_6_S_rx_pixel-id_2",
+            "name": "Exp: SS | S-ID-S-right lip corner-S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "corner:6",
+            "family": "corner",
+            "id": "exp_corner_6_L_tx_direct_1",
+            "name": "Exp: L-right lip corner-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "corner:6",
+            "family": "corner",
+            "id": "exp_corner_6_L_tx_direct_2",
+            "name": "Exp: L-right lip corner-L | LL"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:6:id-first",
+            "family": "corner",
+            "id": "exp_corner_6_L_tx_id_1",
+            "name": "Exp: L-ID-L-right lip corner-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:6:id-first",
+            "family": "corner",
+            "id": "exp_corner_6_L_tx_id_2",
+            "name": "Exp: L-ID-L-right lip corner-L | LL"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:6:id-last",
+            "family": "corner",
+            "id": "exp_corner_6_L_tx_pixel-id_1",
+            "name": "Exp: L-right lip corner-L-ID-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "corner:6:id-last",
+            "family": "corner",
+            "id": "exp_corner_6_L_tx_pixel-id_2",
+            "name": "Exp: L-right lip corner-L-ID-L | LL"
+        },
+        {
+            "after": "LL",
+            "after_via": "corner:6",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_6_L_rx_direct_1",
+            "name": "Exp: L | L-right lip corner-L"
+        },
+        {
+            "after": "LL",
+            "after_via": "corner:6",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_6_L_rx_direct_2",
+            "name": "Exp: LL | L-right lip corner-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:6:id-last",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_6_L_rx_id_1",
+            "name": "Exp: L | L-right lip corner-L-ID-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:6:id-last",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_6_L_rx_id_2",
+            "name": "Exp: LL | L-right lip corner-L-ID-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:6:id-first",
+            "before": "L",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_6_L_rx_pixel-id_1",
+            "name": "Exp: L | L-ID-L-right lip corner-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "corner:6:id-first",
+            "before": "LL",
+            "before_via": "",
+            "family": "corner",
+            "id": "exp_corner_6_L_rx_pixel-id_2",
+            "name": "Exp: LL | L-ID-L-right lip corner-L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "wall:2",
+            "family": "wall",
+            "id": "exp_wall_2_S_tx_direct_1",
+            "name": "Exp: S-left bevel-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "wall:2",
+            "family": "wall",
+            "id": "exp_wall_2_S_tx_direct_2",
+            "name": "Exp: S-left bevel-S | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "wall:2:id-first",
+            "family": "wall",
+            "id": "exp_wall_2_S_tx_id_1",
+            "name": "Exp: S-ID-S-left bevel-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "wall:2:id-first",
+            "family": "wall",
+            "id": "exp_wall_2_S_tx_id_2",
+            "name": "Exp: S-ID-S-left bevel-S | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "wall:2:id-last",
+            "family": "wall",
+            "id": "exp_wall_2_S_tx_pixel-id_1",
+            "name": "Exp: S-left bevel-S-ID-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "wall:2:id-last",
+            "family": "wall",
+            "id": "exp_wall_2_S_tx_pixel-id_2",
+            "name": "Exp: S-left bevel-S-ID-S | SS"
+        },
+        {
+            "after": "SS",
+            "after_via": "wall:2",
+            "before": "S",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_2_S_rx_direct_1",
+            "name": "Exp: S | S-left bevel-S"
+        },
+        {
+            "after": "SS",
+            "after_via": "wall:2",
+            "before": "SS",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_2_S_rx_direct_2",
+            "name": "Exp: SS | S-left bevel-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "wall:2:id-last",
+            "before": "S",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_2_S_rx_id_1",
+            "name": "Exp: S | S-left bevel-S-ID-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "wall:2:id-last",
+            "before": "SS",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_2_S_rx_id_2",
+            "name": "Exp: SS | S-left bevel-S-ID-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "wall:2:id-first",
+            "before": "S",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_2_S_rx_pixel-id_1",
+            "name": "Exp: S | S-ID-S-left bevel-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "wall:2:id-first",
+            "before": "SS",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_2_S_rx_pixel-id_2",
+            "name": "Exp: SS | S-ID-S-left bevel-S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "wall:2",
+            "family": "wall",
+            "id": "exp_wall_2_L_tx_direct_1",
+            "name": "Exp: L-left bevel-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "wall:2",
+            "family": "wall",
+            "id": "exp_wall_2_L_tx_direct_2",
+            "name": "Exp: L-left bevel-L | LL"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "wall:2:id-first",
+            "family": "wall",
+            "id": "exp_wall_2_L_tx_id_1",
+            "name": "Exp: L-ID-L-left bevel-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "wall:2:id-first",
+            "family": "wall",
+            "id": "exp_wall_2_L_tx_id_2",
+            "name": "Exp: L-ID-L-left bevel-L | LL"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "wall:2:id-last",
+            "family": "wall",
+            "id": "exp_wall_2_L_tx_pixel-id_1",
+            "name": "Exp: L-left bevel-L-ID-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "wall:2:id-last",
+            "family": "wall",
+            "id": "exp_wall_2_L_tx_pixel-id_2",
+            "name": "Exp: L-left bevel-L-ID-L | LL"
+        },
+        {
+            "after": "LL",
+            "after_via": "wall:2",
+            "before": "L",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_2_L_rx_direct_1",
+            "name": "Exp: L | L-left bevel-L"
+        },
+        {
+            "after": "LL",
+            "after_via": "wall:2",
+            "before": "LL",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_2_L_rx_direct_2",
+            "name": "Exp: LL | L-left bevel-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "wall:2:id-last",
+            "before": "L",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_2_L_rx_id_1",
+            "name": "Exp: L | L-left bevel-L-ID-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "wall:2:id-last",
+            "before": "LL",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_2_L_rx_id_2",
+            "name": "Exp: LL | L-left bevel-L-ID-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "wall:2:id-first",
+            "before": "L",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_2_L_rx_pixel-id_1",
+            "name": "Exp: L | L-ID-L-left bevel-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "wall:2:id-first",
+            "before": "LL",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_2_L_rx_pixel-id_2",
+            "name": "Exp: LL | L-ID-L-left bevel-L"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "wall:4",
+            "family": "wall",
+            "id": "exp_wall_4_S_tx_direct_1",
+            "name": "Exp: S-right bevel-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SS",
+            "before_via": "wall:4",
+            "family": "wall",
+            "id": "exp_wall_4_S_tx_direct_2",
+            "name": "Exp: S-right bevel-S | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "wall:4:id-first",
+            "family": "wall",
+            "id": "exp_wall_4_S_tx_id_1",
+            "name": "Exp: S-ID-S-right bevel-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "wall:4:id-first",
+            "family": "wall",
+            "id": "exp_wall_4_S_tx_id_2",
+            "name": "Exp: S-ID-S-right bevel-S | SS"
+        },
+        {
+            "after": "S",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "wall:4:id-last",
+            "family": "wall",
+            "id": "exp_wall_4_S_tx_pixel-id_1",
+            "name": "Exp: S-right bevel-S-ID-S | S"
+        },
+        {
+            "after": "SS",
+            "after_via": "",
+            "before": "SSS",
+            "before_via": "wall:4:id-last",
+            "family": "wall",
+            "id": "exp_wall_4_S_tx_pixel-id_2",
+            "name": "Exp: S-right bevel-S-ID-S | SS"
+        },
+        {
+            "after": "SS",
+            "after_via": "wall:4",
+            "before": "S",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_4_S_rx_direct_1",
+            "name": "Exp: S | S-right bevel-S"
+        },
+        {
+            "after": "SS",
+            "after_via": "wall:4",
+            "before": "SS",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_4_S_rx_direct_2",
+            "name": "Exp: SS | S-right bevel-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "wall:4:id-last",
+            "before": "S",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_4_S_rx_id_1",
+            "name": "Exp: S | S-right bevel-S-ID-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "wall:4:id-last",
+            "before": "SS",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_4_S_rx_id_2",
+            "name": "Exp: SS | S-right bevel-S-ID-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "wall:4:id-first",
+            "before": "S",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_4_S_rx_pixel-id_1",
+            "name": "Exp: S | S-ID-S-right bevel-S"
+        },
+        {
+            "after": "SSS",
+            "after_via": "wall:4:id-first",
+            "before": "SS",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_4_S_rx_pixel-id_2",
+            "name": "Exp: SS | S-ID-S-right bevel-S"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "wall:4",
+            "family": "wall",
+            "id": "exp_wall_4_L_tx_direct_1",
+            "name": "Exp: L-right bevel-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LL",
+            "before_via": "wall:4",
+            "family": "wall",
+            "id": "exp_wall_4_L_tx_direct_2",
+            "name": "Exp: L-right bevel-L | LL"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "wall:4:id-first",
+            "family": "wall",
+            "id": "exp_wall_4_L_tx_id_1",
+            "name": "Exp: L-ID-L-right bevel-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "wall:4:id-first",
+            "family": "wall",
+            "id": "exp_wall_4_L_tx_id_2",
+            "name": "Exp: L-ID-L-right bevel-L | LL"
+        },
+        {
+            "after": "L",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "wall:4:id-last",
+            "family": "wall",
+            "id": "exp_wall_4_L_tx_pixel-id_1",
+            "name": "Exp: L-right bevel-L-ID-L | L"
+        },
+        {
+            "after": "LL",
+            "after_via": "",
+            "before": "LLL",
+            "before_via": "wall:4:id-last",
+            "family": "wall",
+            "id": "exp_wall_4_L_tx_pixel-id_2",
+            "name": "Exp: L-right bevel-L-ID-L | LL"
+        },
+        {
+            "after": "LL",
+            "after_via": "wall:4",
+            "before": "L",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_4_L_rx_direct_1",
+            "name": "Exp: L | L-right bevel-L"
+        },
+        {
+            "after": "LL",
+            "after_via": "wall:4",
+            "before": "LL",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_4_L_rx_direct_2",
+            "name": "Exp: LL | L-right bevel-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "wall:4:id-last",
+            "before": "L",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_4_L_rx_id_1",
+            "name": "Exp: L | L-right bevel-L-ID-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "wall:4:id-last",
+            "before": "LL",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_4_L_rx_id_2",
+            "name": "Exp: LL | L-right bevel-L-ID-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "wall:4:id-first",
+            "before": "L",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_4_L_rx_pixel-id_1",
+            "name": "Exp: L | L-ID-L-right bevel-L"
+        },
+        {
+            "after": "LLL",
+            "after_via": "wall:4:id-first",
+            "before": "LL",
+            "before_via": "",
+            "family": "wall",
+            "id": "exp_wall_4_L_rx_pixel-id_2",
+            "name": "Exp: LL | L-ID-L-right bevel-L"
+        }
+    ],
+    "scope": "Experimental same-mode L/S paths: one exposed bevel reflection or one fixed groove-corner timing encounter; optional backwall before or after it. Corner diffraction amplitude/phase is not modelled."
+}

@@ -1,0 +1,22 @@
+{
+  "native_executable": "SAFTWorkbenchCpp_20261030_092409_758.exe",
+  "native_executable_sha256": "d8cf6a80c2907fb07eba9fca2b1e71d0741fcce41d70c754abdd5dd3f298f693",
+  "native_cpp_sha256": "c7e832da88615fbc09a389cb662aac370dcd46eba28dca709c8e1a5ddb0f4bd2",
+  "datasets": {
+    "full": {
+      "input_fingerprint": "c3c1a5b2b587a17f6336ccfc20c46ec6c093f084d53c4ee50d6a00013a62a07b",
+      "manifest_sha256": "db8cb2678f31464a59aca74af1aae6acfc50083446ec2b95f7d3fdcb8427679e"
+    },
+    "partial": {
+      "input_fingerprint": "fd34529e7a01bb6b521cbf1d8ee4d9cda8548eecbd3723797a6fdf93eb1420e5",
+      "manifest_sha256": "1224f41835544b032fbc0cbd062af04e673780ae2e1d9b1575a2cf1250696226"
+    }
+  },
+  "scope": "Reconstruction scores from existing deterministic FE records, not new FE solves. Known-case follow-up, not independent optimization validation.",
+  "new_configurations": 82,
+  "new_case_images": 142,
+  "archived_configurations": 138,
+  "archived_case_images": 270,
+  "units": "x_mm/depth_mm in mm; points_m in m; complex means and amplitude scores in m/s. NaN means unsupported.",
+  "raw_data_included": false
+}

@@ -1,0 +1,17 @@
+{
+  "historical_hashes": {
+    "saft.cpp": "3d16aa2347bd662fbb391b19becaef8d1ef344bc80849d81b818ecd328289fd1",
+    "saft.hpp": "01366184979122af302b5efc286c37dde77b6542172a421aaea7a3e5823de3b0",
+    "screening.cpp": "8b29cab88fd2e2f9f76027043d811d2ec9655e147902803b37919784e1feb8c3",
+    "dataset_geometry.cpp": "d6ebbd2effa781b3718a0ccc0958954fe57234a9c83b023a95347e7e74f9ec7a",
+    "groove_paths.cpp": "c32ec66ff03afd4d7c023ed8d2b578f4096ae4964f85e9dbc6943265b5044ff7"
+  },
+  "standalone_hashes": {
+    "saft.cpp": "67be92656ec47905b5887422844c7013b2257c383659e0ce208067aa1088aa03",
+    "saft.hpp": "01366184979122af302b5efc286c37dde77b6542172a421aaea7a3e5823de3b0",
+    "screening.cpp": "8b29cab88fd2e2f9f76027043d811d2ec9655e147902803b37919784e1feb8c3",
+    "dataset_geometry.cpp": "d6ebbd2effa781b3718a0ccc0958954fe57234a9c83b023a95347e7e74f9ec7a",
+    "groove_paths.cpp": "c32ec66ff03afd4d7c023ed8d2b578f4096ae4964f85e9dbc6943265b5044ff7"
+  },
+  "scope": "The companion repository already replaced legacy default dataset/cache paths and fallback audit loading in the Engine constructor. Reconstruction algorithms are unchanged; dataset is now explicit. These existing source files were not edited in this task. Main metrics, source-threshold checks, and native export parity were validated."
+}

@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "x_to_depth_scale_ratios": [
+    1.0,
+    1.0,
+    0.999999999999997
+  ],
+  "closed_J_bevel": true,
+  "air_is_white": true,
+  "full_grid_mm": [
+    -6.0,
+    5.0,
+    12.0,
+    20.25
+  ],
+  "partial_grid_mm": [
+    -7.5,
+    16.65,
+    15.0,
+    8.600000000000001
+  ],
+  "same_LOF_coordinates_in_both_models": true,
+  "input_sha256": {
+    "full_dataset.json": "db8cb2678f31464a59aca74af1aae6acfc50083446ec2b95f7d3fdcb8427679e",
+    "partial_dataset.json": "1224f41835544b032fbc0cbd062af04e673780ae2e1d9b1575a2cf1250696226",
+    "geometry_display_extents.json": "70e9add494f82e80b2338e6793adbdd0720f41fbb9ac81c5413cba85aed85c12"
+  }
+}

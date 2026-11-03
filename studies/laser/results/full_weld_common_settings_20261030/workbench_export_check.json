@@ -1,0 +1,8 @@
+{
+  "qt_stream_readback_passed": true,
+  "exact_float64_arrays": true,
+  "identical_controls_except_path": true,
+  "amplitude_reference_um_s": 8.995460590563358,
+  "settings_sha256": "0ddaa938ac9327c37fbc0c636b39044265cd78b490fed3dba1343d5bb60db98f",
+  "blend_sha256": "232e96b7bbe37fb216a9669bf484b8ec745775cfe872a81c3fe8ababf3eb8c5d"
+}

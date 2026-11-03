@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "figure": "source_calibration",
+  "legend_count": 2,
+  "legends": [
+    {
+      "labels": [
+        "Thermoelastic",
+        "Calibrated dipole"
+      ],
+      "bounds_figure_fraction": [
+        0.20971621362232504,
+        0.046031715724085605,
+        0.3395531400966183,
+        0.07111111111111112
+      ],
+      "data_or_label_collisions": []
+    },
+    {
+      "labels": [
+        "Fit directions",
+        "Withheld"
+      ],
+      "bounds_figure_fraction": [
+        0.8044509060886837,
+        0.016309493501863385,
+        0.14130434782608692,
+        0.13055555555555556
+      ],
+      "data_or_label_collisions": []
+    }
+  ],
+  "check": "Rendered legend bounds inside canvas and outside all data axes and their text."
+}

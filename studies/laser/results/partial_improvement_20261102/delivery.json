@@ -1,0 +1,13 @@
+{
+  "bundle": "results\\reports\\partial_weld_improvement_20261102.zip",
+  "bytes": 916176,
+  "sha256": "f9d367ea1f7b606a143a32498fc60f2b8c92c94fb4e4bb8d8845e6d168226fe5",
+  "files": 34,
+  "zip_integrity": "passed",
+  "original_models_and_recordings_modified": false,
+  "primary_figures": [
+    "figures/comparison.png",
+    "figures/defect_profiles.png",
+    "figures/wide_field.png"
+  ]
+}

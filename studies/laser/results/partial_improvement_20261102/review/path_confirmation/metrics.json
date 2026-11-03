@@ -1,0 +1,1174 @@
+{
+  "rows": [
+    {
+      "id": "a000",
+      "candidate": 0,
+      "label": "fine",
+      "path": "3-1_SLSL",
+      "group": "left",
+      "view": "source1",
+      "lof": {
+        "cmax_db": 15.834436559045248,
+        "near_support_pct": 76.27376425855513,
+        "support_pct": 8.609068039098958,
+        "near_um_s": 86.84400720212497,
+        "background_um_s": 14.0287193390014,
+        "peak_distance_mm": 0.4062417821924068,
+        "peak_x_mm": 2.3500000000000014,
+        "peak_depth_mm": 19.9
+      },
+      "reference": {
+        "cmax_db": 16.80283521423887,
+        "near_support_pct": 76.27376425855513,
+        "support_pct": 8.609068039098958,
+        "near_um_s": 83.33769101648045,
+        "background_um_s": 12.042029945665764,
+        "peak_distance_mm": 0.4062417821924068,
+        "peak_x_mm": 2.3500000000000014,
+        "peak_depth_mm": 19.9
+      },
+      "difference": {
+        "cmax_db": 3.274424832766327,
+        "near_support_pct": 76.27376425855513,
+        "support_pct": 8.609068039098958,
+        "near_um_s": 4.765592008679495,
+        "background_um_s": 3.268854703730285,
+        "peak_distance_mm": 0.5740701678771366,
+        "peak_x_mm": 3.3500000000000014,
+        "peak_depth_mm": 19.549999999999997
+      },
+      "lof_over_pristine_near_db": 0.3579678223786025
+    },
+    {
+      "id": "a001",
+      "candidate": 0,
+      "label": "wide",
+      "path": "3-1_SLSL",
+      "group": "left",
+      "view": "source1",
+      "lof": {
+        "cmax_db": 1.5791647268313205,
+        "near_support_pct": 73.58490566037736,
+        "support_pct": 40.147006390389734,
+        "near_um_s": 84.50562566602994,
+        "background_um_s": 70.45752529055702,
+        "peak_distance_mm": 0.5008711400435713,
+        "peak_x_mm": 2.25,
+        "peak_depth_mm": 20.0
+      },
+      "reference": {
+        "cmax_db": 1.0734840423645433,
+        "near_support_pct": 73.58490566037736,
+        "support_pct": 40.147006390389734,
+        "near_um_s": 80.79166857812244,
+        "background_um_s": 71.39904049986468,
+        "peak_distance_mm": 0.5008711400435713,
+        "peak_x_mm": 2.25,
+        "peak_depth_mm": 20.0
+      },
+      "difference": {
+        "cmax_db": -7.050376571706883,
+        "near_support_pct": 73.58490566037736,
+        "support_pct": 40.147006390389734,
+        "near_um_s": 4.503042497779799,
+        "background_um_s": 10.139694592580328,
+        "peak_distance_mm": 16.304140778390295,
+        "peak_x_mm": -9.0,
+        "peak_depth_mm": 7.25
+      },
+      "lof_over_pristine_near_db": 0.3903808780780408
+    },
+    {
+      "id": "a002",
+      "candidate": 1,
+      "label": "fine",
+      "path": "3-1_SLSS",
+      "group": "left",
+      "view": "source1",
+      "lof": {
+        "cmax_db": 17.332206476983913,
+        "near_support_pct": 76.27376425855513,
+        "support_pct": 8.609068039098958,
+        "near_um_s": 3.2482740841736266,
+        "background_um_s": 0.44161350219263784,
+        "peak_distance_mm": 0.16160567582112692,
+        "peak_x_mm": 2.6500000000000004,
+        "peak_depth_mm": 18.849999999999998
+      },
+      "reference": {
+        "cmax_db": 2.4524631733095874,
+        "near_support_pct": 76.27376425855513,
+        "support_pct": 8.609068039098958,
+        "near_um_s": 5.575953439297742,
+        "background_um_s": 4.204322093440563,
+        "peak_distance_mm": 0.7265527068090247,
+        "peak_x_mm": 2.1000000000000014,
+        "peak_depth_mm": 18.549999999999997
+      },
+      "difference": {
+        "cmax_db": -1.2758267080443697,
+        "near_support_pct": 76.27376425855513,
+        "support_pct": 8.609068039098958,
+        "near_um_s": 7.699665825808122,
+        "background_um_s": 8.917912607829162,
+        "peak_distance_mm": 1.0287583650475445,
+        "peak_x_mm": 1.8000000000000007,
+        "peak_depth_mm": 18.5
+      },
+      "lof_over_pristine_near_db": -4.693329428815749
+    },
+    {
+      "id": "a003",
+      "candidate": 1,
+      "label": "wide",
+      "path": "3-1_SLSS",
+      "group": "left",
+      "view": "source1",
+      "lof": {
+        "cmax_db": -26.371554234118925,
+        "near_support_pct": 73.58490566037736,
+        "support_pct": 40.14974904692685,
+        "near_um_s": 1.7707891777810785,
+        "background_um_s": 36.87606491521836,
+        "peak_distance_mm": 21.454318507561656,
+        "peak_x_mm": -8.5,
+        "peak_depth_mm": 0.25
+      },
+      "reference": {
+        "cmax_db": -20.15788780651542,
+        "near_support_pct": 73.58490566037736,
+        "support_pct": 40.14974904692685,
+        "near_um_s": 3.6189781320034315,
+        "background_um_s": 36.8536366056842,
+        "peak_distance_mm": 21.454318507561656,
+        "peak_x_mm": -8.5,
+        "peak_depth_mm": 0.25
+      },
+      "difference": {
+        "cmax_db": -11.343265185676806,
+        "near_support_pct": 73.58490566037736,
+        "support_pct": 40.14974904692685,
+        "near_um_s": 4.160193773366567,
+        "background_um_s": 15.35595458173163,
+        "peak_distance_mm": 15.097644492084322,
+        "peak_x_mm": 17.25,
+        "peak_depth_mm": 25.0
+      },
+      "lof_over_pristine_near_db": -6.208381994780032
+    },
+    {
+      "id": "a004",
+      "candidate": 2,
+      "label": "fine",
+      "path": "3-2_LSSLL",
+      "group": "left_weld",
+      "view": "source1",
+      "lof": {
+        "cmax_db": 21.041777385954546,
+        "near_support_pct": 36.958174904942965,
+        "support_pct": 4.2190770648896745,
+        "near_um_s": 1.3943210701724524,
+        "background_um_s": 0.12367272238164392,
+        "peak_distance_mm": 0.5374349985070759,
+        "peak_x_mm": 3.3500000000000014,
+        "peak_depth_mm": 18.849999999999998
+      },
+      "reference": {
+        "cmax_db": 15.557300747415304,
+        "near_support_pct": 36.958174904942965,
+        "support_pct": 4.2190770648896745,
+        "near_um_s": 1.1828604799734381,
+        "background_um_s": 0.19727337953759,
+        "peak_distance_mm": 0.4796531283329049,
+        "peak_x_mm": 3.3000000000000007,
+        "peak_depth_mm": 18.7
+      },
+      "difference": {
+        "cmax_db": -9.970885837892562,
+        "near_support_pct": 36.958174904942965,
+        "support_pct": 4.2190770648896745,
+        "near_um_s": 0.3084766389587634,
+        "background_um_s": 0.9722245250010136,
+        "peak_distance_mm": 1.5045344439218453,
+        "peak_x_mm": 2.5,
+        "peak_depth_mm": 17.0
+      },
+      "lof_over_pristine_near_db": 1.4285853641875041
+    },
+    {
+      "id": "a005",
+      "candidate": 2,
+      "label": "wide",
+      "path": "3-2_LSSLL",
+      "group": "left_weld",
+      "view": "source1",
+      "lof": {
+        "cmax_db": -12.56847826460453,
+        "near_support_pct": 41.509433962264154,
+        "support_pct": 65.85666876937,
+        "near_um_s": 1.3631467789265121,
+        "background_um_s": 5.793840495624174,
+        "peak_distance_mm": 14.506621423505303,
+        "peak_x_mm": 6.75,
+        "peak_depth_mm": 4.5
+      },
+      "reference": {
+        "cmax_db": -19.908008927192803,
+        "near_support_pct": 41.509433962264154,
+        "support_pct": 65.85666876937,
+        "near_um_s": 1.168203007385583,
+        "background_um_s": 11.558960145001517,
+        "peak_distance_mm": 17.752456242750487,
+        "peak_x_mm": 6.0,
+        "peak_depth_mm": 1.0
+      },
+      "difference": {
+        "cmax_db": -34.88855035298047,
+        "near_support_pct": 41.509433962264154,
+        "support_pct": 65.85666876937,
+        "near_um_s": 0.26961149349528873,
+        "background_um_s": 14.968073938837426,
+        "peak_distance_mm": 17.506526357926692,
+        "peak_x_mm": 6.0,
+        "peak_depth_mm": 1.25
+      },
+      "lof_over_pristine_near_db": 1.3404860347924115
+    },
+    {
+      "id": "a006",
+      "candidate": 3,
+      "label": "fine",
+      "path": "3-1_LSSL",
+      "group": "left_weld",
+      "view": "source1",
+      "lof": {
+        "cmax_db": 19.97690559213708,
+        "near_support_pct": 36.958174904942965,
+        "support_pct": 4.109615347684981,
+        "near_um_s": 44.3892500021317,
+        "background_um_s": 4.450743104551643,
+        "peak_distance_mm": 0.12992047286187175,
+        "peak_x_mm": 2.9000000000000004,
+        "peak_depth_mm": 19.65
+      },
+      "reference": {
+        "cmax_db": 27.455860590499785,
+        "near_support_pct": 36.958174904942965,
+        "support_pct": 4.109615347684981,
+        "near_um_s": 42.78661455019787,
+        "background_um_s": 1.8134888728109781,
+        "peak_distance_mm": 0.13253727067401894,
+        "peak_x_mm": 2.9000000000000004,
+        "peak_depth_mm": 19.7
+      },
+      "difference": {
+        "cmax_db": 10.643966291479877,
+        "near_support_pct": 36.958174904942965,
+        "support_pct": 4.109615347684981,
+        "near_um_s": 47.52292102536339,
+        "background_um_s": 13.954195795285113,
+        "peak_distance_mm": 0.437572045031617,
+        "peak_x_mm": 3.25,
+        "peak_depth_mm": 18.849999999999998
+      },
+      "lof_over_pristine_near_db": 0.3193976513358331
+    },
+    {
+      "id": "a007",
+      "candidate": 3,
+      "label": "wide",
+      "path": "3-1_LSSL",
+      "group": "left_weld",
+      "view": "source1",
+      "lof": {
+        "cmax_db": 0.3166471434474225,
+        "near_support_pct": 41.509433962264154,
+        "support_pct": 45.91207043141987,
+        "near_um_s": 37.022280720448386,
+        "background_um_s": 35.69692545710891,
+        "peak_distance_mm": 0.23501702196162322,
+        "peak_x_mm": 3.0,
+        "peak_depth_mm": 19.75
+      },
+      "reference": {
+        "cmax_db": 1.2488927074224851,
+        "near_support_pct": 41.509433962264154,
+        "support_pct": 45.91207043141987,
+        "near_um_s": 39.23462085548854,
+        "background_um_s": 33.980113470288316,
+        "peak_distance_mm": 0.23501702196162322,
+        "peak_x_mm": 3.0,
+        "peak_depth_mm": 19.75
+      },
+      "difference": {
+        "cmax_db": 12.038843734187951,
+        "near_support_pct": 41.509433962264154,
+        "support_pct": 45.91207043141987,
+        "near_um_s": 45.48824991458206,
+        "background_um_s": 11.375147627669069,
+        "peak_distance_mm": 0.43233844940732274,
+        "peak_x_mm": 3.25,
+        "peak_depth_mm": 18.75
+      },
+      "lof_over_pristine_near_db": -0.5041258127152346
+    },
+    {
+      "id": "a008",
+      "candidate": 4,
+      "label": "fine",
+      "path": "3-1_SSSL",
+      "group": "left",
+      "view": "weld_min2",
+      "lof": {
+        "cmax_db": 8.403900614816706,
+        "near_support_pct": 53.61216730038023,
+        "support_pct": 12.29235880398671,
+        "near_um_s": 17.81058194720025,
+        "background_um_s": 6.768354218205913,
+        "peak_distance_mm": 0.26670222492087825,
+        "peak_x_mm": 2.5500000000000007,
+        "peak_depth_mm": 18.75
+      },
+      "reference": {
+        "cmax_db": 11.22129278430037,
+        "near_support_pct": 53.61216730038023,
+        "support_pct": 12.29235880398671,
+        "near_um_s": 15.673364776383426,
+        "background_um_s": 4.306233766970559,
+        "peak_distance_mm": 0.26670222492087825,
+        "peak_x_mm": 2.5500000000000007,
+        "peak_depth_mm": 18.75
+      },
+      "difference": {
+        "cmax_db": 11.514692824842857,
+        "near_support_pct": 53.61216730038023,
+        "support_pct": 12.29235880398671,
+        "near_um_s": 10.028594045506713,
+        "background_um_s": 2.6638232816994623,
+        "peak_distance_mm": 0.6161512511784227,
+        "peak_x_mm": 3.4000000000000004,
+        "peak_depth_mm": 19.4
+      },
+      "lof_over_pristine_near_db": 1.110317372169129
+    },
+    {
+      "id": "a009",
+      "candidate": 4,
+      "label": "wide",
+      "path": "3-1_SSSL",
+      "group": "left",
+      "view": "weld_min2",
+      "lof": {
+        "cmax_db": -6.471783992122676,
+        "near_support_pct": 52.83018867924528,
+        "support_pct": 30.10888346452374,
+        "near_um_s": 16.18334742632871,
+        "background_um_s": 34.09239858927731,
+        "peak_distance_mm": 34.95450111081365,
+        "peak_x_mm": -27.0,
+        "peak_depth_mm": 0.25
+      },
+      "reference": {
+        "cmax_db": -7.2961919910363555,
+        "near_support_pct": 52.83018867924528,
+        "support_pct": 30.10888346452374,
+        "near_um_s": 14.340172814936595,
+        "background_um_s": 33.21727367584217,
+        "peak_distance_mm": 35.16810465854746,
+        "peak_x_mm": -27.25,
+        "peak_depth_mm": 0.25
+      },
+      "difference": {
+        "cmax_db": 3.0527820570043334,
+        "near_support_pct": 52.83018867924528,
+        "support_pct": 30.10888346452374,
+        "near_um_s": 10.018413490387568,
+        "background_um_s": 7.0495249106766975,
+        "peak_distance_mm": 0.4715904165895307,
+        "peak_x_mm": 3.25,
+        "peak_depth_mm": 19.5
+      },
+      "lof_over_pristine_near_db": 1.0502794526117105
+    },
+    {
+      "id": "a010",
+      "candidate": 5,
+      "label": "fine",
+      "path": "2-2_LSSL",
+      "group": "sides",
+      "view": "source4",
+      "lof": {
+        "cmax_db": 5.535938542474649,
+        "near_support_pct": 100.0,
+        "support_pct": 49.12910721487143,
+        "near_um_s": 37.10012119647551,
+        "background_um_s": 19.614552361703826,
+        "peak_distance_mm": 0.05389232890922818,
+        "peak_x_mm": 2.75,
+        "peak_depth_mm": 19.0
+      },
+      "reference": {
+        "cmax_db": 0.10613775323142138,
+        "near_support_pct": 100.0,
+        "support_pct": 49.12910721487143,
+        "near_um_s": 34.219059118044946,
+        "background_um_s": 33.803461638227176,
+        "peak_distance_mm": 0.9894350869587806,
+        "peak_x_mm": 3.8000000000000007,
+        "peak_depth_mm": 18.9
+      },
+      "difference": {
+        "cmax_db": 7.274059631957915,
+        "near_support_pct": 100.0,
+        "support_pct": 49.12910721487143,
+        "near_um_s": 36.55536845492968,
+        "background_um_s": 15.821519253584619,
+        "peak_distance_mm": 0.3902573661060367,
+        "peak_x_mm": 3.200000000000001,
+        "peak_depth_mm": 18.9
+      },
+      "lof_over_pristine_near_db": 0.7021452853890302
+    },
+    {
+      "id": "a011",
+      "candidate": 5,
+      "label": "wide",
+      "path": "2-2_LSSL",
+      "group": "sides",
+      "view": "source4",
+      "lof": {
+        "cmax_db": 15.270948347358196,
+        "near_support_pct": 100.0,
+        "support_pct": 30.843915416472395,
+        "near_um_s": 37.10012119647551,
+        "background_um_s": 6.394813910146282,
+        "peak_distance_mm": 0.05389232890922818,
+        "peak_x_mm": 2.75,
+        "peak_depth_mm": 19.0
+      },
+      "reference": {
+        "cmax_db": 10.200453726881758,
+        "near_support_pct": 100.0,
+        "support_pct": 30.843915416472395,
+        "near_um_s": 29.813945448851943,
+        "background_um_s": 9.212908675109192,
+        "peak_distance_mm": 0.05389232890922818,
+        "peak_x_mm": 2.75,
+        "peak_depth_mm": 19.0
+      },
+      "difference": {
+        "cmax_db": 7.725538032919307,
+        "near_support_pct": 100.0,
+        "support_pct": 30.843915416472395,
+        "near_um_s": 31.543866274647677,
+        "background_um_s": 12.96098539684299,
+        "peak_distance_mm": 0.43233844940732274,
+        "peak_x_mm": 3.25,
+        "peak_depth_mm": 18.75
+      },
+      "lof_over_pristine_near_db": 1.8991175170372387
+    },
+    {
+      "id": "a012",
+      "candidate": 6,
+      "label": "fine",
+      "path": "3-1_LSSS",
+      "group": "weld",
+      "view": "source1",
+      "lof": {
+        "cmax_db": 17.09545575675882,
+        "near_support_pct": 29.65779467680608,
+        "support_pct": 3.740902194995487,
+        "near_um_s": 66.49649084676058,
+        "background_um_s": 9.290218736084608,
+        "peak_distance_mm": 0.07482671140640586,
+        "peak_x_mm": 2.75,
+        "peak_depth_mm": 18.599999999999998
+      },
+      "reference": {
+        "cmax_db": -9.748462710383382,
+        "near_support_pct": 29.65779467680608,
+        "support_pct": 3.740902194995487,
+        "near_um_s": 2.553307300720614,
+        "background_um_s": 7.8437947799944805,
+        "peak_distance_mm": 3.5483360431248974,
+        "peak_x_mm": 3.6000000000000014,
+        "peak_depth_mm": 24.4
+      },
+      "difference": {
+        "cmax_db": 19.861931556647882,
+        "near_support_pct": 29.65779467680608,
+        "support_pct": 3.740902194995487,
+        "near_um_s": 67.99455384791037,
+        "background_um_s": 6.908401195076539,
+        "peak_distance_mm": 0.022278436856529246,
+        "peak_x_mm": 2.8000000000000007,
+        "peak_depth_mm": 18.65
+      },
+      "lof_over_pristine_near_db": 28.3139128058627
+    },
+    {
+      "id": "a013",
+      "candidate": 6,
+      "label": "wide",
+      "path": "3-1_LSSS",
+      "group": "weld",
+      "view": "source1",
+      "lof": {
+        "cmax_db": 14.258242883414757,
+        "near_support_pct": 35.84905660377358,
+        "support_pct": 12.21853487287787,
+        "near_um_s": 58.53500649420283,
+        "background_um_s": 11.337140444304339,
+        "peak_distance_mm": 0.08006030703070013,
+        "peak_x_mm": 2.75,
+        "peak_depth_mm": 18.5
+      },
+      "reference": {
+        "cmax_db": -12.505302441207615,
+        "near_support_pct": 35.84905660377358,
+        "support_pct": 12.21853487287787,
+        "near_um_s": 1.8652984845121234,
+        "background_um_s": 7.8707018180846715,
+        "peak_distance_mm": 17.487544474599495,
+        "peak_x_mm": 20.25,
+        "peak_depth_mm": 20.25
+      },
+      "difference": {
+        "cmax_db": 11.807687911811334,
+        "near_support_pct": 35.84905660377358,
+        "support_pct": 12.21853487287787,
+        "near_um_s": 56.79158213964152,
+        "background_um_s": 14.584769576824527,
+        "peak_distance_mm": 0.06697631796996416,
+        "peak_x_mm": 2.75,
+        "peak_depth_mm": 18.75
+      },
+      "lof_over_pristine_near_db": 29.933346669863745
+    },
+    {
+      "id": "a014",
+      "candidate": 7,
+      "label": "fine",
+      "path": "3-1_SLLS",
+      "group": "weld",
+      "view": "source1",
+      "lof": {
+        "cmax_db": 9.375168786772461,
+        "near_support_pct": 57.26235741444867,
+        "support_pct": 10.316286751291456,
+        "near_um_s": 63.9784796382351,
+        "background_um_s": 21.74079776026609,
+        "peak_distance_mm": 0.40334135516677266,
+        "peak_x_mm": 3.200000000000001,
+        "peak_depth_mm": 19.15
+      },
+      "reference": {
+        "cmax_db": 2.822535121716288,
+        "near_support_pct": 57.26235741444867,
+        "support_pct": 10.316286751291456,
+        "near_um_s": 8.261485139876733,
+        "background_um_s": 5.969409466046232,
+        "peak_distance_mm": 0.2478886927154283,
+        "peak_x_mm": 2.950000000000001,
+        "peak_depth_mm": 20.95
+      },
+      "difference": {
+        "cmax_db": 6.692402635602438,
+        "near_support_pct": 57.26235741444867,
+        "support_pct": 10.316286751291456,
+        "near_um_s": 67.22833618808944,
+        "background_um_s": 31.112308135118518,
+        "peak_distance_mm": 0.40595815297891985,
+        "peak_x_mm": 3.200000000000001,
+        "peak_depth_mm": 19.2
+      },
+      "lof_over_pristine_near_db": 17.779515788589755
+    },
+    {
+      "id": "a015",
+      "candidate": 7,
+      "label": "wide",
+      "path": "3-1_SLLS",
+      "group": "weld",
+      "view": "source1",
+      "lof": {
+        "cmax_db": 10.117915979116203,
+        "near_support_pct": 60.37735849056604,
+        "support_pct": 10.287704670744082,
+        "near_um_s": 60.47589104504565,
+        "background_um_s": 18.866288745993984,
+        "peak_distance_mm": 0.20884904384015127,
+        "peak_x_mm": 3.0,
+        "peak_depth_mm": 19.25
+      },
+      "reference": {
+        "cmax_db": -3.4986448826613614,
+        "near_support_pct": 60.37735849056604,
+        "support_pct": 10.287704670744082,
+        "near_um_s": 8.139831418609095,
+        "background_um_s": 12.17720604456319,
+        "peak_distance_mm": 17.264055069032324,
+        "peak_x_mm": 20.0,
+        "peak_depth_mm": 20.75
+      },
+      "difference": {
+        "cmax_db": 11.863478880650089,
+        "near_support_pct": 60.37735849056604,
+        "support_pct": 10.287704670744082,
+        "near_um_s": 65.70751644992673,
+        "background_um_s": 16.766449624543444,
+        "peak_distance_mm": 0.20884904384015127,
+        "peak_x_mm": 3.0,
+        "peak_depth_mm": 19.25
+      },
+      "lof_over_pristine_near_db": 17.419337309529624
+    },
+    {
+      "id": "a016",
+      "candidate": 8,
+      "label": "fine",
+      "path": "3-1_SLSS",
+      "group": "left_weld",
+      "view": "source1",
+      "lof": {
+        "cmax_db": 15.798595036596602,
+        "near_support_pct": 98.5551330798479,
+        "support_pct": 10.191461986058034,
+        "near_um_s": 67.78145192982865,
+        "background_um_s": 10.994642581229838,
+        "peak_distance_mm": 0.22462114161959051,
+        "peak_x_mm": 2.6000000000000014,
+        "peak_depth_mm": 18.599999999999998
+      },
+      "reference": {
+        "cmax_db": -7.94917074379339,
+        "near_support_pct": 98.5551330798479,
+        "support_pct": 10.191461986058034,
+        "near_um_s": 2.5533073007206126,
+        "background_um_s": 6.376195496388048,
+        "peak_distance_mm": 1.5730127176861877,
+        "peak_x_mm": 2.700000000000001,
+        "peak_depth_mm": 16.9
+      },
+      "difference": {
+        "cmax_db": 14.67732300960451,
+        "near_support_pct": 98.5551330798479,
+        "support_pct": 10.191461986058034,
+        "near_um_s": 69.81985500194376,
+        "background_um_s": 12.88584170765497,
+        "peak_distance_mm": 0.17207286706971567,
+        "peak_x_mm": 2.6500000000000004,
+        "peak_depth_mm": 18.65
+      },
+      "lof_over_pristine_near_db": 28.48015560985774
+    },
+    {
+      "id": "a017",
+      "candidate": 8,
+      "label": "wide",
+      "path": "3-1_SLSS",
+      "group": "left_weld",
+      "view": "source1",
+      "lof": {
+        "cmax_db": 4.013422001066517,
+        "near_support_pct": 100.0,
+        "support_pct": 45.654260716930416,
+        "near_um_s": 58.53500649420281,
+        "background_um_s": 36.87606491521836,
+        "peak_distance_mm": 0.08006030703070013,
+        "peak_x_mm": 2.75,
+        "peak_depth_mm": 18.5
+      },
+      "reference": {
+        "cmax_db": -25.91464023597375,
+        "near_support_pct": 100.0,
+        "support_pct": 45.654260716930416,
+        "near_um_s": 1.8652984845121237,
+        "background_um_s": 36.8536366056842,
+        "peak_distance_mm": 21.454318507561656,
+        "peak_x_mm": -8.5,
+        "peak_depth_mm": 0.25
+      },
+      "difference": {
+        "cmax_db": 10.544551754818164,
+        "near_support_pct": 100.0,
+        "support_pct": 45.654260716930416,
+        "near_um_s": 55.500346364282215,
+        "background_um_s": 16.484208753161443,
+        "peak_distance_mm": 0.16959707665794332,
+        "peak_x_mm": 3.0,
+        "peak_depth_mm": 18.5
+      },
+      "lof_over_pristine_near_db": 29.93334666986374
+    },
+    {
+      "id": "a018",
+      "candidate": 9,
+      "label": "fine",
+      "path": "1-2_SSS",
+      "group": "left",
+      "view": "source3",
+      "lof": {
+        "cmax_db": 11.485024939951723,
+        "near_support_pct": 96.80608365019012,
+        "support_pct": 42.92627657327214,
+        "near_um_s": 77.12851859058561,
+        "background_um_s": 20.557189671917655,
+        "peak_distance_mm": 0.32470211751499706,
+        "peak_x_mm": 2.9000000000000004,
+        "peak_depth_mm": 18.15
+      },
+      "reference": {
+        "cmax_db": -39.19901814869795,
+        "near_support_pct": 96.80608365019012,
+        "support_pct": 42.92627657327214,
+        "near_um_s": 0.24147580689808146,
+        "background_um_s": 22.020366014673883,
+        "peak_distance_mm": 9.652839846159669,
+        "peak_x_mm": -5.95,
+        "peak_depth_mm": 25.25
+      },
+      "difference": {
+        "cmax_db": 11.934239027988834,
+        "near_support_pct": 96.80608365019012,
+        "support_pct": 42.92627657327214,
+        "near_um_s": 85.92890051722452,
+        "background_um_s": 21.748399574407422,
+        "peak_distance_mm": 0.2182290696912146,
+        "peak_x_mm": 2.8500000000000014,
+        "peak_depth_mm": 18.25
+      },
+      "lof_over_pristine_near_db": 50.0868272797721
+    },
+    {
+      "id": "a019",
+      "candidate": 9,
+      "label": "wide",
+      "path": "1-2_SSS",
+      "group": "left",
+      "view": "source3",
+      "lof": {
+        "cmax_db": 11.034637818041876,
+        "near_support_pct": 96.22641509433963,
+        "support_pct": 2.561641205671814,
+        "near_um_s": 73.00064025073446,
+        "background_um_s": 20.492492188307814,
+        "peak_distance_mm": 0.2748845314911878,
+        "peak_x_mm": 3.0,
+        "peak_depth_mm": 18.25
+      },
+      "reference": {
+        "cmax_db": -39.38517105869492,
+        "near_support_pct": 96.22641509433963,
+        "support_pct": 2.561641205671814,
+        "near_um_s": 0.23095550291308575,
+        "background_um_s": 21.517255037560595,
+        "peak_distance_mm": 9.474015778958288,
+        "peak_x_mm": -5.75,
+        "peak_depth_mm": 25.25
+      },
+      "difference": {
+        "cmax_db": 11.690450997532796,
+        "near_support_pct": 96.22641509433963,
+        "support_pct": 2.561641205671814,
+        "near_um_s": 81.21091122189702,
+        "background_um_s": 21.13935994306829,
+        "peak_distance_mm": 0.08006030703070013,
+        "peak_x_mm": 2.75,
+        "peak_depth_mm": 18.5
+      },
+      "lof_over_pristine_near_db": 49.995967091759645
+    },
+    {
+      "id": "a020",
+      "candidate": 10,
+      "label": "fine",
+      "path": "2-2_SLSS",
+      "group": "sides",
+      "view": "source4",
+      "lof": {
+        "cmax_db": 7.265183613295792,
+        "near_support_pct": 100.0,
+        "support_pct": 94.19468822614407,
+        "near_um_s": 12.484072548781961,
+        "background_um_s": 5.4087524279007315,
+        "peak_distance_mm": 0.5296559159771904,
+        "peak_x_mm": 2.25,
+        "peak_depth_mm": 19.45
+      },
+      "reference": {
+        "cmax_db": -5.366670066597248,
+        "near_support_pct": 100.0,
+        "support_pct": 94.19468822614407,
+        "near_um_s": 1.9933867036189583,
+        "background_um_s": 3.6976436966721304,
+        "peak_distance_mm": 2.2929583886705776,
+        "peak_x_mm": 0.5,
+        "peak_depth_mm": 19.15
+      },
+      "difference": {
+        "cmax_db": 2.789299978558261,
+        "near_support_pct": 100.0,
+        "support_pct": 94.19468822614407,
+        "near_um_s": 9.010407011155914,
+        "background_um_s": 6.535508895474447,
+        "peak_distance_mm": 0.6083008577419812,
+        "peak_x_mm": 3.4000000000000004,
+        "peak_depth_mm": 19.25
+      },
+      "lof_over_pristine_near_db": 15.935294534721285
+    },
+    {
+      "id": "a021",
+      "candidate": 10,
+      "label": "wide",
+      "path": "2-2_SLSS",
+      "group": "sides",
+      "view": "source4",
+      "lof": {
+        "cmax_db": 3.597261779901647,
+        "near_support_pct": 100.0,
+        "support_pct": 57.538191492279424,
+        "near_um_s": 7.729912391741452,
+        "background_um_s": 5.108712734867608,
+        "peak_distance_mm": 0.5270391181650432,
+        "peak_x_mm": 2.25,
+        "peak_depth_mm": 19.5
+      },
+      "reference": {
+        "cmax_db": -13.831693305593824,
+        "near_support_pct": 100.0,
+        "support_pct": 57.538191492279424,
+        "near_um_s": 1.3822932937938595,
+        "background_um_s": 6.794928110678238,
+        "peak_distance_mm": 18.9824136214608,
+        "peak_x_mm": 21.25,
+        "peak_depth_mm": 25.0
+      },
+      "difference": {
+        "cmax_db": 2.6462378757837275,
+        "near_support_pct": 100.0,
+        "support_pct": 57.538191492279424,
+        "near_um_s": 8.668353057950746,
+        "background_um_s": 6.391822377131911,
+        "peak_distance_mm": 0.7081638112174382,
+        "peak_x_mm": 3.5,
+        "peak_depth_mm": 19.25
+      },
+      "lof_over_pristine_near_db": 14.951487415086316
+    },
+    {
+      "id": "a022",
+      "candidate": 11,
+      "label": "fine",
+      "path": "2-1_SSS",
+      "group": "left_weld",
+      "view": "source1",
+      "lof": {
+        "cmax_db": 3.783304984572104,
+        "near_support_pct": 99.01140684410646,
+        "support_pct": 73.87321644614292,
+        "near_um_s": 65.86491362517854,
+        "background_um_s": 42.60777712798826,
+        "peak_distance_mm": 0.022278436856529246,
+        "peak_x_mm": 2.8000000000000007,
+        "peak_depth_mm": 18.65
+      },
+      "reference": {
+        "cmax_db": -18.500118914464455,
+        "near_support_pct": 99.01140684410646,
+        "support_pct": 73.87321644614292,
+        "near_um_s": 1.1417151198748894,
+        "background_um_s": 9.606467066816396,
+        "peak_distance_mm": 11.063338939576555,
+        "peak_x_mm": -7.5,
+        "peak_depth_mm": 25.25
+      },
+      "difference": {
+        "cmax_db": 6.558986384324808,
+        "near_support_pct": 99.01140684410646,
+        "support_pct": 73.87321644614292,
+        "near_um_s": 67.48455691733113,
+        "background_um_s": 31.714296458806697,
+        "peak_distance_mm": 0.08281811224322227,
+        "peak_x_mm": 2.9000000000000004,
+        "peak_depth_mm": 18.75
+      },
+      "lof_over_pristine_near_db": 35.22192748242366
+    },
+    {
+      "id": "a023",
+      "candidate": 11,
+      "label": "wide",
+      "path": "2-1_SSS",
+      "group": "left_weld",
+      "view": "source1",
+      "lof": {
+        "cmax_db": 3.620818050265633,
+        "near_support_pct": 100.0,
+        "support_pct": 20.537012149968458,
+        "near_um_s": 64.37356153617534,
+        "background_um_s": 42.42937505744413,
+        "peak_distance_mm": 0.32971769071934365,
+        "peak_x_mm": 2.5,
+        "peak_depth_mm": 18.5
+      },
+      "reference": {
+        "cmax_db": -34.381236475569,
+        "near_support_pct": 100.0,
+        "support_pct": 20.537012149968458,
+        "near_um_s": 0.8122385154052804,
+        "background_um_s": 42.53489873153087,
+        "peak_distance_mm": 31.60952625407518,
+        "peak_x_mm": -23.0,
+        "peak_depth_mm": 0.25
+      },
+      "difference": {
+        "cmax_db": 8.526369225222503,
+        "near_support_pct": 100.0,
+        "support_pct": 20.537012149968458,
+        "near_um_s": 65.39761126909607,
+        "background_um_s": 24.50436338623835,
+        "peak_distance_mm": 0.18268106571867931,
+        "peak_x_mm": 3.0,
+        "peak_depth_mm": 18.75
+      },
+      "lof_over_pristine_near_db": 37.980479164386416
+    },
+    {
+      "id": "a024",
+      "candidate": 12,
+      "label": "fine",
+      "path": "2-1_SLS",
+      "group": "left_weld",
+      "view": "source4",
+      "lof": {
+        "cmax_db": 7.148654827941136,
+        "near_support_pct": 100.0,
+        "support_pct": 91.70587444548998,
+        "near_um_s": 33.7084029968438,
+        "background_um_s": 14.801489998471048,
+        "peak_distance_mm": 0.13013279116880444,
+        "peak_x_mm": 2.950000000000001,
+        "peak_depth_mm": 18.7
+      },
+      "reference": {
+        "cmax_db": -16.775102329479665,
+        "near_support_pct": 100.0,
+        "support_pct": 91.70587444548998,
+        "near_um_s": 2.183927787954477,
+        "background_um_s": 15.065841381084457,
+        "peak_distance_mm": 4.613477197083044,
+        "peak_x_mm": -1.4499999999999993,
+        "peak_depth_mm": 16.75
+      },
+      "difference": {
+        "cmax_db": 9.200361138218438,
+        "near_support_pct": 100.0,
+        "support_pct": 91.70587444548998,
+        "near_um_s": 27.498850551708358,
+        "background_um_s": 9.53446840305825,
+        "peak_distance_mm": 0.13013279116880444,
+        "peak_x_mm": 2.950000000000001,
+        "peak_depth_mm": 18.7
+      },
+      "lof_over_pristine_near_db": 23.76999806415673
+    },
+    {
+      "id": "a025",
+      "candidate": 12,
+      "label": "wide",
+      "path": "2-1_SLS",
+      "group": "left_weld",
+      "view": "source4",
+      "lof": {
+        "cmax_db": 3.7440545191051706,
+        "near_support_pct": 100.0,
+        "support_pct": 30.21584706947149,
+        "near_um_s": 31.312753999262252,
+        "background_um_s": 20.347850594384315,
+        "peak_distance_mm": 0.18268106571867931,
+        "peak_x_mm": 3.0,
+        "peak_depth_mm": 18.75
+      },
+      "reference": {
+        "cmax_db": -15.574803122006454,
+        "near_support_pct": 100.0,
+        "support_pct": 30.21584706947149,
+        "near_um_s": 1.8199723188539279,
+        "background_um_s": 10.934651312202385,
+        "peak_distance_mm": 41.429389614501716,
+        "peak_x_mm": 44.0,
+        "peak_depth_mm": 24.25
+      },
+      "difference": {
+        "cmax_db": -1.3224194783461265,
+        "near_support_pct": 100.0,
+        "support_pct": 30.21584706947149,
+        "near_um_s": 25.503110162031966,
+        "background_um_s": 29.69710542857474,
+        "peak_distance_mm": 15.963432194346163,
+        "peak_x_mm": 18.75,
+        "peak_depth_mm": 19.75
+      },
+      "lof_over_pristine_near_db": 24.713129670385708
+    },
+    {
+      "id": "a026",
+      "candidate": 13,
+      "label": "fine",
+      "path": "exp_corner_5_L_rx_pixel-id_2",
+      "group": "right",
+      "view": "source4",
+      "lof": {
+        "cmax_db": 16.941047957333463,
+        "near_support_pct": 82.58555133079848,
+        "support_pct": 8.756937376375474,
+        "near_um_s": 0.0581233397807309,
+        "background_um_s": 0.008266052573458318,
+        "peak_distance_mm": 0.0750390297133368,
+        "peak_x_mm": 2.700000000000001,
+        "peak_depth_mm": 19.549999999999997
+      },
+      "reference": {
+        "cmax_db": 18.66555331010382,
+        "near_support_pct": 82.58555133079848,
+        "support_pct": 8.756937376375474,
+        "near_um_s": 0.045337646091017016,
+        "background_um_s": 0.0052866590493705415,
+        "peak_distance_mm": 0.37434426092622075,
+        "peak_x_mm": 3.1500000000000004,
+        "peak_depth_mm": 19.549999999999997
+      },
+      "difference": {
+        "cmax_db": -7.208044819551923,
+        "near_support_pct": 82.58555133079848,
+        "support_pct": 8.756937376375474,
+        "near_um_s": 0.011194991081004529,
+        "background_um_s": 0.025670007342377392,
+        "peak_distance_mm": 4.057467505369975,
+        "peak_x_mm": 3.700000000000001,
+        "peak_depth_mm": 24.9
+      },
+      "lof_over_pristine_near_db": 2.1578318598491237
+    },
+    {
+      "id": "a027",
+      "candidate": 13,
+      "label": "wide",
+      "path": "exp_corner_5_L_rx_pixel-id_2",
+      "group": "right",
+      "view": "source4",
+      "lof": {
+        "cmax_db": -33.968705556378225,
+        "near_support_pct": 77.35849056603774,
+        "support_pct": 25.199528263075617,
+        "near_um_s": 0.058043294349189915,
+        "background_um_s": 2.898593616469412,
+        "peak_distance_mm": 34.866868658488784,
+        "peak_x_mm": 37.5,
+        "peak_depth_mm": 14.75
+      },
+      "reference": {
+        "cmax_db": -45.156031078635515,
+        "near_support_pct": 77.35849056603774,
+        "support_pct": 25.199528263075617,
+        "near_um_s": 0.044058664751889805,
+        "background_um_s": 7.976876810571129,
+        "peak_distance_mm": 41.835150583005266,
+        "peak_x_mm": 44.5,
+        "peak_depth_mm": 22.75
+      },
+      "difference": {
+        "cmax_db": -34.52934721824792,
+        "near_support_pct": 77.35849056603774,
+        "support_pct": 25.199528263075617,
+        "near_um_s": 0.010632031623950797,
+        "background_um_s": 0.5663483252770272,
+        "peak_distance_mm": 28.05678663791865,
+        "peak_x_mm": 29.5,
+        "peak_depth_mm": 9.75
+      },
+      "lof_over_pristine_near_db": 2.3944144477507487
+    },
+    {
+      "id": "a028",
+      "candidate": 14,
+      "label": "fine",
+      "path": "exp_corner_4_S_tx_id_1",
+      "group": "left_weld",
+      "view": "source0",
+      "lof": {
+        "cmax_db": 6.194939409755895,
+        "near_support_pct": 100.0,
+        "support_pct": 97.25961630787549,
+        "near_um_s": 35.80109075716643,
+        "background_um_s": 17.544834992495755,
+        "peak_distance_mm": 0.23522934026855577,
+        "peak_x_mm": 3.0500000000000007,
+        "peak_depth_mm": 18.799999999999997
+      },
+      "reference": {
+        "cmax_db": -8.630995736323326,
+        "near_support_pct": 100.0,
+        "support_pct": 97.25961630787549,
+        "near_um_s": 2.5884508623042306,
+        "background_um_s": 6.991811510503514,
+        "peak_distance_mm": 5.380466423439871,
+        "peak_x_mm": -2.25,
+        "peak_depth_mm": 16.7
+      },
+      "difference": {
+        "cmax_db": 5.940331845800549,
+        "near_support_pct": 100.0,
+        "support_pct": 97.25961630787549,
+        "near_um_s": 26.988633405979723,
+        "background_um_s": 13.619598405256376,
+        "peak_distance_mm": 0.13013279116880444,
+        "peak_x_mm": 2.950000000000001,
+        "peak_depth_mm": 18.7
+      },
+      "lof_over_pristine_near_db": 22.81712667132524
+    },
+    {
+      "id": "a029",
+      "candidate": 14,
+      "label": "wide",
+      "path": "exp_corner_4_S_tx_id_1",
+      "group": "left_weld",
+      "view": "source0",
+      "lof": {
+        "cmax_db": 7.897397058955788,
+        "near_support_pct": 100.0,
+        "support_pct": 27.67340445955953,
+        "near_um_s": 35.46026126961658,
+        "background_um_s": 14.284731385604811,
+        "peak_distance_mm": 0.18268106571867931,
+        "peak_x_mm": 3.0,
+        "peak_depth_mm": 18.75
+      },
+      "reference": {
+        "cmax_db": -13.019166233539345,
+        "near_support_pct": 100.0,
+        "support_pct": 27.67340445955953,
+        "near_um_s": 1.9700436911202566,
+        "background_um_s": 8.81930108985206,
+        "peak_distance_mm": 7.9038932459054365,
+        "peak_x_mm": 10.5,
+        "peak_depth_mm": 22.25
+      },
+      "difference": {
+        "cmax_db": 6.295684000323407,
+        "near_support_pct": 100.0,
+        "support_pct": 27.67340445955953,
+        "near_um_s": 25.521763225783285,
+        "background_um_s": 12.363074184616472,
+        "peak_distance_mm": 0.18268106571867931,
+        "peak_x_mm": 3.0,
+        "peak_depth_mm": 18.75
+      },
+      "lof_over_pristine_near_db": 25.1053214639941
+    }
+  ]
+}

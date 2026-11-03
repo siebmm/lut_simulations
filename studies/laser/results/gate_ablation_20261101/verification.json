@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "configurations": 98,
+  "full": 52,
+  "partial": 46,
+  "ablated_configurations": 294,
+  "paired_signal_cases": 882,
+  "full_wall_gate_images_exactly_equal": 156,
+  "principal_wall_gate_images_exactly_equal": 6,
+  "primary_support_masks_unchanged": true,
+  "decisions": {
+    "wall_gate": 0.05,
+    "min_offset_mm": 1.5
+  },
+  "protocol_sha256": "3261b75490ab9449c5c15794ce58372f56fb7090f498deea7413c74b7a72c569",
+  "comparison_sha256": "c6dd788ac56c0496e1e1607d2358f6cb2a4e95574ed032b688ee59bdf709d270",
+  "original_arrays_unchanged": true
+}

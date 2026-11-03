@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "checks": {
+    "clean": {
+      "pages": 17,
+      "text_identical": true,
+      "maximum_word_position_difference_pt": 0.0,
+      "pixels_identical": true
+    },
+    "joint": {
+      "pages": 81,
+      "both_appendices_compile": true,
+      "appendix_references_resolved": true,
+      "bibliography_resolved": true
+    }
+  },
+  "citation_keys": [
+    "dolz-2024",
+    "levesque",
+    "nicolson23",
+    "stratoudaki",
+    "tu"
+  ]
+}

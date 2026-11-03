@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "configurations": 22,
+  "scientific_configurations": 21,
+  "native_reproduction_cases": 3,
+  "protocol_sha256": "557916baf09edcd1ca32c2545f881a4c974693f78324817fd7c06ef039501a9e",
+  "equal_receivers": true
+}

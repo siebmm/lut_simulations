@@ -1,0 +1,27 @@
+{
+  "above_surface_air_checks": [
+    {
+      "sample_x_depth_mm": [
+        40,
+        -1
+      ],
+      "air_rgb": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "sample_x_depth_mm": [
+        40,
+        -1
+      ],
+      "air_rgb": [
+        255,
+        255,
+        255
+      ]
+    }
+  ],
+  "equal_coordinate_scales": true
+}

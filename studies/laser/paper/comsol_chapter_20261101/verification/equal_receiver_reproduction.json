@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "configurations": 280,
+  "signal_cases": 840,
+  "all_processing": "raw",
+  "independent_baseline_cases": 3,
+  "contrast_tolerance_db": 1e-08
+}

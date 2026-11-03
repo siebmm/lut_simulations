@@ -1,0 +1,153 @@
+{
+  "status": "passed",
+  "signal_cases": 24,
+  "new_scientific_configurations": 6,
+  "replay_controls": 2,
+  "checks": [
+    {
+      "id": "all__one",
+      "case": "lof",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "all__one",
+      "case": "reference",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "all__one",
+      "case": "difference",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "all__replay_two",
+      "case": "lof",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "all__replay_two",
+      "case": "reference",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "all__replay_two",
+      "case": "difference",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "both__one",
+      "case": "lof",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "both__one",
+      "case": "reference",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "both__one",
+      "case": "difference",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "left__one",
+      "case": "lof",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "left__one",
+      "case": "reference",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "left__one",
+      "case": "difference",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "left__replay_two",
+      "case": "lof",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "left__replay_two",
+      "case": "reference",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "left__replay_two",
+      "case": "difference",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "left_finer__one",
+      "case": "lof",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "left_finer__one",
+      "case": "reference",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "left_finer__one",
+      "case": "difference",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "left_wide__one",
+      "case": "lof",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "left_wide__one",
+      "case": "reference",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "left_wide__one",
+      "case": "difference",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "both_wide__one",
+      "case": "lof",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "both_wide__one",
+      "case": "reference",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    },
+    {
+      "id": "both_wide__one",
+      "case": "difference",
+      "common_support_unchanged": true,
+      "new_pixels_have_one_source": true
+    }
+  ],
+  "protocol_sha256": "679aff6bbc6409e7fc6a6c3e742da6c81911b0dc1853a67345c70963d526ff55"
+}

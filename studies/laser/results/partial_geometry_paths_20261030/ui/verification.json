@@ -1,0 +1,20 @@
+{
+    "checks": [
+        "Two windows preserve settings and layers",
+        "Invalid folder leaves session intact",
+        "Dataset caches differ",
+        "331 receiver controls and usage",
+        "No reconstructed air pixels",
+        "Cross-dataset settings/blends rejected",
+        "Recessed source/receiver path inspection",
+        "Partial blend reload and image exports",
+        "Five added shear routes on the short list",
+        "Reflected screening settings round-trip and survive path changes",
+        "Five-leg image, ray inspection and saved blend recipe",
+        "48 bevel and 144 corner routes separated from conventional paths",
+        "Experimental settings and blend recipes round-trip",
+        "Experimental image and typeset help displayed",
+        "Experimental point polyline and signal arrival preserve the corner"
+    ],
+    "status": "passed"
+}

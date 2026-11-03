@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "figure": "geometry",
+  "legend_count": 1,
+  "legends": [
+    {
+      "labels": [
+        "Laser sources",
+        "Known LOF",
+        "Side-surface receivers",
+        "SAFT grid",
+        "Weld-surface receivers",
+        "15 mm absorbers"
+      ],
+      "bounds_figure_fraction": [
+        0.22251736111111117,
+        0.082987012987013,
+        0.5949652777777779,
+        0.09090909090909091
+      ],
+      "data_or_label_collisions": []
+    }
+  ],
+  "check": "Rendered legend bounds inside canvas and outside all data axes and their text."
+}

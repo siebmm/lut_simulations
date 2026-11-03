@@ -1,0 +1,64 @@
+{
+  "dataset_fingerprint": "fd34529e7a01bb6b521cbf1d8ee4d9cda8548eecbd3723797a6fdf93eb1420e5",
+  "variant": {
+    "name": "lowpass5_long",
+    "method": "analytic_fir",
+    "low_MHz": 0,
+    "high_MHz": 5,
+    "half_samples": 328,
+    "support_half_samples": 328,
+    "known_initial_rest": false
+  },
+  "energy": [
+    {
+      "case": "lof",
+      "source": 0,
+      "above_5MHz_fraction": 0.0004911958103154253
+    },
+    {
+      "case": "lof",
+      "source": 1,
+      "above_5MHz_fraction": 0.0016324145309016792
+    },
+    {
+      "case": "lof",
+      "source": 2,
+      "above_5MHz_fraction": 0.0015020050331733602
+    },
+    {
+      "case": "lof",
+      "source": 3,
+      "above_5MHz_fraction": 0.0016714289495931435
+    },
+    {
+      "case": "lof",
+      "source": 4,
+      "above_5MHz_fraction": 0.0004704161900371815
+    },
+    {
+      "case": "reference",
+      "source": 0,
+      "above_5MHz_fraction": 0.00046753322094625956
+    },
+    {
+      "case": "reference",
+      "source": 1,
+      "above_5MHz_fraction": 0.0016626382408109403
+    },
+    {
+      "case": "reference",
+      "source": 2,
+      "above_5MHz_fraction": 0.0015712462746984644
+    },
+    {
+      "case": "reference",
+      "source": 3,
+      "above_5MHz_fraction": 0.0016625442133932813
+    },
+    {
+      "case": "reference",
+      "source": 4,
+      "above_5MHz_fraction": 0.00046759772974488365
+    }
+  ]
+}

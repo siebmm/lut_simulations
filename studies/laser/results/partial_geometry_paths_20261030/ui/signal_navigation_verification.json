@@ -1,0 +1,14 @@
+{
+    "checks": [
+        "A-scan and receiver-map cursor-anchored time zoom; live Start/End and spectrum sample window",
+        "Independent frequency and dB zoom; synchronized editable limits",
+        "A-scan pan and Shift-drag; receiver-map box selection and horizontal zoom",
+        "Amplitude zoom does not alter time; cursor hover reuses cached frame",
+        "Minimum time span and recording/Nyquist boundaries; double-click reset",
+        "Receiver-map click loads A-scan and spectrum while retaining zoom",
+        "Global reset restores loaded file and startup settings including signal views",
+        "Failed settings load preserves reset target; existing images/layers retained",
+        "Display navigation does not alter reconstruction settings or result"
+    ],
+    "status": "passed"
+}

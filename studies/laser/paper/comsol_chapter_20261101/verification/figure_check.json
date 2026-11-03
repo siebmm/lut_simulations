@@ -1,0 +1,199 @@
+{
+  "status": "passed",
+  "paper_figures": 21,
+  "total_figures": 24,
+  "figures": [
+    {
+      "figure": "filter_response",
+      "used_in_papers": true,
+      "legend_count": 1,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "69cc19fc16dee11356ac5de4b0b070216a4d83a8e816d7d3df95cd723b245426"
+    },
+    {
+      "figure": "full_case_atlas",
+      "used_in_papers": true,
+      "legend_count": 0,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "fb73f2d4fbb136ba66bdbfdaf83b45a18544d2dda90290bc50acb6acd6bb2c08"
+    },
+    {
+      "figure": "full_common_paths",
+      "used_in_papers": true,
+      "legend_count": 0,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "1421646fe5a85e251f503e28b127662c4d148a669698ae8f1ad62fcc3cd1b54a"
+    },
+    {
+      "figure": "full_filter_matrix_0",
+      "used_in_papers": true,
+      "legend_count": 0,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "46cc798bec7c8b9461574791512cbd132c2681c92b013f20f6c6dc6423bde449"
+    },
+    {
+      "figure": "full_recordings",
+      "used_in_papers": true,
+      "legend_count": 4,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "c137ac546b3ca5a16492264300e5f826c7a50356b85c99ed02ea4a917f84ee38"
+    },
+    {
+      "figure": "full_wide",
+      "used_in_papers": true,
+      "legend_count": 0,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "a07f0335b8fe0e91c4a187a883059ce5d62d656407e16822ba0261363268016c"
+    },
+    {
+      "figure": "geometry",
+      "used_in_papers": true,
+      "legend_count": 1,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "e0f24f4cd2ba8e179c1415b2a2a1e36c07475383853a4c3e409481ce1cca64f7"
+    },
+    {
+      "figure": "marker_comparison",
+      "used_in_papers": false,
+      "legend_count": 0,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "ef9b2eb420cdc904ace79e5cfd7c431a5c9d4c610df91d70c741116ef9aa755a"
+    },
+    {
+      "figure": "partial_difference_atlas",
+      "used_in_papers": true,
+      "legend_count": 0,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "c1b2d10031fff16c662cc287834a70190b45a374155272094a2deead282c3991"
+    },
+    {
+      "figure": "partial_filter_matrix_0",
+      "used_in_papers": true,
+      "legend_count": 0,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "60ce25fbf2852cc562b24fde0fbdb86d0e2a7527c4a2ddd59dac480bdede4ca3"
+    },
+    {
+      "figure": "partial_filter_matrix_1",
+      "used_in_papers": true,
+      "legend_count": 0,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "760ec7161ff78df763d3f039ba1c22f72648fa3117dfe7fff527ae65fafcbe9f"
+    },
+    {
+      "figure": "partial_joint",
+      "used_in_papers": true,
+      "legend_count": 0,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "51d7a263bb5e95f9fce901d0767a9fd82d3dda47e828ba95152ecba8fa313649"
+    },
+    {
+      "figure": "partial_lof_atlas",
+      "used_in_papers": true,
+      "legend_count": 0,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "d71970b8152d7ab0437b8f0366e06fc6ba2559beb134353d2e8131b2567d664e"
+    },
+    {
+      "figure": "partial_path_atlas",
+      "used_in_papers": false,
+      "legend_count": 0,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "df8aa0a380fffac0370c2a6b4c2474f4252c8b59b8e370ca9d57923e221227ef"
+    },
+    {
+      "figure": "partial_recordings",
+      "used_in_papers": true,
+      "legend_count": 3,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "3fbccc7171d4e6ca173ce7e1f4fffd39f64e1f454dd8cd927b5952af9d89cc04"
+    },
+    {
+      "figure": "partial_reference_atlas",
+      "used_in_papers": true,
+      "legend_count": 0,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "9ac02969cb9ac3ec8960bc8e9b60253ca9c5bc45a379808aff04353c32332d4f"
+    },
+    {
+      "figure": "partial_wide",
+      "used_in_papers": true,
+      "legend_count": 0,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "26a4f5d670b74b3a9d8b7ebdb19d6c2f786070c9a278bbf32c335064d137d69a"
+    },
+    {
+      "figure": "path_guide",
+      "used_in_papers": true,
+      "legend_count": 1,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "8755fde3e7c1102cd336f96fff6d4baa3ea94636712eb15dc563d7090a020f8e"
+    },
+    {
+      "figure": "physics",
+      "used_in_papers": true,
+      "legend_count": 2,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "09aba9a4b7ffa143648bb884116473a849be281f458d58836a940079f5286651"
+    },
+    {
+      "figure": "primary_full",
+      "used_in_papers": true,
+      "legend_count": 0,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "34f440bc837808d7ab0082221d8427602abb72663019b26a01814957fd90153a"
+    },
+    {
+      "figure": "primary_partial",
+      "used_in_papers": true,
+      "legend_count": 0,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "15d8b8c5112ab9ff4c70bcdc6b42da64438ff5309aca3efdbdd9411c93b3314d"
+    },
+    {
+      "figure": "saft_walkthrough",
+      "used_in_papers": true,
+      "legend_count": 1,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "892bfb5a0487cdc3b8f65337d01034f6fcbfc677ec3d5cfe4693b67f68f63f5d"
+    },
+    {
+      "figure": "source_calibration",
+      "used_in_papers": true,
+      "legend_count": 2,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "0a0650bf919ac9ed02ef7d21d10e0689a7a35dbeb736d05389b5758c8359de9e"
+    },
+    {
+      "figure": "wide_fields",
+      "used_in_papers": false,
+      "legend_count": 0,
+      "outside_text": [],
+      "all_fonts_embedded": true,
+      "sha256": "6c897cc17be4573172c9ae103d76517714d71021125518c8cd1406b7f31e5a77"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "created_utc": "2026-10-30T10:46:46.053302+00:00",
+  "common_controls": {
+    "anchor_x_mm": 0,
+    "anchor_depth_mm": 0,
+    "angular_gate": 0.2,
+    "aperture": "all",
+    "cases": [
+      "lof"
+    ],
+    "clean": false,
+    "coherence": true,
+    "coherence_power": 1,
+    "combination": "rms",
+    "component": "vy",
+    "depth_min_mm": 16.65,
+    "depth_max_mm": 25.25,
+    "freeze": false,
+    "groups": [
+      true,
+      true,
+      true
+    ],
+    "high_MHz": 5,
+    "low_MHz": 0.5,
+    "min_offset_mm": 1.5,
+    "minimum_effective_receivers": 8,
+    "minimum_receivers": 8,
+    "minimum_sources": 2,
+    "mute_halfwidth_us": 0.6,
+    "mutes": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "policy": "minimum",
+    "processing": "raw",
+    "pulse_reflections": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "pulse_screening": "LSR",
+    "receiver_fraction": 0.25,
+    "repairs": "case",
+    "screen_margin_us": 0.1,
+    "screen_tail_db": 30,
+    "sources": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "spacing_mm": 0.1,
+    "threads": 8,
+    "wall_gate": 0.05,
+    "x_min_mm": -7.5,
+    "x_max_mm": 7.5
+  },
+  "paths": [
+    "1-1_SS",
+    "1-1_LL",
+    "1-1_LS",
+    "1-1_SL",
+    "1-2_SSS",
+    "2-1_SSS",
+    "1-2_LLL",
+    "2-1_LLL",
+    "1-3_SSSS",
+    "2-2_SSSS",
+    "3-1_SSSS",
+    "1-3_LLLL",
+    "2-2_LLLL",
+    "3-1_LLLL",
+    "2-3_SSSSS",
+    "3-2_SSSSS",
+    "2-3_LLLLL",
+    "3-2_LLLLL"
+  ],
+  "selection_basis": "Frozen before this study reconstructs LOF images. Geometry/acquisition and established processing physics only. Historical flaw location is known; not a blind experiment.",
+  "source_exclusion_basis": "Maximum prescribed source footprint half-width 1.425 mm, rounded up to the 0.25 mm acquisition increment: 1.5 mm.",
+  "extent_basis": "Twice the groove half-opening rounded out to 0.5 mm; first centre 0.25 mm below the fill surface; final centre at least 0.1 mm above backwall.",
+  "path_basis": "Every pure-L and pure-S split available with 2 to 5 total legs and at most 3 legs per branch; add both direct mode-converted scattering hypotheses.",
+  "threshold_status": "20% angular, 5% wall, 8 receivers, 25% retained and 2 sources are predeclared engineering guards, not unique values derived from elasticity or optimized against the LOF.",
+  "screening_basis": "All valid direct L/S/R families with common 30 dB tail, 0.1 us margin; no baseline reflected guard because it may overlap desired echoes. Reflected screens tested as diagnostics only.",
+  "no_adaptive_selection": "Every declared path and sensitivity result is retained, including unsupported and off-flaw maxima. No metric selects replacement settings.",
+  "fingerprints": {
+    "full": "c3c1a5b2b587a17f6336ccfc20c46ec6c093f084d53c4ee50d6a00013a62a07b",
+    "partial": "fd34529e7a01bb6b521cbf1d8ee4d9cda8548eecbd3723797a6fdf93eb1420e5"
+  }
+}

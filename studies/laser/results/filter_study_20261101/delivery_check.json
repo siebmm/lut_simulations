@@ -1,0 +1,34 @@
+[
+  {
+    "file": "comsol_chapter_latex.zip",
+    "bytes": 12080177,
+    "sha256": "1815242ba58e0028696454a8cad6d97376ff0ee18574bb2ad1feaeb1bee5b608",
+    "files": 95,
+    "crc_and_sha256": "passed"
+  },
+  {
+    "file": "comsol_chapter_evidence.zip",
+    "bytes": 167966351,
+    "sha256": "b4cb241ba03d9a66239509c7bf3ba65b23def5cbb1267fe1bcf94077e7a2c267",
+    "files": 660,
+    "crc_and_sha256": "passed"
+  },
+  {
+    "file": "comsol_chapter_and_appendices.pdf",
+    "bytes": 1453242,
+    "sha256": "9ed2107d275669bdd35e6141825fd029218c2253fedea46f73e95d5cd19139bb",
+    "pages": 74
+  },
+  {
+    "file": "full_weld_simulation_paper.pdf",
+    "bytes": 705966,
+    "sha256": "1b9b95bdec009a816eb86dd516b5152de6846c493c0cfc7874ad66fcd6f88785",
+    "pages": 24
+  },
+  {
+    "file": "partial_weld_simulation_paper.pdf",
+    "bytes": 903868,
+    "sha256": "20ae90ecca3f4b0e846ef129a8f9a5b496968186bdda40e2b2625c3c7c0c8c9f",
+    "pages": 35
+  }
+]

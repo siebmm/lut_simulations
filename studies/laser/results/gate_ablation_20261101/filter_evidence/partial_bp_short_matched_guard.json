@@ -1,0 +1,64 @@
+{
+  "dataset_fingerprint": "fd34529e7a01bb6b521cbf1d8ee4d9cda8548eecbd3723797a6fdf93eb1420e5",
+  "variant": {
+    "half_samples": 128,
+    "high_MHz": 5,
+    "known_initial_rest": false,
+    "low_MHz": 0.5,
+    "method": "analytic_fir",
+    "name": "bp_short_matched_guard",
+    "support_half_samples": 328
+  },
+  "energy": [
+    {
+      "case": "lof",
+      "source": 0,
+      "above_5MHz_fraction": 0.0007707818089238565
+    },
+    {
+      "case": "lof",
+      "source": 1,
+      "above_5MHz_fraction": 0.0031145642064957517
+    },
+    {
+      "case": "lof",
+      "source": 2,
+      "above_5MHz_fraction": 0.0027514475804507705
+    },
+    {
+      "case": "lof",
+      "source": 3,
+      "above_5MHz_fraction": 0.003249358040108664
+    },
+    {
+      "case": "lof",
+      "source": 4,
+      "above_5MHz_fraction": 0.0007407708750405117
+    },
+    {
+      "case": "reference",
+      "source": 0,
+      "above_5MHz_fraction": 0.0007377623168192778
+    },
+    {
+      "case": "reference",
+      "source": 1,
+      "above_5MHz_fraction": 0.0031700909501490983
+    },
+    {
+      "case": "reference",
+      "source": 2,
+      "above_5MHz_fraction": 0.002920629482501223
+    },
+    {
+      "case": "reference",
+      "source": 3,
+      "above_5MHz_fraction": 0.0031703903980706515
+    },
+    {
+      "case": "reference",
+      "source": 4,
+      "above_5MHz_fraction": 0.0007381206204359259
+    }
+  ]
+}

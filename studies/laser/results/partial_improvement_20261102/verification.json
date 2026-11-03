@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "baseline_reproduction": [
+    {
+      "id": "all__raw__min2",
+      "status": "passed",
+      "maximum_absolute_difference": 9.41900637346782e-19,
+      "archive": "studies\\laser\\results\\reports\\comsol_chapter_evidence.zip",
+      "member": "data/confirmation_partial_baseline__1-2_SSS__fine.npz",
+      "archive_sha256": "b4cb241ba03d9a66239509c7bf3ba65b23def5cbb1267fe1bcf94077e7a2c267"
+    },
+    {
+      "id": "all__weighted__min2",
+      "status": "passed",
+      "maximum_absolute_difference": 0,
+      "archive": "studies\\laser\\results\\reports\\laser_weld_feasibility_sources.zip",
+      "member": "data/partial__1-2_SSS__weighted.npz",
+      "archive_sha256": "fbc3a459278c994ee3e2c5be4887e53244054005eb571ac5709bbcbde87ad75d"
+    }
+  ],
+  "executable_sha256": "e7297cdd94bc809de020d28e2d8706bb160ae1905f5579b9923905c831297358",
+  "driver_sha256": "fbef18149ae97549e3abce2634ba5efeb2feae8ebf84fabde65c6b1dd610a57a",
+  "protocol_sha256": "63189e2650d6682ffababc0141477d20d8e365f32067af2f0ab017d827b971eb"
+}

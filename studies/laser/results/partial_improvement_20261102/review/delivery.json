@@ -1,0 +1,54 @@
+{
+  "preserved_papers": {
+    "full_weld_explanatory_paper.pdf": "b7e7bde5b020f9ee57c08e9170fe4720e0ecb1e8a3d48a7c327429e698f28180",
+    "partial_weld_explanatory_paper.pdf": "2bd196ce8d36e359d3c48a2c2019881a59e7fc0c2c08252e4fe0d1ee6ef1d8f6",
+    "combined_core_saft_paper.pdf": "a355a1951a8f633a527554f1cd248f53d4f484a3858707e10446a14e162f80d0",
+    "full_weld_simulation_paper.pdf": "1b9b95bdec009a816eb86dd516b5152de6846c493c0cfc7874ad66fcd6f88785",
+    "partial_weld_simulation_paper.pdf": "20ae90ecca3f4b0e846ef129a8f9a5b496968186bdda40e2b2625c3c7c0c8c9f",
+    "comsol_chapter_and_appendices.pdf": "9ed2107d275669bdd35e6141825fd029218c2253fedea46f73e95d5cd19139bb"
+  },
+  "papers": {
+    "standalone": {
+      "pdf": "combined_explanatory_saft_paper.pdf",
+      "pdf_sha256": "c1ab95653f12d5a3747c54f5bc84b223518f567db776794904555b36b29ec7f6",
+      "bundle": "combined_explanatory_saft_latex.zip",
+      "bundle_sha256": "5dde670596d2e900520eafa34559d8c81b91e57bef20defdbb5a316bb3932301",
+      "pages": 9,
+      "words": 3206,
+      "figures": 5,
+      "files": {
+        "chapter_comsol.tex": "7ab4132ccfe855b5a761488cbf0ffecee6e53b5940d7d64b1b5f604420e0f585",
+        "README.txt": "e871e4220420941f3a7c2ad30af85a4285601f51ec4f434d28c474428e835611",
+        "bibfile.bib": "5d603e8d49767657a2ac1743d100875bbfdbdd8bfb956d11e9a84de6307c24bf",
+        "figures\\combined_explanatory\\geometry.pdf": "e0f24f4cd2ba8e179c1415b2a2a1e36c07475383853a4c3e409481ce1cca64f7",
+        "figures\\combined_explanatory\\path_examples.pdf": "fde298d541f28bf0ed55d39401c652eae8490b73cc456308fa5a1f7ce909ca79",
+        "figures\\combined_explanatory\\primary_full.pdf": "34f440bc837808d7ab0082221d8427602abb72663019b26a01814957fd90153a",
+        "figures\\review\\partial_reassessment.pdf": "aae396cc4d032d6e82e74d9647c9325371ebd8747b26e9b62cfcec142cc7b531",
+        "figures\\review\\right_paths_controls.pdf": "db33e37b41aa3537e8c24d1d17836f277995581491a650e834fbfc5ad74f3b49"
+      }
+    },
+    "extended": {
+      "pdf": "extended_combined_saft_paper.pdf",
+      "pdf_sha256": "3f50ef5ca2b9cde24b89826286b2e81e52359f7e8c10f6b2b5361cde02eeaad5",
+      "bundle": "extended_combined_saft_latex.zip",
+      "bundle_sha256": "73acc5d7b028da28e9e2742949889b41f2521812d48b28d405035acdb0f61c24",
+      "pages": 16,
+      "words": 5924,
+      "figures": 9,
+      "files": {
+        "chapter_comsol_extended.tex": "6ef22f24938b1f2cd5cdb0821685e00d70e65c69724efab507c76f5ee8f0767a",
+        "README.txt": "813099069d66f11861d9c19133eecda308dbf5f8ba44b6493b4e66aee65688bf",
+        "bibfile.bib": "5d603e8d49767657a2ac1743d100875bbfdbdd8bfb956d11e9a84de6307c24bf",
+        "figures\\combined_explanatory\\geometry.pdf": "e0f24f4cd2ba8e179c1415b2a2a1e36c07475383853a4c3e409481ce1cca64f7",
+        "figures\\combined_explanatory\\path_examples.pdf": "fde298d541f28bf0ed55d39401c652eae8490b73cc456308fa5a1f7ce909ca79",
+        "figures\\combined_explanatory\\primary_full.pdf": "34f440bc837808d7ab0082221d8427602abb72663019b26a01814957fd90153a",
+        "figures\\combined_explanatory\\source_calibration.pdf": "0a0650bf919ac9ed02ef7d21d10e0689a7a35dbeb736d05389b5758c8359de9e",
+        "figures\\review\\atlas_controls.pdf": "8576267f750ba440ae8104967e4d5def8dc878f60accad5a58c1854e49e94fc2",
+        "figures\\review\\mute_sensitivity.pdf": "657e037f07609a96cd13e66468cfc6b1708930f95d1cca2e8baf3c476df4491d",
+        "figures\\review\\partial_reassessment.pdf": "aae396cc4d032d6e82e74d9647c9325371ebd8747b26e9b62cfcec142cc7b531",
+        "figures\\review\\right_paths_controls.pdf": "db33e37b41aa3537e8c24d1d17836f277995581491a650e834fbfc5ad74f3b49",
+        "figures\\review\\right_paths_wide.pdf": "382643fa242e0b987646d4498c328e9604f7937380ed6fbf89111f968ef69914"
+      }
+    }
+  }
+}

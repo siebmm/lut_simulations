@@ -1,2 +1,7 @@
 # Preserve exact bytes, including source hashes, across operating systems.
 * -text
+
+# Large scientific inputs are retained through Git LFS when committed.
+data/**/*.csv filter=lfs diff=lfs merge=lfs -text
+*.npz filter=lfs diff=lfs merge=lfs -text
+paper/evidence.zip filter=lfs diff=lfs merge=lfs -text

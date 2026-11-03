@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "configurations": {
+    "full": 104,
+    "partial": 280
+  },
+  "partial_primary_rows": 54,
+  "full_control_rows": 12,
+  "confirmation_rows": {
+    "full": 48,
+    "partial": 28
+  }
+}

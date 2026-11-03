@@ -1,0 +1,705 @@
+{
+  "rows": [
+    {
+      "point_mm": [
+        2.9000000000000004,
+        18.049999999999997
+      ],
+      "source": 0,
+      "source_id": "shoulder_left",
+      "launch_gain": null,
+      "reason": "blocked incoming geometry"
+    },
+    {
+      "point_mm": [
+        2.9000000000000004,
+        18.049999999999997
+      ],
+      "source": 1,
+      "source_id": "bead_left",
+      "launch_gain": 0.12149699794695648,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        2.9000000000000004,
+        18.049999999999997
+      ],
+      "source": 2,
+      "source_id": "bead_centre",
+      "launch_gain": 0.1231618201956962,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        2.9000000000000004,
+        18.049999999999997
+      ],
+      "source": 3,
+      "source_id": "bead_right",
+      "launch_gain": 0.14160046765134748,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        2.9000000000000004,
+        18.049999999999997
+      ],
+      "source": 4,
+      "source_id": "shoulder_right",
+      "launch_gain": 0.41710815306487137,
+      "reason": "launch admitted"
+    },
+    {
+      "point_mm": [
+        3.0,
+        18.049999999999997
+      ],
+      "source": 0,
+      "source_id": "shoulder_left",
+      "launch_gain": null,
+      "reason": "blocked incoming geometry"
+    },
+    {
+      "point_mm": [
+        3.0,
+        18.049999999999997
+      ],
+      "source": 1,
+      "source_id": "bead_left",
+      "launch_gain": 0.12062489582093007,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.0,
+        18.049999999999997
+      ],
+      "source": 2,
+      "source_id": "bead_centre",
+      "launch_gain": 0.12445159110676109,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.0,
+        18.049999999999997
+      ],
+      "source": 3,
+      "source_id": "bead_right",
+      "launch_gain": 0.06805110279018313,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.0,
+        18.049999999999997
+      ],
+      "source": 4,
+      "source_id": "shoulder_right",
+      "launch_gain": 0.41457227061179047,
+      "reason": "launch admitted"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.049999999999997
+      ],
+      "source": 0,
+      "source_id": "shoulder_left",
+      "launch_gain": null,
+      "reason": "blocked incoming geometry"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.049999999999997
+      ],
+      "source": 1,
+      "source_id": "bead_left",
+      "launch_gain": 0.11972127055853495,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.049999999999997
+      ],
+      "source": 2,
+      "source_id": "bead_centre",
+      "launch_gain": 0.1253864136274251,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.049999999999997
+      ],
+      "source": 3,
+      "source_id": "bead_right",
+      "launch_gain": 0.018789741639213885,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.049999999999997
+      ],
+      "source": 4,
+      "source_id": "shoulder_right",
+      "launch_gain": 0.41211982858275253,
+      "reason": "launch admitted"
+    },
+    {
+      "point_mm": [
+        3.0,
+        18.15
+      ],
+      "source": 0,
+      "source_id": "shoulder_left",
+      "launch_gain": null,
+      "reason": "blocked incoming geometry"
+    },
+    {
+      "point_mm": [
+        3.0,
+        18.15
+      ],
+      "source": 1,
+      "source_id": "bead_left",
+      "launch_gain": 0.122788785260939,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.0,
+        18.15
+      ],
+      "source": 2,
+      "source_id": "bead_centre",
+      "launch_gain": 0.12198594580082414,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.0,
+        18.15
+      ],
+      "source": 3,
+      "source_id": "bead_right",
+      "launch_gain": 0.12901392758035668,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.0,
+        18.15
+      ],
+      "source": 4,
+      "source_id": "shoulder_right",
+      "launch_gain": 0.41334697501001927,
+      "reason": "launch admitted"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.15
+      ],
+      "source": 0,
+      "source_id": "shoulder_left",
+      "launch_gain": null,
+      "reason": "blocked incoming geometry"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.15
+      ],
+      "source": 1,
+      "source_id": "bead_left",
+      "launch_gain": 0.1220262442516096,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.15
+      ],
+      "source": 2,
+      "source_id": "bead_centre",
+      "launch_gain": 0.1234913055639501,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.15
+      ],
+      "source": 3,
+      "source_id": "bead_right",
+      "launch_gain": 0.0630615867430901,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.15
+      ],
+      "source": 4,
+      "source_id": "shoulder_right",
+      "launch_gain": 0.4109438707126579,
+      "reason": "launch admitted"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.15
+      ],
+      "source": 0,
+      "source_id": "shoulder_left",
+      "launch_gain": null,
+      "reason": "blocked incoming geometry"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.15
+      ],
+      "source": 1,
+      "source_id": "bead_left",
+      "launch_gain": 0.12122660543809632,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.15
+      ],
+      "source": 2,
+      "source_id": "bead_centre",
+      "launch_gain": 0.12463532143539383,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.15
+      ],
+      "source": 3,
+      "source_id": "bead_right",
+      "launch_gain": 0.017627956345810474,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.15
+      ],
+      "source": 4,
+      "source_id": "shoulder_right",
+      "launch_gain": 0.4086041573063849,
+      "reason": "launch admitted"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.25
+      ],
+      "source": 0,
+      "source_id": "shoulder_left",
+      "launch_gain": null,
+      "reason": "blocked incoming geometry"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.25
+      ],
+      "source": 1,
+      "source_id": "bead_left",
+      "launch_gain": 0.1238395317544941,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.25
+      ],
+      "source": 2,
+      "source_id": "bead_centre",
+      "launch_gain": 0.12073086984871302,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.25
+      ],
+      "source": 3,
+      "source_id": "bead_right",
+      "launch_gain": 0.1184626722171574,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.25
+      ],
+      "source": 4,
+      "source_id": "shoulder_right",
+      "launch_gain": 0.4097954188947326,
+      "reason": "launch admitted"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.25
+      ],
+      "source": 0,
+      "source_id": "shoulder_left",
+      "launch_gain": null,
+      "reason": "blocked incoming geometry"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.25
+      ],
+      "source": 1,
+      "source_id": "bead_left",
+      "launch_gain": 0.12318313091921317,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.25
+      ],
+      "source": 2,
+      "source_id": "bead_centre",
+      "launch_gain": 0.12243192383624814,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.25
+      ],
+      "source": 3,
+      "source_id": "bead_right",
+      "launch_gain": 0.058751391698935736,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.25
+      ],
+      "source": 4,
+      "source_id": "shoulder_right",
+      "launch_gain": 0.4074951873250606,
+      "reason": "launch admitted"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.349999999999998
+      ],
+      "source": 0,
+      "source_id": "shoulder_left",
+      "launch_gain": null,
+      "reason": "blocked incoming geometry"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.349999999999998
+      ],
+      "source": 1,
+      "source_id": "bead_left",
+      "launch_gain": 0.12518117989842742,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.349999999999998
+      ],
+      "source": 2,
+      "source_id": "bead_centre",
+      "launch_gain": 0.11710605892100678,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.349999999999998
+      ],
+      "source": 3,
+      "source_id": "bead_right",
+      "launch_gain": 0.18865502971427012,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.1000000000000014,
+        18.349999999999998
+      ],
+      "source": 4,
+      "source_id": "shoulder_right",
+      "launch_gain": 0.4086735057314566,
+      "reason": "launch admitted"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.349999999999998
+      ],
+      "source": 0,
+      "source_id": "shoulder_left",
+      "launch_gain": null,
+      "reason": "blocked incoming geometry"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.349999999999998
+      ],
+      "source": 1,
+      "source_id": "bead_left",
+      "launch_gain": 0.12468055162172438,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.349999999999998
+      ],
+      "source": 2,
+      "source_id": "bead_centre",
+      "launch_gain": 0.11941821612877536,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.349999999999998
+      ],
+      "source": 3,
+      "source_id": "bead_right",
+      "launch_gain": 0.10949214375739078,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.349999999999998
+      ],
+      "source": 4,
+      "source_id": "shoulder_right",
+      "launch_gain": 0.4064093307034507,
+      "reason": "launch admitted"
+    },
+    {
+      "point_mm": [
+        3.3000000000000007,
+        18.349999999999998
+      ],
+      "source": 0,
+      "source_id": "shoulder_left",
+      "launch_gain": null,
+      "reason": "blocked incoming geometry"
+    },
+    {
+      "point_mm": [
+        3.3000000000000007,
+        18.349999999999998
+      ],
+      "source": 1,
+      "source_id": "bead_left",
+      "launch_gain": 0.12412643710096385,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.3000000000000007,
+        18.349999999999998
+      ],
+      "source": 2,
+      "source_id": "bead_centre",
+      "launch_gain": 0.12129692838937335,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.3000000000000007,
+        18.349999999999998
+      ],
+      "source": 3,
+      "source_id": "bead_right",
+      "launch_gain": 0.05498986187339082,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.3000000000000007,
+        18.349999999999998
+      ],
+      "source": 4,
+      "source_id": "shoulder_right",
+      "launch_gain": 0.40418665626787476,
+      "reason": "launch admitted"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.45
+      ],
+      "source": 0,
+      "source_id": "shoulder_left",
+      "launch_gain": null,
+      "reason": "blocked incoming geometry"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.45
+      ],
+      "source": 1,
+      "source_id": "bead_left",
+      "launch_gain": 0.1257367260532787,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.45
+      ],
+      "source": 2,
+      "source_id": "bead_centre",
+      "launch_gain": 0.11559074564073965,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.45
+      ],
+      "source": 3,
+      "source_id": "bead_right",
+      "launch_gain": 0.17276561766323645,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.200000000000001,
+        18.45
+      ],
+      "source": 4,
+      "source_id": "shoulder_right",
+      "launch_gain": 0.4053443896728391,
+      "reason": "launch admitted"
+    },
+    {
+      "point_mm": [
+        3.3000000000000007,
+        18.45
+      ],
+      "source": 0,
+      "source_id": "shoulder_left",
+      "launch_gain": null,
+      "reason": "blocked incoming geometry"
+    },
+    {
+      "point_mm": [
+        3.3000000000000007,
+        18.45
+      ],
+      "source": 1,
+      "source_id": "bead_left",
+      "launch_gain": 0.12533855867605817,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.3000000000000007,
+        18.45
+      ],
+      "source": 2,
+      "source_id": "bead_centre",
+      "launch_gain": 0.11806470085214207,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.3000000000000007,
+        18.45
+      ],
+      "source": 3,
+      "source_id": "bead_right",
+      "launch_gain": 0.10177225916372525,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.3000000000000007,
+        18.45
+      ],
+      "source": 4,
+      "source_id": "shoulder_right",
+      "launch_gain": 0.403150251511083,
+      "reason": "launch admitted"
+    },
+    {
+      "point_mm": [
+        3.3000000000000007,
+        18.549999999999997
+      ],
+      "source": 0,
+      "source_id": "shoulder_left",
+      "launch_gain": null,
+      "reason": "blocked incoming geometry"
+    },
+    {
+      "point_mm": [
+        3.3000000000000007,
+        18.549999999999997
+      ],
+      "source": 1,
+      "source_id": "bead_left",
+      "launch_gain": 0.12613659697933408,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.3000000000000007,
+        18.549999999999997
+      ],
+      "source": 2,
+      "source_id": "bead_centre",
+      "launch_gain": 0.1140635836421565,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.3000000000000007,
+        18.549999999999997
+      ],
+      "source": 3,
+      "source_id": "bead_right",
+      "launch_gain": 0.15930661830992016,
+      "reason": "below 20% launch gate"
+    },
+    {
+      "point_mm": [
+        3.3000000000000007,
+        18.549999999999997
+      ],
+      "source": 4,
+      "source_id": "shoulder_right",
+      "launch_gain": 0.4021314624935514,
+      "reason": "launch admitted"
+    }
+  ],
+  "method": "Independent Python geometry/directivity implementation; incoming S leg, actual 1-5 MHz FIR response."
+}

@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "bibliography_keys": [
+    "dolz-2024",
+    "levesque",
+    "nicolson23",
+    "stratoudaki",
+    "tu"
+  ],
+  "checks": {
+    "full": {
+      "pages": 27,
+      "text_identical": true,
+      "all_page_pixels_identical": false,
+      "maximum_word_position_difference_pt": 1.0841064453125
+    },
+    "partial": {
+      "pages": 39,
+      "text_identical": true,
+      "all_page_pixels_identical": false,
+      "maximum_word_position_difference_pt": 1.0841064453125
+    },
+    "joint": {
+      "pages": 65,
+      "both_appendices_compile": true,
+      "labels_resolved": true
+    }
+  }
+}
