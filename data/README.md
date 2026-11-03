@@ -1,24 +1,49 @@
-# Canonical SAFT acquisitions
+# Surface velocity histories
 
-These are the archived weld regression datasets. New models use the separate
-[geometry/acquisition contract](../saft/FORMAT.md); they do not need this weld
-layout or these source/receiver/sample counts. Keep generated data in `output/`
-or an external dataset directory and pass it explicitly to `tools/analyze.py`.
+These files contain the receiver signals from the full-weld and partial-weld
+simulations. Each laser position has a **sound reference** and a **lack-of-fusion
+case**. Their difference helps identify the part of the wavefield caused by
+the defect.
 
-`full_weld/` and `partial_weld/` each contain `dataset.json` and 60 CSVs:
-five sources × reference/LOF × left/right/weld receiver groups × vx/vy.
-Both manifests include the material, geometry, source/receiver coordinates,
-original completion evidence, audit hashes and repair intervals.
+| Quantity | Full weld | Partial weld |
+|---|---:|---:|
+| Laser positions | 5 | 5 |
+| Receivers | 337 | 331 |
+| Recorded components | vx and vy | vx and vy |
+| Time interval | 0-50 microseconds | 0-50 microseconds |
+| Sample spacing | 10 ns | 10 ns |
+| Samples per trace | 5,001 | 5,001 |
 
-The full weld has 337 receivers; the partial weld has 331. Histories contain
-5,001 samples at 10 ns intervals (0–50 microseconds). These are the canonical
-resampled histories used in the published SAFT analysis. Larger native-time
-solver tables and solved fields are unnecessary for replay and are omitted.
+## Read a recording
 
-All 120 CSVs are copied byte-for-byte from the source study and checked against
-their original SHA-256 hashes by `python tools/verify_repository.py`. Historical
-absolute paths in the manifests document provenance; the engine resolves the
-recording paths within these folders.
+Within either specimen folder, the path identifies the physical measurement:
 
-Combined recording size: 1,572,025,590 bytes. Git LFS tracks the CSVs. The custom
-full-weld processed bank is a generated output, not a second stored acquisition.
+```text
+sources/<laser position>/<reference or lof>/receivers/<left, right or weld>_<vx or vy>.csv
+```
+
+`vx` is horizontal velocity and `vy` is upward vertical velocity, both in m/s.
+The first CSV column, `time_s`, is time in seconds. The remaining columns are
+receiver traces. `dataset.json` gives their coordinates, ordering, source
+positions and material properties. The receiver labels restart within each
+group; use the associated coordinates when combining groups.
+
+The files contain the resampled histories used in the paper. Their metadata
+also records any repairs to the original exports. Original recording bytes
+are preserved and can be checked with `python tools/verify_repository.py`.
+
+## Use the signals for imaging
+
+Follow the [SAFT guide](../saft/README.md) to reconstruct the specimen from
+these traces, or run `python tools/reproduce_main.py` to repeat the main images.
+The recorded interval includes propagation and scattering through the weld;
+the short local laser-generation comparison is described
+[separately](../models/laser_generation/README.md).
+
+For another specimen, supply its own geometry, source/receiver coordinates and
+velocity histories using the [data-format guide](../saft/FORMAT.md). Its counts
+and sampling do not need to match these examples. If depth points downward,
+convert the vertical velocity consistently: `vz = -vy`.
+
+The CSV files total about 1.57 GB and are stored with Git LFS. Follow the
+[setup instructions](../tools/README.md#software-setup) to download their contents.

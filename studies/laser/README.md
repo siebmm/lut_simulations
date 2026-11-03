@@ -1,30 +1,36 @@
-# Inputs and helpers for the paper replays
+# Calculations supporting the weld-imaging paper
 
-This directory contains only the inputs and Python helpers used by the
-repository's main-result replay, paper-figure replay and independent weld
-physics check. Use the public commands in `tools/`; new models and parameter
-studies use `tools/analyze.py`.
+These calculations compare how filtering, wave paths, receiver coverage and
+source selection affect the reconstructed defect. They supply the reference
+images and figures used in the [full paper](../../paper/paper.pdf).
 
-`replay_inputs.json` is the dependency index. It lists the required helper
-modules and maps each logical data path to one canonical file or a member of
-`paper/evidence.zip`. Hashes verify that shared inputs preserve the exact
-scientific bytes. The replay workspace reconstructs the historical relative
-paths without retaining duplicate copies in Git.
-
-| Retained content | Purpose |
+| Scientific purpose | Location |
 |---|---|
-| `paper/comsol_chapter_20261101/` | Reference arrays for all 384 baseline configurations, calibration exports, figure generators and array-to-metric checks |
-| `paper/explanatory_saft_20261101/`, `paper/combined_explanatory_saft_20261101/` | Coupling, coverage, source-count and path diagrams |
-| `paper/filter_study_20261101/study.py` | Exact published filtering, native execution and scoring helpers |
-| `paper/partial_improvement_20261102/` | Reconstruction, comparison and plotting of the final partial-weld figures |
-| `src/` | Repository discovery and independent filtering, boundary-response and ray/focusing checks |
-| Remaining indexed data | Canonical inputs not already available elsewhere or in the supplement |
+| Compare 384 baseline imaging configurations and check laser calibration | `paper/comsol_chapter_20261101/` |
+| Explain ray coverage, source count and reflected paths | `paper/explanatory_saft_20261101/`, `paper/combined_explanatory_saft_20261101/` |
+| Apply the published filters and image-quality measures | `paper/filter_study_20261101/study.py` |
+| Reconstruct and compare the final partial-weld images | `paper/partial_improvement_20261102/` |
+| Independently check travel times, boundary response and focusing | `src/` |
 
-The historical directory names identify the source studies; no additional
-manuscripts live here. The sole paper is `../../paper/paper.pdf`. All 20,412
-acquisition/path comparison rows, including unsuccessful outcomes, remain in
-`../../paper/evidence.zip`.
+The dates identify the original calculations. These are supporting calculations,
+not separate papers. The complete set of 20,412 partial-weld comparisons,
+including unsuccessful configurations, is in `../../paper/evidence.zip`.
 
-`tools/verify_repository.py` rejects unindexed study files and byte-identical
-copies. Runtime results, logs and temporary workspace copies belong under
-`output/` or `build/`, both excluded from Git.
+## Repeat the comparisons
+
+From the repository root:
+
+```sh
+python tools/reproduce_main.py
+python tools/reproduce_figures.py
+```
+
+New results go under `output/`. The first command checks the principal images;
+the second regenerates the baseline, explanatory and final-review figures.
+For a different specimen or new imaging settings, use
+[the general analysis workflow](../../saft/FORMAT.md).
+
+`replay_inputs.json` lists the numerical inputs required for these calculations.
+Each is stored once, either here or in the paper supplement. The replay commands
+assemble a working copy automatically. See [running the calculations](../../tools/README.md)
+for setup and optional checks.

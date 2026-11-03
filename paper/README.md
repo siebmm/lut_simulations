@@ -2,39 +2,25 @@
 
 **[Read the complete paper (PDF)](paper.pdf).**
 
-This is the repository's only manuscript. It contains the full detailed methods,
-source calibration, SAFT definitions, results, negative comparisons, path and
-source-subset registers, and reproduction instructions. It is a self-contained
-article with an abstract, numbered sections, conclusions and its own references.
+The paper follows laser generation, source calibration, propagation through the
+welds and SAFT imaging. It includes the detailed equations, assumptions,
+comparisons and negative results, together with the full source/path registers.
+It is the repository's only manuscript.
 
-- `paper.tex`: complete editable LaTeX source.
-- `paper.pdf`: rendered paper, ready to read.
-- `references.bib`: the three cited bibliography entries.
-- `figures/`: exactly the 27 figures cited by the paper.
-- `evidence.zip`: numerical supplement, including all 20,412 acquisition/path
-  rows and the settings, controls and negative outcomes described in the paper.
+| Material | Contents |
+|---|---|
+| `paper.pdf` | Complete rendered paper |
+| `paper.tex` and `references.bib` | Editable text and references |
+| `figures/` | The 27 figures cited in the paper |
+| `evidence.zip` | Numerical supplement, including all 20,412 acquisition/path comparisons |
 
-## Build the PDF
+To explore the work, start with the
+[laser-generation model](../models/laser_generation/README.md),
+[specimen models](../models/README.md), [recordings](../data/README.md), or
+[imaging method](../saft/README.md).
 
-Install Tectonic, then run from the repository root:
-
-```sh
-python tools/build_paper.py
-```
-
-Use `--tectonic PATH` if the executable is not on `PATH`. Tectonic downloads its
-standard TeX resources on first use. The build needs no COMSOL, native SAFT tools,
-or Python scientific packages. It writes the finished PDF here, intermediate
-files to `build/paper/`, and a source/PDF hash receipt to `verification/paper.json`.
-Missing references and overfull text boxes fail the build. After an intentional
-edit and rebuild, update the repository snapshot with
-`python tools/verify_repository.py --write-manifest`.
-
-## Reproduce the evidence
-
-The model inputs are in `../models/`, velocity histories in `../data/`, and
-scientific analysis and figure generators in `../studies/laser/`. From the
-repository root, `python tools/reproduce_main.py` checks the main numerical
-results and `python tools/reproduce_figures.py` regenerates the artwork under
-`output/replay/`. These workflows preserve the supplied manuscript assets.
+To repeat the principal images and figures, follow
+[the reproduction instructions](../tools/README.md#reproduce-the-paper).
 Extract `evidence.zip` here to obtain the `evidence/` paths cited in the paper.
+To compile the PDF from its source, install Tectonic and run
+`python tools/build_paper.py` from the repository root.

@@ -628,13 +628,13 @@
     },
     {
       "path": "data/README.md",
-      "bytes": 1388,
-      "sha256": "768d2a32192bde5761092204885bdb09cbb83ef47258c145a6c4be7e4f360720"
+      "bytes": 2191,
+      "sha256": "2db920569b4843618edbc768235384fa2c0dbe2cfbce627101e00b44f0c980c3"
     },
     {
       "path": "models/checksums.json",
-      "bytes": 1837,
-      "sha256": "c03568d674bd0879df81b2e752d2d7b368bb3eb3b23ba267940da0708d35fecb"
+      "bytes": 2199,
+      "sha256": "ca5d5e5e216b38b8aace94ed74eae1a81df78a954f3ce5f5d6c89114e3726686"
     },
     {
       "path": "models/defect_geometry.json",
@@ -707,6 +707,31 @@
       "sha256": "4d01a98100bf9dd7a51cf2d674a4aff484829371d70b55fd09d41a395e4cf50d"
     },
     {
+      "path": "models/laser_generation/analyze.py",
+      "bytes": 10299,
+      "sha256": "afa339af17f3bb96203dfe051ac4e626e4fb1f2f0f7d351f189136dffb65ed10"
+    },
+    {
+      "path": "models/laser_generation/BuildLaserCalibration.java",
+      "bytes": 14350,
+      "sha256": "56255d267f6190a82a4f9e8498ed7d4c7631fecb119768312f30d837d217f67d"
+    },
+    {
+      "path": "models/laser_generation/laser_source_calibration.mph",
+      "bytes": 1272993,
+      "sha256": "c559cd6fbc23eeebc19127ac05ecac81f7171094fcaa8d982becbf4f8a2cf377"
+    },
+    {
+      "path": "models/laser_generation/README.md",
+      "bytes": 7073,
+      "sha256": "bd5e70aa1284fa0ba699cc76cf051979d311736b8d0a9f7459a13e5369b35a88"
+    },
+    {
+      "path": "models/laser_generation/RunLaserCalibration.java",
+      "bytes": 5997,
+      "sha256": "29b09e801fb6da332fa4a69b0f194722a0a569660f938cbcfaee31b701fbd9cd"
+    },
+    {
       "path": "models/partial_weld/lof.mph",
       "bytes": 1682425,
       "sha256": "5f2fbc116b0372b4a9eddff6f5e65dbcba258f1720300299cc996537048a8e91"
@@ -733,8 +758,8 @@
     },
     {
       "path": "models/README.md",
-      "bytes": 2262,
-      "sha256": "14ab2ff0b3de9ba13ebf5963de585680ec56aaa15a89bf9aef4ff1cf8b9b3918"
+      "bytes": 2706,
+      "sha256": "0ccfa00e571b563a3be2539f00f1079b0cc9547b88b7ab8e70da341fe28a965e"
     },
     {
       "path": "paper/evidence.zip",
@@ -888,8 +913,8 @@
     },
     {
       "path": "paper/README.md",
-      "bytes": 1943,
-      "sha256": "4fa9a193490cc1fea40a84cd6a1da788ab341a19a15d0fcf722b2e23107b6e27"
+      "bytes": 1201,
+      "sha256": "15cffb38bd592560fa140481ea2aaa70939a149eca6f08c58dbd97b422344754"
     },
     {
       "path": "paper/references.bib",
@@ -898,8 +923,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7106,
-      "sha256": "17b572266c72792438d0c55067cc61219ffee0c5f321421609a51559e4fe17fa"
+      "bytes": 4524,
+      "sha256": "bfc7b46a17e5bbfb5a7c49ef8a6eaeea953e854beeb708837eff29b30561b8cc"
     },
     {
       "path": "requirements.txt",
@@ -958,8 +983,8 @@
     },
     {
       "path": "saft/README.md",
-      "bytes": 3511,
-      "sha256": "811a1ee4fc48ff0bcb79822c51404a634a1f4cef419bbb3566486d8c39e42da1"
+      "bytes": 4852,
+      "sha256": "2ef79faa5088add80fd0165b62fd3db9dc388a143fdce8ce030fabe0b520baad"
     },
     {
       "path": "saft/schema/acquisition.schema.json",
@@ -2838,8 +2863,8 @@
     },
     {
       "path": "studies/laser/README.md",
-      "bytes": 1904,
-      "sha256": "d8944c1e36eca47b61a3a7f69cbeac3ba7350a8231ea9f8b401658d96d30b3c4"
+      "bytes": 1753,
+      "sha256": "97cfb6735f39a79a01f33d5059e8a5721b227b0e89d9f0ae4a57f78b2707a6ce"
     },
     {
       "path": "studies/laser/replay_inputs.json",
@@ -2877,6 +2902,11 @@
       "sha256": "04b98efffc2a352815811bc4f05baa8b94004965c0d0b4977c003e50329b22b7"
     },
     {
+      "path": "tests/test_laser_generation.py",
+      "bytes": 3622,
+      "sha256": "a1005b245f2cdee1c665628476c4b44078ea72029548b4587705d7889193adc1"
+    },
+    {
       "path": "tools/analyze.py",
       "bytes": 7031,
       "sha256": "2a3569ac8c9c79863ca34e1d177c94a1a41ce439a808f6578484009003c76b1a"
@@ -2897,14 +2927,19 @@
       "sha256": "4d7854976b127be5c61adb642aa6091ad08e38bb36288847e290aa1c92eb6b75"
     },
     {
+      "path": "tools/laser_generation.py",
+      "bytes": 4464,
+      "sha256": "6c40ce9cdad80e9381c3f0f90396ff156d7e873b1f602eb4cfc5ea840f957f1b"
+    },
+    {
       "path": "tools/make_example.py",
       "bytes": 3484,
       "sha256": "f2f316dba0b751c88c7b9a8cadff91d0ad460b1568cb177610b3a88d61a36fde"
     },
     {
       "path": "tools/README.md",
-      "bytes": 3607,
-      "sha256": "29b9d8cd8cc79ee3b250f7ebe5bf2678f0f45968f980ba4b2305153fc7b4ef66"
+      "bytes": 5246,
+      "sha256": "329398aaf4fef0698afd5f0445066f8a12b55fee8db9249a513395861667113b"
     },
     {
       "path": "tools/replay_workspace.py",
@@ -2933,13 +2968,13 @@
     },
     {
       "path": "tools/verify_repository.py",
-      "bytes": 8070,
-      "sha256": "bdfbc071d91be5c433fa724f9cc272c9ee1984a9a595f1121d4633fe6e8613de"
+      "bytes": 8106,
+      "sha256": "3135f729ad00f9309ab052809d582a76ca9d1ecbf67285ec3026a2007885113e"
     },
     {
       "path": "verification/generalization.json",
-      "bytes": 3949,
-      "sha256": "b4632f7ec7d9a94433dc20c0afc2af9e51a343ea5678c0562e202d0068c395c7"
+      "bytes": 6123,
+      "sha256": "916ea82572f396a29c1e007d2e1d22a5078a6a534ffa36bc8261a80f4fac8373"
     },
     {
       "path": "verification/paper.json",

@@ -1,51 +1,61 @@
-# Core COMSOL models
+# The physical models
 
-These are the original model inputs for the completed full weld and the
-partial J-bevel weld with 9 mm fill. All twelve `.mph` files retain their
-original bytes; `checksums.json` records their SHA-256 hashes with paths relative
-to this directory. They require COMSOL Multiphysics 6.4 and the relevant physics
-licences.
+The simulation separates **wave generation** from **wave propagation**. A small
+model resolves the heated layer under the laser. Its calibrated equivalent
+force then excites the larger weld models without resolving heat conduction
+throughout the weld calculation.
+
+## Local laser generation
+
+Open [laser_generation/laser_source_calibration.mph](laser_generation/laser_source_calibration.mph)
+in COMSOL. This is the original model copied from the NDT study, with its
+geometry, mesh and two source descriptions intact. Follow the
+[laser-generation guide](laser_generation/README.md) for the governing physics,
+parameters, solve procedure and comparison with the recorded calibration.
 
 ## Full weld
 
-`full_weld/<source>/reference.mph` and `full_weld/<source>/lof.mph` contain the
-configured pristine and lack-of-fusion cases for each of five laser positions:
+`full_weld/` contains a sound model (`reference.mph`) and a lack-of-fusion model
+(`lof.mph`) for each of five laser positions:
 
-| Source directory | x position (mm) |
+| Folder | Laser position x |
 |---|---:|
-| `shoulder_left` | -12 |
-| `bead_left` | -1.5 |
-| `bead_centre` | 0 |
-| `bead_right` | 1.5 |
-| `shoulder_right` | 12 |
+| `shoulder_left` | -12 mm |
+| `bead_left` | -1.5 mm |
+| `bead_centre` | 0 mm |
+| `bead_right` | 1.5 mm |
+| `shoulder_right` | 12 mm |
 
-Each file already contains the source position, geometry, mesh, and solver
-settings for that shot. Open the desired file and run its time-dependent
-study (`sol1`) with output paths set for your installation.
+These ten files already contain the source position, geometry, mesh and solver
+settings for their respective shots. Open the desired file, save a working
+copy under `output/`, and compute its time-dependent study (`sol1`). Set export
+destinations to your working folder before exporting results.
 
 ## Partial weld
 
-`partial_weld/reference.mph` and `partial_weld/lof.mph` are the original
-reference/defect model pair. The five source definitions are in
-`partial_weld/metadata/multisource.json`. To run another shot, configure
-`laser_x`, `laser_y`, and the `sourceFace` boundary selection for that source;
-the source and receiver definitions needed for this are retained locally.
+`partial_weld/reference.mph` and `partial_weld/lof.mph` describe the sound and
+defective J-bevel weld with **9 mm fill**. The same pair is reused for five
+source positions; this is why there are two partial-weld files and ten
+full-weld files.
 
-## Metadata
+The positions and source boundaries are listed in
+`partial_weld/metadata/multisource.json`. For another shot, set `laser_x`,
+`laser_y` and the `sourceFace` boundary selection accordingly in a working copy.
+The other physical parameters remain those of the chosen specimen.
 
-Each weld's `metadata/` directory retains the model setup, source definitions,
-and receiver coordinates. The shared flaw definition is stored once in
-`defect_geometry.json`. Coordinates use the original model's
-x/y convention; the paper and SAFT use depth = plate thickness - y. Historical
-paths inside the original setup metadata describe the source study and are not
-dependencies of this repository.
+## Geometry, coordinates and recordings
 
-The canonical receiver histories and repair information are included in
-`../data/`. The saved `.mph` inputs are the authoritative models. Legacy solver
-automation and export templates are outside this replay-focused repository.
-Export histories for other models using the contract in `../saft/FORMAT.md`.
-No new COMSOL solve was performed during packaging.
+Each weld's `metadata/` directory contains the model parameters, source
+positions and receiver coordinates. `defect_geometry.json` defines the shared
+lack-of-fusion flaw. The COMSOL models use x and upward y; the paper's image
+depth is plate thickness minus y. Apply the same sign change to vertical
+velocity when converting coordinates.
 
-Solved field snapshots, original native-time probe tables and machine-specific
-batch-control infrastructure are omitted. They are not required to reconstruct
-the published images from the included acquisitions.
+The [supplied receiver histories](../data/README.md) are the results used for
+the paper's images. To image a different specimen, export its geometry and
+recordings using the [SAFT data format](../saft/FORMAT.md).
+
+All thirteen supplied `.mph` files are original model inputs, with checksums
+in `checksums.json`. New calculations need COMSOL 6.4 and licences for the
+physics interfaces in the model. Solved fields and new exports belong in a
+separate working directory.

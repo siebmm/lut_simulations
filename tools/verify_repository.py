@@ -56,7 +56,7 @@ def main():
             if not p.is_file() or sha(p)!=entry['sha256']: failures.append(str(p))
         for entry in d['model_evidence']:
             if entry['sha256'] not in model_hashes: failures.append('Missing model evidence: '+entry['path'])
-    for p in list((ROOT/'studies').rglob('*.py'))+list((ROOT/'tools').glob('*.py'))+list((ROOT/'tests').glob('*.py')):
+    for p in list((ROOT/'studies').rglob('*.py'))+list((ROOT/'models').rglob('*.py'))+list((ROOT/'tools').glob('*.py'))+list((ROOT/'tests').glob('*.py')):
         ast.parse(p.read_text(encoding='utf-8-sig'), filename=str(p))
     study = ROOT/'studies/laser'
     replay = json.loads((study/'replay_inputs.json').read_text())

@@ -1,4 +1,28 @@
-# C++ SAFT tool
+# Forming an image from elastic-wave recordings
+
+SAFT (Synthetic Aperture Focusing Technique) tests each candidate point in the
+specimen as a possible scatterer. It predicts the travel time from a laser
+source to that point and onward to a receiver, samples the corresponding
+velocity trace, and combines contributions from the selected source/receiver
+pairs. A real reflector can produce a coherent response at its image location.
+
+Longitudinal and shear waves have different travel times. Specified reflections
+and mode conversions add alternative paths. Filtering selects the frequency
+band; early-arrival suppression reduces contributions from unwanted direct or
+surface waves. These choices affect both defect response and background.
+
+## Start with an image
+
+After [software setup](../tools/README.md#software-setup), run
+`python tools/reproduce_main.py` for the supplied welds. To use another specimen,
+follow [the geometry and recording guide](FORMAT.md). The analysis accepts
+different boundaries, voids, source/receiver positions and sampling intervals.
+
+The model assumes homogeneous, isotropic 2D elasticity and uses ray travel
+times. It does not solve heterogeneous refraction, 3D propagation or diffraction.
+The [paper](../paper/paper.pdf) explains the equations and amplitude assumptions.
+
+## Programs and detailed use
 
 `src/` contains the reconstruction engine, weld geometry and ray paths,
 wall response, and packet screening. `cli/` contains four
@@ -11,7 +35,7 @@ command-line entry points:
 | `SAFTAdmissionAudit` | Per-source admission statistics for the paper's threshold checks |
 | `SAFTBatch` | Headless version of the original desktop batch exporter, including geometry checks and `images.npz` |
 
-Build from the repository root using the commands in the top-level README.
+Build from the repository root using the [setup instructions](../tools/README.md#software-setup).
 Qt 6 Core must be available at runtime as well as when compiling.
 
 For a new model, use [the schema-2 geometry and acquisition format](FORMAT.md).

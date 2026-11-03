@@ -48,6 +48,12 @@
     {
       "path": "partial_weld/lof.mph",
       "sha256": "5f2fbc116b0372b4a9eddff6f5e65dbcba258f1720300299cc996537048a8e91"
+    },
+    {
+      "path": "laser_generation/laser_source_calibration.mph",
+      "sha256": "c559cd6fbc23eeebc19127ac05ecac81f7171094fcaa8d982becbf4f8a2cf377",
+      "source": "NDT/studies/laser/models/laser_source_calibration.mph",
+      "description": "Original unsolved local thermoelastic and equivalent-dipole benchmark; copied without modification."
     }
   ]
 }

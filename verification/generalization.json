@@ -92,5 +92,46 @@
       "general_dataset_tests": 12,
       "native_interfaces": 4
     }
+  },
+  "laser_generation_restoration": {
+    "date": "2026-11-03",
+    "original_model_source": "NDT/studies/laser/models/laser_source_calibration.mph",
+    "original_model_bytes_preserved": true,
+    "model_state": "Original unsolved, meshed model; COMSOL 6.4.0.429; 10 J/m^2 baseline.",
+    "workflow": "Original model or Java rebuild; thermoelastic solve; dipole solve; receiver and thermal-energy exports; waveform fit and temperature comparison.",
+    "java_compilation": {
+      "BuildLaserCalibration": "passed",
+      "RunLaserCalibration": "passed",
+      "compiler": "Installed COMSOL 6.4 comsolcompile"
+    },
+    "comsol_execution": {
+      "status": "blocked_before_model_load",
+      "reason": "Configured COMSOL licence server could not be reached (FlexNet error -15). A fresh preparation or solve was not verified."
+    },
+    "source_calibration_tests_passed": 3,
+    "combined_test_suite_passed": 15,
+    "reference_comparisons": {
+      "10": {
+        "original_text_exports_match_retained_arrays": true,
+        "historical_metric_checks": 6,
+        "dipole_scale": 1.0844342935972646,
+        "fit_relative_L2_error": 0.009307603907173586,
+        "peak_temperature_rise_K": 7.833757875501533
+      },
+      "100": {
+        "original_text_exports_match_retained_arrays": true,
+        "historical_metric_checks": 6,
+        "dipole_scale": 1.0844342938670577,
+        "fit_relative_L2_error": 0.009307603802692405,
+        "peak_temperature_rise_K": 78.3375787550213
+      }
+    },
+    "source_sha256": {
+      "models/laser_generation/laser_source_calibration.mph": "c559cd6fbc23eeebc19127ac05ecac81f7171094fcaa8d982becbf4f8a2cf377",
+      "models/laser_generation/BuildLaserCalibration.java": "56255d267f6190a82a4f9e8498ed7d4c7631fecb119768312f30d837d217f67d",
+      "models/laser_generation/RunLaserCalibration.java": "29b09e801fb6da332fa4a69b0f194722a0a569660f938cbcfaee31b701fbd9cd",
+      "models/laser_generation/analyze.py": "afa339af17f3bb96203dfe051ac4e626e4fb1f2f0f7d351f189136dffb65ed10",
+      "tools/laser_generation.py": "6c40ce9cdad80e9381c3f0f90396ff156d7e873b1f602eb4cfc5ea840f957f1b"
+    }
   }
 }
